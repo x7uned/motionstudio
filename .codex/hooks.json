@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {"type": "command", "command": "node \"/Users/rv/Desktop/Motion Studio/scripts/agent-run-hook.mjs\"", "timeout": 10}
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {"type": "command", "command": "node \"/Users/rv/Desktop/Motion Studio/scripts/agent-stop-hook.mjs\"", "timeout": 15}
+        ]
+      }
+    ]
+  }
+}

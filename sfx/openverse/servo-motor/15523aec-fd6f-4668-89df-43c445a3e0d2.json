@@ -1,0 +1,133 @@
+{
+  "type": "servo-motor",
+  "origin": "openverse",
+  "file": "sfx/openverse/servo-motor/15523aec-fd6f-4668-89df-43c445a3e0d2-b5f25d6efcf3.wav",
+  "sha256": "b5f25d6efcf37474d0cc7bf69cf42f39ed8f12cf81a3a4bb400765a6b7078c23",
+  "attribution": "\"ROBTMvmt_Robot steps.Servo.Clattering Of The Joints Of The Legs_EM.mp3\" by newlocknew is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/.",
+  "result": {
+    "id": "15523aec-fd6f-4668-89df-43c445a3e0d2",
+    "title": "ROBTMvmt_Robot steps.Servo.Clattering Of The Joints Of The Legs_EM.mp3",
+    "url": "https://cdn.freesound.org/previews/688/688244_5828667-hq.mp3",
+    "license": "by",
+    "source": "freesound",
+    "attribution": "\"ROBTMvmt_Robot steps.Servo.Clattering Of The Joints Of The Legs_EM.mp3\" by newlocknew is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/.",
+    "foreign_landing_url": "https://freesound.org/people/newlocknew/sounds/688244",
+    "creator": "newlocknew",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_version": "4.0",
+    "provider": "freesound",
+    "filetype": "mp3",
+    "duration": 5534,
+    "filesize": 129984,
+    "mature": false,
+    "tags": [
+      {
+        "name": "drone"
+      },
+      {
+        "name": "effect"
+      },
+      {
+        "name": "fantastic"
+      },
+      {
+        "name": "future"
+      },
+      {
+        "name": "fx"
+      },
+      {
+        "name": "machine"
+      },
+      {
+        "name": "mechanical"
+      },
+      {
+        "name": "motor"
+      },
+      {
+        "name": "movement"
+      },
+      {
+        "name": "old-school"
+      },
+      {
+        "name": "retro"
+      },
+      {
+        "name": "robo"
+      },
+      {
+        "name": "robocain"
+      },
+      {
+        "name": "robocop"
+      },
+      {
+        "name": "robot"
+      },
+      {
+        "name": "robotic"
+      },
+      {
+        "name": "sci-fi"
+      },
+      {
+        "name": "science-fiction"
+      },
+      {
+        "name": "servo"
+      },
+      {
+        "name": "sfx"
+      },
+      {
+        "name": "sound"
+      },
+      {
+        "name": "sound-design"
+      },
+      {
+        "name": "space"
+      },
+      {
+        "name": "steps"
+      },
+      {
+        "name": "synth"
+      }
+    ],
+    "indexed_on": "2024-05-21T15:00:07.873258Z",
+    "creator_url": "https://freesound.org/people/newlocknew",
+    "category": null,
+    "genres": null,
+    "alt_files": [
+      {
+        "url": "https://freesound.org/apiv2/sounds/688244/download/",
+        "bit_rate": 192000,
+        "filesize": 134208,
+        "filetype": "mp3",
+        "sample_rate": 48000
+      }
+    ],
+    "fields_matched": [
+      "tags.name"
+    ],
+    "audio_set": {
+      "title": "Robots",
+      "foreign_landing_url": "https://freesound.org/apiv2/packs/38438/",
+      "creator": "newlocknew",
+      "creator_url": "https://freesound.org/people/newlocknew/",
+      "url": null,
+      "filesize": null,
+      "filetype": null
+    },
+    "bit_rate": 128000,
+    "sample_rate": null,
+    "thumbnail": null,
+    "detail_url": "https://api.openverse.org/v1/audio/15523aec-fd6f-4668-89df-43c445a3e0d2/",
+    "related_url": "https://api.openverse.org/v1/audio/15523aec-fd6f-4668-89df-43c445a3e0d2/related/",
+    "waveform": "https://api.openverse.org/v1/audio/15523aec-fd6f-4668-89df-43c445a3e0d2/waveform/",
+    "unstable__sensitivity": []
+  }
+}

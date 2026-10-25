@@ -1,0 +1,87 @@
+{
+  "type": "air-release",
+  "origin": "openverse",
+  "file": "sfx/openverse/air-release/0a5f6562-53a0-4db7-b7b9-46d826fa521f-570ba10f28ec.wav",
+  "sha256": "570ba10f28ec606393484188f0991dbeeaf6d267e07ac05bd6f41182fd1fb113",
+  "attribution": "\"Slips air release v3\" by mcpable is marked with CC0 1.0. To view the terms, visit https://creativecommons.org/publicdomain/zero/1.0/.",
+  "result": {
+    "id": "0a5f6562-53a0-4db7-b7b9-46d826fa521f",
+    "title": "Slips air release v3",
+    "url": "https://cdn.freesound.org/previews/131/131932_1542102-hq.mp3",
+    "license": "cc0",
+    "source": "freesound",
+    "attribution": "\"Slips air release v3\" by mcpable is marked with CC0 1.0. To view the terms, visit https://creativecommons.org/publicdomain/zero/1.0/.",
+    "foreign_landing_url": "https://freesound.org/people/mcpable/sounds/131932",
+    "creator": "mcpable",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_version": "1.0",
+    "provider": "freesound",
+    "filetype": "mp3",
+    "duration": 2571,
+    "filesize": 61363,
+    "mature": false,
+    "tags": [
+      {
+        "name": "air"
+      },
+      {
+        "name": "compressed"
+      },
+      {
+        "name": "industrial"
+      },
+      {
+        "name": "mechanical"
+      },
+      {
+        "name": "oil"
+      },
+      {
+        "name": "pressure"
+      },
+      {
+        "name": "release"
+      },
+      {
+        "name": "rig"
+      },
+      {
+        "name": "slips"
+      }
+    ],
+    "indexed_on": "2024-05-21T15:00:07.873258Z",
+    "creator_url": "https://freesound.org/people/mcpable",
+    "category": null,
+    "genres": null,
+    "alt_files": [
+      {
+        "url": "https://freesound.org/apiv2/sounds/131932/download/",
+        "bit_rate": 0,
+        "filesize": 681136,
+        "filetype": "wav",
+        "sample_rate": 44100
+      }
+    ],
+    "fields_matched": [
+      "description",
+      "title",
+      "tags.name"
+    ],
+    "audio_set": {
+      "title": "Rig sounds",
+      "foreign_landing_url": "https://freesound.org/apiv2/packs/8294/",
+      "creator": "mcpable",
+      "creator_url": "https://freesound.org/people/mcpable/",
+      "url": null,
+      "filesize": null,
+      "filetype": null
+    },
+    "bit_rate": 128000,
+    "sample_rate": null,
+    "thumbnail": null,
+    "detail_url": "https://api.openverse.org/v1/audio/0a5f6562-53a0-4db7-b7b9-46d826fa521f/",
+    "related_url": "https://api.openverse.org/v1/audio/0a5f6562-53a0-4db7-b7b9-46d826fa521f/related/",
+    "waveform": "https://api.openverse.org/v1/audio/0a5f6562-53a0-4db7-b7b9-46d826fa521f/waveform/",
+    "unstable__sensitivity": []
+  }
+}

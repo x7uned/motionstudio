@@ -1,0 +1,34 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {ROOT,DATA,project} from '../src/lib/store';
+import {normalizePlan} from '../src/lib/model';
+import {readJSON,writeJSON,digest,editorialInput,checkNarrative} from '../src/lib/quality';
+import {reviewManualNarrative,auditText} from '../src/lib/editorial';
+async function main(){
+ process.loadEnvFile(path.join(ROOT,'.env.local'));
+ const id='175081da-be5c-4ff1-b75b-2a14510c5d55',dir=path.join(DATA,'projects',id),out=path.join(dir,'qualified-attribution'),p=project(id)!;
+ if(!p||p.voice&&await fs.access(path.join(dir,'narration.wav')).then(()=>true).catch(()=>false))throw new Error('This correction is only before the first TTS');
+ await fs.mkdir(out,{recursive:true});
+ const n=await readJSON(path.join(dir,'narrative.json')),split=await readJSON(path.join(dir,'segmentation-2-0/answer.json')),research=await readJSON(path.join(dir,'research.json')),sources=await readJSON(path.join(dir,'sources.json'));
+ const from='Как сжатый воздух может поднять Roadster?',to='Как Tesla объясняет полёт Roadster?';
+ if(!n.fullText.startsWith(from)||!split.scenes[0].narration.startsWith(from))throw new Error('Unexpected script revision; preserve new work');
+ n.fullText=n.fullText.replace(from,to);n.title='Как Tesla объясняет полёт Roadster';
+ n.fullText=n.fullText.replace('возможности именно этого прототипа','возможности именно этой машины');
+ n.summary='Путь воздуха от баллонов к соплам объясняет реактивную тягу. По словам Tesla, вентиляторы под днищем усиливают прижим к поверхности.';
+ const scenes=split.scenes.map((s:any,i:number)=>({...s,...(i===0?{title:to,narration:s.narration.replace(from,to)}:{}),...(i===5?{title:'Прижим: по словам Tesla'}:{}),...(i===6?{title:'Принцип и показанная машина',subtitle:'Физика объясняет механизм; возможности машины требуют отдельной проверки.',items:['Физика объясняет механизм','Возможности машины требуют проверки','@xtuned'],narration:s.narration.replace('возможности именно этого прототипа','возможности именно этой машины')}:{})}));
+ const plan=normalizePlan({title:n.title,summary:n.summary,factNotes:research.disputed.join(' ').slice(0,500),scenes},60,p.voice);
+ checkNarrative(n,plan);
+ await fs.copyFile(path.join(dir,'quality-instructions.json'),path.join(out,'quality-instructions.json'));
+ await writeJSON(path.join(out,'sources.json'),sources);await writeJSON(path.join(out,'narrative.json'),n);await writeJSON(path.join(out,'storyboard.json'),plan);
+ await writeJSON(path.join(out,'provenance.json'),{at:new Date().toISOString(),reason:'Hook, summary and fan heading explicitly attribute claims to Tesla. The engineering-status term prototype is replaced with this car because the supplied transcript does not establish that status. Conditional physics is preserved. Operator edit after bounded automatic fact review; not owner approval or model training.'});
+ const signal=new AbortController().signal;
+ console.log('Independent editor: explicitly attributed hook');await reviewManualNarrative(plan,out,signal);
+ console.log('Independent facts: corrected hook, speech and all screen text');
+ const audit=await auditText({...editorialInput(plan),screenText:editorialInput(plan).screenText+'\n'+n.caption},sources,path.join(out,'facts'),signal,undefined,out);
+ audit.inputHash=digest(editorialInput(plan));
+ const policy=await readJSON(path.join(dir,'quality-instructions.json'));
+ await writeJSON(path.join(out,'fact-audit.json'),{...audit,instructionsHash:policy.sha256});
+ if(!audit.passed)throw new Error('Qualified version still needs factual correction: '+JSON.stringify(audit.claims.filter(c=>!['supported','illustration'].includes(c.status)).map(c=>({claim:c.claim,reason:c.reason}))));
+ console.log(JSON.stringify({id,ready:true,claims:audit.claims.length,sourceHash:audit.sourceHash}));
+}
+main().catch(e=>{console.error(e.message);process.exitCode=1;});

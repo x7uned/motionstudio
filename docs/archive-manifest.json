@@ -1,0 +1,921 @@
+{
+  "archiveFiles": 149,
+  "skills": [
+    "animated-chart",
+    "apple-launch-film",
+    "brand-intake",
+    "launch-video",
+    "loop-cover",
+    "milestone-reveal",
+    "model-showdown",
+    "motion-brief-writer",
+    "motion-design",
+    "motion-effects",
+    "motion-prompt-writer",
+    "newsletter-promo",
+    "reel-export",
+    "reference-to-motion",
+    "review-loop",
+    "sound-design",
+    "title-sequence-3d",
+    "vox-explainer",
+    "web-sims"
+  ],
+  "skillCount": 19,
+  "files": [
+    {
+      "path": "CI-CD-56s-9x16-RU-voice.mp4",
+      "bytes": 3840460,
+      "sha256": "a6fbac58b54d4ce2d1ba28629d66cd97777a0b16306f8a31653d9ded58156734",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-56s-9x16-RU.mp4",
+      "bytes": 3846703,
+      "sha256": "535164b164e39479f5fab4facf1c06a3e07b6e8d3aa5a3ffae5d0399c8df4298",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-56s-9x16-source.zip",
+      "bytes": 11753893,
+      "sha256": "3f94343c30de0864aac548201dc7d613cfab64cac0328bf35fa73fbcb74b5848",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-9x16-сценарий.md",
+      "bytes": 3666,
+      "sha256": "3a34b00db92ec403d2241a992b22a310228f01cac290f8469598022bc43ef37e",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-Explained-RU.mp4",
+      "bytes": 5434261,
+      "sha256": "cbff19994a7d1e7197dae4cf82664c018bc27aa6a6d56ebb5d5c0d9ce3ffbf1b",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-poster.jpg",
+      "bytes": 208662,
+      "sha256": "399f9cfb1194f803e782a6b6865c18b4a6ee8ef253ea3a63818e376f68d79e36",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-source.zip",
+      "bytes": 19744345,
+      "sha256": "1ca7363a412581df138d99accb4ac4cced0e04f748e33b655982893ef8e0cd8c",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-voice-source.zip",
+      "bytes": 13647680,
+      "sha256": "7d9459fd35f66cf0b100297828fba8aad4f89ab17186ea160e291c0c869ba7f1",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-озвучка.md",
+      "bytes": 1792,
+      "sha256": "9b4d7a69e3a5edcdad3323bd8d8c7e8da1a0ef71f2539aef55d96d8256c67f41",
+      "originalMatched": true
+    },
+    {
+      "path": "CI-CD-сценарий.md",
+      "bytes": 6800,
+      "sha256": "13ca6c30232a5225e812500a7cd11260573a3e4f15fbd791e5dc8d35cd0d187f",
+      "originalMatched": true
+    },
+    {
+      "path": "Ideas-in-Motion-frames.jpg",
+      "bytes": 68473,
+      "sha256": "043309a461f5b613e450a3e5fe34965158e979cd11c5f807747c30a7fe498e36",
+      "originalMatched": true
+    },
+    {
+      "path": "Ideas-in-Motion-poster.jpg",
+      "bytes": 100383,
+      "sha256": "65c12e99dcd11576af134daac80d582ffe6a37a0f9ba9df217e105396e47f330",
+      "originalMatched": true
+    },
+    {
+      "path": "Ideas-in-Motion-preview.gif",
+      "bytes": 2943325,
+      "sha256": "290c47f2ad17377060ebc263bab00f524a13fd0262722ba325d1c996331d846d",
+      "originalMatched": true
+    },
+    {
+      "path": "Ideas-in-Motion-source.zip",
+      "bytes": 4117801,
+      "sha256": "7b9dc95ea34e53c428e0718041bd7a7064e898c8e58f8573e499f8231ae84158",
+      "originalMatched": true
+    },
+    {
+      "path": "Ideas-in-Motion.mp4",
+      "bytes": 4351773,
+      "sha256": "88bdce819be1f0572061a053a9a59b4f1562fffbf54c830e1fdc0055bee16e84",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/LICENSE-claude-motion.txt",
+      "bytes": 1066,
+      "sha256": "ca02fba63bfcc89f475a8672dd852a220005a17325fc05d7f2299f5adf7f10a4",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/README.md",
+      "bytes": 1800,
+      "sha256": "b5f019a933bc9f22b10d794012be11ab356899ca2a6ea87a0734aa0b467b490f",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/SHA256.txt",
+      "bytes": 88,
+      "sha256": "d22106dcdfbb534c46494fed0ee01cc6950cf4a25b0eb5273d1caac0f5239b6f",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/package.json",
+      "bytes": 1178,
+      "sha256": "99bb2b3077e99830d8ebe5d9685d5376f8313bc318e9b90eb33191793b3c2937",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/playback-verification.json",
+      "bytes": 871,
+      "sha256": "1b92e2742ab2a486e33946420b1d816d3d03be415b925eb475e18d70513621f2",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/public/cicd-reel-sound.wav",
+      "bytes": 10752044,
+      "sha256": "55bb63fb0b0a8206fccbc12880dc92aa96d2567743562e44183513b4c4ce2d4c",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/remotion.config.ts",
+      "bytes": 522,
+      "sha256": "d043765f0c435cf2bda6a07ba3ccb4be8644dd4e300644c562c0a0e516e8240e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/final-sheet-1.jpg",
+      "bytes": 161490,
+      "sha256": "064cc1918d3c0e18ab8624e5e8dbaea62ce3f7623722e6dc560fb75c4d53dac4",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/final-sheet-2.jpg",
+      "bytes": 160931,
+      "sha256": "9da47f59a0336260eae0c174d64565e7544cc2899688fe688e0f021a5157305d",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/final-sheet-3.jpg",
+      "bytes": 168937,
+      "sha256": "49daf7bf3b1febd7fbd601f00939371be8544a738619dfa65fe7ab1d181cc0b4",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/final-sheet-4.jpg",
+      "bytes": 149123,
+      "sha256": "3a14774d79e11672cebfda05c1b3e3bb6b9959bdbcbfd1e61f3d4cecb5c33c4d",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/final-sheet-5.jpg",
+      "bytes": 191226,
+      "sha256": "a974e2155d4f3d2f111cea7357c8d8d7409fda3cc5e416408f1312c9529dff2f",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/final-sheet-6.jpg",
+      "bytes": 189756,
+      "sha256": "c2285375d0d77f77d709d0ffabdde8e405db6a6a2f1837babe059f4a7d23d9e2",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/final-sheet-7.jpg",
+      "bytes": 179593,
+      "sha256": "0f70f4285941818284cf4e92c26104d4c95b21252a16679d4e3b5a8a4dedc78a",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/final-sheet-8.jpg",
+      "bytes": 128588,
+      "sha256": "cf61fe2494f31a49869083ae2a18f3594fa5dc43cbcf9c66a4e8defb7cb74700",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/transitions-sheet-1.jpg",
+      "bytes": 152452,
+      "sha256": "5c261ae5b619577f172a3b5b5caa37315750e094f15f964242cefd4e81414b94",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/transitions-sheet-2.jpg",
+      "bytes": 148504,
+      "sha256": "99b31d06dfb79ce68ac18b4068bc4d7d4f13018f348c6592fa6d734550d7e556",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/transitions-sheet-3.jpg",
+      "bytes": 166286,
+      "sha256": "d3400482220b79fa09649bd29b382c82dc19d158b5cad7a8aff47e27a289000e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/review/transitions-sheet-4.jpg",
+      "bytes": 165213,
+      "sha256": "9fb2afaf550cbc841d4740c3a801aadc614b3e22983a4c1df5529ffcb8820dd9",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/sfx/__init__.py",
+      "bytes": 295,
+      "sha256": "cababa88916deb9b2056d2dfc15c1fbee4ec702d18356b460abe6a08ea6daa80",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/sfx/__main__.py",
+      "bytes": 2078,
+      "sha256": "3da2dc29d28f129d9e133b3fc2b178edff5f40cfc8a88f50ca30441e06885b46",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/sfx/cues/cicd_reel.py",
+      "bytes": 1671,
+      "sha256": "7d2cbdf3d3cd60b64e739c754e8eb47f1877f5cca28e1b1578650e9b5d70a64c",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/sfx/dsp.py",
+      "bytes": 13741,
+      "sha256": "9ef82489ca92f2730778879224a7a0352a580badbb56f1041408f03599c63e86",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/sfx/loudness.py",
+      "bytes": 2285,
+      "sha256": "884d6ec244a28f62cb26c28465dac31de3d783e2187a1ed8f2718e4be3885173",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/sfx/mix.py",
+      "bytes": 4659,
+      "sha256": "c6fb37d90546907a8fe149284bcdc183802fd79d8b6dff2480aeb86e2f9f1b34",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/sfx/synth.py",
+      "bytes": 6413,
+      "sha256": "59f54a8f7dd4213f88596aab7d49901679482fc16ba8bd918bde9b005e0b63ac",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/src/Root.tsx",
+      "bytes": 273,
+      "sha256": "e2c33ea1639550a5d24f072f4bdfc15ff1bb21df9e46cf16af63ad8671612e4c",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/src/cicd/CICDReel.tsx",
+      "bytes": 13001,
+      "sha256": "6254d4039e21b09ed4c3e2a47cf99fafa23f4a0fe8ce306f3ad0f4239a3eb053",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/src/cicd/lib.ts",
+      "bytes": 3161,
+      "sha256": "baf4723ced47ad55428ffa0bfeb29fcf5833a6f0f212620ab12313a0e5bdbe99",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/src/components/useFonts.ts",
+      "bytes": 798,
+      "sha256": "a757ede005dae2b58a70e2aab384061dc0fb8ebcf548dee5d795fd6d12e03cb2",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/src/index.ts",
+      "bytes": 327,
+      "sha256": "39b208d83cc77f19ee5a353b7db9c778ce911fa39ab9f01b53552a30bce3493e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/timeline-cicd-reel.json",
+      "bytes": 795,
+      "sha256": "f337abda01f769d0ad2439ba5110e3a0c8f6cd22e1e805e2db62aebb0e4a1572",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/timeline-cicd.json",
+      "bytes": 883,
+      "sha256": "93e1b5a87bd32bd79081e19e00e156368d3f3add8f23b5c599ab2667e5396ab9",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/tsconfig.json",
+      "bytes": 332,
+      "sha256": "96a4bbf67d073595d91281046b0c4eb4aca6c01398e8387a2edbc51840b0fa30",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/Проверка.md",
+      "bytes": 1699,
+      "sha256": "9a4388616f626d232923c6ce98ac6eb7a608c1220fa0d73ecb208f1b9374da6e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-reel-source/Сценарий.md",
+      "bytes": 3666,
+      "sha256": "3a34b00db92ec403d2241a992b22a310228f01cac290f8469598022bc43ef37e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/LICENSE-claude-motion.txt",
+      "bytes": 1066,
+      "sha256": "ca02fba63bfcc89f475a8672dd852a220005a17325fc05d7f2299f5adf7f10a4",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/README.md",
+      "bytes": 2552,
+      "sha256": "6f7db1d175f178c90394e324470f304c6dc60ab7d22f312340e5d47fa4c7837a",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/SHA256.txt",
+      "bytes": 89,
+      "sha256": "eb2faa2bc75fc48614f671422cc555d21f87a61edd1eda92f591bf71ff764983",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/package.json",
+      "bytes": 1395,
+      "sha256": "bbaf8172466933e504658aefc33d1046ee7a22634ea1f435aeabecc736f34da5",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/playback-verification.json",
+      "bytes": 866,
+      "sha256": "54627131c9749d7ed74642993079d8e6b85d7db0a5452d923d1936927a8734b7",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/public/cicd-sound.wav",
+      "bytes": 18048044,
+      "sha256": "4bb1df5c9829bdf1cf9da873703958d7f451a62bf0e682138b3e04eb8bf35e3e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/remotion.config.ts",
+      "bytes": 522,
+      "sha256": "d043765f0c435cf2bda6a07ba3ccb4be8644dd4e300644c562c0a0e516e8240e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/final-sheet-1.jpg",
+      "bytes": 279732,
+      "sha256": "61b2a5607e003c15fa34760e4bef847162506117a2d46d6e3a1a18f8415c826b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/final-sheet-2.jpg",
+      "bytes": 356603,
+      "sha256": "fbd7d4cfd07c69a910827ce3684806c4de1b197e2065f8ff1e2e478ef123a87f",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/final-sheet-3.jpg",
+      "bytes": 338403,
+      "sha256": "2156c0a8646e78aaffc55158db78294bf8c557b080d93db0a446aca065f4717e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/final-sheet-4.jpg",
+      "bytes": 360501,
+      "sha256": "769455c61a0add660e9440dc5b44a07ac8043ca710e1c51c0f4eb3d1a96ae7b2",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/final-sheet-5.jpg",
+      "bytes": 394510,
+      "sha256": "e392418f388c0a7a015952b9f494ae48db3056c9f6bfd319b703490b351f1d10",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/final-sheet-6.jpg",
+      "bytes": 331079,
+      "sha256": "60f6205b9e8a81caae163adef157a61caa919618ad45a80264adbbced24d1ab8",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/final-sheet-7.jpg",
+      "bytes": 71275,
+      "sha256": "d607130640092603909894697583805165cb38c9c87f544a58e766cc2c2bb098",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/transitions-compact-1.jpg",
+      "bytes": 206435,
+      "sha256": "0fc939ea331b83b3026a53fdd783e1674788af686ffd861c30cc17de52645191",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/transitions-compact-2.jpg",
+      "bytes": 241904,
+      "sha256": "6064717e79feb64a01e4d4f70b3e6e2b336eea7a24e890f1ebec048e0f8e3ade",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/transitions-compact-3.jpg",
+      "bytes": 203898,
+      "sha256": "3f196bbc8c0325d59d60e6a5ecc69fda45706506a9e7f8f4484bc6a79c9ab84b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/transitions-compact-4.jpg",
+      "bytes": 261437,
+      "sha256": "16a3f1f3deb23e24f30c6c8ba068a118325b0090de436cbf348acf22885755d4",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/review/transitions-compact-5.jpg",
+      "bytes": 199090,
+      "sha256": "e21ab166ef64b2b38bd3775f73c88f58989795b999a87d1148228d4941b9c4cb",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/scripts/sheet.mjs",
+      "bytes": 4367,
+      "sha256": "bb6d5b23636fc6f876c047e8f5b41557ab83b9d6e9902bb1bc5975a140a1552e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/scripts/wave.mjs",
+      "bytes": 2969,
+      "sha256": "428f28a634e64a95d93a7561dac74f6eca46435ee07113802c58e9eeb6e22113",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/sfx/__init__.py",
+      "bytes": 295,
+      "sha256": "cababa88916deb9b2056d2dfc15c1fbee4ec702d18356b460abe6a08ea6daa80",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/sfx/__main__.py",
+      "bytes": 2078,
+      "sha256": "3da2dc29d28f129d9e133b3fc2b178edff5f40cfc8a88f50ca30441e06885b46",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/sfx/cues/cicd.py",
+      "bytes": 1703,
+      "sha256": "30b24ff34d79b00e60ec4ff07fd3cfe892a7066185265c402af6ebd5620353d6",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/sfx/dsp.py",
+      "bytes": 13741,
+      "sha256": "9ef82489ca92f2730778879224a7a0352a580badbb56f1041408f03599c63e86",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/sfx/loudness.py",
+      "bytes": 2285,
+      "sha256": "884d6ec244a28f62cb26c28465dac31de3d783e2187a1ed8f2718e4be3885173",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/sfx/mix.py",
+      "bytes": 4659,
+      "sha256": "c6fb37d90546907a8fe149284bcdc183802fd79d8b6dff2480aeb86e2f9f1b34",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/sfx/synth.py",
+      "bytes": 6413,
+      "sha256": "59f54a8f7dd4213f88596aab7d49901679482fc16ba8bd918bde9b005e0b63ac",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/src/Root.tsx",
+      "bytes": 310,
+      "sha256": "80cfe30eb969818e3bf95c5cc8fea1d55079a0b15d11f9a06eb3155fdcbcc703",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/src/cicd/CICDVideo.tsx",
+      "bytes": 18678,
+      "sha256": "9c185621fc63434e5cd638c11ed993e2b34b0347ff0d86e64cc811552cf2940b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/src/cicd/lib.ts",
+      "bytes": 3161,
+      "sha256": "baf4723ced47ad55428ffa0bfeb29fcf5833a6f0f212620ab12313a0e5bdbe99",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/src/components/useFonts.ts",
+      "bytes": 798,
+      "sha256": "a757ede005dae2b58a70e2aab384061dc0fb8ebcf548dee5d795fd6d12e03cb2",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/src/index.ts",
+      "bytes": 327,
+      "sha256": "39b208d83cc77f19ee5a353b7db9c778ce911fa39ab9f01b53552a30bce3493e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/timeline-cicd.json",
+      "bytes": 883,
+      "sha256": "93e1b5a87bd32bd79081e19e00e156368d3f3add8f23b5c599ab2667e5396ab9",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/tsconfig.json",
+      "bytes": 332,
+      "sha256": "96a4bbf67d073595d91281046b0c4eb4aca6c01398e8387a2edbc51840b0fa30",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/Проверка.md",
+      "bytes": 3272,
+      "sha256": "8d9d653b1c89310c4b5fa77f60e67b2edafe17cc9ef67b807dc12451cf15e611",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-source/Сценарий.md",
+      "bytes": 6800,
+      "sha256": "13ca6c30232a5225e812500a7cd11260573a3e4f15fbd791e5dc8d35cd0d187f",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-poster.jpg",
+      "bytes": 82571,
+      "sha256": "7aa348157d82527cf9920a08a8f28580f8c30d4dc1abbbe3c6f65bea275b6ee8",
+      "originalMatched": false
+    },
+    {
+      "path": "cicd-voice-source/README.md",
+      "bytes": 2439,
+      "sha256": "cb5562f4cfc5ae5648b6e7cb4eef1fe7cba523c7bcc4869cae4e66e64ca3a79d",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/SHA256.txt",
+      "bytes": 94,
+      "sha256": "a0c5578afdeebe65de44c7bb10a44a8bf6db5239b717e280503b662b4a683e4e",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/alignment.json",
+      "bytes": 25426,
+      "sha256": "76574a493f2f0ec4d41ddb2e7c1006b81c23b7ac507a274228a9945f7d6c6db9",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/background.wav",
+      "bytes": 10752044,
+      "sha256": "55bb63fb0b0a8206fccbc12880dc92aa96d2567743562e44183513b4c4ce2d4c",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/check_sync.py",
+      "bytes": 3326,
+      "sha256": "8add7ba69abfa1d5a35c6083f03124ef436cd762e429e9a0c65c9d42512f53eb",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/cues.json",
+      "bytes": 4791,
+      "sha256": "38ad749bcef023d8271b115ef97d02bc0f3b15e3f3f4a95ae8dcd7e033708f25",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/fit.py",
+      "bytes": 3223,
+      "sha256": "55f3c7001f0d6d9f2fe6905766f188c627e5552e08ef992ef2032bd3c034f502",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/make_cues.py",
+      "bytes": 2521,
+      "sha256": "e1a35737903ab917cd18ff1d9a698f25464e140ac276e7afac24dad5fde17ef3",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/mix.py",
+      "bytes": 2204,
+      "sha256": "5c5ef31a467ff1fd10620abf13f731631b26e50aebcebd0f1a386f9b62175e9d",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/narration.srt",
+      "bytes": 1605,
+      "sha256": "57f3009b25986d8ee77905782152d78cb15a7d07c59badfc8cc2531781628327",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/playback-verification.json",
+      "bytes": 871,
+      "sha256": "e6ac81ecf7122ea23e75113fe350b0a9df34c24d2bfc2b465f7429b0fba1879b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/build.jsonl",
+      "bytes": 922,
+      "sha256": "f62b1e30beb705a453e736a513224a0bb50a8d2aaaedb27d70841f1f26918236",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/build.mp3",
+      "bytes": 26208,
+      "sha256": "5f818c3013d88cc754f63f9a48ec7feece1981cb8cd10f789e71e08783d37cde",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/code-price.jsonl",
+      "bytes": 590,
+      "sha256": "ec804e912bf2c62dec7a00d24d6f12635f588141555ebd4f819ccf2a72f7943b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/code-price.mp3",
+      "bytes": 18288,
+      "sha256": "52cac9431c94c6e8a983dcb59cca8973852aea143d2de74b100cbe6684e4c14a",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/code-rule.jsonl",
+      "bytes": 490,
+      "sha256": "3bab65ac89d622472cc9e8731d908a334f4e59e5738b379dfb3012a7ac768a80",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/code-rule.mp3",
+      "bytes": 18720,
+      "sha256": "9686d90ce7142c30ea774c38b89b10f5f64e5652076d549c0eff6447882009ba",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/deploy-build.jsonl",
+      "bytes": 388,
+      "sha256": "0e602f8ab8be7782b7aac888557c4f5ad16167a8dec54383f962326439fda00b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/deploy-build.mp3",
+      "bytes": 16704,
+      "sha256": "95df4bedf54ca25b11eeff9c70c6b533745e2552cd0394fe45c28c951d89e316",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/deploy-mode.jsonl",
+      "bytes": 623,
+      "sha256": "c930370a28de9b3fc8f74ad493986776a0ce780cea51a386ab6c974761f4ce08",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/deploy-mode.mp3",
+      "bytes": 29376,
+      "sha256": "4a1b2b3b4042f73e146d99d9ec509c6630d58044e4e554a23ab687f4257f7f2c",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/intro.jsonl",
+      "bytes": 408,
+      "sha256": "9c95ba5548f43186616de51cf36a56876f5887a3c080f926708a5365a1b83266",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/intro.mp3",
+      "bytes": 17568,
+      "sha256": "53cbf2c22dd4726cb293bd730ffffdf6711459b0b9372c85ad35720274c7596f",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/monitor.jsonl",
+      "bytes": 543,
+      "sha256": "be852963e57cb1067276c452fd2cac923262f8ae58f58445a592b3e7c0e645c5",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/monitor.mp3",
+      "bytes": 18576,
+      "sha256": "27a3abb1d5ac4116967a869fc38c2260fddf4b765a24758cad198844c742b2e9",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/push-code.jsonl",
+      "bytes": 460,
+      "sha256": "52a56953a2bae4423177c030256c25b73d29ded8260bd79a08d48b2263358c1b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/push-code.mp3",
+      "bytes": 16992,
+      "sha256": "aa033ab1bce71691b14a39174bdec15ad10f68d4488234ed99ac96c12ca33faf",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/push-start.jsonl",
+      "bytes": 532,
+      "sha256": "2b8a67d0a95912a9524b168e359fb819d84dc3ebe59cd42086444d0ff9481426",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/push-start.mp3",
+      "bytes": 21600,
+      "sha256": "3388c16e190894951f417870d6306e3b188a5f9fedcba28f2da2c911021fb071",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/rollback.jsonl",
+      "bytes": 591,
+      "sha256": "62edc65c5cb326c8bc914a5607265215ba94863d343542c774a09c9e7316f488",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/rollback.mp3",
+      "bytes": 19584,
+      "sha256": "5e8e823a67e4e6330bfdad2d07e892cfe2e287d681c8287801390fd938d11a0b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/stage-live.jsonl",
+      "bytes": 555,
+      "sha256": "490584318f79af1b55707d3f3a909c775a4d52a7cccbf16b38177cb70563f76d",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/stage-live.mp3",
+      "bytes": 17856,
+      "sha256": "b2f0ec9cad51e05025120ecc21768299288e3be021ce0c32d5d3c8c4d8861807",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/stage-test.jsonl",
+      "bytes": 556,
+      "sha256": "718efdc4bbd7e002036278b8ecba4f7f8235fd0ac6781231fbd9204876a248e8",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/stage-test.mp3",
+      "bytes": 17712,
+      "sha256": "81158ede1e2333f5b4fe308e3e490d035e9288bc86074075d32e8f1d7140850f",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/summary.jsonl",
+      "bytes": 906,
+      "sha256": "dce093c05e71332bef913133ad24640bc6bfd364c5e0ed8977796ab1936da4b3",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/summary.mp3",
+      "bytes": 35424,
+      "sha256": "e933689fafc6eda31ddeae4a4c0b58cd0da95338a99190ee92550fe0cb8f98ad",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/test-fail.jsonl",
+      "bytes": 214,
+      "sha256": "1f140c8142174425aa2db0d8d6046b49f07afe59e8f8bebe3007feaf98a89962",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/test-fail.mp3",
+      "bytes": 13536,
+      "sha256": "041523a37aa4c508cc687effa469d58016f34bd6324a84d0661d5681a637882b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/test-fix.jsonl",
+      "bytes": 232,
+      "sha256": "362679d0042e00d5010e776110695438d9ba17a381455cbcbca23377439af44a",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/test-fix.mp3",
+      "bytes": 13104,
+      "sha256": "7fb39aee9b97ce46aa35f4269a67097459bfbe69a3d490e2fa7e974a7b208b8c",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/test-pass.jsonl",
+      "bytes": 315,
+      "sha256": "0b1c8154875bbdf2d8753665d21d818cdf6660767c23ad31187567c28b18a26b",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/test-pass.mp3",
+      "bytes": 12384,
+      "sha256": "b5cf97d3a52b0d3b66af1ead4ddf9628f596b2855a126a4bb851288827572f4c",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/test-start.jsonl",
+      "bytes": 125,
+      "sha256": "d0f35b6578b9e27cb0382711f5154f07138d75a7d09cd253f11ab44a937970e2",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/raw/test-start.mp3",
+      "bytes": 11232,
+      "sha256": "437954981a8591e9198f27a2c04d13cfca00e67e728599800b25d2cfb20313fc",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/requirements.txt",
+      "bytes": 29,
+      "sha256": "438095fb2bb746c56b47f08af3effe6999aed7fd2d1ee7cebcdad618efb012ff",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/sync-verification.json",
+      "bytes": 3655,
+      "sha256": "b211bc5b2f1fa71b48c94d9385357043200e23811d371cee00cba61b06a92dcf",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/synthesize.py",
+      "bytes": 696,
+      "sha256": "f1773b16e54304f5aa0f16c19568f84f4dc053ea36608e3fea89ec757548ce16",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/test-sync.png",
+      "bytes": 38511,
+      "sha256": "78bb2fc064b2d22e22eef93f1c3f35ba38f63cf3b2a3a19f392f06b0d0f4edaf",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/timeline.json",
+      "bytes": 795,
+      "sha256": "f337abda01f769d0ad2439ba5110e3a0c8f6cd22e1e805e2db62aebb0e4a1572",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/video-integrity.json",
+      "bytes": 217,
+      "sha256": "62f6f08520f0dd8a7c8d952c789352b6deffc659b1be1c454c40bff092b63fe6",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/voice-master.wav",
+      "bytes": 5376078,
+      "sha256": "b11f4132e3a5778a2ae5741eb90cb36e8377e7c0577553fd72633affb0aa8556",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/Проверка.md",
+      "bytes": 1808,
+      "sha256": "314eefa88e39aa71a7f4f4bfa603b214e39a5c65f24b0a639105af14bfc896f2",
+      "originalMatched": true
+    },
+    {
+      "path": "cicd-voice-source/Текст озвучки.md",
+      "bytes": 1792,
+      "sha256": "9b4d7a69e3a5edcdad3323bd8d8c7e8da1a0ef71f2539aef55d96d8256c67f41",
+      "originalMatched": true
+    },
+    {
+      "path": "source/OFL.txt",
+      "bytes": 4380,
+      "sha256": "921d7424e428338070a0715ba5014235e68f1a1d7cf8c779b010e49b1c7ead20",
+      "originalMatched": true
+    },
+    {
+      "path": "source/README.md",
+      "bytes": 2647,
+      "sha256": "0cae1d4a877e6a3622b7597c75b41981d40f376ec9a01203f5aa4dfa0e52bf14",
+      "originalMatched": true
+    },
+    {
+      "path": "source/film.html",
+      "bytes": 2044611,
+      "sha256": "75984f517db3d29a53be999dd707450a35423af931caea81a858911c677e065b",
+      "originalMatched": true
+    },
+    {
+      "path": "source/render.cjs",
+      "bytes": 2291,
+      "sha256": "5e8e0b47b446e77d57670b35b62d967ec08bfeeb5ec36541a75786886802c2b8",
+      "originalMatched": true
+    },
+    {
+      "path": "source/soundtrack.py",
+      "bytes": 2178,
+      "sha256": "3bb1dd9c3a59965fc162ba3c733ef32bd870a17e2f65bca83c8b90d7079b2c3f",
+      "originalMatched": true
+    },
+    {
+      "path": "source/soundtrack.wav",
+      "bytes": 3840044,
+      "sha256": "826a9e9acc1d58ec12e33cf35d88a689f3ccf1120f75b542fa035eeceb2b541b",
+      "originalMatched": true
+    }
+  ]
+}

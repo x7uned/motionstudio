@@ -1,0 +1,76 @@
+{
+  "type": "fan-start",
+  "origin": "openverse",
+  "file": "sfx/openverse/fan-start/2d23b842-47e4-4167-adac-e0a33d080531-51df7cabf492.wav",
+  "sha256": "51df7cabf492494b7a665f9d2f56688b3ecc832ac921b22b8d692a4216416ac7",
+  "attribution": "\"Fan Start and Stop\" by alegemaate is marked with CC0 1.0. To view the terms, visit https://creativecommons.org/publicdomain/zero/1.0/.",
+  "result": {
+    "id": "2d23b842-47e4-4167-adac-e0a33d080531",
+    "title": "Fan Start and Stop",
+    "url": "https://cdn.freesound.org/previews/667/667277_2531187-hq.mp3",
+    "license": "cc0",
+    "source": "freesound",
+    "attribution": "\"Fan Start and Stop\" by alegemaate is marked with CC0 1.0. To view the terms, visit https://creativecommons.org/publicdomain/zero/1.0/.",
+    "foreign_landing_url": "https://freesound.org/people/alegemaate/sounds/667277",
+    "creator": "alegemaate",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_version": "1.0",
+    "provider": "freesound",
+    "filetype": "mp3",
+    "duration": 14730,
+    "filesize": 334578,
+    "mature": false,
+    "tags": [
+      {
+        "name": "electric"
+      },
+      {
+        "name": "fan"
+      },
+      {
+        "name": "machine"
+      },
+      {
+        "name": "motor"
+      },
+      {
+        "name": "start"
+      },
+      {
+        "name": "startup"
+      },
+      {
+        "name": "stop"
+      },
+      {
+        "name": "whir"
+      }
+    ],
+    "indexed_on": "2024-05-21T15:00:07.873258Z",
+    "creator_url": "https://freesound.org/people/alegemaate",
+    "category": null,
+    "genres": null,
+    "alt_files": [
+      {
+        "url": "https://freesound.org/apiv2/sounds/667277/download/",
+        "bit_rate": 0,
+        "filesize": 5197144,
+        "filetype": "wav",
+        "sample_rate": 44100
+      }
+    ],
+    "fields_matched": [
+      "description",
+      "title",
+      "tags.name"
+    ],
+    "audio_set": null,
+    "bit_rate": 128000,
+    "sample_rate": null,
+    "thumbnail": null,
+    "detail_url": "https://api.openverse.org/v1/audio/2d23b842-47e4-4167-adac-e0a33d080531/",
+    "related_url": "https://api.openverse.org/v1/audio/2d23b842-47e4-4167-adac-e0a33d080531/related/",
+    "waveform": "https://api.openverse.org/v1/audio/2d23b842-47e4-4167-adac-e0a33d080531/waveform/",
+    "unstable__sensitivity": []
+  }
+}

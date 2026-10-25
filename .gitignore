@@ -1,0 +1,28 @@
+node_modules/
+.next/
+.runtime/
+data/
+bin/ffmpeg
+*.log
+.DS_Store
+tsconfig.tsbuildinfo
+__pycache__/
+*.pyc
+
+# Secrets
+.env*
+!.env.example
+
+# Exports, renders and local workspace
+exports/
+archive/
+work/
+video-design/qa/
+video-design/references/frames-1s/
+*.mp4
+*.mov
+*.m4a
+*.zip
+
+# Personal files
+/*.pdf

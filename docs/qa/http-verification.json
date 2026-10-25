@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-18T00:14:14.009Z",
+  "checks": [
+    {
+      "name": "video Range206 and exact1024 byte payload",
+      "passed": true
+    },
+    {
+      "name": "out-of-range416",
+      "passed": true
+    },
+    {
+      "name": "database never served as media",
+      "passed": true
+    },
+    {
+      "name": "path traversal rejected",
+      "passed": true
+    },
+    {
+      "name": "cross-site mutation rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid project options rejected",
+      "passed": true
+    },
+    {
+      "name": "untrusted project id rejected",
+      "passed": true
+    },
+    {
+      "name": "false image signature rejected",
+      "passed": true
+    },
+    {
+      "name": "rejected requests create no projects or references",
+      "passed": true
+    }
+  ]
+}

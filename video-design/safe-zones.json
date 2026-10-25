@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "date": "2026-10-25",
+  "doc": "docs/safe-zones.md",
+  "frame": { "width": 1080, "height": 1920, "aspect": "9:16", "fps": 30 },
+  "scale": "Coordinates are 1080x1920 pixels. Pixel films (540x960 grid) use the same numbers x 0.5; other 9:16 sizes scale by width/1080.",
+  "levels": {
+    "ui": "Platform interface covers it. Background only: no text, numbers, faces, logos, cards, CTA, key action, landing point, highlight or sound accent.",
+    "captions": "Reserved for the subtitles. Nothing else that must be read or seen.",
+    "caution": "Covered on some apps, phones, ads or long descriptions. Large shapes, object edges, floor and secondary detail are fine; no key text, numbers, faces, CTA or accents.",
+    "edge": "May be cropped on tall phones and under rounded corners. No text or faces; objects may bleed out intentionally.",
+    "main": "Safe for everything important: text, numbers, faces, hero objects, CTA cards, accents."
+  },
+  "zones": [
+    { "id": "top-ui", "level": "ui", "x0": 0, "y0": 0, "x1": 1080, "y1": 250, "covers": "TikTok Following/For You tabs, LIVE, search; Reels header and camera; Shorts search, camera and menu; status bar" },
+    { "id": "top-caution", "level": "caution", "x0": 0, "y0": 250, "x1": 1080, "y1": 300, "covers": "Instagram 14% (269 px) and YouTube 288 px ad templates" },
+    { "id": "right-buttons", "level": "ui", "x0": 940, "y0": 800, "x1": 1080, "y1": 1500, "covers": "avatar, like, comment, save, share, remix, sound disc" },
+    { "id": "right-caution", "level": "caution", "x0": 880, "y0": 800, "x1": 940, "y1": 1500, "covers": "YouTube Shorts 192 px ad template; larger font/zoom settings" },
+    { "id": "lower-caution", "level": "caution", "x0": 0, "y0": 1250, "x1": 1080, "y1": 1360, "covers": "Meta 35%, TikTok 660 px and YouTube 672 px ad templates; long expanded descriptions" },
+    { "id": "captions", "level": "captions", "x0": 78, "y0": 1360, "x1": 940, "y1": 1500, "covers": "studio subtitles (karaoke row y1360, text about y1400-1490)" },
+    { "id": "bottom-ui", "level": "ui", "x0": 0, "y0": 1500, "x1": 1080, "y1": 1920, "covers": "username, follow, description, hashtags, sound, Shorts title and subscribe, progress bar, nav bar" },
+    { "id": "edge-left", "level": "edge", "x0": 0, "y0": 250, "x1": 70, "y1": 1500, "covers": "side crop of 9:16 on tall screens, rounded corners" },
+    { "id": "edge-right", "level": "edge", "x0": 1010, "y0": 250, "x1": 1080, "y1": 800, "covers": "side crop of 9:16 on tall screens, rounded corners" }
+  ],
+  "main": [
+    { "x0": 70, "y0": 300, "x1": 1010, "y1": 800 },
+    { "x0": 70, "y0": 800, "x1": 880, "y1": 1250 }
+  ],
+  "focus": { "x0": 140, "y0": 420, "x1": 880, "y1": 1250, "note": "hero objects, landings, key numbers; faces and eyes best at y 500-1000" },
+  "crops": {
+    "instagramFeed4x5": { "x0": 0, "y0": 285, "x1": 1080, "y1": 1635 },
+    "instagramGrid3x4": { "x0": 0, "y0": 240, "x1": 1080, "y1": 1680 }
+  }
+}

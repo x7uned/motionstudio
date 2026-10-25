@@ -1,0 +1,30 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "motion-studio",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "start"
+      ],
+      "port": 3210
+    },
+    {
+      "name": "outro-sounds",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "data/sound-packs/outro-8bit-01/serve.py"
+      ],
+      "port": 3212
+    },
+    {
+      "name": "pixel-lab-files",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "-e",
+        "const http=require(\"http\"),fs=require(\"fs\"),path=require(\"path\");const ROOT=path.resolve(\"work/pixel-lab\");const T={\".mp4\":\"video/mp4\",\".png\":\"image/png\",\".jpg\":\"image/jpeg\",\".html\":\"text/html\",\".txt\":\"text/plain; charset=utf-8\",\".wav\":\"audio/wav\"};http.createServer((q,s)=>{const f=path.join(ROOT,decodeURIComponent(q.url.split(\"?\")[0]));if(!f.startsWith(ROOT)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){s.writeHead(404);return s.end(\"not found\")}const n=fs.statSync(f).size,ty=T[path.extname(f)]||\"application/octet-stream\",r=/bytes=(\\d*)-(\\d*)/.exec(q.headers.range||\"\");if(r){const a=r[1]?+r[1]:0,b=r[2]?+r[2]:n-1;s.writeHead(206,{\"Content-Type\":ty,\"Content-Range\":`bytes ${a}-${b}/${n}`,\"Accept-Ranges\":\"bytes\",\"Content-Length\":b-a+1});fs.createReadStream(f,{start:a,end:b}).pipe(s)}else{s.writeHead(200,{\"Content-Type\":ty,\"Accept-Ranges\":\"bytes\",\"Content-Length\":n});fs.createReadStream(f).pipe(s)}}).listen(3220,\"127.0.0.1\",()=>console.log(\"pixel-lab files on http://127.0.0.1:3220\"));"
+      ],
+      "port": 3220
+    }
+  ]
+}

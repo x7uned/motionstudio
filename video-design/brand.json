@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "username": "@xtuned",
+  "avatar": "black-placeholder",
+  "font": "Manrope",
+  "colors": {
+    "background": "#000000",
+    "surface": "#1A1A16",
+    "card": "#120C1D",
+    "purple": "#8D59DA",
+    "lavender": "#E0CDF8",
+    "yellow": "#F4CA50",
+    "ivory": "#FDFEED",
+    "text": "#FFFFFF",
+    "muted": "#959595",
+    "green": "#65DA41",
+    "pink": "#E03056",
+    "purpleStroke": "#946ADE",
+    "yellowLine": "#FAE375",
+    "surfaceTop": "#2C2D28",
+    "surfaceBottom": "#1D1628"
+  }
+}

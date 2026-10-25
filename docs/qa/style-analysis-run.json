@@ -1,0 +1,29 @@
+{
+  "elapsedMs": 8650,
+  "events": [
+    {
+      "at": "2026-10-18T00:07:54.346Z",
+      "type": "thread.started"
+    },
+    {
+      "at": "2026-10-18T00:07:54.673Z",
+      "type": "turn.started"
+    },
+    {
+      "at": "2026-10-18T00:08:02.714Z",
+      "type": "item.completed",
+      "itemType": "agent_message"
+    },
+    {
+      "at": "2026-10-18T00:08:02.717Z",
+      "type": "turn.completed",
+      "usage": {
+        "input_tokens": 19192,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 344,
+        "reasoning_output_tokens": 0
+      }
+    }
+  ]
+}

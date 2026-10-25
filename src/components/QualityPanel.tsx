@@ -1,0 +1,10 @@
+"use client";
+type Any=Record<string,any>;
+export default function QualityPanel({review,onSeek,onReview,disabled}:{review:Any;onSeek:(time:number)=>void;onReview:()=>void;disabled:boolean}){
+ const q=review?.quality,a=review?.audioText;
+ return <section className="quality-panel"><div className="section-heading"><h3>Проверка готового файла</h3><button className="text-button" onClick={onReview} disabled={disabled}>Проверить MP4 заново</button></div>
+  {q&&<><p className="quiet">Извлечено кадров: {q.coverage.sampledFrames}. Проверка привязана к этой версии MP4. Проигрывание и выразительность голоса остаются за редактором.</p><div className="quality-coverage">{[["Декодирование",q.coverage.decoded],["Кадры моделью",q.coverage.frameModel],["Текст аудио через ASR",q.coverage.audioText],["OCR ключевых кадров",q.ocr?.available]].map(([name,ok])=><span className="badge" key={String(name)}>{name}: {ok?"проверено":"не проверено"}</span>)}</div>{q.sheets?.length>0&&<details><summary>Все контактные листы ({q.sheets.length})</summary><div className="quality-sheets">{q.sheets.map((s:string,i:number)=><a key={s} href={`/api/assets/${s}`} target="_blank" rel="noopener noreferrer">Кадры {i+1}</a>)}</div></details>}
+  {q.findings?.map((f:Any,i:number)=><article key={i} className="editor-note"><button className="text-button" onClick={()=>onSeek(f.start)}>{f.start.toFixed(2)}–{f.end.toFixed(2)} с</button><p>{f.detail}</p></article>)}</>}
+  {a&&<div className="editor-note"><strong>Содержание озвучки: {a.status==="pass"?"совпадает с распознаванием":a.status==="changes"?"есть расхождения":"проверка недоступна"}</strong><p>{a.error||a.note||"Распознавание может ошибаться в именах и числах. Оно не оценивает выразительность."}</p>{a.edits?.length>0&&<details><summary>Расхождения ({a.edits.length})</summary><ul>{a.edits.map((e:Any,i:number)=><li key={i}>{typeof e.at==="number"?<button className="text-button" onClick={()=>onSeek(e.at)}>{e.expected||"∅"} → {e.heard||"∅"}</button>:<span>{e.expected||"∅"} → {e.heard||"∅"}</span>}</li>)}</ul></details>}</div>}
+ </section>;
+}

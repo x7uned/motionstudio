@@ -1,0 +1,13 @@
+"use client";
+import {useState} from "react";
+export default function ScriptComparison({id,initial}:{id:string;initial:any}){
+ const [data,setData]=useState(initial),[scores,setScores]=useState<number[][]>(initial?.selection?.scores?.map((row:(number|null)[])=>row.map(v=>v??0))||[[0,0,0,0,0],[0,0,0,0,0]]),[comment,setComment]=useState(""),[busy,setBusy]=useState(false),[error,setError]=useState("");
+ async function send(action:string,winner?:number|"tie"){
+  setBusy(true);setError("");try{const r=await fetch("/api/preproduction",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({id,action,selection:data?{id:data.id,winner,scores:scores.map(row=>row.map(v=>v||null)),comment}:undefined})});const j=await r.json();if(!r.ok)throw new Error(j.error);setData(j.comparison);}catch(e){setError(e instanceof Error?e.message:"Не удалось сравнить тексты.");}finally{setBusy(false);}
+ }
+ return <details className="editor-note"><summary>Слепое сравнение сценария</summary><p className="quiet">Сравните две версии одной истории по пяти критериям. Их порядок скрыт до выбора. Числовые оценки необязательны. Это оценка текста, одобрение видео остаётся отдельным действием.</p>
+ {!data?<button className="secondary" disabled={busy} onClick={()=>void send("compare")}>Подготовить сравнение до и после редактуры</button>:<>
+ {data.candidates.map((c:any)=><article className="research-fact" key={c.choice}><h3>{c.label}{data.origins?` · ${data.origins[c.choice]}`:""}</h3><p className="narrative-text">{c.text}</p>{data.rubric.map((criterion:string,i:number)=><label className="comparison-score" key={criterion}>{criterion}<select disabled={busy||data.status==="selected"} aria-label={`${c.label}: ${criterion}`} value={scores[c.choice][i]} onChange={e=>setScores(prior=>prior.map((row,n)=>n===c.choice?row.map((v,j)=>j===i?Number(e.target.value):v):row))}><option value={0}>Без оценки</option>{[1,2,3,4,5].map(n=><option key={n} value={n}>{n} / 5</option>)}</select></label>)}</article>)}
+ {data.status==="selected"?<p>Оценка сохранена. Выбор: {data.selection.winner==="tie"?"равноценны":`текст ${String.fromCharCode(65+data.selection.winner)}`}.</p>:<><label>Комментарий<textarea maxLength={2000} value={comment} onChange={e=>setComment(e.target.value)}/></label><div className="research-downloads"><button className="secondary" disabled={busy} onClick={()=>void send("selectComparison",0)}>Выбираю текст A</button><button className="secondary" disabled={busy} onClick={()=>void send("selectComparison",1)}>Выбираю текст B</button><button className="text-button" disabled={busy} onClick={()=>void send("selectComparison","tie")}>Равноценны</button></div></>}
+ </>}{error&&<p className="inline-error" role="status">{error}</p>}</details>;
+}

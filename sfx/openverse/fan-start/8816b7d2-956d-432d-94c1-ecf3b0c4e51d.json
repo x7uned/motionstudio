@@ -1,0 +1,77 @@
+{
+  "type": "fan-start",
+  "origin": "openverse",
+  "file": "sfx/openverse/fan-start/8816b7d2-956d-432d-94c1-ecf3b0c4e51d-3a8f41a2c909.wav",
+  "sha256": "3a8f41a2c909ae7ced7474c454d9d536fd6b6d55011385cdbfb4a20c35bde052",
+  "attribution": "\"Xbox 360, Startup, idle. stereo.wav\" by Dan_AudioFile is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/.",
+  "result": {
+    "id": "8816b7d2-956d-432d-94c1-ecf3b0c4e51d",
+    "title": "Xbox 360, Startup, idle. stereo.wav",
+    "url": "https://cdn.freesound.org/previews/615/615276_12932169-hq.mp3",
+    "license": "by",
+    "source": "freesound",
+    "attribution": "\"Xbox 360, Startup, idle. stereo.wav\" by Dan_AudioFile is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/.",
+    "foreign_landing_url": "https://freesound.org/people/Dan_AudioFile/sounds/615276",
+    "creator": "Dan_AudioFile",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_version": "4.0",
+    "provider": "freesound",
+    "filetype": "mp3",
+    "duration": 8000,
+    "filesize": 189917,
+    "mature": false,
+    "tags": [
+      {
+        "name": "appliance"
+      },
+      {
+        "name": "electrical"
+      },
+      {
+        "name": "field-recording"
+      },
+      {
+        "name": "idle"
+      },
+      {
+        "name": "start-up"
+      },
+      {
+        "name": "xbox-360"
+      }
+    ],
+    "indexed_on": "2022-06-01T12:00:12.608809Z",
+    "creator_url": "https://freesound.org/people/Dan_AudioFile",
+    "category": null,
+    "genres": null,
+    "alt_files": [
+      {
+        "url": "https://freesound.org/apiv2/sounds/615276/download/",
+        "bit_rate": 0,
+        "filesize": 2129938,
+        "filetype": "wav",
+        "sample_rate": 44100
+      }
+    ],
+    "fields_matched": [
+      "description",
+      "tags.name"
+    ],
+    "audio_set": {
+      "title": "Electric Appliances Pack",
+      "foreign_landing_url": "https://freesound.org/apiv2/packs/33984/",
+      "creator": "Dan_AudioFile",
+      "creator_url": "https://freesound.org/people/Dan_AudioFile/",
+      "url": null,
+      "filesize": null,
+      "filetype": null
+    },
+    "bit_rate": 128000,
+    "sample_rate": null,
+    "thumbnail": null,
+    "detail_url": "https://api.openverse.org/v1/audio/8816b7d2-956d-432d-94c1-ecf3b0c4e51d/",
+    "related_url": "https://api.openverse.org/v1/audio/8816b7d2-956d-432d-94c1-ecf3b0c4e51d/related/",
+    "waveform": "https://api.openverse.org/v1/audio/8816b7d2-956d-432d-94c1-ecf3b0c4e51d/waveform/",
+    "unstable__sensitivity": []
+  }
+}

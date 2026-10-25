@@ -1,0 +1,85 @@
+{
+  "installedAt": "2026-10-18",
+  "skills": [
+    {
+      "name": "script-lite",
+      "repo": "tenfoldmarc/script-lite",
+      "commit": "f43b2e8c1695eab92a3974cdf62197f5d9e21426"
+    },
+    {
+      "name": "short-video-scripter",
+      "repo": "aaron-he-zhu/aaron-marketing-skills",
+      "commit": "0120b62d9c5b7714e32f2fce1591af4e2cfdde72"
+    },
+    {
+      "name": "content-research-writer",
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "commit": "be2a406907dbc61b73e6827ded415c96139d13a2"
+    },
+    {
+      "name": "tavily-search",
+      "repo": "tavily-ai/skills",
+      "commit": "778122e5f9c680f541eeceda5a5b36405eb7980c"
+    },
+    {
+      "name": "tavily-extract",
+      "repo": "tavily-ai/skills",
+      "commit": "778122e5f9c680f541eeceda5a5b36405eb7980c"
+    },
+    {
+      "name": "tavily-research",
+      "repo": "tavily-ai/skills",
+      "commit": "778122e5f9c680f541eeceda5a5b36405eb7980c"
+    },
+    {
+      "name": "tavily-cli",
+      "repo": "tavily-ai/skills",
+      "commit": "778122e5f9c680f541eeceda5a5b36405eb7980c"
+    },
+    {
+      "name": "tavily-best-practices",
+      "repo": "tavily-ai/skills",
+      "commit": "778122e5f9c680f541eeceda5a5b36405eb7980c"
+    },
+    {
+      "name": "reel-script-craft",
+      "repo": "imMeeto/midi-skills",
+      "commit": "8683dd9c8022b84c081647ca71a498b0e17ea552",
+      "license": "MIT",
+      "files": [
+        "skills/cp-script-short/SKILL.md",
+        "context/07-evidence.md"
+      ],
+      "adapted": "2026-10-19",
+      "mode": "manual rewrite for one continuous narration and persistent topology; filming/cuts and vendor statistics removed"
+    },
+    {
+      "name": "reel-script-craft",
+      "repo": "vyralcontent/content-skills",
+      "commit": "349e495d97029a3e6303a7510e3f39c73f36d8fe",
+      "license": "MIT",
+      "files": [
+        "skills/viral-short-form/references/retention.md"
+      ],
+      "adapted": "2026-10-19",
+      "mode": "but/therefore and three failure modes only; SKILL.md upsell not used"
+    },
+    {
+      "name": "claim-evidence-rules",
+      "repo": "elvisun/newsjack",
+      "commit": "3b7fb829c37119ee59ac64ee21dcc70f80b51935",
+      "license": "MIT",
+      "files": [
+        "skills/fact-check/SKILL.md"
+      ],
+      "adapted": "2026-10-19",
+      "mode": "methodology mapped to studio JSON statuses; markdown output and PR examples removed"
+    }
+  ],
+  "cli": {
+    "package": "tavily-cli",
+    "version": "0.1.8",
+    "path": ".runtime/research/bin/tvly"
+  },
+  "scope": "Project worker loads skill text explicitly; global skills available on next turn."
+}
