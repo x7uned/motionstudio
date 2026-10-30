@@ -189,7 +189,7 @@ async function main(){
   case "start":{
    if(a.foreground){if(enginePid(ROOT)){say(`Движок уже запущен (pid ${enginePid(ROOT)}).`);return 0;}say("Движок в этом терминале; Ctrl+C останавливает его (выполняющиеся задачи вернутся в очередь).");return runEngineForeground(ROOT);}
    const r=await startEngine(ROOT);
-   say(r.started?`Движок запущен в фоне (pid ${r.pid}), без Next.js. Журнал: ${path.relative(ROOT,enginePaths(ROOT).log)}`:`Движок уже запущен (pid ${r.pid}).`,"Состояние: npm run studio -- status");return 0;
+   say(r.started?`Движок запущен в фоне (pid ${r.pid}). Журнал: ${path.relative(ROOT,enginePaths(ROOT).log)}`:`Движок уже запущен (pid ${r.pid}).`,"Состояние: npm run studio -- status");return 0;
   }
   case "stop":{
    const pid=enginePid(ROOT);if(!pid){say("Движок не запущен.");return 0;}
