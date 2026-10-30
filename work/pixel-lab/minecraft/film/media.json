@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "logo-twitch-7fd57005",
+      "kind": "logo",
+      "subject": "Twitch",
+      "file": "0a0a0a0a-0000-4000-8000-00000000c0be/media/logo-twitch-7fd57005.png",
+      "sha256": "7fd57005a80e8d6b341ba8def882f9e16fb003a0e6e3500229a8c4ffb6767d7d",
+      "width": 439,
+      "height": 512,
+      "source": {
+        "wikidata": "Q4555537",
+        "label": "Twitch",
+        "description": "American live-streaming platform",
+        "property": "P8972",
+        "commonsFile": "Twitch Glitch Logo Purple.svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Twitch_Glitch_Logo_Purple.svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Twitch Interactive, Inc.",
+        "credit": "Twitch brand assets: https://brand.twitch.tv/downloads/twitch-brand-assets.zip",
+        "restrictions": "trademarked",
+        "attributionRequired": false,
+        "date": "2019-09-10",
+        "retrievedAt": "2026-10-22T22:01:19.030Z"
+      }
+    }
+  ],
+  "failed": []
+}

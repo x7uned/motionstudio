@@ -1,0 +1,12 @@
+{
+  "id": "4dd5053529d9213b95ed1145",
+  "name": "Спутник · студийная GLB",
+  "file": "4dd5053529d9213b95ed1145.glb",
+  "sha256": "4dd5053529d9213b95ed1145719c541880baf706a9c922075ef2319efbaaac96",
+  "bytes": 2796,
+  "vertices": 72,
+  "animations": [
+    "Panel swing"
+  ],
+  "rights": "Оригинальная модель Motion Studio, создана для проверки рендера."
+}

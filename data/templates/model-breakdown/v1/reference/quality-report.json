@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "artifactHash": "b552090e36350c4b97202cec776bf7d4cecb7d00f05b743a4e80bce855ad5d93",
+  "inputHash": "fc70434cdb4c03a18ea0db60a421fdf7147fb46d414539bf809ed7a26163a077",
+  "checkedAt": "2026-10-18T22:12:23.465Z",
+  "coverage": {
+    "decoded": true,
+    "sampledFrames": 396,
+    "frameModel": true,
+    "audioText": true,
+    "humanPlayback": false,
+    "humanListening": false
+  },
+  "findings": [
+    {
+      "kind": "safe-zone",
+      "start": 6.366666666666666,
+      "end": 6.466666666666666,
+      "detail": "OCR: «Воздух под давлением» выходит из проектной safe-zone. Проверьте кадр.",
+      "severity": "warning"
+    },
+    {
+      "kind": "safe-zone",
+      "start": 7.3,
+      "end": 7.3999999999999995,
+      "detail": "OCR: «Воздух под давлением» выходит из проектной safe-zone. Проверьте кадр.",
+      "severity": "warning"
+    },
+    {
+      "kind": "safe-zone",
+      "start": 7.9,
+      "end": 8,
+      "detail": "OCR: «Воздух под давлением» выходит из проектной safe-zone. Проверьте кадр.",
+      "severity": "warning"
+    },
+    {
+      "kind": "safe-zone",
+      "start": 9.766666666666667,
+      "end": 9.866666666666667,
+      "detail": "OCR: «Воздух под давлением» выходит из проектной safe-zone. Проверьте кадр.",
+      "severity": "warning"
+    },
+    {
+      "kind": "safe-zone",
+      "start": 36.233333333333334,
+      "end": 36.333333333333336,
+      "detail": "OCR: «Принцип и показанная машина» выходит из проектной safe-zone. Проверьте кадр.",
+      "severity": "warning"
+    },
+    {
+      "kind": "readability",
+      "start": 21.733,
+      "end": 27,
+      "detail": "Полностью появившиеся подписи «Реактивная сила вверх» и «Тяжесть направлена вниз» слишком мелкие относительно машины и основных титров. В общем вертикальном кадре направления стрелок различимы, но прочитать пояснения трудно; требуется увеличить подписи.",
+      "severity": "warning"
+    },
+    {
+      "kind": "readability",
+      "start": 32.7,
+      "end": 36.633,
+      "detail": "Подписи «Вентиляторы под днищем» и «Прижим к поверхности» очень мелкие относительно вертикального кадра. Даже при полной видимости их трудно разобрать рядом с детализированным шасси; требуется увеличить текст.",
+      "severity": "warning"
+    },
+    {
+      "kind": "readability",
+      "start": 41.9,
+      "end": 42,
+      "detail": "Одновременно с основным CTA видны бледные повторения «Хочешь узнать больше?» возле аватара и ниже него. Скрыть стандартный блок титров и подсветку слов при появлении брендированного финала.",
+      "severity": "warning"
+    }
+  ],
+  "status": "changes",
+  "visualEvidenceReuse": {
+    "sourceArtifactHash": "492647273d9d3654100068e1d4479df28d6d01651a96205c0c4b05c162b08d7b",
+    "videoStreamHash": "5b3bd3fc3a0d489711fc2a7ceb745755e7e27bf94650d9203a6b326005580282",
+    "identicalFrames": 396
+  }
+}

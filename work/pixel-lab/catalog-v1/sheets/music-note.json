@@ -1,0 +1,33 @@
+{
+ "kind": "music-note",
+ "states": [
+  "quiet",
+  "play",
+  "many",
+  "fade"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 37,
+  "hh": 63
+ },
+ "measured": {
+  "hw": 37,
+  "hh": 63,
+  "box": [
+   234,
+   357,
+   299,
+   429
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 20.4,
+ "maxFramePx": 633,
+ "maxNovelPx": 180
+}

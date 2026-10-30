@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "selection": "uniform-random-on-project-creation",
+  "excluded": [
+    "07"
+  ],
+  "renderer": "renderer/StudioBackground.tsx",
+  "rendererHash": "040506844b70c705fae7d0703f90cbb65322e33fe5072ad32ce961ca1c82e757",
+  "assets": [
+    {
+      "id": "01",
+      "name": "Точечная матрица",
+      "file": "01.png",
+      "sha256": "d66247192d9d66172b74fb879cab1878e785bedcca55434b80fb3047fc1010e8"
+    },
+    {
+      "id": "02",
+      "name": "Инженерная сетка",
+      "file": "02.png",
+      "sha256": "a5acba6bbfba307b9065871ac2478040afa10148a69127235cb5613942e23b81"
+    },
+    {
+      "id": "03",
+      "name": "Звёздная пыль",
+      "file": "03.png",
+      "sha256": "2c7d6f5a9dc7801a17cc3cb5840c58d0ffdf46c91ccc96059e7b6648b99ced33"
+    },
+    {
+      "id": "04",
+      "name": "Топографические линии",
+      "file": "04.png",
+      "sha256": "3933c09f2a54ad42df109a4400779eeaa271799e2ddf1b375c7f3d2ca7f3b7d7"
+    },
+    {
+      "id": "05",
+      "name": "Мягкий свет",
+      "file": "05.png",
+      "sha256": "e9ee9bbe860fb945a82a01c576c5b3df9a0c14eb72dbcf7a7f42077f30bd3745"
+    },
+    {
+      "id": "06",
+      "name": "Диагональная штриховка",
+      "file": "06.png",
+      "sha256": "f6678c2328fcaef34942f8d2bf32e57999f8c474ffeb43c0bf826a954d1865ec"
+    },
+    {
+      "id": "08",
+      "name": "Дымчатое стекло",
+      "file": "08.png",
+      "sha256": "b3df6a1e8653310f3f84903d8277c13a50ee3508cf9cfed005e713b9700a0c6d"
+    },
+    {
+      "id": "09",
+      "name": "Поток линий",
+      "file": "09.png",
+      "sha256": "c7fd8eb2fe1f8bca3f2bf5e980e2ca957e9d9f66c15908c5455f5c70978f7872"
+    },
+    {
+      "id": "10",
+      "name": "Печатная плата",
+      "file": "10.png",
+      "sha256": "1838eebe6830fc1081a3bc7fd5bf83a7623f7cebe3409e7c7bf117d9a19f36cc"
+    }
+  ],
+  "assetOpacity": 1,
+  "productionDefaultOpacity": 0.5,
+  "productionRendererHash": "50a421a3d39da9fe01b39c26862c827330ae3f2017c90fa5b27dd78e69a083d3",
+  "rendererHashScope": "Original asset-generating renderer; productionRendererHash includes opacity wrapper"
+}

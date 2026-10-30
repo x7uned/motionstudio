@@ -1,0 +1,35 @@
+{
+ "kind": "leaf",
+ "states": [
+  "still",
+  "sway",
+  "droop",
+  "glow",
+  "autumn",
+  "fall"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 66,
+  "hh": 86
+ },
+ "measured": {
+  "hw": 99,
+  "hh": 101,
+  "box": [
+   163,
+   342,
+   356,
+   521
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 5,
+ "pure": true,
+ "frames": 282,
+ "msPerFrame": 22.5,
+ "maxFramePx": 6686,
+ "maxNovelPx": 2570
+}

@@ -1,0 +1,34 @@
+{
+ "kind": "heat-glow",
+ "states": [
+  "faint",
+  "warm",
+  "hot",
+  "pulse",
+  "cool"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 76,
+  "hh": 96
+ },
+ "measured": {
+  "hw": 82,
+  "hh": 116,
+  "box": [
+   180,
+   312,
+   344,
+   536
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 232,
+ "msPerFrame": 21.6,
+ "maxFramePx": 3196,
+ "maxNovelPx": 739
+}

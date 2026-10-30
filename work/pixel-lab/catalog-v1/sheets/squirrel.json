@@ -1,0 +1,33 @@
+{
+ "kind": "squirrel",
+ "states": [
+  "sit",
+  "nibble",
+  "alert",
+  "drop"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 66,
+  "hh": 74
+ },
+ "measured": {
+  "hw": 66,
+  "hh": 74,
+  "box": [
+   196,
+   346,
+   326,
+   486
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 23.8,
+ "maxFramePx": 2197,
+ "maxNovelPx": 693
+}

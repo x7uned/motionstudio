@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "sourceArtifactHash": "b552090e36350c4b97202cec776bf7d4cecb7d00f05b743a4e80bce855ad5d93",
+  "humanApproved": false,
+  "templateAcceptedByUser": true,
+  "files": {
+    "brand.json": "8a944dc1cf6bfc99d8a1adc41cc60244e4c45210943ece9afc661f5342d20670",
+    "VOICE.md": "1b5318a7555758ee0f4451240a49e6e931d76c73ff9f0b24167a085f1d5e4ce4",
+    "settings.json": "1ea0d8cc2ddb783b4cc5910124176a19d4cfc0e6c08b2c78eaf27248fd7ac426",
+    "template.json": "ca7c609c0519a04289a98803c49beb0ecc7072d8bfde9d2b831629ab4bf504ad",
+    "CONTENT.md": "31dc0da3c4edd45d58c6457a6356165620f78874b4fe81e88e0e1d4cd551de1d",
+    "MOTION.md": "c0a7553f73e40e148285e1bc6da1ebd4621741033b446bab532f80b3f4b98c94",
+    "WORKFLOW.md": "ee1716dc45aee2b26a27de85fc1ecd7f96218f89b43b8fa0cc8190387f0ff754",
+    "README.md": "cb9b6fe11dd08ad9ea46400428116dd70944f9d478f2ae278b4875e30ca1d6e9",
+    "CHECKLIST.md": "2c03ecf498de1914c1c115ada906aef6de1eea950fbd7be84e0105fa7d94e896",
+    "DESIGN.md": "b8c5d1645ef4f6b3408c56fefeb218704056cdefea346060a1b532802c8dbc78",
+    "assets/credits.txt": "1a74db96ed6b5e1ee93cb27a7a9db94461fcf98e077e8cd106364a21c2868104",
+    "assets/dennis-avatar.png": "eb1c22f520e83909f34c8096bd7c3757cd539aa4ec4edfe081983b487b9c53e8",
+    "reference/encoded-audio-verification.json": "7b7f91924be17e89bab9fc0313a4c8863215a13e0c8cb74e86adbd8aefb4ff2f",
+    "reference/script.md": "e1d3c1d865879b78641514c3ecda4085b7ce50bfd75334e6ab89bcea5e4bfe4a",
+    "reference/video.mp4": "b552090e36350c4b97202cec776bf7d4cecb7d00f05b743a4e80bce855ad5d93",
+    "reference/storyboard.json": "e3114511dd7b39db6d323fcc7a111996bfbc3e37268e6e3589cd8f8085c5b1a4",
+    "reference/contact-sheet.png": "02e57e5bed42e3642c699f0ac7af99731626d5d793c25d5d4aa7636414af8f73",
+    "reference/sound-cues.json": "4bb52d19e7181a7533abf633bee1a0dc924df4f6de297aaffc2bd7bcb11602ba",
+    "reference/sound-mix-report.json": "87e72283962c455f6eb4cf3ed87e9e9d224c0adf02f4a9d942a34bfed0106be2",
+    "reference/quality-report.json": "5c82de2127a76c06af2a2d11332a37d2107e3fce23a7424c401bbb26d5884c48",
+    "assets/sfx/51df7cabf492494b7a665f9d2f56688b3ecc832ac921b22b8d692a4216416ac7.wav": "51df7cabf492494b7a665f9d2f56688b3ecc832ac921b22b8d692a4216416ac7",
+    "reference/poster.jpg": "21bb009e45c5cc5028f434dd338abe1b63ca1e3f37a15703979b144f6202042c"
+  }
+}

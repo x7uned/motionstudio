@@ -1,0 +1,34 @@
+{
+ "kind": "scent-trail",
+ "states": [
+  "faint",
+  "strong",
+  "puff",
+  "fade",
+  "toward"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 70,
+  "hh": 86
+ },
+ "measured": {
+  "hw": 91,
+  "hh": 92,
+  "box": [
+   208,
+   328,
+   353,
+   491
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 226,
+ "msPerFrame": 20.8,
+ "maxFramePx": 1478,
+ "maxNovelPx": 830
+}

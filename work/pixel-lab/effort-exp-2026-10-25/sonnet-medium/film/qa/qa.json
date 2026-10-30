@@ -1,0 +1,20 @@
+{
+ "file": "pumpkin-face-sonnet-medium.mp4",
+ "frames": 300,
+ "frames_ok": true,
+ "video_s": 10,
+ "audio_s": 10.005,
+ "seam_picture_meanabs": 7.942,
+ "neighbour_frames_meanabs": [
+  0.078,
+  0.083,
+  0.233
+ ],
+ "seam_audio_jump": 0.0045,
+ "audio_typical_step": 0.0413,
+ "loudness_LUFS": -15.9,
+ "true_peak_dBFS": -7.1,
+ "LRA": 1.2,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

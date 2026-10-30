@@ -5,7 +5,7 @@ from elevenlabs_speech import synthesize
 
 async def main():
  root=pathlib.Path(sys.argv[1]);ffmpeg=sys.argv[2]
- data=json.loads((root/'render.json').read_text());plan=data['plan'];voice=data['voice'];rate=48000
+ data=json.loads((root/'render.json').read_text(encoding='utf-8'));plan=data['plan'];voice=data['voice'];rate=48000
  provider=data.get('ttsProvider') or os.environ.get('STUDIO_TTS_PROVIDER') or 'edge'
  if provider not in ('edge','elevenlabs'):raise ValueError('Неизвестный провайдер озвучки.')
  segments=synthesize(root,plan,ffmpeg,data.get('maxDuration'),data.get('paidGate')) if voice and provider=='elevenlabs' else None
@@ -49,7 +49,7 @@ async def main():
     if pos+j<total:mixed[pos+j]+=v/32768*.8
    words=[]
    tokens=re.findall(r"[A-Za-zА-Яа-яЁё0-9]+(?:[-‑][A-Za-zА-Яа-яЁё0-9]+)*[.,!?;:]*",text);token_index=0
-   for line in (root/f'{i}-words.jsonl').read_text().splitlines():
+   for line in (root/f'{i}-words.jsonl').read_text(encoding='utf-8').splitlines():
     w=json.loads(line)
     if w.get('type')=='WordBoundary':
      ws=start+.32+(w['offset']/1e7-lo/rate)/speed
@@ -62,18 +62,18 @@ async def main():
    alignment.append({'scene':i+1,'start':start+.32,'end':(pos+len(samples))/rate,'sceneEnd':start+s['seconds'],'speed':speed,'text':text,'words':words})
   start+=s['seconds']
  if segments is None:
-  (root/'speech-provider.json').write_text(json.dumps({'provider':'edge' if voice else 'none','voice':'ru-RU-SvetlanaNeural' if voice else None},indent=2))
+  (root/'speech-provider.json').write_text(json.dumps({'provider':'edge' if voice else 'none','voice':'ru-RU-SvetlanaNeural' if voice else None},indent=2),encoding='utf-8')
  # Verify the actual word clock, including chapter boundaries, before mixing the bed.
  if segments is not None:
   all_words=[w for a in alignment for w in a['words']]
   gaps=[{'after':l['text'],'before':r['text'],'seconds':round(r['start']-l['end'],4)} for l,r in zip(all_words,all_words[1:])]
   chapter_gaps=[round(b['words'][0]['start']-a['words'][-1]['end'],4) for a,b in zip(alignment,alignment[1:])]
   rhythm={'maxWordGap':max((g['seconds'] for g in gaps),default=0),'chapterGaps':chapter_gaps,'duration':total/rate,'speed':1,'limit':1.5,'passed':all(g['seconds']<=1.5 for g in gaps),'mode':'continuous' if continuous else 'segmented','insertedInterSceneSilenceSeconds':0 if continuous else None}
-  (root/'speech-rhythm.json').write_text(json.dumps(rhythm,ensure_ascii=False,indent=2))
+  (root/'speech-rhythm.json').write_text(json.dumps(rhythm,ensure_ascii=False,indent=2),encoding='utf-8')
   preserving=(root/'voice-plan.json').exists()
   rhythm['naturalPausesPreserved']=preserving
   rhythm['warnings']=[g for g in gaps if g['seconds']>1.5]
-  (root/'speech-rhythm.json').write_text(json.dumps(rhythm,ensure_ascii=False,indent=2))
+  (root/'speech-rhythm.json').write_text(json.dumps(rhythm,ensure_ascii=False,indent=2),encoding='utf-8')
   if not rhythm['passed'] and not preserving:raise ValueError('ElevenLabs: пауза между словами превышает 1,5 с. Монтаж остановлен для проверки.')
   voice_pcm=array.array('h',(max(-32767,min(32767,round(v*32767))) for v in mixed))
   with wave.open(str(root/'narration.wav'),'wb') as f:f.setnchannels(1);f.setsampwidth(2);f.setframerate(rate);f.writeframes(voice_pcm.tobytes())
@@ -92,7 +92,7 @@ async def main():
  pcm=array.array('h',(max(-32767,min(32767,round(v*32767))) for v in mixed))
  with wave.open(str(root/'premix.wav'),'wb') as f:f.setnchannels(1);f.setsampwidth(2);f.setframerate(rate);f.writeframes(pcm.tobytes())
  subprocess.run([ffmpeg,'-y','-v','error','-i',str(root/'premix.wav'),'-af','loudnorm=I=-16:TP=-1.5:LRA=9','-ar','48000','-ac','2',str(root/'audio.wav')],check=True)
- (root/'alignment.json').write_text(json.dumps(alignment,ensure_ascii=False,indent=2))
+ (root/'alignment.json').write_text(json.dumps(alignment,ensure_ascii=False,indent=2),encoding='utf-8')
 if __name__=='__main__':
  try:asyncio.run(main())
  except ValueError as error:

@@ -1,0 +1,34 @@
+{
+ "kind": "traffic-light",
+ "states": [
+  "red",
+  "amber",
+  "green",
+  "walk",
+  "blink"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 42,
+  "hh": 80
+ },
+ "measured": {
+  "hw": 42,
+  "hh": 82,
+  "box": [
+   220,
+   338,
+   303,
+   491
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 219,
+ "msPerFrame": 21,
+ "maxFramePx": 1357,
+ "maxNovelPx": 398
+}

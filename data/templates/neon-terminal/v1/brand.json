@@ -1,0 +1,22 @@
+{
+  "handle": "@xtuned",
+  "colors": {
+    "background": "#030507",
+    "text": "#FDFEED",
+    "purple": "#8D59DA",
+    "green": "#65DA41",
+    "cyan": "#4FD8E8",
+    "lilac": "#B98CFF",
+    "yellow": "#F4CA50",
+    "lavender": "#E0CDF8",
+    "dots": "#1C3527",
+    "muted": "#959595"
+  },
+  "fonts": [
+    "JetBrains Mono 400/700 — подписи, лог, капсулы, hex",
+    "Manrope Variable — тема в шапке"
+  ],
+  "libraries": [
+    "PixiJS 8 + pixi-filters (AdvancedBloom, CRT, Glitch, RGBSplit) — нужен WebGL (gl: angle)"
+  ]
+}

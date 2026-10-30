@@ -1,0 +1,19 @@
+{
+ "file": "dog-wet-nose-pixel.mp4",
+ "frames": 1557,
+ "video_s": 51.9,
+ "audio_s": 51.904,
+ "seam_picture_meanabs": 1.283,
+ "neighbour_frames_meanabs": [
+  1.003,
+  1.47,
+  0.399
+ ],
+ "seam_audio_jump": 0.0013,
+ "audio_typical_step": 0.0116,
+ "loudness_LUFS": -16.5,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.2,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

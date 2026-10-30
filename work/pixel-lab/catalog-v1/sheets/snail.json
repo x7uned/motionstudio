@@ -1,0 +1,33 @@
+{
+ "kind": "snail",
+ "states": [
+  "glide",
+  "look",
+  "push",
+  "stop"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 76,
+  "hh": 72
+ },
+ "measured": {
+  "hw": 76,
+  "hh": 76,
+  "box": [
+   186,
+   344,
+   336,
+   485
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 193,
+ "msPerFrame": 22.5,
+ "maxFramePx": 2457,
+ "maxNovelPx": 788
+}

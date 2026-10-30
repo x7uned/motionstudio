@@ -1,0 +1,256 @@
+{
+ "prices": {
+  "in": 4,
+  "out": 20,
+  "w1h": 8,
+  "w5": 5,
+  "read": 0.2
+ },
+ "staticPrefixTokens": 5637,
+ "rows": [
+  {
+   "run": "bats-low",
+   "topic": "bats",
+   "effort": "low",
+   "status": "ok",
+   "calls": [
+    {
+     "label": "call-1",
+     "cli": 0.0284824,
+     "check": 0.028482,
+     "input": 2,
+     "cacheWrite": 366,
+     "cacheRead": 5932,
+     "output": 1218,
+     "thinking": 444,
+     "seconds": 13.5,
+     "apiSeconds": 12.4
+    },
+    {
+     "label": "call-2",
+     "cli": 0.029695400000000004,
+     "check": 0.029695,
+     "input": 2,
+     "cacheWrite": 1360,
+     "cacheRead": 5637,
+     "output": 884,
+     "thinking": 114,
+     "seconds": 8.9,
+     "apiSeconds": 7.9
+    }
+   ],
+   "retry": true,
+   "retryReason": [
+    "the narration runs to 8.6 s; it must end by 8.45 s (shorter sentences, fewer words)"
+   ],
+   "repairs": [],
+   "cli": 0.0582,
+   "output": 2102,
+   "thinking": 558,
+   "seconds": 22.4,
+   "apiWarm": 0.0524,
+   "apiCold": 0.0964
+  },
+  {
+   "run": "bats-medium",
+   "topic": "bats",
+   "effort": "medium",
+   "status": "ok",
+   "calls": [
+    {
+     "label": "call-1",
+     "cli": 0.0341354,
+     "check": 0.034135,
+     "input": 2,
+     "cacheWrite": 660,
+     "cacheRead": 5637,
+     "output": 1386,
+     "thinking": 650,
+     "seconds": 15.6,
+     "apiSeconds": 14.7
+    },
+    {
+     "label": "call-2",
+     "cli": 0.0359994,
+     "check": 0.035999,
+     "input": 2,
+     "cacheWrite": 1323,
+     "cacheRead": 5637,
+     "output": 1214,
+     "thinking": 479,
+     "seconds": 14.2,
+     "apiSeconds": 13.1
+    }
+   ],
+   "retry": true,
+   "retryReason": [
+    "the narration runs to 9.5 s; it must end by 8.45 s (shorter sentences, fewer words)"
+   ],
+   "repairs": [],
+   "cli": 0.0701,
+   "output": 2600,
+   "thinking": 1129,
+   "seconds": 29.8,
+   "apiWarm": 0.0622,
+   "apiCold": 0.1062
+  },
+  {
+   "run": "pumpkin-low",
+   "topic": "pumpkin",
+   "effort": "low",
+   "status": "ok",
+   "calls": [
+    {
+     "label": "call-1",
+     "cli": 0.023007200000000005,
+     "check": 0.023007,
+     "input": 2,
+     "cacheWrite": 367,
+     "cacheRead": 6016,
+     "output": 943,
+     "thinking": 0,
+     "seconds": 9.2,
+     "apiSeconds": 8.3
+    }
+   ],
+   "retry": false,
+   "retryReason": [],
+   "repairs": [
+    "c: slot top → top-right (overlap)"
+   ],
+   "cli": 0.023,
+   "output": 943,
+   "thinking": 0,
+   "seconds": 9.2,
+   "apiWarm": 0.023,
+   "apiCold": 0.067
+  },
+  {
+   "run": "pumpkin-medium",
+   "topic": "pumpkin",
+   "effort": "medium",
+   "status": "ok",
+   "calls": [
+    {
+     "label": "call-1",
+     "cli": 0.081052,
+     "check": 0.081052,
+     "input": 2,
+     "cacheWrite": 6383,
+     "cacheRead": 0,
+     "output": 1499,
+     "thinking": 548,
+     "seconds": 15.7,
+     "apiSeconds": 14.7
+    }
+   ],
+   "retry": false,
+   "retryReason": [],
+   "repairs": [
+    "c: slot top → top-right (overlap)"
+   ],
+   "cli": 0.0811,
+   "output": 1499,
+   "thinking": 548,
+   "seconds": 15.7,
+   "apiWarm": 0.0341,
+   "apiCold": 0.0781
+  },
+  {
+   "run": "sunlight-low",
+   "topic": "sunlight",
+   "effort": "low",
+   "status": "ok",
+   "calls": [
+    {
+     "label": "call-1",
+     "cli": 0.0309346,
+     "check": 0.030935,
+     "input": 2,
+     "cacheWrite": 365,
+     "cacheRead": 5933,
+     "output": 1341,
+     "thinking": 394,
+     "seconds": 14,
+     "apiSeconds": 13
+    },
+    {
+     "label": "call-2",
+     "cli": 0.036827399999999996,
+     "check": 0.036827,
+     "input": 2,
+     "cacheWrite": 1514,
+     "cacheRead": 5637,
+     "output": 1179,
+     "thinking": 235,
+     "seconds": 12,
+     "apiSeconds": 11
+    }
+   ],
+   "retry": true,
+   "retryReason": [
+    "the narration runs to 8.6 s; it must end by 8.45 s (shorter sentences, fewer words)"
+   ],
+   "repairs": [],
+   "cli": 0.0678,
+   "output": 2520,
+   "thinking": 629,
+   "seconds": 26,
+   "apiWarm": 0.0614,
+   "apiCold": 0.1054
+  },
+  {
+   "run": "sunlight-medium",
+   "topic": "sunlight",
+   "effort": "medium",
+   "status": "ok",
+   "calls": [
+    {
+     "label": "call-1",
+     "cli": 0.037751400000000004,
+     "check": 0.037751,
+     "input": 2,
+     "cacheWrite": 662,
+     "cacheRead": 5637,
+     "output": 1566,
+     "thinking": 703,
+     "seconds": 16.2,
+     "apiSeconds": 15.5
+    }
+   ],
+   "retry": false,
+   "retryReason": [],
+   "repairs": [],
+   "cli": 0.0378,
+   "output": 1566,
+   "thinking": 703,
+   "seconds": 16.2,
+   "apiWarm": 0.0351,
+   "apiCold": 0.0791
+  }
+ ],
+ "summary": {
+  "medium": {
+   "films": 3,
+   "cliMean": 0.063,
+   "cliMax": 0.0811,
+   "apiWarmMean": 0.0438,
+   "apiColdMean": 0.0878,
+   "outputMean": 1888,
+   "thinkingMean": 793,
+   "secondsMean": 20.5667,
+   "retries": 1
+  },
+  "low": {
+   "films": 3,
+   "cliMean": 0.0497,
+   "cliMax": 0.0678,
+   "apiWarmMean": 0.0456,
+   "apiColdMean": 0.0896,
+   "outputMean": 1855,
+   "thinkingMean": 396,
+   "secondsMean": 19.2,
+   "retries": 2
+  }
+ }
+}

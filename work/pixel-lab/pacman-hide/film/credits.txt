@@ -1,0 +1,11 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), своя мелодия; без музыки, сирены и звуков оригинальной игры.
+Картинка: нарисована в коде. Лабиринт (свой, 21×26, из ролика про призраков; его участок у старта повторяет устройство оригинала: «Т» под домиком и два коротких прохода вверх из ряда старта), спрайты, панели, корпус и панель автомата — свои рисунки, не графика аркады и не оригинальная карта. Призраки весь ролик живут по правилам Dossier в режиме погони с запретом поворота вверх на четырёх клетках; Pac-Man стоит в укрытии.
+Pac-Man — товарный знак Bandai Namco Entertainment; ролик объясняет правила игры и не связан с правообладателем.
+
+Источники фактов (подробно — ../facts.md и ../research.md):
+- Jamey Pittman, The Pac-Man Dossier, разделы Areas To Exploit, Looking Ahead, Scatter Chase Repeat, Frightening Behavior: https://pacman.holenet.info/
+- Chad Birch, Understanding Pac-Man Ghost Behavior (GameInternals, 2010; архив): https://web.archive.org/web/20201213134620/https://gameinternals.com/understanding-pac-man-ghost-behavior
+- StrategyWiki, Pac-Man/Tips, «The safe spot»: https://strategywiki.org/wiki/Pac-Man/Tips
+- pacman.js (Shaun Williams), src/maps.js — те же четыре клетки: https://github.com/masonicGIT/pacman
+- Jamey Pittman, «New Pac-Man Cheat» (2011, форум classicarcadegaming): без запрета «classic hiding spot no longer works».

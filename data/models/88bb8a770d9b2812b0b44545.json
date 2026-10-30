@@ -1,0 +1,12 @@
+{
+  "id": "88bb8a770d9b2812b0b44545",
+  "name": "Спутник · embedded GLTF",
+  "file": "88bb8a770d9b2812b0b44545.gltf",
+  "sha256": "88bb8a770d9b2812b0b445454c6f13944ad045faa3668e91318812806549fa2c",
+  "bytes": 3293,
+  "vertices": 72,
+  "animations": [
+    "Panel swing"
+  ],
+  "rights": "Оригинальная модель Motion Studio, самостоятельный GLTF со встроенными буферами."
+}

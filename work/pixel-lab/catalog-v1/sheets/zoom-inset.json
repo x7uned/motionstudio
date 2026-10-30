@@ -1,0 +1,33 @@
+{
+ "kind": "zoom-inset",
+ "states": [
+  "show",
+  "zoom",
+  "sweep",
+  "close"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 68,
+  "hh": 68
+ },
+ "measured": {
+  "hw": 105,
+  "hh": 70,
+  "box": [
+   189,
+   350,
+   367,
+   481
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 21.2,
+ "maxFramePx": 3354,
+ "maxNovelPx": 2660
+}

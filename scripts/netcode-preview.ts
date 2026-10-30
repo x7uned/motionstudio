@@ -2,6 +2,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import {bundle} from "@remotion/bundler";
+import {bundleLive} from "../src/lib/remotion-bundle";
 import {selectComposition,renderStill} from "@remotion/renderer";
 import sharp from "sharp";
 import {DATA,ROOT} from "../src/lib/store";
@@ -19,7 +20,7 @@ async function main(){
  const profile=JSON.parse(await fs.readFile(path.join(dir,"context.json"),"utf8")).profile;
  const props={plan,profile,format:"9:16",alignment,models:verifyModelSnapshot(dir),modelBase:`${id}/models`};
  await fs.mkdir(out,{recursive:true});
- const serveUrl=await bundle({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects"),symlinkPublicDir:true});
+ const serveUrl=await bundleLive({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects")});
  const comp=await selectComposition({serveUrl,id:"StudioFilm",inputProps:props,browserExecutable:CHROME,chromiumOptions:{gl:"angle"}});
  const thumbs:Buffer[]=[];
  for(const s of times){

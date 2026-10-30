@@ -140,7 +140,7 @@ test("a project snapshots its style; editing the author profile affects only fut
 });
 
 test("persistent generation removes parent chat metadata while preserving the normal user environment", async () => {
-  const binary = path.join(temp, "fake-codex");
+  const binary = path.join(temp, "fake-codex.cjs");
   fs.writeFileSync(
     binary,
     `#!/usr/bin/env node\nconst fs=require('node:fs');const args=process.argv.slice(2);const out=args[args.indexOf('-o')+1];fs.writeFileSync(out,JSON.stringify({threadCleared:!('CODEX_THREAD_ID' in process.env),pipeCleared:!('CODEX_APP_TOOLS_PIPE_PATH' in process.env),homePresent:!!process.env.HOME,voiceKeyCleared:!('ELEVENLABS_API_KEY' in process.env)}));console.log(JSON.stringify({type:'turn.completed',usage:{input_tokens:1,output_tokens:1}}));\n`,
@@ -199,7 +199,7 @@ test("chapter labels and caption envelopes are continuous at every boundary", ()
 });
 
 test("scenario agent receives exact model and xhigh, Unicode stdin, without research credentials", async () => {
-  const binary = path.join(temp, "fake-codex");
+  const binary = path.join(temp, "fake-codex.cjs");
   fs.writeFileSync(
     binary,
     `#!/usr/bin/env node

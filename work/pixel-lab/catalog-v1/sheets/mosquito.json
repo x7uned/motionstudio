@@ -1,0 +1,35 @@
+{
+ "kind": "mosquito",
+ "states": [
+  "hover",
+  "fly",
+  "look",
+  "bite",
+  "full",
+  "crown"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 76,
+  "hh": 74
+ },
+ "measured": {
+  "hw": 101,
+  "hh": 80,
+  "box": [
+   161,
+   345,
+   338,
+   500
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 259,
+ "msPerFrame": 21.6,
+ "maxFramePx": 4421,
+ "maxNovelPx": 4173
+}

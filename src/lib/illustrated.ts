@@ -219,65 +219,156 @@ export function solveCamera(p:IllustratedPlan,scenes:Clock,alignment:Alignment=[
  return changed;
 }
 
-/** opts.coverage=1 — the experimental coverage mode (opt-in per project): every sentence shown, no long still stretches. */
-export function validateIllustrated(raw:unknown,plan:{title:string;summary?:string;scenes:Clock;media?:readonly MediaAsset[];creatorOutro?:{sceneId:string}|null;loopEnding?:{version:1}|null},alignment:Alignment=[],opts:{coverage?:number}={}):IllustratedPlan{
- const prepared=raw&&typeof raw==="object"&&Array.isArray((raw as any).camera)?{...(raw as any),camera:(raw as any).camera.map((c:any)=>({...c,zoom:typeof c?.zoom==="number"?Math.max(.5,c.zoom):c?.zoom}))}:raw;
- const result=illustratedSchema.parse(prepared),scenes=plan.scenes,total=scenes.reduce((n,s)=>n+s.seconds,0),vocabulary=corpus(plan);
- const check=(a:Anchor3D,what:string)=>{
-  if(!scenes[a.scene-1])throw new Error(`Иллюстрация: ${what} ссылается на несуществующую главу ${a.scene}.`);
-  if(a.cue&&!(scenes[a.scene-1].narration||"").split(/\s+/).some(s=>word(s)===word(a.cue)))throw new Error(`Иллюстрация: слова «${a.cue}» нет в главе ${a.scene} (${what}).`);
-  const t=anchorTime(a,scenes,alignment);if(t<0||t>total+.01)throw new Error(`Иллюстрация: ${what} за пределами ролика.`);return t;
+/** A broken rule of a director plan. `ref` names the element, so a deterministic repair can drop a decorative one. */
+export type IllustratedIssueRef={kind:"plan"}|{kind:"object";id:string;field?:"label"}|{kind:"key";id:string;list:"active"|"moves";index:number}
+ |{kind:"camera";index:number;late?:boolean}|{kind:"flow"|"callout"|"bigWord"|"mode";index:number};
+export type IllustratedIssue={ref:IllustratedIssueRef;message:string};
+type IssueReport=(ref:IllustratedIssueRef,message:string)=>void;
+type IllustratedInput={title:string;summary?:string;scenes:Clock;media?:readonly MediaAsset[];creatorOutro?:{sceneId:string}|null;loopEnding?:{version:1}|null};
+const errorText=(e:unknown)=>e instanceof Error?e.message:String(e);
+
+/** opts.coverage=1 — the experimental coverage mode (opt-in per project): every sentence shown, no long still stretches.
+ *  Strict: throws the first broken rule, the same message in the same order as before the issue list (2026-10-25). */
+export function validateIllustrated(raw:unknown,plan:IllustratedInput,alignment:Alignment=[],opts:{coverage?:number}={}):IllustratedPlan{
+ return inspectIllustrated(raw,plan,alignment,opts,(_ref,message)=>{throw new Error(message);});
+}
+/** Every broken rule at once (user decision 2026-10-25, «починки режиссёра»): the strict validator stops at the first one,
+ *  so a director repair learned one problem per ≈$0.5 attempt and could spend all three attempts. Schema errors still throw. */
+export function illustratedIssues(raw:unknown,plan:IllustratedInput,alignment:Alignment=[],opts:{coverage?:number}={}){
+ const issues:IllustratedIssue[]=[];
+ const checked=inspectIllustrated(raw,plan,alignment,opts,(ref,message)=>{if(!issues.some(i=>i.message===message&&JSON.stringify(i.ref)===JSON.stringify(ref)))issues.push({ref,message});});
+ return {plan:checked,issues};
+}
+function prepareRaw(raw:unknown){
+ return raw&&typeof raw==="object"&&Array.isArray((raw as any).camera)?{...(raw as any),camera:(raw as any).camera.map((c:any)=>({...c,zoom:typeof c?.zoom==="number"?Math.max(.5,c.zoom):c?.zoom}))}:raw;
+}
+function inspectIllustrated(raw:unknown,plan:IllustratedInput,alignment:Alignment,opts:{coverage?:number},report:IssueReport):IllustratedPlan{
+ const result=illustratedSchema.parse(prepareRaw(raw)),scenes=plan.scenes,total=scenes.reduce((n,s)=>n+s.seconds,0),vocabulary=corpus(plan);
+ // NaN marks a broken anchor in collect mode: every later comparison with it is false, so it reports once.
+ const check=(a:Anchor3D,what:string,ref:IllustratedIssueRef)=>{
+  if(!scenes[a.scene-1]){report(ref,`Иллюстрация: ${what} ссылается на несуществующую главу ${a.scene}.`);return NaN;}
+  if(a.cue&&!(scenes[a.scene-1].narration||"").split(/\s+/).some(s=>word(s)===word(a.cue))){report(ref,`Иллюстрация: слова «${a.cue}» нет в главе ${a.scene} (${what}).`);return NaN;}
+  let t:number;try{t=anchorTime(a,scenes,alignment);}catch(e){report(ref,errorText(e));return NaN;}
+  if(t<0||t>total+.01){report(ref,`Иллюстрация: ${what} за пределами ролика.`);return NaN;}return t;
  };
  const ids=new Set<string>();
- for(const o of result.objects){if(ids.has(o.id))throw new Error(`Иллюстрация: id ${o.id} повторяется.`);ids.add(o.id);}
- for(const o of result.objects){if(o.kind==="camera"&&o.aim&&!ids.has(o.aim))throw new Error(`Иллюстрация: камера ${o.id} смотрит на неизвестный ${o.aim}.`);}
- for(const c of result.callouts)if(!ids.has(c.target))throw new Error(`Иллюстрация: выноска «${c.text}» ссылается на неизвестный ${c.target}.`);
- const framed=solveCamera(result,scenes,alignment);
- if(framed&&!result.notes.some(n=>n.startsWith("Кадрирование")))result.notes=[...result.notes.slice(0,7),`Кадрирование ${framed} ключей камеры автоматически подогнано под безопасную зону кадра.`];
- const tl=timeline(result,scenes,alignment);
+ for(const o of result.objects){if(ids.has(o.id))report({kind:"object",id:o.id},`Иллюстрация: id ${o.id} повторяется.`);ids.add(o.id);}
+ for(const o of result.objects){if(o.kind==="camera"&&o.aim&&!ids.has(o.aim))report({kind:"object",id:o.id},`Иллюстрация: камера ${o.id} смотрит на неизвестный ${o.aim}.`);}
+ result.callouts.forEach((c,i)=>{if(!ids.has(c.target))report({kind:"callout",index:i},`Иллюстрация: выноска «${c.text}» ссылается на неизвестный ${c.target}.`);});
+ let tl:IllustratedTimeline;
+ try{
+  const framed=solveCamera(result,scenes,alignment);
+  if(framed&&!result.notes.some(n=>n.startsWith("Кадрирование")))result.notes=[...result.notes.slice(0,7),`Кадрирование ${framed} ключей камеры автоматически подогнано под безопасную зону кадра.`];
+  tl=timeline(result,scenes,alignment);
+ }catch(e){report({kind:"plan"},errorText(e));return result;}
  for(const o of result.objects){
-  const enter=check(o.enter,`${o.id}.enter`),exit=o.exit?check(o.exit,`${o.id}.exit`):Infinity;
-  if(exit-enter<.6)throw new Error(`Иллюстрация: ${o.id} должен быть виден не меньше 0,6 с.`);
-  o.active.forEach((k,i)=>check(k.at,`${o.id}.active[${i}]`));o.moves.forEach((k,i)=>check(k.at,`${o.id}.moves[${i}]`));
-  if(o.kind==="camera"&&o.aim&&!ids.has(o.aim))throw new Error(`Иллюстрация: камера ${o.id} смотрит на неизвестный ${o.aim}.`);
-  if(["plaque","cloud-sign","logo-tile","person-tile","counter","money-stack"].includes(o.kind)&&!o.label)throw new Error(`Иллюстрация: ${o.id} требует label.`);
+  const ref={kind:"object" as const,id:o.id};
+  const enter=check(o.enter,`${o.id}.enter`,ref),exit=o.exit?check(o.exit,`${o.id}.exit`,ref):Infinity;
+  if(exit-enter<.6)report(ref,`Иллюстрация: ${o.id} должен быть виден не меньше 0,6 с.`);
+  o.active.forEach((k,i)=>check(k.at,`${o.id}.active[${i}]`,{kind:"key",id:o.id,list:"active",index:i}));o.moves.forEach((k,i)=>check(k.at,`${o.id}.moves[${i}]`,{kind:"key",id:o.id,list:"moves",index:i}));
+  if(o.kind==="camera"&&o.aim&&!ids.has(o.aim))report(ref,`Иллюстрация: камера ${o.id} смотрит на неизвестный ${o.aim}.`);
+  if(LABEL_REQUIRED.includes(o.kind)&&!o.label)report(ref,`Иллюстрация: ${o.id} требует label.`);
   // «One minute on Earth» catalog (2026-10-22): counters and money stacks show a number from the checked script.
-  if((o.kind==="counter"||o.kind==="money-stack")&&parseAmount(o.label)===null)throw new Error(`Иллюстрация: ${o.id} (${o.kind}) — в label нужно число из текста, например «250» или «$88,000».`);
-  if(o.kind==="counter"&&!(COUNTER_ICONS as readonly string[]).includes(o.aim))throw new Error(`Иллюстрация: значок счётчика ${o.id} — aim из ${COUNTER_ICONS.join(", ")}.`);
+  if((o.kind==="counter"||o.kind==="money-stack")&&parseAmount(o.label)===null)report(ref,`Иллюстрация: ${o.id} (${o.kind}) — в label нужно число из текста, например «250» или «$88,000».`);
+  if(o.kind==="counter"&&!(COUNTER_ICONS as readonly string[]).includes(o.aim))report(ref,`Иллюстрация: значок счётчика ${o.id} — aim из ${COUNTER_ICONS.join(", ")}.`);
   // Real logos/photos only from the project's media snapshot (source, licence, SHA-256): never drawn or guessed.
-  if((o.kind==="logo-tile"||o.kind==="person-tile")&&!findMedia(plan.media,o.label,o.kind==="logo-tile"?"logo":"person"))throw new Error(`Иллюстрация: для ${o.kind} «${o.label}» нет снимка в media проекта (доступны: ${(plan.media??[]).filter(m=>m.kind===(o.kind==="logo-tile"?"logo":"person")).map(m=>m.subject).join(", ")||"нет"}).`);
-  if(o.label&&!grounded(o.label,vocabulary))throw new Error(`Иллюстрация: подпись «${o.label}» не опирается на проверенный текст.`);
+  if((o.kind==="logo-tile"||o.kind==="person-tile")&&!findMedia(plan.media,o.label,o.kind==="logo-tile"?"logo":"person"))report(ref,`Иллюстрация: для ${o.kind} «${o.label}» нет снимка в media проекта (доступны: ${(plan.media??[]).filter(m=>m.kind===(o.kind==="logo-tile"?"logo":"person")).map(m=>m.subject).join(", ")||"нет"}).`);
+  if(o.label&&!grounded(o.label,vocabulary))report({kind:"object",id:o.id,field:"label"},`Иллюстрация: подпись «${o.label}» не опирается на проверенный текст.`);
  }
- for(const f of result.flows){
-  if(!ids.has(f.from)||!ids.has(f.to)||f.from===f.to)throw new Error(`Иллюстрация: поток ${f.from}→${f.to} ссылается на неизвестные объекты.`);
-  const enter=check(f.enter,"поток"),exit=f.exit?check(f.exit,"поток"):Infinity;if(exit-enter<.6)throw new Error("Иллюстрация: поток короче 0,6 с.");
- }
- const cams=tl.camera;
- if(cams[0].at>.05)throw new Error("Иллюстрация: первый ключ камеры должен стоять в начале ролика (scene 1, progress 0, cue '').");
- for(let i=1;i<cams.length;i++)if(cams[i].at-cams[i-1].at<1)throw new Error("Иллюстрация: между ключами камеры нужно не меньше 1 с.");
- result.camera.forEach((c,i)=>check(c.at,`camera[${i}]`));result.mode.forEach((m,i)=>check(m.at,`mode[${i}]`));
- for(const c of result.callouts){
-  if(!ids.has(c.target))throw new Error(`Иллюстрация: выноска «${c.text}» ссылается на неизвестный ${c.target}.`);
-  if(!grounded(c.text,vocabulary))throw new Error(`Иллюстрация: выноска «${c.text}» не опирается на проверенный текст.`);
-  const enter=check(c.enter,"выноска"),exit=c.exit?check(c.exit,"выноска"):Infinity;if(exit-enter<.8)throw new Error(`Иллюстрация: выноска «${c.text}» короче 0,8 с.`);
-  const o=tl.objects.find(x=>x.id===c.target)!;if(enter<o.enterAt-.05||enter>o.exitAt)throw new Error(`Иллюстрация: выноска «${c.text}» появляется, когда ${c.target} не виден.`);
-  const r=tl.callouts.find(x=>x.text===c.text&&x.target===c.target&&x.enterAt===enter)!,settle=focusTime(r.from,r.to,1.2),p=placeAt(settle,o,o.moveKeys),s=toScreen(p,poseAt(settle,cams));
-  if(s.x<FOCUS.left||s.x>FOCUS.right||s.y<FOCUS.top||s.y>FOCUS.bottom)throw new Error(`Иллюстрация: при выноске «${c.text}» центр ${c.target} (${Math.round(s.x)},${Math.round(s.y)}) вне безопасной зоны x ${FOCUS.left}..${FOCUS.right}, y ${FOCUS.top}..${FOCUS.bottom}. Сдвиньте камеру к нему.`);
- }
+ result.flows.forEach((f,i)=>{
+  const ref={kind:"flow" as const,index:i};
+  if(!ids.has(f.from)||!ids.has(f.to)||f.from===f.to)report(ref,`Иллюстрация: поток ${f.from}→${f.to} ссылается на неизвестные объекты.`);
+  const enter=check(f.enter,"поток",ref),exit=f.exit?check(f.exit,"поток",ref):Infinity;if(exit-enter<.6)report(ref,"Иллюстрация: поток короче 0,6 с.");
+ });
+ // tl.camera is sorted by time with a stable sort, so the same sort of the plan's keys maps each timeline key to its index.
+ const cams=tl.camera,order=result.camera.map((c,i)=>({i,at:anchorTime(c.at,scenes,alignment)})).sort((a,b)=>a.at-b.at);
+ if(cams[0].at>.05)report({kind:"camera",index:order[0].i,late:true},"Иллюстрация: первый ключ камеры должен стоять в начале ролика (scene 1, progress 0, cue '').");
+ for(let i=1;i<cams.length;i++)if(cams[i].at-cams[i-1].at<1)report({kind:"camera",index:order[i].i},"Иллюстрация: между ключами камеры нужно не меньше 1 с.");
+ result.camera.forEach((c,i)=>check(c.at,`camera[${i}]`,{kind:"camera",index:i}));result.mode.forEach((m,i)=>check(m.at,`mode[${i}]`,{kind:"mode",index:i}));
+ result.callouts.forEach((c,i)=>{
+  const ref={kind:"callout" as const,index:i};
+  if(!ids.has(c.target)){report(ref,`Иллюстрация: выноска «${c.text}» ссылается на неизвестный ${c.target}.`);return;}
+  if(!grounded(c.text,vocabulary))report(ref,`Иллюстрация: выноска «${c.text}» не опирается на проверенный текст.`);
+  const enter=check(c.enter,"выноска",ref),exit=c.exit?check(c.exit,"выноска",ref):Infinity;if(exit-enter<.8)report(ref,`Иллюстрация: выноска «${c.text}» короче 0,8 с.`);
+  if(!Number.isFinite(enter))return;
+  const o=tl.objects.find(x=>x.id===c.target)!;if(enter<o.enterAt-.05||enter>o.exitAt){report(ref,`Иллюстрация: выноска «${c.text}» появляется, когда ${c.target} не виден.`);return;}
+  const r=tl.callouts.find(x=>x.text===c.text&&x.target===c.target&&x.enterAt===enter);if(!r)return;
+  const settle=focusTime(r.from,r.to,1.2),p=placeAt(settle,o,o.moveKeys),s=toScreen(p,poseAt(settle,cams));
+  if(s.x<FOCUS.left||s.x>FOCUS.right||s.y<FOCUS.top||s.y>FOCUS.bottom)report(ref,`Иллюстрация: при выноске «${c.text}» центр ${c.target} (${Math.round(s.x)},${Math.round(s.y)}) вне безопасной зоны x ${FOCUS.left}..${FOCUS.right}, y ${FOCUS.top}..${FOCUS.bottom}. Сдвиньте камеру к нему.`);
+ });
  for(const o of tl.objects){
   if(o.kind==="seed"||o.kind==="number-stream")continue;
   const t=focusTime(o.enterAt,o.exitAt,1.3);if(t>total)continue;
   const s=toScreen(placeAt(t,o,o.moveKeys),poseAt(t,cams));
-  if(s.x<FOCUS.left-40||s.x>FOCUS.right+40||s.y<FOCUS.top-40||s.y>FOCUS.bottom+40)throw new Error(`Иллюстрация: ${o.id} появляется вне безопасной зоны кадра (${Math.round(s.x)},${Math.round(s.y)}). Поставьте камеру на него к моменту появления.`);
+  if(s.x<FOCUS.left-40||s.x>FOCUS.right+40||s.y<FOCUS.top-40||s.y>FOCUS.bottom+40)report({kind:"object",id:o.id},`Иллюстрация: ${o.id} появляется вне безопасной зоны кадра (${Math.round(s.x)},${Math.round(s.y)}). Поставьте камеру на него к моменту появления.`);
  }
  if(opts.coverage){
   const skip=plan.creatorOutro?.sceneId?[plan.creatorOutro.sceneId]:[];
   const message=coverageError(coverageReport(sentences(scenes as any,alignment as any,skip),anchoredTimes(result,a=>anchorTime(a,scenes,alignment))),"Иллюстрация");
-  if(message)throw new Error(message);
+  if(message)report({kind:"plan"},message);
  }
- for(const b of result.bigWords){if(!grounded(b.text,vocabulary))throw new Error(`Иллюстрация: крупное слово «${b.text}» не из проверенного текста.`);if(check(b.exit,"bigWord")-check(b.enter,"bigWord")<.8)throw new Error("Иллюстрация: крупное слово короче 0,8 с.");}
- if(plan.loopEnding)loopSeamError(result,timeline(result,scenes,alignment),total);
+ result.bigWords.forEach((b,i)=>{
+  const ref={kind:"bigWord" as const,index:i};
+  if(!grounded(b.text,vocabulary)){report(ref,`Иллюстрация: крупное слово «${b.text}» не из проверенного текста.`);return;}
+  if(check(b.exit,"bigWord",ref)-check(b.enter,"bigWord",ref)<.8)report(ref,"Иллюстрация: крупное слово короче 0,8 с.");
+ });
+ if(plan.loopEnding)try{loopSeamError(result,timeline(result,scenes,alignment),total);}catch(e){report({kind:"plan"},errorText(e));}
  return result;
+}
+const LABEL_REQUIRED:readonly string[]=["plaque","cloud-sign","logo-tile","person-tile","counter","money-stack"],TEXT_SIGNS:readonly string[]=["plaque","cloud-sign"];
+/** Deterministic repair (user decision 2026-10-25, «починки режиссёра»): instead of paying the model ≈$0.5 per retry for a
+ *  mechanical problem, drop the decorative element that breaks a rule — a callout, big word, flow, state/move/mode key or a
+ *  too-close camera key — clear an optional object label that the narration never says, and move a late first camera key to
+ *  the start. Objects, required labels and whole-plan rules (loop, coverage) stay with the model. Every change is listed in
+ *  `removed`; `issues` holds what is still broken (empty = the plan passes the strict validator). Schema errors throw. */
+export function repairIllustrated(raw:unknown,plan:IllustratedInput,alignment:Alignment=[],opts:{coverage?:number}={}){
+ const removed:string[]=[],scenes=plan.scenes;
+ const current=structuredClone(illustratedSchema.parse(prepareRaw(raw)));
+ // An anchor on a missing scene or a missing word occurrence breaks the whole timeline: drop such decorative elements first.
+ const broken=(a:Anchor3D)=>{try{anchorTime(a,scenes,alignment);return false;}catch{return true;}};
+ const keep=<T,>(list:T[],bad:(x:T)=>boolean,what:(x:T)=>string)=>list.filter(x=>{if(!bad(x))return true;removed.push(`${what(x)}: якорь на несуществующую главу или вхождение слова`);return false;});
+ current.callouts=keep(current.callouts,c=>broken(c.enter)||!!c.exit&&broken(c.exit),c=>`выноска «${c.text}»`);
+ current.flows=keep(current.flows,f=>broken(f.enter)||!!f.exit&&broken(f.exit),f=>`поток ${f.from}→${f.to}`);
+ current.bigWords=keep(current.bigWords,b=>broken(b.enter)||broken(b.exit),b=>`крупное слово «${b.text}»`);
+ current.mode=keep(current.mode,m=>broken(m.at),m=>`режим ${m.value}`);
+ for(const o of current.objects){o.active=keep(o.active,k=>broken(k.at),()=>`ключ состояния ${o.id}`);o.moves=keep(o.moves,k=>broken(k.at),()=>`перемещение ${o.id}`);}
+ if(current.camera.length>1)current.camera=keep(current.camera,c=>broken(c.at),()=>"ключ камеры");
+ let next:IllustratedPlan=current;
+ for(let pass=0;;pass++){
+  const {plan:checked,issues}=illustratedIssues(next,plan,alignment,opts);
+  if(!issues.length||pass===5)return {plan:checked,removed,issues};
+  const fix=structuredClone(checked),drop={callouts:new Set<number>(),flows:new Set<number>(),bigWords:new Set<number>(),mode:new Set<number>(),camera:new Set<number>()},keys=new Map<string,Set<number>>();
+  let changed=false;const why=(m:string)=>m.replace(/^Иллюстрация: /,""),signs=new Set<string>();
+  for(const {ref,message} of issues){
+   if(ref.kind==="callout"||ref.kind==="flow"||ref.kind==="bigWord"||ref.kind==="mode"){
+    const list=ref.kind==="callout"?"callouts":ref.kind==="flow"?"flows":ref.kind==="bigWord"?"bigWords":"mode";
+    if(!drop[list].has(ref.index)){drop[list].add(ref.index);removed.push(why(message));}
+   }else if(ref.kind==="key"){const k=`${ref.id}\u0000${ref.list}`;if(!keys.has(k))keys.set(k,new Set());if(!keys.get(k)!.has(ref.index)){keys.get(k)!.add(ref.index);removed.push(why(message));}}
+   else if(ref.kind==="camera"){
+    if(ref.late){fix.camera[ref.index].at={scene:1,progress:0,cue:""};removed.push("первый ключ камеры перенесён в начало ролика");changed=true;}
+    else if(!drop.camera.has(ref.index)){drop.camera.add(ref.index);removed.push(why(message));}
+   }else if(ref.kind==="object"&&ref.field==="label"){
+    const o=fix.objects.find(x=>x.id===ref.id);
+    if(o&&o.label&&!LABEL_REQUIRED.includes(o.kind)){removed.push(`подпись «${o.label}» у ${o.id} убрана: её нет в тексте`);o.label="";changed=true;}
+    // A sign is nothing but its text: a plaque or cloud sign the narration never says goes away with what points at it.
+    else if(o&&TEXT_SIGNS.includes(o.kind)&&fix.objects.length-signs.size>3&&!signs.has(o.id)){signs.add(o.id);removed.push(`${o.kind} ${o.id} «${o.label}» убран: этого текста нет в озвучке`);}
+   }
+  }
+  const without=<T,>(list:T[],idx:Set<number>)=>{if(idx.size)changed=true;return list.filter((_x,i)=>!idx.has(i));};
+  fix.callouts=without(fix.callouts,drop.callouts);fix.flows=without(fix.flows,drop.flows);fix.bigWords=without(fix.bigWords,drop.bigWords);fix.mode=without(fix.mode,drop.mode);
+  // The earliest camera key is never dropped: a gap issue names the later key of the pair.
+  if(drop.camera.size&&fix.camera.length-drop.camera.size>=1)fix.camera=without(fix.camera,drop.camera);
+  for(const o of fix.objects){o.active=without(o.active,keys.get(`${o.id}\u0000active`)??new Set());o.moves=without(o.moves,keys.get(`${o.id}\u0000moves`)??new Set());}
+  // After the index-based drops above, so their indices still point at the right elements.
+  if(signs.size){
+   changed=true;
+   for(const c of fix.callouts)if(signs.has(c.target))removed.push(`выноска «${c.text}» вместе с ${c.target}`);
+   fix.objects=fix.objects.filter(o=>!signs.has(o.id));fix.callouts=fix.callouts.filter(c=>!signs.has(c.target));fix.flows=fix.flows.filter(f=>!signs.has(f.from)&&!signs.has(f.to));
+   for(const o of fix.objects)if(o.kind==="camera"&&signs.has(o.aim))o.aim="";
+  }
+  if(!changed)return {plan:checked,removed,issues};
+  next=fix;
+ }
 }
 /** Loop ending (2026-10-22): the last frame must be the first frame. The renderer shows objects present at t≈0 without
  *  their entrance; the plan must bring the camera, those objects and the x-ray back and clear everything else. */

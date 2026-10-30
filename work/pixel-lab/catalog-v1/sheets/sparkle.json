@@ -1,0 +1,33 @@
+{
+ "kind": "sparkle",
+ "states": [
+  "faint",
+  "twinkle",
+  "burst",
+  "fade"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 57,
+  "hh": 52
+ },
+ "measured": {
+  "hw": 57,
+  "hh": 52,
+  "box": [
+   205,
+   368,
+   310,
+   469
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 20.3,
+ "maxFramePx": 113,
+ "maxNovelPx": 44
+}

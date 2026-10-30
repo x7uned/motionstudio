@@ -1,0 +1,16 @@
+«Why mosquitoes bite you» · Kagenami (@kagenami_ai) · пиксельный ролик, 2026-10-22
+
+Голос: ElevenLabs, Dennis · Eleven v4 (eleven_v4, language_code en), один дубль на весь текст (voice/eleven-17e893c0afeed8663891.*).
+Картинка: оригинальная пиксельная графика, нарисована кодом (render.mjs, scenery.mjs, people.mjs, mosquito.mjs); шрифты — собственные пиксельные шрифты renderer/pixel/raster.mjs. Чужих изображений, логотипов, флагов и фото нет.
+Обложка: аватар канала из data/branding/xtuned-outro/v1/spritesheet.png (собственный персонаж канала).
+Звук и музыка: синтезированы 8-битными генераторами в synth.mjs (оригинальные), без сэмплов.
+
+Факты (иллюстрации, не в масштабе):
+- Любимчик комаров >100× привлекательнее наименее привлекательных; 64 человека, нейлоновые рукава, три карбоновые (жирные) кислоты кожи, различия держались ~3 года; Aedes aegypti, Рокфеллеровский университет, Нью-Йорк.
+  De Obaldia ME, Morita T, Dedmon LC, … Vosshall LB. Differential mosquito attraction to humans is associated with skin-derived carboxylic acid levels. Cell 185(22):4099–4116 (2022). doi:10.1016/j.cell.2022.09.034 — https://pmc.ncbi.nlm.nih.gov/articles/PMC10069481/
+- После CO2 комары летят к красному и оранжевому (а также к голубому и чёрному), зелёный, синий и фиолетовый игнорируют; длинные волны, отражённые кожей любого оттенка, привлекают, а с фильтром оранжевого и красного — нет. Без CO2 цветовых предпочтений нет («газ включает зрение» — упрощение для зрителя).
+  Alonso San Alberto D, Rusch C, Zhan Y, Straw AD, Montell C, Riffell JA. The olfactory gating of visual preferences to human skin and visible spectra in mosquitoes. Nature Communications 13, 555 (2022). doi:10.1038/s41467-022-28195-x — https://pmc.ncbi.nlm.nih.gov/articles/PMC8816903/
+- Тепло тела (тепловое ИК) комар чувствует вблизи, примерно до 70 см.
+  Chandel A, DeBeaubien NA, … Montell C. Thermal infrared directs host-seeking behaviour in Aedes aegypti mosquitoes. Nature 633 (2024). doi:10.1038/s41586-024-07848-5 — https://neuroscience.ucsb.edu/news/all/2024/mosquitoes-sense-infrared-body-heat-help-track-humans-down
+- Кусают только самки: белок крови нужен для яиц, энергию оба пола берут из нектара.
+  Cold Spring Harbor Protocols, 2022 — https://cshprotocols.cshlp.org/content/2022/6/pdb.top107657

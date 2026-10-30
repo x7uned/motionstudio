@@ -1,0 +1,33 @@
+{
+ "kind": "door",
+ "states": [
+  "closed",
+  "ajar",
+  "open",
+  "knock"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 44,
+  "hh": 120
+ },
+ "measured": {
+  "hw": 40,
+  "hh": 124,
+  "box": [
+   222,
+   296,
+   301,
+   544
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 23.5,
+ "maxFramePx": 3826,
+ "maxNovelPx": 5072
+}

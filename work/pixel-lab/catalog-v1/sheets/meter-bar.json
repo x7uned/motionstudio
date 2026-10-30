@@ -1,0 +1,34 @@
+{
+ "kind": "meter-bar",
+ "states": [
+  "show",
+  "fill",
+  "drain",
+  "full",
+  "warn"
+ ],
+ "hud": true,
+ "declared": {
+  "hw": 94,
+  "hh": 28
+ },
+ "measured": {
+  "hw": 96,
+  "hh": 30,
+  "box": [
+   166,
+   232,
+   356,
+   288
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 223,
+ "msPerFrame": 22.2,
+ "maxFramePx": 2126,
+ "maxNovelPx": 3378
+}

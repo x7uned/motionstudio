@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "flag-south-korea-ea90509b",
+      "kind": "flag",
+      "subject": "South Korea",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/flag-south-korea-ea90509b.png",
+      "sha256": "ea90509b6a80c722b55db68b62b9bccda44941d152dad04d6fc80ccfac00401b",
+      "width": 640,
+      "height": 427,
+      "source": {
+        "wikidata": "Q884",
+        "label": "South Korea",
+        "description": "country in East Asia",
+        "property": "P41",
+        "commonsFile": "Flag of South Korea.svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Korea.svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Original: Government of the Republic of Korea Vector: Great Brightstar and others",
+        "credit": "Ordinance Act of the Law concerning the National Flag of the Republic of Korea, Construction and color guidelines (Russian/English) File:Flag of South Korea (construction sheet).svg",
+        "restrictions": "insignia",
+        "attributionRequired": false,
+        "date": "2011-05-30",
+        "retrievedAt": "2026-10-21T23:37:57.551Z"
+      }
+    }
+  ],
+  "failed": []
+}

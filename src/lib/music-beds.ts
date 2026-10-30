@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import {systemEnv} from "./platform";
 import path from "node:path";
 import {createHash} from "node:crypto";
 import {execFile} from "node:child_process";
@@ -115,7 +116,7 @@ export function arrangementInputFor(plan:Storyboard,alignment:any[]):Omit<Arrang
  return {chapters:clock.map(s=>({start:s.start,end:s.end})),outroStart:outro?outro.start:null,
   callouts:tl?tl.callouts.map(c=>({at:c.from,tone:c.tone})):iso,bigWords:tl?tl.bigWords.map(b=>({at:b.enterAt})):[]};
 }
-const run=(command:string,args:string[],signal?:AbortSignal,stderr=false)=>new Promise<string>((resolve,reject)=>execFile(command,args,{env:{PATH:process.env.PATH??""} as unknown as NodeJS.ProcessEnv,timeout:180000,signal,maxBuffer:4_000_000},(e:Error|null,out,err)=>e?reject(e):resolve(String(stderr?err:out))));
+const run=(command:string,args:string[],signal?:AbortSignal,stderr=false)=>new Promise<string>((resolve,reject)=>execFile(command,args,{env:{...systemEnv(),PATH:process.env.PATH??process.env.Path??""} as unknown as NodeJS.ProcessEnv,timeout:180000,windowsHide:true,signal,maxBuffer:4_000_000},(e:Error|null,out,err)=>e?reject(e):resolve(String(stderr?err:out))));
 /** Integrated loudness of a raw float32 stereo bed (ffmpeg loudnorm measurement). */
 async function measureLufs(ffmpeg:string,raw:string,signal?:AbortSignal){
  const text=await run(ffmpeg,["-hide_banner","-nostats","-f","f32le","-ar","48000","-ac","2","-i",raw,"-af","loudnorm=print_format=json","-f","null","-"],signal,true);

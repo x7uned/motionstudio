@@ -1,3 +1,4 @@
+import {TEST_FFMPEG} from "./test-tools";
 import {test,before,after} from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -6,7 +7,7 @@ import path from "node:path";
 import {spawnSync} from "node:child_process";
 import {reelLink,reelLinks,validateChunk,needsCustomRenderer} from "../src/lib/video-reference-model";
 const previous=process.cwd(),temp=fs.mkdtempSync(path.join(os.tmpdir(),"video-reference-test-"));fs.cpSync(path.join(previous,"data/branding/xtuned-outro"),path.join(temp,"data/branding/xtuned-outro"),{recursive:true});fs.cpSync(path.join(previous,"data/sound-packs/background-beds/v4"),path.join(temp,"data/sound-packs/background-beds/v4"),{recursive:true,filter:f=>!/\.(wav|m4a)$/.test(f)});
-process.env.STUDIO_FFMPEG=path.join(previous,"bin/ffmpeg");
+process.env.STUDIO_FFMPEG=TEST_FFMPEG;
 let store:typeof import("../src/lib/store"),data:typeof import("../src/lib/author-store"),providers:typeof import("../src/lib/author-providers");
 const originalFetch=globalThis.fetch;
 before(async()=>{process.chdir(temp);store=await import("../src/lib/store");data=await import("../src/lib/author-store");providers=await import("../src/lib/author-providers");fs.writeFileSync(path.join(temp,".env.local"),"APIFY_TOKEN=apify_api_test1234567890123456789\nELEVENLABS_API_KEY=private-test-fixture\n");});

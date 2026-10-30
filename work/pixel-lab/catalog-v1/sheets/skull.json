@@ -1,0 +1,32 @@
+{
+ "kind": "skull",
+ "states": [
+  "grin",
+  "glow",
+  "chatter"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 54,
+  "hh": 48
+ },
+ "measured": {
+  "hw": 54,
+  "hh": 52,
+  "box": [
+   208,
+   368,
+   315,
+   471
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 145,
+ "msPerFrame": 20.5,
+ "maxFramePx": 1323,
+ "maxNovelPx": 1338
+}

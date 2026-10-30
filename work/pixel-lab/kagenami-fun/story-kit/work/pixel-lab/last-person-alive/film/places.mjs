@@ -1,0 +1,12 @@
+// «The last person alive» — where everything stands (world units, ground wy = 0, up negative). Every module uses these.
+export const TOWN = { x0: -320, x1: 660 };            // ruined street (buildings, cars, lamp posts) — shot A
+export const TALLY = { x0: 215, x1: 335, y0: -150, y1: -60 }; // the wall with ~300 scratched day marks and a big "300"
+export const EDGE = { x0: 640, x1: 780 };             // the road ends: broken fence, a fallen sign, the first trees
+export const GLOW = { x: 930, y: -40 };               // the far fire seen from the forest edge (glow + smoke between trunks)
+export const CLEARING = { x0: 980, x1: 1560 };        // the forest clearing — shots C and E
+export const FIRE = { x: 1262, r: 15 };               // campfire: stone ring centre and radius at the ground
+export const LOG = { x0: 1298, x1: 1380, top: -22 };  // the log she sits on (seat height 22)
+export const WOMAN = { x: 1336, facing: -1 };         // her hips over the log, facing left (toward the fire and him)
+export const HERO_STAND = { x: 1152, facing: 1 };     // where he stands in the clearing, facing right
+export const GRASS = { x0: 1166, x1: 1720, gap: [1236, 1290], h: 34 }; // tall grass along the ground (no grass by the fire)
+export const DEEP = { x0: 1460 };                     // beyond here: the dense dark forest the mouse came from

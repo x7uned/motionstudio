@@ -1,0 +1,12 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей и без звуков игры.
+Картинка: нарисована в коде. Блочный мир, текстуры, постройки, редстоун-детали и персонаж — свои, в духе игры, без её текстур, скинов, логотипа и графики. Компьютер, экран из ламп, стенды и полусумматор — иллюстрация, не копии реальных построек; полусумматор показан модулем, не схемой проводки. Падающие блоки на экране — обобщённые, не оформление Tetris. Пыль в игре передаёт сигнал практически мгновенно — в ролике изменение показано бегущим, чтобы глаз успел.
+
+Источники фактов:
+- Редстоун-пыль как провод, сила сигнала до 15 блоков: https://minecraft.wiki/w/Redstone_Dust
+- Редстоун-факел гаснет, когда его блок под питанием (НЕ), переключение 0,1 с: https://minecraft.wiki/w/Redstone_Torch
+- Вентили НЕ / ИЛИ / И (И = три факела): https://minecraft.wiki/w/Redstone_circuits/Logic
+- Полусумматор: 1 + 1 = 10: https://en.wikipedia.org/wiki/Adder_(electronics) ; https://minecraft.wiki/w/Tutorial:Arithmetic_logic
+- CHUNGUS 2 (sammyuri, 2021): такт 1 Гц, играет в Tetris; записи на ускоряющем сервере MCHPRS до 180×: https://www.youtube.com/watch?v=FDiapbD0Xfg
+- Чип телефона ~4 млрд тактов/с: Snapdragon 8 Elite до 4,32 ГГц, https://www.androidauthority.com/snapdragon-8-elite-3491805/
+- CraftGPT (sammyuri, 2025): 5 087 280 параметров; ответ ≈2 часа при ≈40 000× на MCHPRS: https://www.youtube.com/watch?v=VaeI9YgE1o8 ; без ускорения «upwards of 10 years»: https://github.com/sammyuri/CraftGPT

@@ -1,0 +1,25 @@
+{
+  "handle": "@xtuned",
+  "colors": {
+    "background": "#000000",
+    "text": "#FFFFFF",
+    "purple": "#8D59DA",
+    "lavender": "#E0CDF8",
+    "yellow": "#F4CA50",
+    "pink": "#E03056",
+    "ivory": "#FDFEED",
+    "card": "#120C1D",
+    "purpleStroke": "#946ADE",
+    "building": "#2A2536",
+    "plate": "#17131F",
+    "ground": "#0A0910"
+  },
+  "fonts": [
+    "Manrope Variable 700–800"
+  ],
+  "libraries": [
+    "three 0.180 + @remotion/three ThreeCanvas: orthographic, flat (без тонмаппинга), тени PCF 4096",
+    "InstancedMesh для зданий, окон, крыш и машин; геометрия процедурная, без загружаемых моделей и генерируемого кода",
+    "Remotion Easing.bezier(0.16,1,0.3,1) для входов, (0.65,0,0.35,1) для камеры и прорисовки маршрута"
+  ]
+}

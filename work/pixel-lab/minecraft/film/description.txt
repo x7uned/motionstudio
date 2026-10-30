@@ -1,0 +1,8 @@
+Is a Minecraft world really endless? Most of it doesn't exist until you get close.
+
+The game builds the world in chunks as you move, all from one number, the seed. Noise picks land, ocean, mountains and biomes; 3D noise carves caves. The edge is a wall 30 million blocks from the center. Old versions broke at 12.5 million, and one streamer walked there for 14 years.
+
+Pixel illustration, simplified; not game footage. Seed and chat are examples.
+Sources: Minecraft Wiki (World border, Chunk, World generation, Seed, Nether portal, Walking, Far Lands); Wikipedia, "Far Lands or Bust".
+
+#gaming #minecraft #worldgeneration #farlands

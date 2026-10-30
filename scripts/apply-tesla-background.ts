@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import assert from "node:assert/strict";
 import {bundle} from "@remotion/bundler";
+import {bundleLive} from "../src/lib/remotion-bundle";
 import {selectComposition,renderStill,renderMedia} from "@remotion/renderer";
 import {DATA,ROOT,project,updateProject,db,event} from "../src/lib/store";
 import {readJSON,writeJSON,fileHash,digest,auditCurrent} from "../src/lib/quality";
@@ -28,7 +29,7 @@ async function main(){
  assert.ok(auditCurrent(await readJSON(path.join(dir,"fact-audit.json")),p.plan,(await readJSON(path.join(dir,"sources.json")))??[]),"Unchanged script retains the fact gate");
  if(manifest.complete){assert.equal(await fileHash(path.join(dir,"video.mp4")),manifest.videoHash);console.log(JSON.stringify({alreadyComplete:true,file:manifest.delivery}));return;}
  const inputProps={plan:p.plan,profile:p.profile,format:p.format,alignment:await readJSON(path.join(dir,"alignment.json")),models:verifyModelSnapshot(dir),modelBase:`${id}/models`};
- const serveUrl=await bundle({entryPoint:path.join(ROOT,"renderer/index.tsx"),publicDir:path.join(DATA,"projects"),symlinkPublicDir:true});const chromiumOptions={gl:"angle" as const};
+ const serveUrl=await bundleLive({entryPoint:path.join(ROOT,"renderer/index.tsx"),publicDir:path.join(DATA,"projects")});const chromiumOptions={gl:"angle" as const};
  const composition=await selectComposition({serveUrl,id:"StudioFilm",inputProps,browserExecutable:CHROME,chromiumOptions});
  if(action==="preview"){
   const preview=path.join(production,"preview");await fs.mkdir(preview,{recursive:true});for(const at of [3,15.5,33.5,44])await renderStill({composition,serveUrl,inputProps,browserExecutable:CHROME,chromiumOptions,frame:Math.round(at*30),scale:.5,output:path.join(preview,`${at}.png`)});

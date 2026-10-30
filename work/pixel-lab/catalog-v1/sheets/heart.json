@@ -1,0 +1,66 @@
+{
+ "kind": "heart",
+ "states": [
+  "rest",
+  "beat",
+  "fast",
+  "glow"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 72,
+  "hh": 68
+ },
+ "measured": {
+  "hw": 114,
+  "hh": 108,
+  "box": [
+   148,
+   312,
+   376,
+   520
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [
+  {
+   "t": 2.033,
+   "novel": 3773,
+   "before": 0,
+   "after": 185,
+   "changed": 5786,
+   "bayerTop2": 0.24
+  },
+  {
+   "t": 2.1,
+   "novel": 1742,
+   "before": 185,
+   "after": 55,
+   "changed": 4662,
+   "bayerTop2": 0.24
+  },
+  {
+   "t": 2.733,
+   "novel": 3075,
+   "before": 0,
+   "after": 463,
+   "changed": 5350,
+   "bayerTop2": 0.23
+  },
+  {
+   "t": 5.6,
+   "novel": 2625,
+   "before": 723,
+   "after": 585,
+   "changed": 6263,
+   "bayerTop2": 0.26
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 22.3,
+ "maxFramePx": 6263,
+ "maxNovelPx": 3773
+}

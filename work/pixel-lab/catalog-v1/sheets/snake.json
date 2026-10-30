@@ -1,0 +1,35 @@
+{
+ "kind": "snake",
+ "states": [
+  "coil",
+  "raise",
+  "hood",
+  "hiss",
+  "look",
+  "relax"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 90,
+  "hh": 150
+ },
+ "measured": {
+  "hw": 89,
+  "hh": 151,
+  "box": [
+   173,
+   269,
+   337,
+   472
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 262,
+ "msPerFrame": 25.6,
+ "maxFramePx": 4521,
+ "maxNovelPx": 3205
+}

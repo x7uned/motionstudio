@@ -1,8 +1,10 @@
 import {importAuthor} from "../src/lib/author-pipeline";
 import {author,updateAuthor,authorEvent} from "../src/lib/author-store";
 import fs from "node:fs/promises";
+import { readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { bundle } from "@remotion/bundler";
+import {bundleLive} from "../src/lib/remotion-bundle";
 import {
   selectComposition,
   renderMedia,
@@ -71,6 +73,19 @@ process.on("SIGINT", () => {
   stopped = true;
   scheduler?.abortAll();
 });
+// Windows: Ctrl+Break in the console, and `studio stop` writes data/engine.stop (signals there are hard kills).
+process.on("SIGBREAK", () => {
+  stopped = true;
+  scheduler?.abortAll();
+});
+const STOP_FILE = path.join(DATA, "engine.stop"), BEAT_FILE = path.join(DATA, "worker.beat");
+function stopRequested() {
+  try {
+    if (Number(readFileSync(STOP_FILE, "utf8").trim()) !== process.pid) return false;
+    rmSync(STOP_FILE, { force: true });
+    return true;
+  } catch { return false; }
+}
 let configWarned=false;
 /** A broken studio.config.json must not stop the engine: defaults apply and the error is logged once. */
 function engineConfig():StudioConfig{
@@ -90,11 +105,7 @@ let serveUrl: string | undefined;
 let bundling: Promise<string> | null = null;
 /** One Remotion bundle per engine process, built once inside the render slot even when several jobs ask at once. */
 function serveBundle(){
-  bundling??=slot.run("Сборка Remotion",()=>bundle({
-      entryPoint: path.join(ROOT, "renderer", "index.tsx"),
-      publicDir: path.join(ROOT, "data", "projects"),
-      symlinkPublicDir:true,
-    })).then(url=>{serveUrl=url;return url;}).catch(e=>{bundling=null;throw e;});
+  bundling??=slot.run("Сборка Remotion",()=>bundleLive({entryPoint: path.join(ROOT, "renderer", "index.tsx"), publicDir: path.join(ROOT, "data", "projects")})).then(url=>{serveUrl=url;return url;}).catch(e=>{bundling=null;throw e;});
   return bundling;
 }
 /** Re-stage the picture against the unchanged measured speech (automatic repair or an agent's picture-repair job). */
@@ -653,7 +664,10 @@ async function main() {
     const pid = Number(await fs.readFile(lock, "utf8"));
     try {
       process.kill(pid, 0);
-      throw new Error("Очередь уже запущена.");
+      // On Windows a reused PID may belong to another program: trust the lock only with a fresh heartbeat.
+      const fresh = (() => { try { return Date.now() - statSync(BEAT_FILE).mtimeMs < 90_000; } catch { return false; } })();
+      if (process.platform !== "win32" || fresh) throw new Error("Очередь уже запущена.");
+      throw Object.assign(new Error("stale"), { code: "ESRCH" });
     } catch (e: any) {
       if (e.code !== "ESRCH") throw e;
     }
@@ -672,6 +686,7 @@ async function main() {
     const d=db().prepare("INSERT OR REPLACE INTO settings(key,value) VALUES(?,?)");
     d.run("workerSeen", new Date().toISOString());
     d.run("engineState", JSON.stringify(engineState()));
+    try { writeFileSync(BEAT_FILE, String(process.pid)); } catch {}
   };
   scheduler=new JobScheduler<any>({
     claim:(running)=>{const legacyBusy=running.some(legacyCli);return claimJob(job=>!(legacyBusy&&legacyCli(job)));},
@@ -682,6 +697,7 @@ async function main() {
   beat();
   const heartbeat = setInterval(()=>{try{beat();}catch(e){console.error(e);}}, 5000);
   while (!stopped) {
+    if (stopRequested()) { stopped = true; break; }
     if(scheduler.fill())beat();
     await scheduler.tick(1200);
   }
@@ -690,6 +706,7 @@ async function main() {
   clearInterval(heartbeat);
   db().prepare("DELETE FROM settings WHERE key='engineState'").run();
   await fs.rm(lock, { force: true });
+  await fs.rm(BEAT_FILE, { force: true });
   db().close();
 }
 main().catch((e) => {

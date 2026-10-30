@@ -1,0 +1,11 @@
+{
+ "kind": "city-skyline",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 7,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 24.6,
+ "maxNovelPx": 33311
+}

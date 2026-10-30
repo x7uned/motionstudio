@@ -1,0 +1,22 @@
+{
+  "handle": "@xtuned",
+  "colors": {
+    "background": "#F2E9D8",
+    "text": "#2B2733",
+    "purple": "#3F4F8A",
+    "graphite": "#4A4450",
+    "terracotta": "#C8694F",
+    "sage": "#7F9A77",
+    "mustard": "#D9A441",
+    "rose": "#D98C8F",
+    "screen": "#F5E6C4"
+  },
+  "fonts": [
+    "Manrope Variable 800 — подписи и текст пакетов (чёткий, не кистью)",
+    "Caveat 700 — рукописные пометки"
+  ],
+  "libraries": [
+    "p5.brush — акварельные спрайты с фиксированным seed, рисуются один раз на вкладку",
+    "Canvas 2D multiply-композиция и маски проявления"
+  ]
+}

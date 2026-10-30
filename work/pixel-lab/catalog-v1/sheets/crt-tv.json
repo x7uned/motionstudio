@@ -1,0 +1,35 @@
+{
+ "kind": "crt-tv",
+ "states": [
+  "off",
+  "on",
+  "static",
+  "bars",
+  "glow",
+  "shut"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 94,
+  "hh": 84
+ },
+ "measured": {
+  "hw": 92,
+  "hh": 85,
+  "box": [
+   170,
+   336,
+   353,
+   505
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 8,
+ "pure": true,
+ "frames": 271,
+ "msPerFrame": 25.3,
+ "maxFramePx": 13645,
+ "maxNovelPx": 7892
+}

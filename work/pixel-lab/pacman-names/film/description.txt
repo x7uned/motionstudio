@@ -1,0 +1,5 @@
+Pac-Man's ghost names were lost in translation, and orange isn't useless 👻
+
+Sources: Jamey Pittman, "The Pac-Man Dossier"; Chad Birch, "Understanding Pac-Man Ghost Behavior" (GameInternals); Pac-Man ROM disassembly (Scott Lawrence).
+
+#pacman #retrogaming #arcade #gaming

@@ -1,0 +1,20 @@
+{
+  "id": "pixel-film-v1",
+  "title": "What happens when you tap",
+  "fps": 30,
+  "durationInFrames": 1737,
+  "width": 1080,
+  "height": 1920,
+  "handle": "@kagenami_ai",
+  "beats": [
+    {"from": 0.0, "to": 6.2, "caption": "You tap your card maybe ten times a day", "action": "Крупно интерьер кофейни (кофемашина, меню, витрина, стойка, окно на улицу). На «ten» набирается ряд из десяти карт, на «approved» — знак вопроса над терминалом."},
+    {"from": 6.2, "to": 14.4, "caption": "Let's follow one tap", "action": "Карта подносится к терминалу, NFC-волны всё время контакта, над терминалом появляется конверт. Метка TOKYO с флагом на «Tokyo», кофе на стойке на «coffee», табличка YOUR BANK · LONDON на «London», замок одноразового кода на «one-time code»."},
+    {"from": 14.4, "to": 18.5, "caption": "The terminal sends it to the shop's bank", "action": "Непрерывный отъезд: кофейня становится зданием квартала Токио (банк, перекрёсток, машины, Токийская башня). Конверт идёт по переходу к двери банка, у банка всплывает WHO?"},
+    {"from": 18.5, "to": 25.6, "caption": "The card network, like Visa or Mastercard", "action": "Квартал уходит в Токио на планете. Пины TOKYO и LONDON с флагами, узлы сети загораются по очереди, плитки логотипов Visa и Mastercard на своих словах, подводные кабели прорисовываются."},
+    {"from": 25.6, "to": 30.1, "caption": "Across the planet to your bank in London", "action": "Конверт летит по кабелям через полпланеты, пройденный путь жёлтый; наезд в ночной Лондон: банк с колоннами, часовая башня, луна."},
+    {"from": 30.1, "to": 36.6, "caption": "Your bank checks the code, your balance…", "action": "Панель проверок: CODE, BALANCE, LIKE YOU отмечаются на своих словах; APPROVED; отъезд, зелёный пакет мчится обратно в Токио; мини-терминал меняет WAITING на APPROVED на «Beep»."},
+    {"from": 36.6, "to": 40.6, "caption": "More than twenty thousand kilometers", "action": "Счётчик 0 → 20 000+ KM, подпись IN A FEW SECONDS, весь маршрут мерцает."},
+    {"from": 40.6, "to": 53.6, "caption": "But no money has moved yet", "action": "HOLD с замком у Лондона, сутки дважды проходят по планете, монеты идут из Лондона в Токио, на узлах отщипывается FEE; общий план маршрута."},
+    {"from": 53.6, "to": 57.9, "caption": "Want more breakdowns like this? Follow Kagenami.", "action": "Пиксельная заставка: вопрос, персонаж машет и показывает на кнопку, курсор нажимает FOLLOW → FOLLOWING ✓ с кликом и арпеджио из пака."}
+  ]
+}

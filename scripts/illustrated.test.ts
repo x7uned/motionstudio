@@ -1,6 +1,10 @@
 import {test} from "node:test";
 import assert from "node:assert/strict";
-import {validateIllustrated,keyed,cameraAt,grounded,corpus,timeline,toScreen,resolveCallouts,SAFE,type IllustratedPlan} from "../src/lib/illustrated";
+import fs from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import {validateIllustrated,illustratedIssues,repairIllustrated,keyed,cameraAt,grounded,corpus,timeline,toScreen,resolveCallouts,SAFE,type IllustratedPlan} from "../src/lib/illustrated";
+import {prepareIllustrated,directorConcept} from "../src/lib/illustrated-director";
 import {writtenText} from "../src/lib/quality";
 
 const scenes=[
@@ -205,4 +209,78 @@ test("the outro moves down only with the tiktok-safe layout",async()=>{
  const base=outroLayout(true),tiktok=outroLayout(true,"tiktok-safe");
  assert.deepEqual(base,{text:{left:78,width:860,top:300},questionSize:52,plateSize:100,plateTop:150,character:{left:-20,top:606},button:{left:600,top:596,width:338,height:108},cursorFrom:[900,1300]});
  assert.equal(tiktok.text.top,410);assert.equal(tiktok.button.top,706);assert.equal(outroLayout(false,"tiktok-safe").text.top,330,"landscape never shifts");
+});
+
+// Director repairs (user decision 2026-10-25, «починки режиссёра»): attempts used to be rejected one rule at a time, ≈$0.5 each.
+test("all broken rules are listed at once; the strict validator still names only the first",()=>{
+ const bad=base();
+ bad.objects[1].label="Сан-Хосе";
+ bad.callouts.push({target:"lamp",text:"Квантовый шум",tone:"warn",side:"right",enter:A(2,"кадр"),exit:null});
+ bad.bigWords[0].text="Энтропия";
+ bad.camera.push({at:A(2,"камера"),x:1300,y:1100,zoom:.9});
+ assert.throws(()=>validateIllustrated(structuredClone(bad),story,alignment),/подпись «Сан-Хосе»/);
+ const {issues}=illustratedIssues(structuredClone(bad),story,alignment),text=issues.map(i=>i.message).join("\n");
+ for(const re of [/подпись «Сан-Хосе»/,/выноска «Квантовый шум»/,/крупное слово «Энтропия»/,/между ключами камеры/])assert.match(text,re);
+});
+test("the deterministic repair drops decorative rule breakers and keeps everything else",()=>{
+ const bad=base();
+ bad.objects[1].label="Сан-Хосе";
+ bad.callouts.push({target:"lamp",text:"Квантовый шум",tone:"warn",side:"right",enter:A(2,"кадр"),exit:null});
+ bad.bigWords[0].text="Энтропия";
+ bad.camera.push({at:A(2,"камера"),x:1300,y:1100,zoom:.9});
+ bad.camera[0].at=A(1,"лавовые");
+ const r=repairIllustrated(bad,story,alignment);
+ assert.deepEqual(r.issues,[]);
+ const plan=validateIllustrated(r.plan,story,alignment);
+ assert.deepEqual(plan.callouts.map(c=>c.text),["Лавовая лампа"]);
+ assert.equal(plan.bigWords.length,0);assert.equal(plan.objects[1].label,"");assert.equal(plan.camera.length,2);
+ assert.equal(timeline(plan,scenes,alignment).camera[0].at,0,"a late first camera key moves to the start");
+ assert.equal(r.removed.length,5);
+ // A sign is only its text: a plaque the narration never says leaves with the callout that points at it.
+ const sign=base();
+ sign.objects.push({id:"sign",kind:"plaque",x:1000,y:900,scale:1,label:"Follow @xtuned",aim:"",rows:1,cols:2,enter:A(2,"кадр"),exit:null,active:[],moves:[]});
+ sign.callouts.push({target:"sign",text:"Камера",tone:"info",side:"top",enter:A(2,"кадр"),exit:null});
+ const s=repairIllustrated(sign,story,alignment);
+ assert.deepEqual(s.issues,[]);assert.ok(!s.plan.objects.some(o=>o.id==="sign"));assert.ok(!s.plan.callouts.some(c=>c.target==="sign"));
+ assert.match(s.removed.join(" "),/plaque sign/);
+});
+test("object problems stay with the model, listed in one retry",async()=>{
+ const broken=base();broken.objects[0].enter=A(1,"никогда");broken.objects[2].exit=A(1,"тоже");
+ const r=repairIllustrated(broken,story,alignment);
+ assert.equal(r.issues.length,2);assert.match(r.issues.map(i=>i.message).join(" "),/«никогда».*«тоже»/s);
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),"motion-studio-director-"));const prompts:string[]=[];
+ const answers=[broken,base()],ask=(async(prompt:string)=>{prompts.push(prompt);return structuredClone(answers[prompts.length-1]);}) as any;
+ try{
+  const staged=await prepareIllustrated({title:story.title,summary:"",scenes} as any,dir,alignment,new AbortController().signal,ask);
+  assert.equal(prompts.length,2);assert.equal(staged.illustrated!.objects.length,3);
+  assert.match(prompts[1],/Исправь все ошибки предыдущего JSON сразу[\s\S]*«никогда»[\s\S]*«тоже»/);
+ }finally{await fs.rm(dir,{recursive:true,force:true});}
+});
+test("a callout outside the script is dropped without another paid attempt",async()=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),"motion-studio-director-"));let calls=0;
+ const answer=base();answer.callouts.push({target:"lamp",text:"Квантовый шум",tone:"warn",side:"right",enter:A(2,"кадр"),exit:null});
+ const ask=(async()=>{calls++;return structuredClone(answer);}) as any;
+ try{
+  const staged=await prepareIllustrated({title:story.title,summary:"",scenes} as any,dir,alignment,new AbortController().signal,ask);
+  assert.equal(calls,1);assert.deepEqual(staged.illustrated!.callouts.map(c=>c.text),["Лавовая лампа"]);
+  assert.match(staged.illustrated!.notes.join(" "),/Автоматически убрано/);
+  const context=JSON.parse(await fs.readFile(path.join(dir,"illustrated-context.json"),"utf8"));
+  assert.equal(context.autoRepair.attempt,1);assert.match(context.autoRepair.removed[0],/Квантовый шум/);
+ }finally{await fs.rm(dir,{recursive:true,force:true});}
+});
+test("concept labels the narration never says reach the director as not-on-screen ideas",async()=>{
+ const concept:any={scenes:[{scene:1,labels:["Лавовая лампа","Квантовый шум"]},{scene:2,labels:["Камера"]}],objects:[{id:"lamp",name:"Лавовая лампа"},{id:"rain",name:"Ливень частиц"}]};
+ const moved:any=directorConcept(concept,corpus(story));
+ assert.deepEqual(moved.scenes[0].labels,["Лавовая лампа"]);assert.deepEqual(moved.scenes[0].notOnScreen,["Квантовый шум"]);
+ assert.deepEqual(moved.namesNotOnScreen,["Ливень частиц"]);assert.equal(moved.scenes[1],concept.scenes[1]);
+ const clean:any={scenes:[{scene:1,labels:["Лавовая лампа"]}],objects:[{id:"lamp",name:"Лавовая лампа"}]};
+ assert.equal(directorConcept(clean,corpus(story)),clean,"a grounded concept is passed unchanged (same context hash)");
+ const promptFor=async(visualConcept:any)=>{
+  const dir=await fs.mkdtemp(path.join(os.tmpdir(),"motion-studio-director-"));let seen="";
+  const ask=(async(prompt:string)=>{seen=prompt;throw new Error("captured");}) as any;
+  try{await assert.rejects(prepareIllustrated({title:story.title,summary:"",scenes,visualConcept} as any,dir,alignment,new AbortController().signal,ask),/captured/);}finally{await fs.rm(dir,{recursive:true,force:true});}
+  return seen;
+ };
+ assert.match(await promptFor(concept),/ТЕКСТ НА ЭКРАНЕ[\s\S]*notOnScreen/);
+ assert.doesNotMatch(await promptFor(clean),/ТЕКСТ НА ЭКРАНЕ/);
 });

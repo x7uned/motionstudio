@@ -1,0 +1,33 @@
+{
+ "kind": "power-line",
+ "states": [
+  "still",
+  "sway",
+  "spark",
+  "hum"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 134,
+  "hh": 90
+ },
+ "measured": {
+  "hw": 134,
+  "hh": 90,
+  "box": [
+   128,
+   330,
+   396,
+   504
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 190,
+ "msPerFrame": 21,
+ "maxFramePx": 670,
+ "maxNovelPx": 397
+}

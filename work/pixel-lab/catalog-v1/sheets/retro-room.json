@@ -1,0 +1,20 @@
+{
+ "kind": "retro-room",
+ "backdrop": true,
+ "jumps": [
+  {
+   "t": 4.067,
+   "novel": 680,
+   "before": 21,
+   "after": 208,
+   "changed": 1036,
+   "bayerTop3": 0.63
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 35.6,
+ "maxNovelPx": 98530
+}

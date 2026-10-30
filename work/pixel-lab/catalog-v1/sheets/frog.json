@@ -1,0 +1,42 @@
+{
+ "kind": "frog",
+ "states": [
+  "peek",
+  "look",
+  "croak",
+  "sink"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 74,
+  "hh": 68
+ },
+ "measured": {
+  "hw": 74,
+  "hh": 68,
+  "box": [
+   190,
+   366,
+   336,
+   488
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [
+  {
+   "t": 2.533,
+   "novel": 1806,
+   "before": 596,
+   "after": 217,
+   "changed": 2502,
+   "bayerTop3": 0.31
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 190,
+ "msPerFrame": 21.2,
+ "maxFramePx": 6723,
+ "maxNovelPx": 5452
+}

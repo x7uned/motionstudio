@@ -1,0 +1,11 @@
+How high can Mario jump in our world · IN OUR WORLD #2 · Kagenami (@kagenami_ai)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take).
+Picture: pixel art drawn for this film in code (mario-real/film/assets, lib) — the plumber hero, his side-scrolling level, the
+portal, the evening street and house, passers-by (adapted from the steve-real/film2 film art), props and HUD. No Kagenami
+catalog art. No Nintendo or Namco sprites, tiles, logos, fonts, sounds or music: the hero, the level and the round yellow
+«chomper» are our own drawings; Super Mario Bros. and Pac-Man are trademarks of their owners, named only as topics.
+Sound: synthesized 8-bit effects and an original chiptune bed (synth.mjs).
+Sources: Super Mario Bros. (1985) game code (disassembly SMBDIS.ASM: PlayerYSpdData, JumpMForceData, FallMForceData);
+Guinness World Records (men's high jump, Javier Sotomayor, 2.45 m, 1993); World Athletics; Hypertextbook (2007, Mario gravity);
+GameSpot (155 cm figure). Usain Bolt's peak speed (Berlin 2009) is shown as a number only; the runner is not his likeness.

@@ -1,0 +1,35 @@
+{
+ "kind": "wolf",
+ "states": [
+  "stand",
+  "howl",
+  "sniff",
+  "look",
+  "turn",
+  "sleep"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 100,
+  "hh": 76
+ },
+ "measured": {
+  "hw": 113,
+  "hh": 78,
+  "box": [
+   149,
+   344,
+   356,
+   498
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 282,
+ "msPerFrame": 24.3,
+ "maxFramePx": 7851,
+ "maxNovelPx": 7409
+}

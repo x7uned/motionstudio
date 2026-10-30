@@ -1,0 +1,25 @@
+{
+  "handle": "@xtuned",
+  "colors": {
+    "background": "#F4EEDF",
+    "text": "#2F2B27",
+    "purple": "#8D59DA",
+    "paperCard": "#FFFCF4",
+    "grid": "#9DBFD6",
+    "margin": "#E39D92",
+    "graphiteSecondary": "#5E5850",
+    "hatch": "#B9AE9C",
+    "marker": "#F4CA50",
+    "packet1": "#F3A97A",
+    "packet2": "#86D3AF",
+    "packet3": "#8EC0EC",
+    "packet4": "#BFA3EE"
+  },
+  "fonts": [
+    "Caveat 700/400 (@fontsource/caveat) — подписи и пометки"
+  ],
+  "libraries": [
+    "roughjs 4.6 — фигуры с фиксированным seed",
+    "SVG feTurbulence — зерно бумаги и графита"
+  ]
+}

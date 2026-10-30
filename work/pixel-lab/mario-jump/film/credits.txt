@@ -1,0 +1,4 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль; тайминги слов сверены и перенесены на Scribe.
+Музыка и звуки: синтезированы в коде (8 бит), своя мелодия; без музыки и звуков игр Mario.
+Картинка: свой рисунок водопроводчика из частей (hero.mjs), свои тайлы уровня (level.mjs), не спрайты и не карты из ПЗУ, логотипов нет. Прыжки считаются по правилам SMB1 кадр за кадром (physics.mjs), высоты совпадают с разбором jdaster64 (66,0 / 70,3 / 82,5 px).
+Источники: дизассемблер https://gist.github.com/1wErt3r/4048722 ; jdaster64 http://web.archive.org/web/20130807122227/http://i276.photobucket.com/albums/kk21/jdaster64/smb_playerphysics.png ; https://tasvideos.org/7094S ; https://tasvideos.org/GameResources/NES/SuperMarioBros ; подробно — ../research/notes.md.

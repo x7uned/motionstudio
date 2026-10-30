@@ -1,0 +1,40 @@
+{
+ "file": "animals-smart-pixel.mp4",
+ "frames": 2276,
+ "video_s": 75.867,
+ "audio_s": 75.883,
+ "seam_picture_meanabs": 0.544,
+ "neighbour_frames_meanabs": [
+  0.226,
+  0.178,
+  0.046
+ ],
+ "seam_audio_jump": 0.0001,
+ "audio_typical_step": 0.0121,
+ "loudness_LUFS": -16.6,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.6,
+ "one_frame_pops": [],
+ "sudden_jumps": [
+  {
+   "t": 8.87,
+   "d": 2.71
+  },
+  {
+   "t": 48.2,
+   "d": 2.87
+  },
+  {
+   "t": 63.03,
+   "d": 3.62
+  },
+  {
+   "t": 70.8,
+   "d": 3.62
+  },
+  {
+   "t": 75.5,
+   "d": 2.68
+  }
+ ]
+}

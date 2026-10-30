@@ -1,0 +1,15 @@
+{
+ "file": "doom-ranking-pixel.mp4",
+ "frames": 1785,
+ "video_s": 59.5,
+ "audio_s": 59.52,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -34.6,
+  -180
+ ],
+ "loudness_LUFS": -16.7,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.3,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

@@ -1,0 +1,34 @@
+{
+ "kind": "brain",
+ "states": [
+  "idle",
+  "think",
+  "signal",
+  "lit",
+  "spark"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 82,
+  "hh": 76
+ },
+ "measured": {
+  "hw": 126,
+  "hh": 120,
+  "box": [
+   136,
+   300,
+   386,
+   536
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 229,
+ "msPerFrame": 22.9,
+ "maxFramePx": 3444,
+ "maxNovelPx": 1674
+}

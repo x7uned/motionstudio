@@ -1,0 +1,153 @@
+{
+ "version": 1,
+ "repo": "x7uned/motionstudio",
+ "files": [
+  {
+   "path": "data/sound-packs/audition-01/sources/sci-fi-sounds.zip",
+   "bytes": 5875104,
+   "sha256": "119340f351a5098ad814f78719438c0da355a9ce8a4c8a3af6a8d48aa3d49e04",
+   "release": "assets-v1",
+   "asset": "119340f351a5098a-sci-fi-sounds.zip"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v1/audio/lofi-pulse.wav",
+   "bytes": 34560102,
+   "sha256": "97e43f7d4ba1c3d31cdf2abce1c48aa88889431865c3db3a4e497059f558134d",
+   "release": "assets-v1",
+   "asset": "97e43f7d4ba1c3d3-lofi-pulse.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v1/audio/music-box.wav",
+   "bytes": 34560102,
+   "sha256": "e980e59e1f640cadaee8bea813a2848ab48c496a73980adfae8db7817b573849",
+   "release": "assets-v1",
+   "asset": "e980e59e1f640cad-music-box.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v1/audio/nature-air.wav",
+   "bytes": 34560102,
+   "sha256": "de764c059a2144100596d6507061aa6fae0901207bd2f14840404cc85bbf4c16",
+   "release": "assets-v1",
+   "asset": "de764c059a214410-nature-air.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v1/audio/space-drone.wav",
+   "bytes": 34560102,
+   "sha256": "5b04cbb8c3b43dab57772fd512bdd1c2d7301c1535eb7c2266de619d7bc212a7",
+   "release": "assets-v1",
+   "asset": "5b04cbb8c3b43dab-space-drone.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v1/audio/warm-pad.wav",
+   "bytes": 34560102,
+   "sha256": "c70778bdaac96b47a8f0b0c7aff3a651526159b95bb85e4aa2261c8b0a188536",
+   "release": "assets-v1",
+   "asset": "c70778bdaac96b47-warm-pad.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v2/audio/chip-soft.wav",
+   "bytes": 34560102,
+   "sha256": "8c74182cddf44a6601feb7fcdb20d3844d57927e690151da5294087f0317f4c9",
+   "release": "assets-v1",
+   "asset": "8c74182cddf44a66-chip-soft.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v2/audio/glass-arp.wav",
+   "bytes": 34560102,
+   "sha256": "13a134d999db5941b28f66957c50e911c139f19723827e94ef675a81b5550572",
+   "release": "assets-v1",
+   "asset": "13a134d999db5941-glass-arp.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v2/audio/lofi-pulse.wav",
+   "bytes": 34560102,
+   "sha256": "97e43f7d4ba1c3d31cdf2abce1c48aa88889431865c3db3a4e497059f558134d",
+   "release": "assets-v1",
+   "asset": "97e43f7d4ba1c3d3-lofi-pulse.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v2/audio/music-box.wav",
+   "bytes": 34560102,
+   "sha256": "e980e59e1f640cadaee8bea813a2848ab48c496a73980adfae8db7817b573849",
+   "release": "assets-v1",
+   "asset": "e980e59e1f640cad-music-box.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v2/audio/nature-air.wav",
+   "bytes": 34560102,
+   "sha256": "de764c059a2144100596d6507061aa6fae0901207bd2f14840404cc85bbf4c16",
+   "release": "assets-v1",
+   "asset": "de764c059a214410-nature-air.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v2/audio/pluck-curious.wav",
+   "bytes": 34560102,
+   "sha256": "e9916e032c399a4c35075bb702b99941aef294ab0580fbe4bb90e485353c1cb4",
+   "release": "assets-v1",
+   "asset": "e9916e032c399a4c-pluck-curious.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v2/audio/space-drone.wav",
+   "bytes": 34560102,
+   "sha256": "5b04cbb8c3b43dab57772fd512bdd1c2d7301c1535eb7c2266de619d7bc212a7",
+   "release": "assets-v1",
+   "asset": "5b04cbb8c3b43dab-space-drone.wav"
+  },
+  {
+   "path": "data/sound-packs/background-beds/v2/audio/warm-pad.wav",
+   "bytes": 34560102,
+   "sha256": "c70778bdaac96b47a8f0b0c7aff3a651526159b95bb85e4aa2261c8b0a188536",
+   "release": "assets-v1",
+   "asset": "c70778bdaac96b47-warm-pad.wav"
+  },
+  {
+   "path": "data/templates/illustrated-scene/v1/reference/video.mp4",
+   "bytes": 9314933,
+   "sha256": "8ebddf7acf9ed38313b7d7f576e79cc633b78f90f7ffa9626016df7f84c3516b",
+   "release": "assets-v1",
+   "asset": "8ebddf7acf9ed383-video.mp4"
+  },
+  {
+   "path": "data/templates/illustrated-scene/v2/reference/video.mp4",
+   "bytes": 11278392,
+   "sha256": "78b50925823bdcb6ca8109b2b83e66e024514a85a4e2fb2d6fa13ab91554ead0",
+   "release": "assets-v1",
+   "asset": "78b50925823bdcb6-video.mp4"
+  },
+  {
+   "path": "data/templates/model-breakdown/v1/reference/video.mp4",
+   "bytes": 14580360,
+   "sha256": "b552090e36350c4b97202cec776bf7d4cecb7d00f05b743a4e80bce855ad5d93",
+   "release": "assets-v1",
+   "asset": "b552090e36350c4b-video.mp4"
+  },
+  {
+   "path": "data/templates/neon-terminal/v1/reference/video.mp4",
+   "bytes": 24061488,
+   "sha256": "1b3376957bc18b95d8f128d94311d05d6807183fec2bda25078c461334187bb6",
+   "release": "assets-v1",
+   "asset": "1b3376957bc18b95-video.mp4"
+  },
+  {
+   "path": "data/templates/pixel-film/v1/reference/video.mp4",
+   "bytes": 13832491,
+   "sha256": "fd9d306bb2d5f240f0b127dbcb2b08b1cbc94bcf7de9e3b7443eacbf34deb2c4",
+   "release": "assets-v1",
+   "asset": "fd9d306bb2d5f240-video.mp4"
+  },
+  {
+   "path": "data/templates/sketchbook/v1/reference/video.mp4",
+   "bytes": 10757329,
+   "sha256": "8a3abfd737ebe10f4198b9c5124a2317786a3d71680d333a8ad161245f73f6e8",
+   "release": "assets-v1",
+   "asset": "8a3abfd737ebe10f-video.mp4"
+  },
+  {
+   "path": "data/templates/tech-story/v1/reference/video.mp4",
+   "bytes": 15458500,
+   "sha256": "7cdb844f4c3edd1a39f3446da08603185c9cedc200b4791bfc46901a48416d15",
+   "release": "assets-v1",
+   "asset": "7cdb844f4c3edd1a-video.mp4"
+  }
+ ]
+}

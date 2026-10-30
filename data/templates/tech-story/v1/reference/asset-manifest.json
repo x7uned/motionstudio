@@ -1,0 +1,62 @@
+{
+  "assets": [
+    {
+      "id": "bell-1876",
+      "title": "Александр Грэм Белл в 1876 году",
+      "sourceUrl": "https://www.loc.gov/item/00649776/",
+      "downloadUrl": "https://tile.loc.gov/storage-services/service/pnp/ppmsc/00800/00836v.jpg",
+      "date": "1876; отпечаток позднее",
+      "rights": "LOC Rights Advisory: No known restrictions on publication.",
+      "credit": "Library of Congress",
+      "sha256": "f3792f6d0128fa2515f92cc4d984d1e95bbfa981c6825f29d0961e3b5cd170a1",
+      "bytes": 312698
+    },
+    {
+      "id": "bell-drawing",
+      "title": "Чертёж телефона Белла,1876",
+      "sourceUrl": "https://www.loc.gov/item/magbell.27300105/",
+      "downloadUrl": "https://blogs.loc.gov/families/files/2026/03/Drawing-by-Alexander-Graham-Bell-1876.jpg",
+      "date": "1876",
+      "rights": "Коллекция LOC: рукописи, созданные Александром Грэмом Беллом, находятся в public domain.",
+      "credit": "Library of Congress",
+      "sha256": "6f37b1bdac60a0efd0b5e3d5c27ed600c20248141f625a2d982bc6422e70c010",
+      "bytes": 543825
+    },
+    {
+      "id": "operators-1928",
+      "title": "Телефонистки Нью-Йоркской биржи",
+      "sourceUrl": "https://www.loc.gov/pictures/item/2002711638/",
+      "downloadUrl": "https://tile.loc.gov/storage-services/service/pnp/ds/06700/06717v.jpg",
+      "date": "1928-11-16",
+      "rights": "Rights Advisory: No known restrictions on publication. No renewal in Copyright office.",
+      "credit": "Library of Congress",
+      "sha256": "580d93d65ed08138653de550da652337f83c3678cddf94174314529e3d734d1c",
+      "bytes": 314946
+    },
+    {
+      "id": "operators-1937",
+      "title": "Операторный зал Капитолия",
+      "sourceUrl": "https://www.loc.gov/pictures/item/2016872097/",
+      "downloadUrl": "https://tile.loc.gov/storage-services/service/pnp/hec/23100/23122v.jpg",
+      "date": "1937-07-30",
+      "rights": "Rights Advisory: No known restrictions on publication.",
+      "credit": "Library of Congress",
+      "sha256": "fd837ba61fd3a8832d6049248f24563aa4e3d800cc7eb67c553831f6cbb07ed8",
+      "bytes": 143202
+    },
+    {
+      "id": "bell-longdistance-1892",
+      "title": "Белл на открытии линии Нью-Йорк—Чикаго",
+      "sourceUrl": "https://www.loc.gov/item/00650383/",
+      "downloadUrl": "https://blogs.loc.gov/families/files/2026/03/Alexander-Graham-Bell-at-the-opening-of-the-long-distance-line.jpg",
+      "date": "1892-10",
+      "rights": "LOC: See Rights and Restrictions Information Page. Wikimedia Commons identifies this historical image as free of known copyright restrictions (Public Domain Mark). No independent claim that the later print is newly authored.",
+      "credit": "Library of Congress",
+      "sha256": "41b80c4582213ea3064b06e5c751cc44a611a0675e3900d306096473a86f323c",
+      "bytes": 362083,
+      "rightsSource": "https://commons.wikimedia.org/wiki/File:Alexander_Graham_Bell_at_the_opening_of_the_long-distance_line_from_New_York_to_Chicago_LCCN00650383.jpg"
+    }
+  ],
+  "editorialRule": "Поздние фотографии операторов иллюстрируют принцип ручной коммутации; не выдавать за снимки станции1878г. Изображения не сгенерированы ИИ.",
+  "catalogAccess": "Ряд страницLOC недоступен прямомуHTTPчтению403; каталожные метаданные получены web, файлы получены с официального tile.loc.gov с обычным User-Agent."
+}

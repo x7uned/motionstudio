@@ -1,0 +1,19 @@
+{
+ "file": "ant-zombie-pixel.mp4",
+ "frames": 1856,
+ "video_s": 61.867,
+ "audio_s": 61.867,
+ "seam_picture_meanabs": 2.239,
+ "neighbour_frames_meanabs": [
+  2.001,
+  1.946,
+  4.171
+ ],
+ "seam_audio_jump": 0.0007,
+ "audio_typical_step": 0.011,
+ "loudness_LUFS": -16.5,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.8,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

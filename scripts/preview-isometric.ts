@@ -5,6 +5,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 import {bundle} from "@remotion/bundler";
+import {bundleLive} from "../src/lib/remotion-bundle";
 import {renderMedia,renderStill,selectComposition} from "@remotion/renderer";
 import {CHROME} from "../src/lib/provider";
 import {ROOT,DATA,project} from "../src/lib/store";
@@ -37,7 +38,7 @@ async function main(){
   profile={name:"Изометрия",description:"",background:"#000000",foreground:"#FFFFFF",accent:"#8D59DA",font:"Manrope",hookRules:[],writingRules:[],visualRules:[],avoid:[],examples:[],username:"@kagenami_ai",production:{version:2,policyVersion:"preview",language:"en",portraitLayout:"tiktok-safe",overlayVersion:2}};
  }
  await fs.writeFile(path.join(out,"plan.json"),JSON.stringify(plan.isometric,null,2));
- const serveUrl=await bundle({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects"),symlinkPublicDir:true});
+ const serveUrl=await bundleLive({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects")});
  const inputProps={plan,profile,format,alignment},chromiumOptions={gl:"angle" as const};
  const composition=await selectComposition({serveUrl,id:"StudioFilm",inputProps,browserExecutable:CHROME,chromiumOptions});
  const total=composition.durationInFrames/30;

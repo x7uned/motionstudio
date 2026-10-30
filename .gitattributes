@@ -1,0 +1,27 @@
+# Same bytes on every OS: SHA-256 snapshots of templates and packs must match after a clone on Windows.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.wav binary
+*.mp3 binary
+*.m4a binary
+*.ogg binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.glb binary
+*.gltf binary
+*.zip binary
+*.gz binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
+*.sqlite binary
+# Style data (templates, sound packs, branding, backgrounds, models) is hashed byte for byte: never convert line endings.
+/data/** -text

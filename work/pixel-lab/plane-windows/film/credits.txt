@@ -1,0 +1,15 @@
+Why airplane windows are round — Kagenami pixel film (2026-10-24)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take); word timings checked with ElevenLabs Scribe.
+Picture and sound: generated locally (pixel art and 8-bit synthesis). The airliner, the 1950s jet in the flashback and the
+window cross-section are our own illustrations: not a real aircraft or airline, not to scale; the stress lines and the
+crack are a simplified picture of metal fatigue. The channel's character: the creator's own pixel sprite sheet.
+
+Sources:
+- De Havilland Comet: the first jet airliner; two Comets broke up in flight in 1954 (BOAC Flight 781, January; South
+  African Airways Flight 201, April). The investigation found metal fatigue: a crack that started at the corner of a
+  window cut-out in the roof grew with repeated pressurisation until the cabin tore. Later airliners use rounded windows.
+- Window panes and the breather hole: airliner cabin windows have an outer pane, a middle pane with a small bleed hole and
+  an inner scratch pane; the hole equalises the pressure so the outer pane carries the load and the middle pane is a
+  backup, and it vents moisture against fogging — Boeing's Bret Jensen and GKN Aerospace, as quoted by Mark Vanhoenacker
+  (Slate) and TIME (2015).

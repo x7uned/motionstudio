@@ -1,0 +1,42 @@
+{
+ "kind": "bed",
+ "states": [
+  "made",
+  "messy",
+  "lit",
+  "shake"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 105,
+  "hh": 68
+ },
+ "measured": {
+  "hw": 105,
+  "hh": 68,
+  "box": [
+   157,
+   352,
+   366,
+   482
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [
+  {
+   "t": 3.9,
+   "novel": 3540,
+   "before": 22,
+   "after": 0,
+   "changed": 4442,
+   "bayerTop3": 0.23
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 178,
+ "msPerFrame": 21.1,
+ "maxFramePx": 4442,
+ "maxNovelPx": 11863
+}

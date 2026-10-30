@@ -1,0 +1,15 @@
+{
+ "file": "pal-50hz-pixel.mp4",
+ "frames": 1615,
+ "video_s": 53.833,
+ "audio_s": 53.845,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -35.2,
+  -180
+ ],
+ "loudness_LUFS": -16.4,
+ "true_peak_dBFS": -4.3,
+ "LRA": 2.3,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

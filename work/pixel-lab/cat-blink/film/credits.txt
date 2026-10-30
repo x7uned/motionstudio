@@ -1,0 +1,6 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде (квартира, кот и хозяин из ролика про «зумиз», кот анфас); сторонних изображений, фото и логотипов нет.
+Источники фактов:
+- Humphrey T., Proops L., Forman J., Spooner R., McComb K., «The role of cat eye narrowing movements in cat–human communication», Scientific Reports 10, 16503 (2020), doi:10.1038/s41598-020-73426-0 — эксперимент 1: 21 кошка из 14 домов; эксперимент 2: 24 кошки из 8 домов.
+- ScienceDaily, 7 октября 2020, «Slow blinking can help humans connect with cats» (Университет Сассекса): https://www.sciencedaily.com/releases/2020/10/201007123031.htm — совет Карен Маккомб.

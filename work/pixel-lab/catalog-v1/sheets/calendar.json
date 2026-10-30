@@ -1,0 +1,33 @@
+{
+ "kind": "calendar",
+ "states": [
+  "show",
+  "flip",
+  "mark",
+  "fast"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 96,
+  "hh": 90
+ },
+ "measured": {
+  "hw": 96,
+  "hh": 76,
+  "box": [
+   212,
+   344,
+   358,
+   471
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 187,
+ "msPerFrame": 20.6,
+ "maxFramePx": 4738,
+ "maxNovelPx": 4504
+}

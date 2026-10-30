@@ -1,0 +1,32 @@
+{
+ "kind": "eye",
+ "states": [
+  "open",
+  "look",
+  "wide",
+  "blink",
+  "glow"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 84,
+  "hh": 52
+ },
+ "measured": {
+  "hw": 96,
+  "hh": 68,
+  "box": [
+   166,
+   352,
+   357,
+   483
+  ]
+ },
+ "footprintOk": false,
+ "jumps": [],
+ "pops": [],
+ "pure": true,
+ "frames": 220,
+ "msPerFrame": 20.7,
+ "maxFramePx": 4272
+}

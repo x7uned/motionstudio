@@ -1,0 +1,33 @@
+{
+ "kind": "cardboard-box",
+ "states": [
+  "closed",
+  "open",
+  "wobble",
+  "squash"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 93,
+  "hh": 73
+ },
+ "measured": {
+  "hw": 93,
+  "hh": 73,
+  "box": [
+   169,
+   347,
+   354,
+   458
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 178,
+ "msPerFrame": 21.9,
+ "maxFramePx": 5698,
+ "maxNovelPx": 3733
+}

@@ -1,0 +1,31 @@
+{
+ "kind": "bat",
+ "states": [
+  "hang",
+  "fly",
+  "ping"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 86,
+  "hh": 56
+ },
+ "measured": {
+  "hw": 138,
+  "hh": 148,
+  "box": [
+   141,
+   272,
+   400,
+   480
+  ]
+ },
+ "footprintOk": false,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 151,
+ "msPerFrame": 20.4,
+ "maxFramePx": 5400
+}

@@ -1,0 +1,33 @@
+{
+ "kind": "bee",
+ "states": [
+  "hover",
+  "look",
+  "load",
+  "cheer"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 79,
+  "hh": 88
+ },
+ "measured": {
+  "hw": 79,
+  "hh": 88,
+  "box": [
+   184,
+   332,
+   341,
+   506
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 20.9,
+ "maxFramePx": 3808,
+ "maxNovelPx": 1328
+}

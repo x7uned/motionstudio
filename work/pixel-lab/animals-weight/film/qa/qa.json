@@ -1,0 +1,19 @@
+{
+ "file": "animals-weight-pixel.mp4",
+ "frames": 2247,
+ "video_s": 74.9,
+ "audio_s": 74.901,
+ "seam_picture_meanabs": 1.241,
+ "neighbour_frames_meanabs": [
+  0.814,
+  0.291,
+  0.037
+ ],
+ "seam_audio_jump": 0.021,
+ "audio_typical_step": 0.011,
+ "loudness_LUFS": -16.6,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.5,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

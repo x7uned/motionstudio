@@ -1,0 +1,33 @@
+{
+ "kind": "pet-food",
+ "states": [
+  "empty",
+  "water",
+  "full",
+  "eaten"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 58,
+  "hh": 36
+ },
+ "measured": {
+  "hw": 53,
+  "hh": 22,
+  "box": [
+   209,
+   402,
+   315,
+   442
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 204,
+ "msPerFrame": 20.7,
+ "maxFramePx": 915,
+ "maxNovelPx": 214
+}

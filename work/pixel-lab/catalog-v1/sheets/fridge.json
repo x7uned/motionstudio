@@ -1,0 +1,57 @@
+{
+ "kind": "fridge",
+ "states": [
+  "closed",
+  "open",
+  "hum"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 26,
+  "hh": 104
+ },
+ "measured": {
+  "hw": 26,
+  "hh": 104,
+  "box": [
+   236,
+   316,
+   287,
+   514
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [
+  {
+   "t": 1.467,
+   "novel": 174,
+   "before": 45,
+   "after": 0,
+   "changed": 407,
+   "bayerTop3": 0.39
+  },
+  {
+   "t": 3.333,
+   "novel": 2112,
+   "before": 0,
+   "after": 3,
+   "changed": 2405,
+   "bayerTop3": 0.27
+  },
+  {
+   "t": 4.567,
+   "novel": 1284,
+   "before": 25,
+   "after": 51,
+   "changed": 2503,
+   "bayerTop3": 0.39
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 151,
+ "msPerFrame": 20.8,
+ "maxFramePx": 2503,
+ "maxNovelPx": 2112
+}

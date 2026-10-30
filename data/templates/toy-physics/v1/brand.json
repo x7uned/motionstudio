@@ -1,0 +1,22 @@
+{
+  "handle": "@xtuned",
+  "colors": {
+    "background": "#FFF6E8",
+    "text": "#2B2350",
+    "purple": "#8D59DA",
+    "backgroundBottom": "#EFE5FF",
+    "yellow": "#F4CA50",
+    "lavender": "#E0CDF8",
+    "body": "#3A2F6B",
+    "coral": "#FF6B57",
+    "mint": "#22B8A0",
+    "success": "#4CC93A"
+  },
+  "fonts": [
+    "Manrope Variable 800"
+  ],
+  "libraries": [
+    "matter-js — запись симуляции один раз, шаг 1000/60 мс, 2 подшага на кадр, без Math.random",
+    "Remotion spring/interpolate — режиссированная сортировка и слияние"
+  ]
+}

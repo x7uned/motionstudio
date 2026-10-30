@@ -15,11 +15,10 @@ import {author,authorDir,authorEvent,createReferenceSet,updateAuthor} from "../s
 import {FFMPEG,CHROME,TAVILY} from "../src/lib/provider";
 import {serverSecrets} from "../src/lib/server-secrets";
 import {studioConfig,setConfig,configKeys,configValue,configExplicit,configPath,GUARDED_KEYS} from "../src/lib/studio-config";
-import {enginePid,startEngine,stopEngine,runEngineForeground,startUi,stopUi,uiUp,enginePaths} from "../src/lib/engine-control";
+import {enginePid,startEngine,stopEngine,runEngineForeground,enginePaths} from "../src/lib/engine-control";
+import {extraCommand,abortApifyRun} from "./studio-commands";
 
 const EXIT={ready:0,failed:1,cancelled:2,tasks:10,user:11,revision:12,paused:13,running:20,worker:30} as const;
-const uiPort=()=>Number(process.env.PORT)||studioConfig(ROOT).ui.port;
-const URL_BASE=`http://127.0.0.1:${uiPort()}`;
 type Args={_:string[];[k:string]:string|boolean|string[]};
 function parse(argv:string[]):Args{
  const out:Args={_:[]};
@@ -62,7 +61,7 @@ function summary(id:string){
  if(review.checks)lines.push(...review.checks.map((c:any)=>`  ${c.ok?"✓":"✗"} ${c.label}: ${String(c.detail??"").slice(0,200)}`));
  if(q)lines.push(`Ревью итогового MP4: ${q.status}; замечаний ${q.findings?.length??0}; кадров ${q.coverage?.sampledFrames??"?"}; humanPlayback=false (кадры ≠ просмотр).`,...(q.findings||[]).slice(0,12).map((f:any)=>`  · ${f.severity} ${f.kind} ${Number(f.start).toFixed(1)}–${Number(f.end).toFixed(1)} с: ${String(f.detail).slice(0,220)}`));
  if(existsSync(path.join(dir,"quality")))lines.push(`Кадры ревью: ${path.relative(ROOT,path.join(dir,"quality"))}/<hash>/sheet-*.jpg`);
- lines.push(`В студии: ${URL_BASE} · проект ${id}`);
+ lines.push(`Папка проекта: ${path.relative(ROOT,dir).split(path.sep).join("/")} · журнал: npm run studio -- events ${id}`);
  return lines.join("\n");
 }
 async function requeueHeld(id:string,stage:string){
@@ -163,6 +162,9 @@ async function create(a:Args){
   ...(str(a,"film-kind")?{filmKind:str(a,"film-kind")}:{}),
   ...(str(a,"ending")?{ending:str(a,"ending")}:{}),
   ...(legacy&&str(a,"content-model")?{contentModel:str(a,"content-model")}:{}),
+  ...(str(a,"voice-mode")?{voiceMode:str(a,"voice-mode")}:{}),
+  ...(str(a,"models")?{modelIds:str(a,"models")!.split(",").map(x=>x.trim()).filter(Boolean)}:{}),
+  ...(str(a,"author")?{authorProfileId:str(a,"author")}:{}),
  };
  const id=await createFromRequest(body,declaredAgent?{agentMode:{declaredAgent}}:{});
  say(`Создан проект ${id}${declaredAgent?` · агентный режим (${declaredAgent})`:" · встроенные Codex/Claude"}`,`MOTION_STUDIO_RUN=${id}`,`Дальше: npm run studio -- run ${id} --timeout 540`);
@@ -182,11 +184,12 @@ function engineLine(){
 }
 async function main(){
  const a=parse(process.argv.slice(2)),cmd=a._[0];
+ const extra=cmd?await extraCommand(cmd,a):undefined;if(extra!==undefined)return extra;
  switch(cmd){
   case "start":{
    if(a.foreground){if(enginePid(ROOT)){say(`Движок уже запущен (pid ${enginePid(ROOT)}).`);return 0;}say("Движок в этом терминале; Ctrl+C останавливает его (выполняющиеся задачи вернутся в очередь).");return runEngineForeground(ROOT);}
    const r=await startEngine(ROOT);
-   say(r.started?`Движок запущен в фоне (pid ${r.pid}), без Next.js. Журнал: ${path.relative(ROOT,enginePaths(ROOT).log)}`:`Движок уже запущен (pid ${r.pid}).`,"Состояние: npm run studio -- status · UI по просьбе человека: npm run studio -- ui");return 0;
+   say(r.started?`Движок запущен в фоне (pid ${r.pid}), без Next.js. Журнал: ${path.relative(ROOT,enginePaths(ROOT).log)}`:`Движок уже запущен (pid ${r.pid}).`,"Состояние: npm run studio -- status");return 0;
   }
   case "stop":{
    const pid=enginePid(ROOT);if(!pid){say("Движок не запущен.");return 0;}
@@ -196,14 +199,6 @@ async function main(){
     return EXIT.running;
    }
    const r=await stopEngine(ROOT);say(r.stopped?`Движок остановлен (pid ${r.pid}). Выполнявшиеся задачи вернутся в очередь при следующем start.`:"Движок не запущен.");return 0;
-  }
-  case "ui":{
-   if(a._[1]==="stop"){say(await stopUi(ROOT)?"UI остановлен.":"UI, запущенный командой studio ui, не найден (UI из npm start останавливается там же).");return 0;}
-   const r=await startUi(ROOT,uiPort(),{dev:!!a.dev});
-   say(r.started?`UI запущен: ${r.url} (только 127.0.0.1). Остановить: npm run studio -- ui stop`:`UI уже открыт: ${r.url}`);
-   if(!enginePid(ROOT)&&workerAge()>15_000)say("Движок не запущен — UI покажет данные, но задачи не пойдут: npm run studio -- start");
-   if(a.open){const {spawn}=await import("node:child_process");spawn("open",[r.url],{stdio:"ignore",detached:true}).unref();}
-   return 0;
   }
   case "config":{
    const sub=a._[1],key=a._[2];
@@ -224,7 +219,6 @@ async function main(){
    const keys=await serverSecrets(),engine=engineLine(),config=studioConfig(ROOT);
    const active=db().prepare("SELECT j.kind,j.status,j.project_id,p.title,p.status AS projectStatus,p.stage FROM jobs j LEFT JOIN projects p ON p.id=j.project_id WHERE j.status IN ('queued','running','held') ORDER BY j.created").all() as any[];
    say(...engine.lines,
-    `UI: ${await uiUp(uiPort())?`открыт ${URL_BASE}`:`не запущен (по просьбе человека: npm run studio -- ui)`}`,
     `Настройки: аккаунт ${config.defaults.brand==="ask"?"— спрашивать":config.defaults.brand} · язык ${config.defaults.language} · шаблон ${config.defaults.template??"—"} · ${config.defaults.duration} с · фактчекинг ${config.defaults.factCheck} · озвучка ${config.defaults.voice?"вкл":"выкл"} · агент ${config.agent.declared??"— (--agent)"} (npm run studio -- config get)`,
     `FFmpeg: ${existsSync(FFMPEG)?"есть":"нет"} · Chrome для рендера: ${existsSync(CHROME)?"есть":"нет"} · Tavily CLI: ${existsSync(TAVILY)?"есть":"нет"}`,
     `ElevenLabs: ${keys.ELEVENLABS_API_KEY?"ключ настроен":"ключ не настроен (только ролик без речи)"} · Apify: ${keys.APIFY_TOKEN?"настроен":"не настроен"}`,
@@ -291,7 +285,7 @@ async function main(){
   case "cancel":{
    const id=a._[1];if(!id)throw new Error("npm run studio -- cancel <id>");
    if(project(id)){updateProject(id,{status:"cancelled",stage:"Остановлено"});db().prepare("UPDATE jobs SET status='cancelled',finished=? WHERE project_id=? AND status IN ('queued','held')").run(new Date().toISOString(),id);event(id,"Остановлено ведущим агентом по просьбе пользователя.");}
-   else{updateAuthor(id,{status:"cancelled",stage:"Остановлен пользователем"});db().prepare("UPDATE jobs SET status='cancelled',finished=? WHERE project_id=? AND status IN ('queued','held')").run(new Date().toISOString(),id);authorEvent(id,"Остановлено ведущим агентом.");}
+   else{await abortApifyRun(id);updateAuthor(id,{status:"cancelled",stage:"Остановлен пользователем"});db().prepare("UPDATE jobs SET status='cancelled',finished=? WHERE project_id=? AND status IN ('queued','held')").run(new Date().toISOString(),id);authorEvent(id,"Остановлено ведущим агентом.");}
    say("Остановка запрошена.");return 0;
   }
   case "release":{const id=a._[1];if(!id)throw new Error("npm run studio -- release <id>");scopeOf(id);say("Ролик больше не удерживает эту сессию агента (его ведёт другая сессия или пользователь).",`MOTION_STUDIO_RELEASE=${id}`);return 0;}
@@ -319,7 +313,7 @@ async function main(){
    if(a._[1]!=="add")throw new Error("npm run studio -- refs add <reel-url>... --agent \"...\" --user-confirmed \"<слова пользователя>\" [--step 0.5|1] [--name ...]");
    const links=a._.slice(2);if(!links.length)throw new Error("Нужны ссылки на Reels.");
    need(a,"user-confirmed","\"<дословное согласие на запуск Apify Free (предел $1)>\"");
-   const keys=await serverSecrets();if(!keys.APIFY_TOKEN)throw new Error("Apify не подключён: подключите в студии (Разборы видео).");if(!keys.ELEVENLABS_API_KEY)throw new Error("Не настроен ElevenLabs для транскрипций.");
+   const keys=await serverSecrets();if(!keys.APIFY_TOKEN)throw new Error("Apify не подключён. Пользователь подключает сам, в своём терминале: npm run studio -- apify connect");if(!keys.ELEVENLABS_API_KEY)throw new Error("Не настроен ElevenLabs для транскрипций.");
    const {apifyAccount}=await import("../src/lib/author-providers");const acc=await apifyAccount();if(!acc.isFree)throw new Error("Для импорта нужен тариф Apify Free.");
    const step=Number(str(a,"step")??1);if(step!==.5&&step!==1)throw new Error("--step 0.5 или 1");
    const id=createReferenceSet({links,name:str(a,"name"),frameStep:step as .5|1,agentMode:{declaredAgent:need(a,"agent","\"<среда/модель>\"")}});
@@ -327,8 +321,8 @@ async function main(){
    say(`Подборка ${id} создана (агентный режим).`,`MOTION_STUDIO_RUN=${id}`,`Дальше: npm run studio -- run ${id} --timeout 540`);return 0;
   }
   case "style":{
-   if(a._[1]!=="analyze")throw new Error("npm run studio -- style analyze --agent \"...\"");
-   enqueue(null,"style",{declaredAgent:need(a,"agent","\"<среда/модель>\"")});say("Анализ стиля в очереди. Дальше: npm run studio -- run style");return 0;
+   if(a._[1]!=="analyze")throw new Error("npm run studio -- style analyze --agent \"...\" · style refs list|add|archive|restore");
+   if(str(a,"engine")==="legacy")enqueue(null,"style");else enqueue(null,"style",{declaredAgent:need(a,"agent","\"<среда/модель>\"")});say("Анализ стиля в очереди. Дальше: npm run studio -- run style");return 0;
   }
   case "media":{
    // Real logos / people photos (user decision 2026-10-21): Wikidata → Wikimedia Commons with licence and SHA-256 into the
@@ -353,7 +347,7 @@ async function main(){
    return 0;
   }
   default:
-   say("Motion Studio · скилл для чат-агента","Движок и UI: start [--foreground] · stop [--force] · status [id] · ui [--open] | ui stop · config get|set|unset","Ролики: templates · create · run <id> · task <id> · submit <id> <task> · confirm <id> tts · repair <id> · media <id> [add «имя» --kind logo|person|flag] · narrative <id> <file> · retry <id> · approve <id> · cancel <id> · pause/resume <id> · release <id> · template save <id> · template sample <style> · refs add <urls> · style analyze","Подробно: .agents/skills/motion-studio/SKILL.md");
+   say("Motion Studio · скилл для чат-агента","Движок: start [--foreground] · stop [--force] · status [id] · health · config get|set|unset · assets: npm run assets -- status|fetch","Ролики: templates · create · run <id> · task <id> · submit <id> <task> · confirm <id> tts · repair <id> · media <id> [add «имя» --kind logo|person|flag] · narrative <id> <file> · retry <id> · approve <id> · cancel <id> · pause/resume <id> · release <id> · template save <id> · template sample <style> · refs add <urls> | list | show <id> | retry <id> · style analyze · style refs list|add|archive|restore","Без веб-интерфейса: list · events <id> · scenes <id> show|export|save · report <id> · review <id> · revise <id> --feedback · compare <id> prepare|show|select · profile get|set · models list|add|demo · apify check|connect · voices list|quote|start|state|sample|select · sfx","Подробно: .agents/skills/motion-studio/SKILL.md");
    return cmd?1:0;
  }
 }

@@ -1,0 +1,9 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без звуков и мелодий оригинальной игры.
+Картинка: лабиринт, Pac-Man и призраки нарисованы в коде по мотивам аркады 1980 года; это не оригинальные спрайты и не оригинальная карта.
+Фото: Toru Iwatani Gamelab Barcelona 2015 (crop).png — автор Amadalvarez, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Toru_Iwatani_Gamelab_Barcelona_2015_(crop).png (снимок и SHA-256 — media.json; в кадре уменьшено до 46×46 и показано пикселями).
+Pac-Man — товарный знак Bandai Namco Entertainment; ролик объясняет правила игры и не связан с правообладателем.
+Источники фактов:
+- Jamey Pittman, The Pac-Man Dossier (перепечатка Game Developer): https://www.gamedeveloper.com/design/the-pac-man-dossier
+- Susan Lammers, Programmers at Work (1986), интервью с Тору Иватани: https://www.oocities.org/siliconvalley/heights/5874/iwatani.htm
+- Wikipedia, Ghosts (Pac-Man): https://en.wikipedia.org/wiki/Ghosts_(Pac-Man)

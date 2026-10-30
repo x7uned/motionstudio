@@ -1,0 +1,34 @@
+{
+ "kind": "crocodile",
+ "states": [
+  "rest",
+  "look",
+  "snap",
+  "swish",
+  "worry"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 105,
+  "hh": 62
+ },
+ "measured": {
+  "hw": 103,
+  "hh": 51,
+  "box": [
+   159,
+   382,
+   340,
+   471
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 223,
+ "msPerFrame": 28.1,
+ "maxFramePx": 2099,
+ "maxNovelPx": 483
+}

@@ -1,0 +1,34 @@
+{
+ "kind": "thermometer",
+ "states": [
+  "show",
+  "rise",
+  "hot",
+  "cold",
+  "drop"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 62,
+  "hh": 116
+ },
+ "measured": {
+  "hw": 62,
+  "hh": 116,
+  "box": [
+   200,
+   304,
+   322,
+   531
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 226,
+ "msPerFrame": 22.7,
+ "maxFramePx": 3803,
+ "maxNovelPx": 1734
+}

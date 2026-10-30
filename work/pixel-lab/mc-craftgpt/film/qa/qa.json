@@ -1,0 +1,19 @@
+{
+ "file": "craftgpt-pixel.mp4",
+ "frames": 2000,
+ "video_s": 66.667,
+ "audio_s": 66.667,
+ "seam_picture_meanabs": 1.072,
+ "neighbour_frames_meanabs": [
+  0.153,
+  0.402,
+  6.552
+ ],
+ "seam_audio_jump": 0.0013,
+ "audio_typical_step": 0.0119,
+ "loudness_LUFS": -16.6,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.2,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

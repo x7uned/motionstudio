@@ -1,0 +1,15 @@
+{
+ "file": "casino-slots-pixel.mp4",
+ "frames": 1441,
+ "video_s": 48.033,
+ "audio_s": 48.043,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -33.7,
+  -180
+ ],
+ "loudness_LUFS": -16.4,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.8,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

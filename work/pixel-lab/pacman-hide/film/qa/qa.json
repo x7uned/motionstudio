@@ -1,0 +1,19 @@
+{
+ "file": "pacman-hide-pixel.mp4",
+ "frames": 1461,
+ "video_s": 48.7,
+ "audio_s": 48.704,
+ "seam_picture_meanabs": 3.904,
+ "neighbour_frames_meanabs": [
+  3.866,
+  3.802,
+  0.688
+ ],
+ "seam_audio_jump": 0.0005,
+ "audio_typical_step": 0.0101,
+ "loudness_LUFS": -16.3,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.1,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

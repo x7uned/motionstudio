@@ -1,0 +1,17 @@
+From the lightest animal to the heaviest — Kagenami pixel film (2026-10-23)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take).
+Picture and sound: generated locally (pixel art and 8-bit synthesis); no third-party images, logos or recordings.
+Pixel illustration, not to scale. The bee is not the lightest animal on Earth; the film climbs from a bee to a blue whale.
+
+Sources (details and links in ../facts.md):
+- Honeybee ~0.1 g; nectar loads ~40% of body mass: Feuerbacher et al., J Exp Biol 2003.
+- Bee hummingbird ~1.6 g, often mistaken for a bee: Guinness World Records; Audubon.
+- House mouse 12–30 g: Animal Diversity Web. Falling mouse: J.B.S. Haldane, "On Being the Right Size", 1926 (a thought example).
+- Domestic cat ~4 kg: Kienzle & Moik, Br J Nutr 2011; righting reflex: Scientific American.
+- All dogs weigh about as much as all wild land mammals; humans ~20× more: Greenspoon et al., PNAS 2023 (Weizmann Institute).
+- Average adult human 62 kg: Walpole et al., BMC Public Health 2012.
+- Horse ~500 kg, a single toe per leg: PetMD (University of Minnesota data); McHorse et al., Proc R Soc B 2017.
+- Hippo can't swim or float, walks the river bottom: San Diego Zoo; National Geographic.
+- African elephant ~6 t, up to 150 kg of plants a day: San Diego Zoo; National Geographic.
+- Blue whale up to ~150 t (NOAA Fisheries); heart ~180–200 kg (National Geographic Education; Guinness).

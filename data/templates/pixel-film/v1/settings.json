@@ -1,0 +1,14 @@
+{
+  "kind": "style-sample",
+  "renderer": "renderer/style-lab/pixel-film",
+  "composition": "node-pixel-raster",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "fps": 30,
+  "durationInFrames": 1737,
+  "rerenderReference": "cd work/pixel-lab/tap-film && node render.mjs --video && node synth.mjs && node mix.mjs",
+  "connected": false,
+  "components": "renderer/pixel"
+}

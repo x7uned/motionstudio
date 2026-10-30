@@ -1,0 +1,15 @@
+From the slowest heartbeat to the fastest — Kagenami pixel film (2026-10-23)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take).
+Picture and sound: generated locally (pixel art and 8-bit synthesis); the bass heartbeats are synthesised at each animal's stated rate. No third-party images, logos or recordings.
+Pixel illustration, not to scale. The whale is not the only very slow heart (deep-diving turtles reach similar minimums); the film says "the biggest heart".
+
+Sources (details and links in ../facts.md):
+- Blue whale heart down to 2 bpm on deep dives: Goldbogen et al., PNAS 2019. Largest heart: Guinness World Records.
+- Groundhog heart ~80 → 4–5 bpm in hibernation: NH PBS NatureWorks; Missouri Department of Conservation.
+- Green sea turtle ~11 bpm at rest: Okuyama et al., Biology Open 2020.
+- Elephant 25–35, cat 120–140, rabbit 180–350, mouse 450–750 bpm: Merck Veterinary Manual.
+- Human 60–100 bpm at rest: Cleveland Clinic. Cat at the vet ~187 bpm: Abbott, J Feline Med Surg 2005.
+- Hummingbird up to 1,260 bpm: National Geographic (blue-throated hummingbird).
+- Etruscan shrew up to 1,511 bpm: Jürgens et al., J Exp Biol 1996.
+- About a billion heartbeats per life for many mammals (a rough rule): Levine, JACC 1997; humans ~3 billion: DiFrancesco et al., Sci Rep 2023.

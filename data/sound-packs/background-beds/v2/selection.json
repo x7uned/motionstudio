@@ -1,0 +1,22 @@
+{
+  "pack": "background-beds/v2",
+  "date": "2026-10-20",
+  "base": "background-beds/v1 (без изменений)",
+  "userWords": "1, 2, 4 давай будем использовать для таких роликов",
+  "clarification": "На вопрос, какие номера имелись в виду, пользователь выбрал «pluck · glass-arp · chip-soft» (порядок отправки демо).",
+  "context": "«таких роликов» — объясняющие ролики вида «как работает QR-код и почему обрезанный всё равно работает».",
+  "preferredForExplainers": [
+    "pluck-curious",
+    "glass-arp",
+    "chip-soft"
+  ],
+  "notSelected": [
+    "data-pulse",
+    "kalimba-loop",
+    "felt-piano",
+    "mallet-groove",
+    "synth-bloom",
+    "bit-rain",
+    "pizzicato-bounce"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+ "kind": "dog-toy",
+ "states": [
+  "still",
+  "squeak",
+  "toss",
+  "wobble"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 93,
+  "hh": 76
+ },
+ "measured": {
+  "hw": 93,
+  "hh": 110,
+  "box": [
+   172,
+   310,
+   355,
+   498
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 190,
+ "msPerFrame": 20.5,
+ "maxFramePx": 2561,
+ "maxNovelPx": 651
+}

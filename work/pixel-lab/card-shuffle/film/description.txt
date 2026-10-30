@@ -1,0 +1,5 @@
+Shuffle a deck well and you hold a brand-new order 🃏
+
+#math #probability #playingcards #cardtricks
+
+Sources: Bayer & Diaconis 1992 (Annals of Applied Probability); Diaconis, Graham & Kantor 1983 (perfect shuffles); HMC Math Fun Facts; Cornell Math.

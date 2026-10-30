@@ -1,0 +1,33 @@
+{
+ "kind": "mirror",
+ "states": [
+  "still",
+  "shine",
+  "fog",
+  "crack"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 62,
+  "hh": 92
+ },
+ "measured": {
+  "hw": 62,
+  "hh": 96,
+  "box": [
+   200,
+   324,
+   323,
+   511
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 6,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 22.5,
+ "maxFramePx": 5541,
+ "maxNovelPx": 4055
+}

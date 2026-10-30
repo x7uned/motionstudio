@@ -1,0 +1,217 @@
+{
+  "id": "background-beds",
+  "version": 2,
+  "created": "2026-10-20",
+  "source": "Оригинальный процедурный синтез generator/beds.mjs (seed 12345) и generator/explainer.mjs (seed 4242). Сторонних сэмплов, записей и музыки нет.",
+  "format": "48 kHz stereo PCM24 WAV, 120 с, вход 2,5 с / выход 3 с (smoothstep), integrated −20 LUFS (ffmpeg loudnorm, измерено).",
+  "regenerate": "node generator/<beds|explainer>.mjs <id> <seconds> <out.f32> → raw float32 stereo 48 kHz; любая длина под фильм. Затем volume=gainDb.",
+  "mix": {
+    "reference": "Проверено на 06ff2ae5 «What If the Sun Disappeared for 24 Hours?», work/background-music/demo/sun-*.mp4",
+    "bedNormalizedLufs": -20,
+    "pauseGainDb": -8,
+    "speechGainDb": -15,
+    "duckSource": "narration.wav (голосовой PCM-мастер, не меняется)",
+    "duck": {
+      "windowMs": 20,
+      "thresholdDbFS": -45,
+      "holdMs": 250,
+      "attackSeconds": 0.12,
+      "releaseSeconds": 0.7,
+      "curve": "one-pole"
+    },
+    "filmFadeInSeconds": 1.5,
+    "filmFadeOutSeconds": 2.5,
+    "measuredMixLufs": -17.26,
+    "measuredOriginalLufs": -17.26,
+    "note": "Подложка не изменила интегральную громкость (голос доминирует); пики микса −3.4…−3.9 dBTP. Уровни — стартовые, не окончательная калибровка пайплайна.",
+    "explainerReference": "Проверено на 401596f0 «Why a Stained QR Code Still Scans», work/background-music/explainer-candidates/demo/qr-*.mp4; микс −17.2 LUFS как оригинал, пики −3.7…−3.9 dBTP"
+  },
+  "beds": [
+    {
+      "id": "pluck-curious",
+      "title": "Любопытные щипки",
+      "status": "preferred",
+      "category": "explainer",
+      "character": "90 BPM, фа мажор: Fadd9 → C/E → Dm7 → B♭maj7. Щипковое арпеджио (Karplus–Strong) восьмыми с паузами, низкий щипок на сильную долю, тихий пад, еле слышный шейкер.",
+      "topics": [
+        "как работают вещи (Kagenami)",
+        "QR, коды, связь, устройства",
+        "лёгкие «почему так» объяснения"
+      ],
+      "avoid": [
+        "катастрофические и космические what-if"
+      ],
+      "since": "v2",
+      "file": "audio/pluck-curious.wav",
+      "generator": "generator/explainer.mjs pluck-curious",
+      "gainDb": 8.49,
+      "sha256": "e9916e032c399a4c35075bb702b99941aef294ab0580fbe4bb90e485353c1cb4"
+    },
+    {
+      "id": "glass-arp",
+      "title": "Стеклянное арпеджио",
+      "status": "preferred",
+      "category": "explainer",
+      "character": "100 BPM, ля минор: Am → Fmaj7 → Cadd9 → G6. Стеклянное арпеджио шестнадцатыми с медленным фильтром (32 с), пад, без ударных.",
+      "topics": [
+        "технологии и вычисления",
+        "математика/алгоритмы (Reed–Solomon и т.п.)",
+        "объяснения с моментом «открытия»"
+      ],
+      "avoid": [
+        "очень спокойные, медленные темы"
+      ],
+      "since": "v2",
+      "file": "audio/glass-arp.wav",
+      "generator": "generator/explainer.mjs glass-arp",
+      "gainDb": 8.13,
+      "sha256": "13a134d999db5941b28f66957c50e911c139f19723827e94ef675a81b5550572"
+    },
+    {
+      "id": "chip-soft",
+      "title": "Мягкий 8-bit",
+      "status": "preferred",
+      "category": "explainer",
+      "character": "110 BPM, до мажор: C → Am → F → G. Отфильтрованное квадратное арпеджио, 8-bit бас восьмыми, тихий хэт, пад. Перекликается с 8-bit заставкой.",
+      "topics": [
+        "пиксели, цифровые данные, QR",
+        "компьютеры, игры, интернет",
+        "бодрые короткие explainers"
+      ],
+      "avoid": [
+        "исторические и природные темы"
+      ],
+      "since": "v2",
+      "file": "audio/chip-soft.wav",
+      "generator": "generator/explainer.mjs chip-soft",
+      "gainDb": 12.61,
+      "sha256": "8c74182cddf44a6601feb7fcdb20d3844d57927e690151da5294087f0317f4c9"
+    },
+    {
+      "id": "warm-pad",
+      "title": "Тёплый пад",
+      "status": "preferred",
+      "character": "Тёплые медленные аккорды Cmaj9 → Am9 → Fmaj9 → G6/9 по 8 с, мягкий фильтр, реверб. Без ритма.",
+      "topics": [
+        "how-things-work (Kagenami)",
+        "технологии и изобретения",
+        "история",
+        "спокойные объяснения механизмов",
+        "универсальный выбор, если тема не подходит к остальным"
+      ],
+      "avoid": [
+        "тревожные/катастрофические what-if — там лучше space-drone"
+      ],
+      "file": "audio/warm-pad.wav",
+      "generator": "generator/beds.mjs warm-pad",
+      "gainDb": 1.92,
+      "sha256": "c70778bdaac96b47a8f0b0c7aff3a651526159b95bb85e4aa2261c8b0a188536",
+      "since": "v1"
+    },
+    {
+      "id": "space-drone",
+      "title": "Космический дрон",
+      "status": "preferred",
+      "character": "Глубокие квинты C2/G2/C3 с верхними обертонами, медленно мерцающие высокие ноты, «воздух», большой реверб. Без ритма.",
+      "topics": [
+        "космос, Солнце, Луна, планеты, орбиты",
+        "what-if сценарии масштаба планеты (World If Then)",
+        "физика, время, гравитация",
+        "загадочные/тревожные темы"
+      ],
+      "avoid": [
+        "лёгкие бытовые темы — звучит слишком серьёзно"
+      ],
+      "file": "audio/space-drone.wav",
+      "generator": "generator/beds.mjs space-drone",
+      "gainDb": 2.39,
+      "sha256": "5b04cbb8c3b43dab57772fd512bdd1c2d7301c1535eb7c2266de619d7bc212a7",
+      "since": "v1"
+    },
+    {
+      "id": "lofi-pulse",
+      "title": "Lo-fi пульс",
+      "status": "preferred",
+      "character": "Lo-fi 72 BPM: Rhodes-аккорды Fmaj7 → Em7 → Dm7 → Cmaj7, мягкая бочка, щётки на слабые доли, тихий винил. Есть ритм.",
+      "topics": [
+        "бытовые технологии и гаджеты",
+        "интернет, QR, связь, компьютеры",
+        "лёгкие быстрые «как это работает»",
+        "позитивные, энергичные ролики"
+      ],
+      "avoid": [
+        "медленные драматичные и космические темы — ритм спорит с паузами речи"
+      ],
+      "file": "audio/lofi-pulse.wav",
+      "generator": "generator/beds.mjs lofi-pulse",
+      "gainDb": 11.82,
+      "sha256": "97e43f7d4ba1c3d31cdf2abce1c48aa88889431865c3db3a4e497059f558134d",
+      "since": "v1"
+    },
+    {
+      "id": "music-box",
+      "title": "Музыкальная шкатулка",
+      "status": "saved",
+      "character": "Редкие колокольчики в пентатонике до мажора поверх тихих аккордов, реверб. Лёгкий, «любопытный».",
+      "topics": [
+        "животные (например, кошка)",
+        "маленькие чудеса и парадоксы повседневности",
+        "детские/наивные вопросы"
+      ],
+      "avoid": [
+        "серьёзные катастрофы, космос"
+      ],
+      "file": "audio/music-box.wav",
+      "generator": "generator/beds.mjs music-box",
+      "gainDb": 2.5,
+      "sha256": "e980e59e1f640cadaee8bea813a2848ab48c496a73980adfae8db7817b573849",
+      "since": "v1"
+    },
+    {
+      "id": "nature-air",
+      "title": "Ветер и волны",
+      "status": "saved",
+      "character": "Ветер с порывами (коричневый шум), шелест листвы, далёкие волны раз в 7–11 с, еле слышный тёплый тон. Без мелодии.",
+      "topics": [
+        "природа, погода, океаны, ветер",
+        "Земля как планета без космического антуража"
+      ],
+      "avoid": [
+        "темы, где нужна музыка; на динамике телефона звучит тише остальных (энергия в низах)"
+      ],
+      "file": "audio/nature-air.wav",
+      "generator": "generator/beds.mjs nature-air",
+      "gainDb": 2.14,
+      "sha256": "de764c059a2144100596d6507061aa6fae0901207bd2f14840404cc85bbf4c16",
+      "since": "v1"
+    }
+  ],
+  "generatorSha256": {
+    "beds.mjs": "35b92735a549723d432bd46e2d500ed81867059025f90d562119f052c246c4bc",
+    "duck.mjs": "1860d216a466d8b6fa1b6470961858cf247e6552091b4db1ec894befe0ab1e3a",
+    "explainer.mjs": "ba203ee66ba7bd33ec8c83b42060163b811e25972f3d63a3a0a448a5ea199cb7"
+  },
+  "selectionDefaults": {
+    "how-things-work explainer (Kagenami, QR, устройства, технологии)": [
+      "pluck-curious",
+      "glass-arp",
+      "chip-soft"
+    ],
+    "космос, what-if масштаба планеты (World If Then)": [
+      "space-drone"
+    ],
+    "гаджеты, интернет, лёгкие бодрые": [
+      "lofi-pulse",
+      "chip-soft"
+    ],
+    "история, спокойные объяснения, не подошло ничего": [
+      "warm-pad"
+    ],
+    "животные, бытовые чудеса": [
+      "music-box"
+    ],
+    "природа, погода, океаны": [
+      "nature-air"
+    ]
+  }
+}

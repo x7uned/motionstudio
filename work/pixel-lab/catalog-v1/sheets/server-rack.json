@@ -1,0 +1,33 @@
+{
+ "kind": "server-rack",
+ "states": [
+  "idle",
+  "busy",
+  "alert",
+  "off"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 25,
+  "hh": 87
+ },
+ "measured": {
+  "hw": 24,
+  "hh": 88,
+  "box": [
+   238,
+   332,
+   285,
+   503
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 187,
+ "msPerFrame": 21,
+ "maxFramePx": 1057,
+ "maxNovelPx": 444
+}

@@ -22,6 +22,20 @@ npm run studio -- config unset defaults.language
 | `engine.maxActiveJobs` | `0` | Сколько задач движок ведёт одновременно; `0` — без искусственного предела. Применяется без перезапуска. |
 | `engine.renderSlots` | `1` | Сколько локальных рендеров (Remotion, лист ключевых кадров, кодирование/сведение FFmpeg) идут одновременно. **1 = строго по одному.** Меняется только по словам пользователя: `config set engine.renderSlots 2 --user-confirmed "<его слова>"` (цитата сохраняется в `confirmations`). |
 | `engine.autostart` | `false` | `run` сам запускает движок, если он не запущен. Включай только там, где shell агента имеет вход Tavily (не в песочнице Bash Claude Code). |
-| `ui.port` | `3210` | Порт UI (`npm run studio -- ui`, `npm start`). Только `127.0.0.1`. Переменная `PORT` важнее. |
 
 Порядок для `create`: флаг → значение, заданное в файле → значение шаблона → значение по умолчанию.
+
+Старый ключ `ui.port` (веб-интерфейс удалён 2026-10-30) в существующих файлах допускается и игнорируется.
+
+## Инструменты по ОС · переопределения `STUDIO_*`
+
+Студия сама находит инструменты на macOS, Windows и Linux (`src/lib/platform.ts`). Если что-то стоит в другом месте, пользователь добавляет строку в `.env.local` (это не секреты, но живут рядом с ключами, чтобы не попасть в git):
+
+| Переменная | По умолчанию |
+|---|---|
+| `STUDIO_FFMPEG` | `bin/ffmpeg` (`bin\ffmpeg.exe` на Windows), иначе `ffmpeg` из PATH. `npm run setup` скачивает статический GPL-билд, если FFmpeg нет. |
+| `STUDIO_PYTHON` | `.runtime/venv/bin/python` (`.runtime\venv\Scripts\python.exe`) |
+| `STUDIO_TAVILY` | `.runtime/research/bin/tvly` (`.runtime\research\Scripts\tvly.exe`) |
+| `STUDIO_CHROME` | headless Chrome Remotion в `node_modules/.remotion/chrome-headless-shell/<ОС>/…` (`npm run browser:install`) |
+| `STUDIO_CODEX`, `STUDIO_CLAUDE` | Только для легаси-проектов со встроенными CLI. Можно указать `.js`/`.mjs` — студия запустит его через Node (так работают npm-обёртки на Windows). |
+| `STUDIO_PYTHON_BOOTSTRAP` | Для `npm run setup`: каким Python создавать окружения (по умолчанию `py -3` на Windows, `python3` на macOS/Linux). |

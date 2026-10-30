@@ -1,0 +1,7 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде; сторонних изображений, флагов и логотипов нет.
+Источники фактов:
+- MIT News, 2010: https://news.mit.edu/2010/cat-lapping-1112 (Reis, Jung, Aristoff, Stocker, Science, doi 10.1126/science.1195421)
+- Gart, Socha, Vlachos, Jung, PNAS 2015, doi 10.1073/pnas.1514842112: https://pmc.ncbi.nlm.nih.gov/articles/PMC4703018
+- Virginia Tech News, 2015: https://news.vt.edu/articles/2015/12/121515-engineering-dogresearch.html

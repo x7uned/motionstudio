@@ -1,0 +1,12 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), своя мелодия; без музыки и звуков Tetris (ни NES, ни Game Boy). «Застрявшая нота» после заморозки — наш синтез по описанию стрима (AP).
+Картинка: нарисована в коде. Комната, телевизор, приставка, контроллер и мальчик — обобщённые рисунки, не портрет (Willis Gibson — несовершеннолетний, фото не используем). Игра на экране — своя симуляция падающих блоков 10×20 со своими цветами и раскладкой экрана, не графика NES Tetris; скорости уровней — по таблице NES (кадров на ряд), ход партии и раскладка — придуманы. Полоса «1 FRAME» в панели цикла очков — иллюстрация (ширины условные).
+Логотип Nintendo: «Nintendo.svg», Wikimedia Commons, Public domain (PD-textlogo; товарный знак Nintendo) — без изменений, плиткой (media.json, SHA-256).
+
+Источники фактов (подробно — ../facts.md):
+- Willis Gibson («Blue Scuti»), 13 лет, Stillwater, Oklahoma; 21.12.2023, уровень 157, single → зависание; ≈38 минут; «I can't feel my fingers»: https://en.wikipedia.org/wiki/Willis_Gibson ; AP: https://www.pbs.org/newshour/nation/i-cant-feel-my-fingers-13-year-old-is-first-gamer-ever-to-beat-tetris ; https://kotaku.com/twitch-youtube-blue-scuti-tetris-kill-screen-nes-1851134043
+- У NES Tetris нет конца; уровень 29 — ряд за кадр (NTSC), удержание ≈10 сдвигов/с, «kill screen»: https://tetris.wiki/Tetris_(NES,_Nintendo) ; https://en.wikipedia.org/wiki/Tetris_(NES_video_game)
+- Хайпертаппинг >10 нажатий/с; rolling (2020, Christopher «CheeZ» Martinez) ≥20 нажатий/с: Kotaku, Wikipedia.
+- Цвета ломаются с уровня 138, 146 «почти невидимый»: https://negative-seven.github.io/tetris_explained/
+- Подсчёт очков циклом по уровню; выше ≈155 цикл длиннее кадра → прыжок не туда → зависание: там же; https://news.ycombinator.com/item?id=38846747
+- ИИ первым показал, что краш возможен (2021): https://www.techspot.com/news/101383-13-year-old-first-human-beat-tetris.html ; https://tetrisinterest.com/?p=3176

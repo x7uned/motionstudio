@@ -1,0 +1,34 @@
+{
+ "kind": "skin",
+ "states": [
+  "dry",
+  "smell",
+  "pump",
+  "wet",
+  "catch"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 118,
+  "hh": 100
+ },
+ "measured": {
+  "hw": 118,
+  "hh": 99,
+  "box": [
+   144,
+   340,
+   379,
+   519
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 223,
+ "msPerFrame": 21.3,
+ "maxFramePx": 4900,
+ "maxNovelPx": 5348
+}

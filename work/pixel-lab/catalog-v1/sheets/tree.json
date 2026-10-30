@@ -1,0 +1,34 @@
+{
+ "kind": "tree",
+ "states": [
+  "still",
+  "sway",
+  "wind",
+  "blossom",
+  "fruit"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 96,
+  "hh": 112
+ },
+ "measured": {
+  "hw": 101,
+  "hh": 112,
+  "box": [
+   167,
+   308,
+   363,
+   530
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 235,
+ "msPerFrame": 25,
+ "maxFramePx": 4050,
+ "maxNovelPx": 1364
+}

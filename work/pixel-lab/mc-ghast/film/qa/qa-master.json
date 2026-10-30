@@ -1,0 +1,15 @@
+{
+ "file": "ghast-pixel.mp4",
+ "frames": 1756,
+ "video_s": 58.533,
+ "audio_s": 58.539,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -34,
+  -180
+ ],
+ "loudness_LUFS": -16.4,
+ "true_peak_dBFS": -4.5,
+ "LRA": 2.8,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

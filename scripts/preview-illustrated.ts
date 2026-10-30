@@ -2,6 +2,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import {bundle} from "@remotion/bundler";
+import {bundleLive} from "../src/lib/remotion-bundle";
 import {renderStill,selectComposition} from "@remotion/renderer";
 import {CHROME} from "../src/lib/provider";
 import {ROOT,DATA,project} from "../src/lib/store";
@@ -28,7 +29,7 @@ async function main(){
  const plan={...p.plan,filmKind:"illustrated" as const,illustrated};
  if(planFile)validateIllustrated(illustrated,plan,alignment);
  await fs.mkdir(out,{recursive:true});
- const serveUrl=await bundle({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects"),symlinkPublicDir:true});
+ const serveUrl=await bundleLive({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects")});
  const inputProps={plan,profile:p.profile,format:p.format,alignment};
  const composition=await selectComposition({serveUrl,id:"StudioFilm",inputProps,browserExecutable:CHROME});
  const times=(process.argv[5]??"0.6,2,6.2,11,20").split(",").map(Number);

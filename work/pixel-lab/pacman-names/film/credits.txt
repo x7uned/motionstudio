@@ -1,0 +1,11 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст. Японские слова озвучены по фонетической записи (pron.json), в субтитрах — латиница, как на экране Puck Man.
+Музыка и звуки: синтезированы в коде (8 бит), своя мелодия; без музыки, сирены и звуков оригинальной игры.
+Картинка: нарисована в коде. Лабиринт (свой, 21×26, из ролика про призраков), спрайты, карточки, корпус и панель автомата — свои рисунки, не графика аркады и не оригинальная карта. Призраки всю партию живут по правилам Dossier (погоня; в последние секунды круга — разбег), Pac-Man играет программа; партия выбрана поиском так, чтобы правило каждого призрака было видно на его словах.
+Pac-Man — товарный знак Bandai Namco Entertainment; ролик объясняет правила игры и не связан с правообладателем.
+
+Источники фактов (подробно — ../facts.md и ../research.md):
+- Jamey Pittman, The Pac-Man Dossier: https://pacman.holenet.info/ (перепечатка: https://www.gamedeveloper.com/design/the-pac-man-dossier)
+- Chad Birch, Understanding Pac-Man Ghost Behavior (GameInternals, 2010; архив): https://web.archive.org/web/20201213134620/https://gameinternals.com/understanding-pac-man-ghost-behavior
+- Scott Lawrence, документированный дизассемблер (строки OIKAKE, MACHIBUSE, KIMAGURE, OTOBOKE): http://umlautllama.com/projects/pacdocs/mspac/mspac.asm
+- mburkley/pacman-c, перевод кода ROM на C (правило Clyde: сумма квадратов < 64): https://github.com/mburkley/pacman-c
+- Словари: Jisho (JMdict), デジタル大辞泉 (おとぼけ — «делать вид, что не знаешь»).

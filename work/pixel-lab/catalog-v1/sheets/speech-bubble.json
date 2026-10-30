@@ -1,0 +1,33 @@
+{
+ "kind": "speech-bubble",
+ "states": [
+  "show",
+  "shout",
+  "think",
+  "quiet"
+ ],
+ "hud": true,
+ "declared": {
+  "hw": 92,
+  "hh": 40
+ },
+ "measured": {
+  "hw": 116,
+  "hh": 44,
+  "box": [
+   39,
+   218,
+   264,
+   287
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 21.5,
+ "maxFramePx": 2657,
+ "maxNovelPx": 539
+}

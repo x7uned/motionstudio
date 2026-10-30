@@ -1,0 +1,49 @@
+{
+ "kind": "ghost",
+ "states": [
+  "float",
+  "boo",
+  "fade"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 66,
+  "hh": 80
+ },
+ "measured": {
+  "hw": 87,
+  "hh": 88,
+  "box": [
+   175,
+   332,
+   348,
+   497
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [
+  {
+   "t": 0.667,
+   "novel": 642,
+   "before": 2,
+   "after": 0,
+   "changed": 928,
+   "bayerTop2": 0.77
+  },
+  {
+   "t": 2.567,
+   "novel": 954,
+   "before": 22,
+   "after": 27,
+   "changed": 1823,
+   "bayerTop2": 0.61
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 145,
+ "msPerFrame": 22.2,
+ "maxFramePx": 3178,
+ "maxNovelPx": 954
+}

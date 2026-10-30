@@ -1,0 +1,13 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст; проверка распознаванием Scribe (совпадает со сценарием, «antennae» распознано как «antenna»).
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей. Писк комара — синтезированный тон ≈ 494 Гц, громкость которого зависит от расстояния комара до уха героя; «песня» — её и его тона, которые сходятся по обертонам.
+Картинка: нарисована в коде (спальня и герой канала из набора квартиры, комар из ролика «Why mosquitoes bite you first», облачка дыхания, приборы); сторонних изображений, фото и логотипов нет. Комар не в масштабе.
+Источники фактов:
+- Cator L.J., Arthur B.J., Harrington L.C., Hoy R.R. (2009) Harmonic convergence in the love songs of the dengue vector mosquito. Science 323:1077–1079. doi:10.1126/science.1166541.
+- Arthur B.J., Emr K.S., Wyttenbach R.A., Hoy R.R. (2014) Mosquito (Aedes aegypti) flight tones. JASA 135:933–941. doi:10.1121/1.4861233.
+- van Breugel F., Riffell J., Fairhall A., Dickinson M.H. (2015) Mosquitoes use vision to associate odor plumes with thermal targets. Current Biology. doi:10.1016/j.cub.2015.06.046.
+- Chandel, DeBeaubien et al. (2024) Nature. doi:10.1038/s41586-024-07848-5 — тепловое излучение до ~70 см.
+- De Jong R., Knols B.G.J. (1995) Experientia, doi:10.1007/BF01964925; Knols, Takken, De Jong (1994) JAMCA 10:423–426 — выдох тянет укусы к голове (часть видов).
+- Feugère L. et al. (2021) J R Soc Interface. doi:10.1098/rsif.2021.0121 — громкость комаров.
+- Su M.P. et al. (2018) Nature Communications 9:3911. doi:10.1038/s41467-018-06388-7 — слух антеннами.
+- Villarreal S.M. et al. (2017) J Med Entomol 54:1116–1121 — частота взмахов самок Aedes.
+- Zuo et al. (2026) Sci Adv. doi:10.1126/sciadv.adz7063 — кружение у цели.

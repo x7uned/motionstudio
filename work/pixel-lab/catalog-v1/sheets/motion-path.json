@@ -1,0 +1,34 @@
+{
+ "kind": "motion-path",
+ "states": [
+  "draw",
+  "arc",
+  "loop",
+  "march",
+  "fade"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 82,
+  "hh": 64
+ },
+ "measured": {
+  "hw": 69,
+  "hh": 94,
+  "box": [
+   202,
+   369,
+   331,
+   514
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 229,
+ "msPerFrame": 20.3,
+ "maxFramePx": 808,
+ "maxNovelPx": 204
+}

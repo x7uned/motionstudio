@@ -1,0 +1,33 @@
+{
+ "kind": "snowflake",
+ "states": [
+  "light",
+  "heavy",
+  "swirl",
+  "stop"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 75,
+  "hh": 90
+ },
+ "measured": {
+  "hw": 75,
+  "hh": 84,
+  "box": [
+   187,
+   336,
+   332,
+   504
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 20.4,
+ "maxFramePx": 146,
+ "maxNovelPx": 67
+}

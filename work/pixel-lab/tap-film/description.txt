@@ -1,0 +1,5 @@
+Every card tap starts a trip around the world. Buy a coffee in Tokyo with a card from London, and the request runs from the terminal to the shop's bank, through the card network and undersea cables, to your bank — which says yes in seconds, in the middle of the night. The money itself only moves a day or two later.
+
+Pixel illustration: the route and data centers are illustrative. Logos and flags: Wikimedia Commons.
+
+#technology #finance #economics #engineering #science #education #howitworks

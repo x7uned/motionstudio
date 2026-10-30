@@ -1,0 +1,140 @@
+{
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "safeArea": {
+      "left": 78,
+      "right": 938,
+      "top": 108,
+      "bottom": 1420
+    },
+    "reservedBottom": 500
+  },
+  "layout": {
+    "avatar": {
+      "left": 78,
+      "top": 108,
+      "diameter": 66
+    },
+    "username": {
+      "size": 29,
+      "weight": 750
+    },
+    "series": {
+      "size": 23
+    },
+    "duration": {
+      "size": 24
+    },
+    "progress": {
+      "left": 78,
+      "top": 210,
+      "width": 860,
+      "height": 10,
+      "gap": 8
+    },
+    "era": {
+      "left": 78,
+      "top": 237,
+      "size": 24
+    },
+    "headline": {
+      "left": 78,
+      "top": 276,
+      "width": 860,
+      "size": 62,
+      "weight": 800,
+      "lineHeight": 1.08,
+      "tracking": -2.5,
+      "minHeight": 138
+    },
+    "subtitle": {
+      "left": 78,
+      "top": 424,
+      "width": 860,
+      "size": 28,
+      "lineHeight": 1.3,
+      "height": 76
+    },
+    "stage": {
+      "left": 78,
+      "top": 515,
+      "width": 860,
+      "height": 555
+    },
+    "captions": {
+      "top": 1124,
+      "size": 48,
+      "maxWords": 5,
+      "maxCharacters": 32
+    },
+    "overallProgress": {
+      "left": 78,
+      "top": 1375,
+      "width": 860,
+      "height": 2
+    }
+  },
+  "motion": {
+    "clock": "frame / 30, storyboard + alignment",
+    "easing": "smoothstep: p*p*(3-2*p)",
+    "titleEnter": 0.35,
+    "titleExit": 0.35,
+    "calloutEnter": 0.6,
+    "modeEnter": 0.35,
+    "modeExit": 0.28,
+    "archiveCrossfade": 0.9,
+    "archiveEnterScale": [
+      0.9,
+      1
+    ],
+    "archiveSlowZoom": [
+      1,
+      1.045
+    ],
+    "diagramScale": [
+      0.97,
+      1
+    ],
+    "subtitleEnterExit": 0.2,
+    "wordHighlight": 0.1,
+    "spokenCueLead": 0.08,
+    "shortPhraseHoldMin": 1,
+    "finalCompositionHoldMin": 2
+  },
+  "voice": {
+    "provider": "elevenlabs",
+    "language": "ru",
+    "strategy": "one continuous master",
+    "speed": 1,
+    "referenceLibraryVoice": "Alexey - Character",
+    "referenceVoiceId": "gRp20jh5cr1dR3Lhhapi",
+    "model": "eleven_multilingual_v2",
+    "stability": 0.55,
+    "similarityBoost": 0.75,
+    "style": 0,
+    "speakerBoost": true,
+    "maxWordOrChapterGapSeconds": 1.5,
+    "insertedChapterSilence": 0,
+    "referenceMeasuredDuration": 148,
+    "credentials": "server .env.local only; never included in this template"
+  },
+  "export": {
+    "videoCodec": "h264",
+    "pixelFormat": "yuv420p",
+    "range": "tv",
+    "colorSpace": "bt709",
+    "audioCodec": "aac",
+    "sampleRate": 48000,
+    "channels": 2,
+    "targetLufs": -16,
+    "acceptedLufs": [
+      -18,
+      -14
+    ],
+    "maxTruePeakDbtp": -1,
+    "browser": "Remotion pinned Chrome Headless Shell"
+  },
+  "scope": "This is a saved production recipe and reference layout. Telephone-specific scenes and archive files are examples, not a universal renderer for arbitrary new topics."
+}

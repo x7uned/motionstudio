@@ -1,0 +1,5 @@
+Netflix keeps more than 18,000 of its own servers inside internet providers. Every night they download what people nearby will probably watch tomorrow, so your episode usually comes from a few kilometres away, stored in thousands of versions and sent in chunks of a few seconds.
+
+Pixel illustration, not to scale.
+
+#technology #internet #engineering #streaming #science #education #howitworks

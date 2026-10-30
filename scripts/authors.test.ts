@@ -1,3 +1,4 @@
+import {TEST_FFMPEG} from "./test-tools";
 import {test,before,after} from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -5,7 +6,7 @@ import os from "node:os";
 import path from "node:path";
 import {instagramAccount,validateVideoAnalysis,validateCorpus,speechMetrics,IMPORT_LIMIT} from "../src/lib/author-model";
 const previous=process.cwd();
-process.env.STUDIO_FFMPEG=path.join(previous,"bin/ffmpeg");const temp=fs.mkdtempSync(path.join(os.tmpdir(),"authors-test-"));fs.cpSync(path.join(previous,"data/branding/xtuned-outro"),path.join(temp,"data/branding/xtuned-outro"),{recursive:true});fs.cpSync(path.join(previous,"data/sound-packs/background-beds/v4"),path.join(temp,"data/sound-packs/background-beds/v4"),{recursive:true,filter:f=>!/\.(wav|m4a)$/.test(f)});
+process.env.STUDIO_FFMPEG=TEST_FFMPEG;const temp=fs.mkdtempSync(path.join(os.tmpdir(),"authors-test-"));fs.cpSync(path.join(previous,"data/branding/xtuned-outro"),path.join(temp,"data/branding/xtuned-outro"),{recursive:true});fs.cpSync(path.join(previous,"data/sound-packs/background-beds/v4"),path.join(temp,"data/sound-packs/background-beds/v4"),{recursive:true,filter:f=>!/\.(wav|m4a)$/.test(f)});
 let store:typeof import("../src/lib/store"),authors:typeof import("../src/lib/author-store"),providers:typeof import("../src/lib/author-providers"),secrets:typeof import("../src/lib/server-secrets");
 const originalFetch=globalThis.fetch;
 before(async()=>{process.chdir(temp);store=await import("../src/lib/store");authors=await import("../src/lib/author-store");providers=await import("../src/lib/author-providers");secrets=await import("../src/lib/server-secrets");});

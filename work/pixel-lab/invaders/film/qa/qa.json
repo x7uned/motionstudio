@@ -1,0 +1,19 @@
+{
+ "file": "invaders-pixel.mp4",
+ "frames": 1569,
+ "video_s": 52.3,
+ "audio_s": 52.309,
+ "seam_picture_meanabs": 0.436,
+ "neighbour_frames_meanabs": [
+  0.612,
+  0.29,
+  0.129
+ ],
+ "seam_audio_jump": 0.0017,
+ "audio_typical_step": 0.01,
+ "loudness_LUFS": -16.4,
+ "true_peak_dBFS": -4.5,
+ "LRA": 2.1,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

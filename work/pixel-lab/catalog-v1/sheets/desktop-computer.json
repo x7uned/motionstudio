@@ -1,0 +1,34 @@
+{
+ "kind": "desktop-computer",
+ "states": [
+  "on",
+  "off",
+  "busy",
+  "glow",
+  "lag"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 74,
+  "hh": 46
+ },
+ "measured": {
+  "hw": 78,
+  "hh": 48,
+  "box": [
+   184,
+   376,
+   332,
+   468
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 226,
+ "msPerFrame": 21.7,
+ "maxFramePx": 2014,
+ "maxNovelPx": 1250
+}

@@ -1,3 +1,4 @@
+import {TEST_PYTHON,TEST_FFMPEG} from "./test-tools";
 import {test} from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs/promises";
@@ -85,7 +86,7 @@ test("mix integration: snapshot hash, cue clock, low gain and continuous narrati
     await fs.mkdir(path.join(f.root,"sfx"));await fs.writeFile(path.join(f.root,"sfx/effect.wav"),sample);await fs.writeFile(path.join(f.root,"narration.wav"),master);
     await fs.writeFile(path.join(f.root,"storyboard.json"),JSON.stringify({scenes:[{seconds:2}]}));
     await fs.writeFile(path.join(f.root,"sound-cues.json"),JSON.stringify({cues:[{at:1,gain:.008,file:"sfx/effect.wav",sha256}]}));
-    execFileSync("/usr/bin/python3",[path.resolve("scripts/remix.py"),f.root,path.resolve("bin/ffmpeg")],{stdio:"pipe",timeout:30000});
+    execFileSync(TEST_PYTHON,[path.resolve("scripts/remix.py"),f.root,TEST_FFMPEG],{stdio:"pipe",timeout:30000});
     assert.deepEqual(await fs.readFile(path.join(f.root,"narration.wav")),master,"master bytes never change");
     const mixed=await fs.readFile(path.join(f.root,"premix.wav"));assert.equal(mixed.length,master.length);
     // The test tone is phase aligned with the narration; only the chosen event window changes.
@@ -107,7 +108,7 @@ test('calibrated mix makes a quiet high-crest recording audible and creates an a
   await fs.mkdir(path.join(f.root,'sfx'));await fs.writeFile(path.join(f.root,'sfx/quiet.wav'),quiet);await fs.writeFile(path.join(f.root,'narration.wav'),master);
   await fs.writeFile(path.join(f.root,'storyboard.json'),JSON.stringify({scenes:[{seconds:2}]}));
   await fs.writeFile(path.join(f.root,'sound-cues.json'),JSON.stringify({version:3,cues:[{at:.4,gain:.008,kind:'assembly-fan',effect:'fan-start',file:'sfx/quiet.wav',sha256,targetRmsDbFS:-27,peakDbFS:-12},{at:1.3,gain:.008,kind:'outro-transition',effect:'soft-whoosh',targetRmsDbFS:-22,peakDbFS:-9}]}));
-  execFileSync('/usr/bin/python3',[path.resolve('scripts/remix.py'),f.root,path.resolve('bin/ffmpeg')],{stdio:'pipe',timeout:30000});
+  execFileSync(TEST_PYTHON,[path.resolve('scripts/remix.py'),f.root,TEST_FFMPEG],{stdio:'pipe',timeout:30000});
   assert.deepEqual(await fs.readFile(path.join(f.root,'narration.wav')),master);
   const report=JSON.parse(await fs.readFile(path.join(f.root,'sound-mix-report.json'),'utf8'));
   assert.ok(report.cues[0].actualActiveRmsDbFS>=-29);assert.ok(report.cues[0].peakDbFS<=-11.9);assert.ok(report.cues[0].boostVsLegacyDb>25,'a single transient must not bury the motor again');
@@ -125,7 +126,7 @@ test('audition mix halves the exact calibrated fan waveform and raises only the 
   const cue={at:.4,gain:.008,kind:'assembly-fan',effect:'fan-start',file:'sfx/fan.wav',sha256,targetRmsDbFS:-27,peakDbFS:-12};
   async function mix(scale:number,backgroundGain:number){
    await fs.writeFile(path.join(f.root,'sound-cues.json'),JSON.stringify({version:4,backgroundGain,cues:[{...cue,levelScale:scale}]}));
-   execFileSync('/usr/bin/python3',[path.resolve('scripts/remix.py'),f.root,path.resolve('bin/ffmpeg')],{stdio:'pipe',timeout:30000});
+   execFileSync(TEST_PYTHON,[path.resolve('scripts/remix.py'),f.root,TEST_FFMPEG],{stdio:'pipe',timeout:30000});
    return {stem:await fs.readFile(path.join(f.root,'sfx-only.wav')),premix:await fs.readFile(path.join(f.root,'premix.wav'))};
   }
   const before=await mix(1,.006),after=await mix(.5,.009);
@@ -146,7 +147,7 @@ test('sustained fan fades to silence well before its source cut and a late cue a
    {at:.2,gain:.008,kind:'assembly-fan',effect:'fan-start',file:'sfx/fan.wav',sha256,targetRmsDbFS:-27,peakDbFS:-12,levelScale:.5,fadeInSeconds:.04,fadeOutSeconds:.9},
    {at:3.7,gain:.008,kind:'outro-transition',effect:'soft-whoosh',targetRmsDbFS:-22,peakDbFS:-9,levelScale:.5,fadeInSeconds:.02,fadeOutSeconds:.2},
   ]}));
-  execFileSync('/usr/bin/python3',[path.resolve('scripts/remix.py'),f.root,path.resolve('bin/ffmpeg')],{stdio:'pipe',timeout:30000});
+  execFileSync(TEST_PYTHON,[path.resolve('scripts/remix.py'),f.root,TEST_FFMPEG],{stdio:'pipe',timeout:30000});
   const b=await fs.readFile(path.join(f.root,'sfx-only.wav'));
   const energy=(start:number,end:number)=>{let sum=0,count=0;for(let i=Math.round(start*48000);i<Math.round(end*48000);i++){sum+=(b.readInt16LE(44+i*2)/32768)**2;count++;}return Math.sqrt(sum/count);};
   assert.ok(energy(3.15,3.2)<energy(1,1.1)*.02,'fan has a long gentle tail, not a short terminal ramp');
@@ -164,7 +165,7 @@ test('scene audio stretches movement to its full interval and loops a fan throug
    {at:1,gain:.008,kind:'assembly-fan',effect:'fan-start',file:'sfx/fan.wav',sha256,targetRmsDbFS:-27,peakDbFS:-12,levelScale:.3,durationSeconds:6,durationMode:'loop',fadeInSeconds:.15,fadeOutSeconds:.9,automation:[{at:1,value:0},{at:2,value:1},{at:6,value:1},{at:7,value:0}]},
    {at:7.4,gain:.008,kind:'assembly-cutaway',effect:'soft-whoosh',targetRmsDbFS:-22,peakDbFS:-9,levelScale:.24,durationSeconds:1.6,durationMode:'stretch',fadeInSeconds:.15,fadeOutSeconds:.4}
   ]}));
-  execFileSync('/usr/bin/python3',[path.resolve('scripts/remix.py'),f.root,path.resolve('bin/ffmpeg')],{stdio:'pipe',timeout:30000});
+  execFileSync(TEST_PYTHON,[path.resolve('scripts/remix.py'),f.root,TEST_FFMPEG],{stdio:'pipe',timeout:30000});
   const b=await fs.readFile(path.join(f.root,'sfx-only.wav')),report=JSON.parse(await fs.readFile(path.join(f.root,'sound-mix-report.json'),'utf8'));
   const energy=(start:number,end:number)=>{let sum=0,count=0;for(let i=Math.round(start*48000);i<Math.round(end*48000);i++){sum+=(b.readInt16LE(44+i*2)/32768)**2;count++;}return Math.sqrt(sum/count);};
   assert.equal(energy(.5,.9),0);assert.ok(energy(5,5.2)>.001,'fan continues beyond the original three-second file');assert.ok(energy(1,1.1)<energy(3,3.2)*.03);assert.ok(energy(6.9,7)<energy(3,3.2)*.03);assert.equal(energy(7.05,7.3),0,'fan stops with the animation');

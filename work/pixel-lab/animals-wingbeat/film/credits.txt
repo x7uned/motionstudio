@@ -1,0 +1,15 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст; проверка распознаванием Scribe (совпадает со сценарием).
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей. Звук крыльев — синтез по частоте взмахов (щелчок на каждый взмах; выше ~20 в секунду — тон той же частоты, подтянутый к ближайшей ноте), а не запись животных.
+Картинка: нарисована в коде (десять биомов и животных, измеритель взмахов, герой канала); сторонних изображений, фото и логотипов нет. Животные не в масштабе.
+Источники фактов:
+- Pennycuick C.J. (1996) Wingbeat frequency of birds in steady cruising flight. J Exp Biol 199:1613–1618 — альбатрос 2,49 Гц.
+- Pennycuick C.J. (2001) J Exp Biol 204:3283–3294; Tobalske B.W., Dial K.P. (1996) J Exp Biol 199:263–280 — голубь ≈ 5,6–6 Гц.
+- Dudley R. (1990) Biomechanics of flight in neotropical butterflies. J Exp Biol 150:37–53 — бабочки, среднее ≈ 11 Гц.
+- Wakeling J.M., Ellington C.P. (1997) Dragonfly flight II. J Exp Biol 200:557–582 — красотка ≈ 20 Гц.
+- Hightower B.J. et al. (2021) How oscillating aerodynamic forces explain the timbre of the hummingbird's hum. eLife 10:e63107 — колибри Анны 44 Гц; тон = частота взмахов.
+- Oertli J.J. (1989) J Exp Biol 145:321–338; Yang L. et al. (2024) Biomimetics 9:720 — семиточечная коровка ≈ 73–77 Гц.
+- Dudley R., Ellington C.P. (1990) Mechanics of forward flight in bumblebees I. J Exp Biol 148:19–52 — шмель ≈ 150 Гц.
+- Altshuler D.L. et al. (2005) Short-amplitude high-frequency wing strokes determine the aerodynamics of honeybee flight. PNAS 102:18213–18218 — пчела ≈ 230 Гц.
+- Villarreal S.M. et al. (2017) J Med Entomol 54:1116–1121; Cator L.J. et al. (2009) Science 323:1077–1079 — комар Aedes aegypti ≈ 500 Гц, выше в тепле.
+- Sotavalta O. (1953) Recordings of high wing-stroke and thoracic vibration frequency in some midges. Biol Bull 104:439–444 — мокрец Forcipomyia ≈ 800–1000 Гц.
+- Møller H., Pedersen C.S. (2004) Hearing at low and infrasonic frequencies. Noise & Health 6:37–57 — ощущение тона пропадает около 20 Гц.

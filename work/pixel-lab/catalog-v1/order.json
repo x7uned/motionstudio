@@ -1,0 +1,2196 @@
+[
+ {
+  "g": "cats-dogs",
+  "name": "living-room",
+  "inv": "living-room",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 46,
+  "uneed": 43,
+  "best": "cat-zoomies/film/apartment.mjs#drawApartment",
+  "states": "sofa, wall clock, big window, curtain, floor lamp, rug, rubber plant, side table; cut-away ceiling with roof and sky; hour drives light day -> golden -> dusk -> night -> lamp",
+  "note": "One persistent apartment cross-section (bedroom | living room | kitchen corner); live-imported by cat-blink, cat-boxes and several non-cat films.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawLiving"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "studio",
+  "inv": "studio",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 44,
+  "uneed": 35,
+  "best": "dogs/kit/nosebio-util.mjs#darkBg",
+  "states": "plain dark dithered diagram background filling a box",
+  "note": "Trivial; any film can do it.",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "person",
+  "inv": "person",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 43,
+  "uneed": 36,
+  "best": "dogs/kit/owner.mjs#drawOwner",
+  "states": "outdoor owner (coral puffer, purple bobble hat, blue scarf, yellow mittens): walk, throw ball (wind-up to follow-through), show two balls, crouch and take ball, scratch head, shrug, point, blink, look, mouths smile/o/flat/grin, worried brows; at home in pyjamas + bobble night cap: walk carrying a gl",
+  "note": "The channel's recurring human hero as two separate rigs (park outfit, pyjamas); both volume-shaded and crisp at any zoom.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "animals/film/hero.mjs#drawHero"
+   },
+   {
+    "g": "games",
+    "reuse": "module",
+    "best": "gta/film/levels/actors-sprites.mjs#personSprite"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/not-ugly/film/levels/room-person.mjs#drawYou"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "cat",
+  "inv": "cat",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 35,
+  "uneed": 35,
+  "best": "cat-zoomies/film/cat.mjs#drawCat",
+  "states": "orange tabby side rig: sleep (curled), stand, sit, walk, run/gallop, crouch, pounce, skid, eat, groom, swat, climb (curtain), eyes close; palettes tabby / African wildcat; front-sitting tabby: slow & quick blink, ear perk/flatten/airplane/twitch, pupil size, hard stare, purr, mew, yawn, tail curl; l",
+  "note": "Most reused actor: the cat-zoomies rig is imported live by cat-blink, cat-boxes, not-ugly, zombie-mouse, aura-* and animals-speed; catface also by not-ugly.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "animals-heart/film/levels/cat-art.mjs#drawCat"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/netflix/film/dioramas.mjs#drawRoom (cat asleep on the bed)"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "chart-bar",
+  "inv": "chart-bar",
+  "kind": "generic",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 33,
+  "uneed": 29,
+  "best": "cat-name/film/name-hud.mjs#chart",
+  "states": "bars grow to values with labels",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "mosquito-buzz/film/name-hud.mjs#chart"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "sound-wave",
+  "inv": "sound-wave",
+  "kind": "effect",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 22,
+  "uneed": 20,
+  "best": "cat-zoomies/film/hud.mjs#soundWaves",
+  "states": "arcs growing in a direction with a label",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "mosquito-buzz/film/hud.mjs#soundWaves"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "extractable",
+    "best": "work/pixel-lab/not-ugly/film/levels/finder-record.mjs#wave / drawRecord"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "arrow",
+  "inv": "arrow",
+  "kind": "generic",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 20,
+  "uneed": 7,
+  "best": "dogs/common.mjs#leader",
+  "states": "label leader lines; animated arrows there and back",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "embedded",
+    "best": "animals-heart/film/levels/meadow.mjs#arrow"
+   },
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "mario-jump/film/render.mjs#arrow"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/plane-windows/film/levels/plane-body.mjs#arrow / drawEdgeArrows"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "dog",
+  "inv": "dog",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 18,
+  "uneed": 18,
+  "best": "dogs/kit/dog.mjs#drawDogSide / drawDogFront",
+  "states": "border collie: stand/walk/trot/run gaits with planted paws, sniff, pant, carry ball in mouth, tail wag, blink, look, wet/dry nose, head yaw morph to camera, full on-the-spot turn (front or back pass), dig; sitting front: head tilt, lick nose, boop the lens, happy squint; lying sphinx (sleep, rise); ",
+  "note": "Black-and-white border collie (red collar, gold tag) in world units, crisp z 0.7-6; separate older Labrador rig for shake/drink.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "deadliest/film/levels/village-dog.mjs#drawDog"
+   },
+   {
+    "g": "games",
+    "reuse": "module",
+    "best": "duck-hunt/film/duck.mjs#drawDog"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "brain",
+  "inv": "brain",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 14,
+  "uneed": 13,
+  "best": "work/pixel-lab/trial-10s/props/kid.mjs#brainColor / xrayPixel (inside drawKid)",
+  "states": "lilac lobes with sulci, cerebellum, brain stem, a signal path and a face area that outlines and lights up; standalone brain icon on a card (high)",
+  "note": "Catalogued as the kid's xray/signal/lit states; the standalone brain is in the high film's card.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals/film/levels/savanna.mjs#brainSprite"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "kitchen",
+  "inv": "kitchen",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 14,
+  "uneed": 14,
+  "best": "cat-drink/film/kitchen.mjs#drawKitchen",
+  "states": "night kitchen: wallpaper, moonlit window, cabinets with warm under-cabinet light, fridge, fish picture, tiled floor, foreground chair legs (parallax); apartment corner: counter, kettle, fruit bowl, food bag, retro fridge, lit by hour",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawKitchen"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "motion-path",
+  "inv": "motion-path",
+  "kind": "generic",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 12,
+  "uneed": 7,
+  "best": "animals-weight/film/levels/meadow-kit.mjs#dotted",
+  "states": "dotted trails and arrows along a path (waggle dance, tracking line)",
+  "note": "",
+  "alts": [
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "mario-jump/film/render.mjs#drawTraces"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "renderer/pixel/earth.mjs#routeSamples"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "myth-stamp",
+  "inv": "myth-stamp",
+  "kind": "generic",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 12,
+  "uneed": 9,
+  "best": "mosquito-buzz/film/name-hud.mjs#mark",
+  "states": "red X / green check stamps and checklists; guess cards crossed out",
+  "note": "",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/ping/film/hud.mjs#stamp"
+   }
+  ]
+ },
+ {
+  "g": "games",
+  "name": "retro-room",
+  "inv": "retro-room",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 12,
+  "uneed": 4,
+  "best": "duck-hunt/film/room.mjs#drawRoom",
+  "states": "dark room at night; TV glow on the wall; floor lamp + framed duck picture (duck-hunt) or window with night + poster + carpet (tetris); TV stand, console, cable; CRT <-> flat panel dissolve",
+  "note": "One retro gaming room drawn twice; also covers living-room / bedroom ideas. drawRoom takes a screen callback.",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "scent-trail",
+  "inv": "scent-trail",
+  "kind": "effect",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 9,
+  "uneed": 9,
+  "best": "dogs/wet-nose/film/fx.mjs#particles",
+  "states": "smell particles drifting and sticking; scent wisps leading to the ball",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "hand",
+  "inv": "hand",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 8,
+  "uneed": 6,
+  "best": "zombie-mouse/film/pov-hands.mjs#drawHands1",
+  "states": "first-person hands gripping a crowbar; pixel pointing hand tapping a button",
+  "note": "",
+  "alts": [
+   {
+    "g": "cats-dogs",
+    "reuse": "extractable",
+    "best": "cat-eyes/film/cat.mjs#phone"
+   },
+   {
+    "g": "games",
+    "reuse": "module",
+    "best": "minecraft/film/actors.mjs#drawFPArm"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "extractable",
+    "best": "work/pixel-lab/fake-buttons/film/levels/cta.mjs#hand (pointing, taps FOLLOW)"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "speech-bubble",
+  "inv": "speech-bubble",
+  "kind": "generic",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 8,
+  "uneed": 5,
+  "best": "cat-name/film/name-hud.mjs#speech",
+  "states": "bubble with a tail to a target, pops in",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "mosquito-buzz/film/name-hud.mjs#speech"
+   },
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "gta/film/levels/actors.mjs#'LAG?' bubble"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/ping/film/hud.mjs#bubble"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "bedroom",
+  "inv": "bedroom",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 7,
+  "uneed": 6,
+  "best": "cat-zoomies/film/apartment.mjs#drawApartment",
+  "states": "bed with blanket, nightstand with lamp and alarm clock, shelf, picture; same lighting by hour",
+  "note": "Left third of the same apartment.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawBedroom"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/not-ugly/film/levels/room-set.mjs#drawRoom / drawRoomLive / inGlass"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "elephant",
+  "inv": "elephant",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 7,
+  "uneed": 7,
+  "best": "animals-heart/film/levels/elephant-art.mjs#drawElephant",
+  "states": "chubby African elephant face-on: ear flap, head tilt, trunk reach/grab/curl to mouth, touches mirror mark, crown, glow; portrait face",
+  "note": "identical in weight+heart; original internal version in animals savanna",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "meter-bar",
+  "inv": "meter-bar",
+  "kind": "generic",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 7,
+  "uneed": 5,
+  "best": "cat-zoomies/film/hud.mjs#energyBar",
+  "states": "level fills/drains with colour by level",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "mosquito-buzz/film/hud.mjs#energyBar"
+   },
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "mario-jump/film/render.mjs#speedMeter"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/ping/film/hud.mjs#bars"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "air-flow",
+  "inv": "air-flow",
+  "kind": "effect",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 6,
+  "uneed": 6,
+  "best": "mosquito-buzz/film/fx.mjs#cloud",
+  "states": "air wisps under wings, downstroke puffs, CO2 breath clouds",
+  "note": "",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/plane-windows/film/levels/explain-panes.mjs#airDot / airPos / gapMask"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "computer-desk",
+  "inv": "computer-desk",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 6,
+  "uneed": 2,
+  "best": "work/pixel-lab/ping/film/world.mjs#drawRoomShell",
+  "states": "cut-away gamer room: monitor-lit wall, LED strip, plank floor, game-themed poster (no text), shelf with figurine and books, desk set",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "animal-eye",
+  "inv": "animal-eye",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 5,
+  "uneed": 5,
+  "best": "cat-eyes/film/cat.mjs#catEye",
+  "states": "amber iris, pupil continuous slit -> full circle, green eyeshine glow, blink, look; lid keys (soft, closed, stare)",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "city-street",
+  "inv": "city-street",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 5,
+  "uneed": 5,
+  "best": "animals-wingbeat/film/levels/city-scene.mjs#cityLayer",
+  "states": "harbour-town square: house fronts, café awning, bakery, clock house, cobbles, puddles",
+  "note": "",
+  "alts": [
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "gta/film/levels/street.mjs#back"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "extractable",
+    "best": "work/pixel-lab/fake-buttons/film/levels/street-main.mjs#back / actors / front"
+   }
+  ]
+ },
+ {
+  "g": "games",
+  "name": "game-console",
+  "inv": "game-console",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 5,
+  "uneed": 1,
+  "best": "gta/film/levels/actors-sprites.mjs#consoleSprite",
+  "states": "generic white tower console (gta, drawn/blueprint looks, 'LAG?' bubble); grey 80s console box with cable (rooms)",
+  "note": "No real console design.",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "heat-glow",
+  "inv": "heat-glow",
+  "kind": "effect",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 5,
+  "uneed": 4,
+  "best": "cat-boxes/film/props-ui.mjs#heatAura",
+  "states": "warm pulsing aura and heat waves around a curled animal",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "mosquito-buzz/film/fx.mjs#shimmer"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "leaf",
+  "inv": "leaf",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 5,
+  "uneed": 5,
+  "best": "animals-wingbeat/film/levels/tropic-plants.mjs#leaf",
+  "states": "general shaded leaf: ovate/lance/paddle/heart/lobed, droop, veins, gloss, monstera holes, banana tears; elephant ears",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "smartphone",
+  "inv": "smartphone",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 5,
+  "uneed": 4,
+  "best": "cat-eyes/film/cat.mjs#phone",
+  "states": "held in the hero's yellow knitted mitten, rises from below, flashlight LED glow, camera flash, custom screen callback",
+  "note": "Screen-space close-up hand + phone.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito/render.mjs#phoneUI"
+   },
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "mc-redstone/film/render.mjs#phone"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/not-ugly/film/levels/room-props.mjs#drawPhone"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "tree",
+  "inv": "tree",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 5,
+  "uneed": 5,
+  "best": "animals-wingbeat/film/levels/garden-flora.mjs#appleTree",
+  "states": "deciduous trees: apple, blossom, willow, alder, olive, big forest trees, backlit tree balls",
+  "note": "",
+  "alts": [
+   {
+    "g": "cats-dogs",
+    "reuse": "extractable",
+    "best": "dogs/kit/park-flora.mjs#oak"
+   },
+   {
+    "g": "games",
+    "reuse": "embedded",
+    "best": "gta/film/levels/street-art.mjs#BACK_PALMS"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/trial-10s/engine/night.mjs#drawTree"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "building",
+  "inv": "building",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 4,
+  "uneed": 2,
+  "best": "zombie-mouse/film/town-street.mjs#building",
+  "states": "city facades (windows, AC units, shutters, awnings, fire escapes, collapse), harbour houses, café, skyscraper skyline",
+  "note": "",
+  "alts": [
+   {
+    "g": "games",
+    "reuse": "embedded",
+    "best": "gta/film/levels/street-art.mjs#BUILDINGS"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "fps-corridor",
+  "inv": "fps-corridor",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 4,
+  "uneed": 0,
+  "best": "work/pixel-lab/ping/film/game.mjs#drawFP / projectFP",
+  "states": "first-person heightfield raycaster of a desert-town corner (sandstone, blue doors, crates, sky) with soldiers, tracers, HUD, kill feed, YOU DIED, camera bob/roll/fall; oblique top-down map of the same place with roofs and shadows",
+  "note": "Evokes a Dust-style map without names or logos (IP-adjacent).",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "mosquito",
+  "inv": "mosquito",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 4,
+  "uneed": 4,
+  "best": "deadliest/film/levels/camp-mosq.mjs#drawMosquito",
+  "states": "chibi female face-on (any scale/tilt, tiny silhouette when far, icon, crown, bite); porch version with blur fan; realistic Aedes male/female from 3-px dot to shaded macro, side view, flying blur (mosquito/)",
+  "note": "two styles: cute chibi (deadliest/wingbeat) and realistic Aedes (mosquito, copied to mosquito-buzz)",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "music-note",
+  "inv": "music-note",
+  "kind": "generic",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 4,
+  "uneed": 1,
+  "best": "mosquito-buzz/film/fx.mjs#note",
+  "states": "floating music note",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "thermometer",
+  "inv": "thermometer",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 4,
+  "uneed": 4,
+  "best": "cat-boxes/film/props-ui.mjs#thermometer",
+  "states": "mercury rises continuously, comfort band and ROOM mark labels",
+  "note": "Screen-space insert.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals-wingbeat/film/levels/porch.mjs#thermometer"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "water-drop",
+  "inv": "water-drop",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 4,
+  "uneed": 4,
+  "best": "dog/film/props.mjs#droplet",
+  "states": "stretch, angle; single droplet detaching from fur in slow motion",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "embedded",
+    "best": "animals-weight/film/levels/meadow.mjs#nectar"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "wolf",
+  "inv": "wolf",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 4,
+  "uneed": 4,
+  "best": "dogs/kit/dog.mjs#drawDogSide({coat:\"wolf\"})",
+  "states": "every collie pose with a grey wolf coat: walk, turn/circle, dig, lie, curl up",
+  "note": "Coat variant of the collie rig (same anatomy), used for the 'long ago' wolf in tall grass/snow.",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "ball",
+  "inv": "ball",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 1,
+  "best": "dogs/kit/ball.mjs#drawBall",
+  "states": "red / blue / yellow (any 8-step ramp), spin while rolling, impact squash, contact shadow by height",
+  "note": "Glossy rubber ball with seam stripe, crisp from 14 px to 56 px.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals/film/levels/yard.mjs#ball"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "mouse",
+  "inv": "mouse",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 3,
+  "best": "animals-heart/film/levels/mouse-art.mjs#drawMouse",
+  "states": "grey-brown chibi house mouse: sit front-on (hands up, happy eyes, parachute ears, squash), side walk; field mouse side rig run/sit/sniff (zombie-mouse); round portrait face",
+  "note": "mouse-art identical in weight+heart",
+  "alts": [
+   {
+    "g": "cats-dogs",
+    "reuse": "module",
+    "best": "cat-zoomies/film/dream.mjs#drawMouse"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "park",
+  "inv": "park",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 3,
+  "best": "dogs/kit/park.mjs#back / front",
+  "states": "sunny afternoon side view with depth layers: sky, sun, drifting clouds, hazy city, hills, tree lines, sandy path, oak, benches, lamp, flower beds, lawn to every edge, foreground grass over paws; squirrel on far bench; loop-periodic wind; zoom 0.7-4; night/sepia via grading",
+  "note": "No red in the park by design; can stand in for a backyard (no garden fence/house).",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals-weight/film/levels/park.mjs#back"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "savanna",
+  "inv": "savanna",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 3,
+  "best": "cat-zoomies/film/dream.mjs#drawDream",
+  "states": "wild steppe at golden dusk or soft day, mouse burrow with mound, far horizon layers",
+  "note": "The cat's dream world; pairs with the wildcat palette.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals/film/levels/savanna.mjs#back"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "shark",
+  "inv": "shark",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 3,
+  "best": "deadliest/film/levels/ocean-shark.mjs#drawFrontShark",
+  "states": "great white side-view swimmer (fin cuts surface, U-turns) and front view rising from sea: grin, worried, happy closed eyes, fin wave; underwater tint; icon",
+  "note": "",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/cable/world.mjs#seaLife (shark)"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "skin",
+  "inv": "skin",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 3,
+  "best": "dogs/kit/nosebio-skin.mjs#drawSkin",
+  "states": "magnified wet-nose skin section: glands pump mucus up ducts into a glossy film that catches particles",
+  "note": "Drawn in any screen box; anchors for labels.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "bubble",
+  "inv": "bubble",
+  "kind": "effect",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 2,
+  "best": "deadliest/film/levels/river-kit.mjs#bubble",
+  "states": "rising bubble streams",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "duck",
+  "inv": "duck",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 1,
+  "best": "duck-hunt/film/duck.mjs#drawDuck",
+  "states": "flying with continuous wing beat, face +-1, palettes, stunned hit pose, fall; plain white hit box",
+  "note": "Own duck from parts; works outside the TV via clip=null.",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "film-camera",
+  "inv": "film-camera",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 1,
+  "best": "gta/film/levels/street-cam.mjs#drawCamera",
+  "states": "cute camcorder as a tiny 3D model (box body, lens, two reels, REC lamp) turning continuously; translucent view cone fan",
+  "note": "drawCamera(c, x, y, facing, alpha, t); the cone footprint reads timeline constants.",
+  "alts": [
+   {
+    "g": "cats-dogs",
+    "reuse": "embedded",
+    "best": "cat-drink/film/render.mjs#drawSpeedCam"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "pet-food",
+  "inv": "pet-bowl",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 2,
+  "best": "cat-drink/film/kitchen.mjs#drawBowl",
+  "states": "back/front halves so the head dips in; water ripples; kibble empty -> heaped; optional stand (dog)",
+  "note": "Covers canonical pet-food (kibble). The apartment bowl is fixed at LAYOUT.bowl.x.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment.mjs#drawBowl"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "scorpion",
+  "inv": "scorpion",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 2,
+  "best": "deadliest/film/levels/desert-scorpion.mjs#drawScorpion",
+  "states": "chibi scorpion face-on: scuttle, tail rise over head, pincer clacks, sheepish face; icon",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "sky",
+  "inv": "sky",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 2,
+  "best": "work/pixel-lab/aura-full/film/world.mjs#drawSky / drawStars / drawSunMoon / drawClouds / drawIslands / drawBirds / drawStairs / drawCloudSea",
+  "states": "sky that darkens from day to violet night with stars, sun → moon, floating islands, staircase, cloud sea; cruise-altitude sky over a scrolling cloud sea; night flight with moon, cloud carpet and city below",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals/film/world.mjs#drawSky"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "sparkle",
+  "inv": "sparkle",
+  "kind": "effect",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 1,
+  "best": "deadliest/film/levels/desert-kit.mjs#sparkle",
+  "states": "sparkle stars, twinkles",
+  "note": "",
+  "alts": [
+   {
+    "g": "games",
+    "reuse": "embedded",
+    "best": "gta/film/levels/actors.mjs#spawn sparkle"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/not-ugly/film/levels/finder-ui.mjs#sparkle"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "squirrel",
+  "inv": "squirrel",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 2,
+  "best": "dogs/kit/park-squirrel.mjs#drawSquirrel",
+  "states": "sits upright holding an acorn, nibbles, bushy S-tail flicks",
+  "note": "Cute-kit squirrel (includes the acorn); drawn on the far park bench, holds up to a x3.75 zoom.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "bee",
+  "inv": "bee",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-weight/film/levels/meadow-bee.mjs#drawBee",
+  "states": "chubby honeybee face-on hover; flutter wings or motion-blur wing fan (hive-bee); tilt/look/blink; worried brows + sweat under load; happy hop; waggle dance (animals); mini/worker/pile bees for swarms",
+  "note": "series honeybee; bee-art.mjs == meadow-bee.mjs byte-identical; hive-bee adds golden backlight rim and blur fan",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "book",
+  "inv": "book",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 0,
+  "best": "animals/film/hero.mjs#drawHero",
+  "states": "stack of books in the hero's arms (pose books)",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "car",
+  "inv": "car",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 0,
+  "best": "gta/film/levels/actors-sprites.mjs#carSprite",
+  "states": "side view: coupe, sport, convertible, taxi, muscle car, bus; 10 pastel colours; head/tail lights; drawn and blueprint looks; materialise/dissolve",
+  "note": "No real car brands.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "module",
+    "best": "zombie-mouse/film/town-street.mjs#car"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/fake-buttons/film/levels/street-sprites.mjs#carSprite"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "cardboard-box",
+  "inv": "cardboard-box",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "cat-boxes/film/props-box.mjs#drawBox",
+  "states": "open shipping box in back/front halves (cat sits or hides inside, ears peek), flaps, dents, torn tape, cut-away; boxClip hides what is inside",
+  "note": "Corrugated kraft box, oblique view, crisp at close-ups.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "city-skyline",
+  "inv": "city-skyline",
+  "kind": "backdrop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-speed/film/levels/city-sky.mjs#drawFar",
+  "states": "far skyscrapers (night/dawn), radio mast, viaduct; night city harbour with windows lighting up",
+  "note": "",
+  "alts": [
+   {
+    "g": "cats-dogs",
+    "reuse": "extractable",
+    "best": "cat-eyes/film/cat.mjs#drawWorld"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "cloud",
+  "inv": "cloud",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/aura-full/film/world.mjs#drawClouds / drawCloudSea",
+  "states": "soft puffs and a cloud sea at several depths, day → violet night, optional glow; three parallax layers of sunlit cumulus tops scrolling; cirrus wisps",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals/film/world.mjs#drawSky"
+   },
+   {
+    "g": "cats-dogs",
+    "reuse": "extractable",
+    "best": "dogs/kit/park-sky.mjs#drawClouds"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "crocodile",
+  "inv": "crocodile",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "deadliest/film/levels/swamp-croc.mjs#drawCroc",
+  "states": "3/4 croc on a mud hump, eyes to camera: jaw snap, slide under, floating eyes-and-nostrils; icon",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "cup",
+  "inv": "cup",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "cat-zoomies/film/person.mjs#drawGlass",
+  "states": "glass with water fill and rotation (carried, flies when he trips); plain cups (warm/cold in thermal view)",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "dog-bed",
+  "inv": "dog-bed",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "dogs/kit/nest-bed.mjs#bedBack / bedFront",
+  "states": "round bolster bed in back/front halves so the animal sits in it; cushion presses and dents; cat version: lavender plush rim, gold bow, price tag, 'brand new' twinkles",
+  "note": "Two different round pet beds (caramel dog bed, lavender cat bed); both usable for any pet.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "dragonfly",
+  "inv": "dragonfly",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-wingbeat/film/levels/pond-damselfly.mjs#drawDamselfly",
+  "states": "banded demoiselle face-on hover, blur fan + two ghost wings, curled abdomen; small swamp dragonflies as filler",
+  "note": "actually a damselfly (banded demoiselle); serves as dragonfly",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "falcon",
+  "inv": "falcon",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-speed/film/levels/city-falcon.mjs#drawFalcon",
+  "states": "peregrine chibi: perch (wings folded), fly (front, wings beating), streak/stoop teardrop; head icon",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "frog",
+  "inv": "frog",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-wingbeat/film/levels/pond-kit.mjs#peekFrog",
+  "states": "small cute frog peeking out of water, watching",
+  "note": "head only",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "hummingbird",
+  "inv": "hummingbird",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-wingbeat/film/levels/tropic-hummingbird.mjs#drawHummingbird",
+  "states": "face-on hover with blurred wings driven by phase; 3 colourings (bee hummingbird, blue-throated, Anna's); sliding gorget sheen; beak in flower; happy ^ ^ eyes; heat-wave helper",
+  "note": "hummingbird-art.mjs identical in 3 films; tropic copy adds Anna's look + phase-driven wings",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "kanizsa-square",
+  "inv": "paper-sheet",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "cat-boxes/film/props-paper.mjs#drawPaper",
+  "states": "sheet taped to the floor printed with a square, a Kanizsa illusory square or 'wonky' discs; edge shimmer, corner halo",
+  "note": "Covers canonical kanizsa-square too.",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "light-gun",
+  "inv": "light-gun",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 0,
+  "best": "duck-hunt/film/room.mjs#drawGun",
+  "states": "grey gun with orange tip, turns toward the aim, passes behind the head; cut-away with lens, light sensor and rays",
+  "note": "Generic, no brand (Zapper-like).",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "lion",
+  "inv": "lion",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "deadliest/film/levels/savanna-lion.mjs#drawLion",
+  "states": "sitting face-on with fluffy mane: idle, big ROAR (mane puff), proud smug grin; icon",
+  "note": "",
+  "alts": [
+   {
+    "g": "cats-dogs",
+    "reuse": "embedded",
+    "best": "cat-drink/film/render.mjs#drawShadows"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "paper-sheet",
+  "inv": "paper-sheet",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "cat-boxes/film/props-paper.mjs#drawPaper",
+  "states": "sheet taped to the floor printed with a square, a Kanizsa illusory square or 'wonky' discs; edge shimmer, corner halo",
+  "note": "Covers canonical kanizsa-square too.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "pigeon",
+  "inv": "pigeon",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-wingbeat/film/levels/city-pigeon.mjs#drawPigeon",
+  "states": "plump rock pigeon hovering face-on with real wing positions + iridescent neck; small side-view pigeons pecking/cooing/walking; escaping prey pigeon",
+  "note": "shares ocean-wing.mjs feathered-wing renderer with the albatross",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "module",
+    "best": "work/pixel-lab/aura-full/film/C-pigeon.mjs#drawPigeon"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "power-line",
+  "inv": "power-line",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "zombie-mouse/film/town-street.mjs#powerPole",
+  "states": "power poles with sagging wires",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "ruler",
+  "inv": "ruler",
+  "kind": "generic",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/not-ugly/film/levels/room-props.mjs#dimLine / pill",
+  "states": "dotted dimension line that grows (30 CM → 1.5 M), mm ruler, depth ruler",
+  "note": "",
+  "alts": [
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "mario-jump/film/render.mjs#ruler"
+   },
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "deadliest/film/levels/desert.mjs#ruler"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "shrew",
+  "inv": "shrew",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-heart/film/levels/wall-shrew.mjs#drawShrew",
+  "states": "tiny Etruscan shrew peeking from a stone-wall gap, wiggly snout, whiskers, heartbeat jitter; round portrait bubble",
+  "note": "head + hands only (no full body)",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "sloth",
+  "inv": "sloth",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-speed/film/levels/jungle-sloth.mjs#drawSloth",
+  "states": "three-toed sloth hanging under a branch, face turned up to camera, super-slow reach, slow blink, algae spreading in fur, moth",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "snail",
+  "inv": "snail",
+  "kind": "character",
+  "reuse": "module",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-speed/film/levels/garden-snail.mjs#drawSnail",
+  "states": "3/4 chibi garden snail: crawl surge, strain/sweat, eye stalks sway, race number on shell, clip line",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "spider-web",
+  "inv": "spider-web",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/trial-10s/engine/night.mjs#drawWeb",
+  "states": "corner web, sways",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "ufo",
+  "inv": "ufo",
+  "kind": "prop",
+  "reuse": "module",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 0,
+  "best": "invaders/film/sprites.mjs#SAUCER",
+  "states": "red saucer crossing with dissolve in/out",
+  "note": "Plain pixel saucer; usable as a generic UFO.",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "extractable",
+    "best": "work/pixel-lab/aura-full/film/ufo.mjs#near"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "backyard",
+  "inv": "backyard",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 13,
+  "uneed": 13,
+  "best": "animals/film/levels/yard.mjs#back",
+  "states": "house yard: cottage, picket fence, striped lawn, doghouse; back of cottage with board fence and tulips",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "forest",
+  "inv": "forest",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 11,
+  "uneed": 11,
+  "best": "animals/film/levels/forest.mjs#back",
+  "states": "daylight forest clearing: big trees, ferns, mushrooms, dirt path, fallen log",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "game-controller",
+  "inv": "game-controller",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 9,
+  "uneed": 1,
+  "best": "tetris/film/render.mjs#controllerTop",
+  "states": "NES-like pad top view; thumb hypertapping blur; side view with three fingers rolling; A button lights while held (mario pad)",
+  "note": "Generic grey pad, no brand.",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/not-ugly/film/levels/room-set.mjs#build (generic game pad on the floor)"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "zoom-inset",
+  "inv": "zoom-inset",
+  "kind": "generic",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 9,
+  "uneed": 9,
+  "best": "animals-wingbeat/film/levels/marsh.mjs#drawLens",
+  "states": "magnifying lens that really magnifies x2; X-ray magnifier; round portrait insets",
+  "note": "",
+  "alts": [
+   {
+    "g": "cats-dogs",
+    "reuse": "embedded",
+    "best": "cat-eyes/film/panels.mjs#drawDetail"
+   },
+   {
+    "g": "games",
+    "reuse": "embedded",
+    "best": "pacman/film/render.mjs#drawInset"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "extractable",
+    "best": "work/pixel-lab/not-ugly/film/levels/finder-view.mjs#hud / screen / modesAt"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "clock",
+  "inv": "clock",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 7,
+  "uneed": 5,
+  "best": "cat-zoomies/film/apartment-props.mjs#drawClockFace",
+  "states": "analog hands follow any hour continuously; UI clock tag",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawClockFace"
+   },
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "mc-redstone/film/render.mjs#clock"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "desert",
+  "inv": "desert",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 7,
+  "uneed": 5,
+  "best": "deadliest/film/levels/desert.mjs#back",
+  "states": "golden dunes, sandstone hoodoo, far oasis, mesa, wind ripples",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "jungle",
+  "inv": "jungle",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 7,
+  "uneed": 7,
+  "best": "animals-speed/film/levels/jungle.mjs#back",
+  "states": "daytime rainforest with mossy trunks, lianas, light shafts; dusk jungle with fireflies and glowing mushrooms",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "arcade-cabinet",
+  "inv": "arcade-cabinet",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 5,
+  "uneed": 2,
+  "best": "pacman-names/film/hud.mjs#drawCabinet",
+  "states": "violet side panels/top around the screen with bezel, lives row, control panel to the bottom edge; scales with the maze camera",
+  "note": "Only the cabinet framing around a playfield, not a free-standing cabinet; tied to the maze camera (cam, MH).",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "calendar",
+  "inv": "calendar",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 5,
+  "uneed": 2,
+  "best": "animals/film/levels/bay.mjs#calendar",
+  "states": "tear-off calendar flipping years; wall calendar pages folding",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "pond",
+  "inv": "pond",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 4,
+  "uneed": 4,
+  "best": "animals-wingbeat/film/levels/pond.mjs#back",
+  "states": "garden pond with willow, irises, lily pads, reflections, ripples",
+  "note": "",
+  "alts": [
+   {
+    "g": "games",
+    "reuse": "extractable",
+    "best": "duck-hunt/film/marsh.mjs#drawMarsh"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "songbird",
+  "inv": "songbird",
+  "kind": "character",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 4,
+  "uneed": 4,
+  "best": "cat-eyes/film/panels.mjs#bird",
+  "states": "cute round bird perched on a twig, static",
+  "note": "Used for the clear vs blurry detail test.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "embedded",
+    "best": "deadliest/film/levels/savanna.mjs#birds"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "cave",
+  "inv": "cave",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 3,
+  "best": "animals-speed/film/levels/cave.mjs#back",
+  "states": "moonlit rocky hills with a dark cave mouth",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "crt-tv",
+  "inv": "crt-tv",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 2,
+  "best": "tetris/film/room.mjs#drawTV",
+  "states": "tube TV with glass highlight, rounded dark corners, knobs, speaker grille; any game drawn into its screen rect; zoom into the screen stays crisp",
+  "note": "Fixed position constants (TV/SCR) in room coordinates.",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "desktop-computer",
+  "inv": "desktop-computer",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 1,
+  "best": "work/pixel-lab/ping/film/people.mjs#drawDesk (monitor, PC tower)",
+  "states": "angled monitor with any screen fill, PC tower with cycling RGB fans, desk and chair",
+  "note": "Drawn inside drawDesk; separable from the gamer with modest work.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "underwater",
+  "inv": "underwater",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 3,
+  "uneed": 3,
+  "best": "animals/film/levels/sea.mjs#back",
+  "states": "sea column: deep floor, mid-water, sunlit reef, layered cliff with fossils, shelf drop-off; deep blue open water (heart)",
+  "note": "",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/cable/world.mjs#drawWorld / slab / seabed / seaLife / shipping"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "airplane-cabin",
+  "inv": "airplane-cabin",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 2,
+  "best": "work/pixel-lab/plane/film/plane.mjs#drawCabin / drawSeatRow / drawPassenger / drawCockpit",
+  "states": "cut-away cabin with 18 rows, bins, far-wall windows, cargo, cockpit; warm cabins seen through the window row",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "brick-wall",
+  "inv": "brick-wall",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 0,
+  "best": "work/pixel-lab/ping/film/world.mjs#brickWall",
+  "states": "brick texture lit from one side",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "door",
+  "inv": "door",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 2,
+  "best": "cat-zoomies/film/apartment-props.mjs#drawDoor",
+  "states": "open interior door with casing (static)",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawDoor"
+   }
+  ]
+ },
+ {
+  "g": "games",
+  "name": "glitch-tiles",
+  "inv": "glitch-tiles",
+  "kind": "effect",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 0,
+  "best": "pacman-256/film/render.mjs#drawGarbage",
+  "states": "270 garbage tiles (letters, digits, wall shards) typed column by column over the right half, dissolve out and type in again",
+  "note": "Level-256 split screen on the own maze; reusable as any 'memory garbage / broken screen' effect.",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/not-ugly/film/levels/finder-view.mjs#glitch"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "night-sky",
+  "inv": "night-sky",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 1,
+  "best": "zombie-mouse/film/clearing.mjs#drawClearing",
+  "states": "moon, stars and Milky Way through a canopy gap; looking up past converging trunks",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "photograph",
+  "inv": "photograph",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 0,
+  "best": "work/pixel-lab/not-ugly/film/levels/finder-view.mjs#card / drawFlip / drawStudy",
+  "states": "photo cards of a face that flip to the mirror image, labels, glow, votes; polaroids",
+  "note": "",
+  "alts": [
+   {
+    "g": "cats-dogs",
+    "reuse": "embedded",
+    "best": "cat-eyes/film/panels.mjs#drawPhoto"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "radio-wave",
+  "inv": "radio-wave",
+  "kind": "generic",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 2,
+  "best": "work/pixel-lab/plane/film/render.mjs#rings",
+  "states": "expanding signal rings from a source, Wi-Fi arcs, sonar rings",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "skull",
+  "inv": "skull",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 2,
+  "best": "deadliest/film/levels/meter.mjs#skull",
+  "states": "cute skull at the end of a danger bar; human skull in rock strata",
+  "note": "",
+  "alts": [
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/not-ugly/film/levels/finder-xray.mjs#drawXray / drawHead / inner / eqMeter"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "snake",
+  "inv": "snake",
+  "kind": "character",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 2,
+  "best": "deadliest/film/levels/jungle-snake.mjs#drawSnake",
+  "states": "cobra in a z-buffered 3D coil: rise, hood spread, forked-tongue hiss, S-sway, happy blink; icon",
+  "note": "pose reads jungle-time.mjs; detach the timing to reuse",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "snow",
+  "inv": "snow",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 2,
+  "uneed": 2,
+  "best": "animals-heart/film/levels/snow.mjs#back",
+  "states": "snowy coast at dawn: pines, pink mountains, ice shelf, burrow cutaway",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "window",
+  "inv": "window",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 2,
+  "uneed": 2,
+  "best": "cat-zoomies/film/apartment-props.mjs#drawWindow",
+  "states": "outside sky follows time of day (day/golden/dusk/night), succulent on sill",
+  "note": "Part of the room backdrops.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawWindow"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/not-ugly/film/levels/room-set.mjs#build (night window: curtains, moon, skyline)"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "airplane",
+  "inv": "airplane",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/plane/film/plane.mjs#drawPlane",
+  "states": "cut-away jet (18 seat rows with passengers, bins, cargo, cockpit, wing, engine, on-board cell); pearl fuselage band that breathes with cabin pressure; old airliner that breaks apart; tiny jets",
+  "note": "plane.mjs reads EV for the sleep beat; otherwise parameterised by camera.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals-speed/film/levels/cave.mjs#drawPlane"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "airplane-window",
+  "inv": "airplane-window",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/plane-windows/film/levels/plane-window.mjs#drawWindowBack / glass / groove / windowArrows",
+  "states": "corner radius morphs round ↔ square, seal ring, bezel, glass tint and reflections, blind, cabin behind with a sleeping passenger and a kid; exploded 3-pane stack with breather hole, fog, load arrows",
+  "note": "Geometry from timeline cornerR(t)/pressure(t); the exploded diagram is embedded.",
+  "alts": []
+ },
+ {
+  "g": "games",
+  "name": "arcade-joystick",
+  "inv": "arcade-joystick",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 0,
+  "best": "pacman-names/film/hud.mjs#drawCabinet",
+  "states": "red ball-top stick + two round buttons on the control panel (static)",
+  "note": "A few primitives inside drawCabinet.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "beach",
+  "inv": "beach",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-weight/film/levels/shore.mjs#back",
+  "states": "dawn beach: swash, wet/dry sand, shells, driftwood, marram, dune",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "bed",
+  "inv": "bed",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "cat-zoomies/film/apartment-props.mjs#drawBedroom",
+  "states": "headboard, mattress, pillow, quilted blanket that dissolves; person 'bed' pose sleeps in it",
+  "note": "Part of the apartment backdrop (fixed LAYOUT position).",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawBedroom"
+   },
+   {
+    "g": "tech-people",
+    "reuse": "embedded",
+    "best": "work/pixel-lab/not-ugly/film/levels/room-set.mjs#build (bed, plush bear, starry blanket)"
+   }
+  ]
+ },
+ {
+  "g": "games",
+  "name": "cherry",
+  "inv": "cherry",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 0,
+  "best": "pacman-256/film/render.mjs#fruitIcon",
+  "states": "5 tiny fruit icons: cherry, strawberry, orange, apple, melon; row appears one by one",
+  "note": "Own little bonus fruit, a few discs/lines each.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "chimpanzee",
+  "inv": "chimpanzee",
+  "kind": "character",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals/film/levels/jungle.mjs#chimpHead",
+  "states": "young chimp sitting face-on: termite fishing with stick, grin, taps touchscreen numbers",
+  "note": "internal to the jungle level",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "crosswalk-button",
+  "inv": "crosswalk-button",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/fake-buttons/film/levels/street-props.mjs#drawButtonBox / boxScreen",
+  "states": "PUSH BUTTON FOR WALK SIGNAL plate, WAIT lamp, pulsing highlight, pressed in/out",
+  "note": "Timed by street-time.mjs (pressAt, waitLampAt).",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "crow",
+  "inv": "crow",
+  "kind": "character",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals/film/levels/forest.mjs#drawCrow",
+  "states": "glossy crow perched face-on: head tilt, glare, wing spread/flap, hops, holds twig, pulls grub; town crows take off as silhouettes",
+  "note": "internal function of the forest level (drawTwig/drawGrub alongside)",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "dog-toy",
+  "inv": "dog-toy",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals/film/levels/yard.mjs#toyPile",
+  "states": "pile of colourful toys, rubber duck (carried in mouth), toy mouse",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "farm",
+  "inv": "farm",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-heart/film/levels/barn.mjs#back",
+  "states": "wheat field with red barn and mine cutaway; open barn door with hay; horse pasture with stable and fences",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "fossil",
+  "inv": "fossil",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals/film/levels/sea-terrain.mjs#dinoDraw",
+  "states": "dinosaur skeleton and fossils in rock strata",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "cats-dogs",
+  "name": "fridge",
+  "inv": "fridge",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "cat-zoomies/film/apartment-props.mjs#drawKitchen",
+  "states": "static",
+  "note": "Part of the kitchen backdrops.",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawKitchen"
+   }
+  ]
+ },
+ {
+  "g": "cats-dogs",
+  "name": "lamp",
+  "inv": "lamp",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "cat-zoomies/film/apartment-props.mjs#drawFloorLamp",
+  "states": "lamps glow when switched on (lampLiving / lampBed in apartment lighting)",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "mosquito-buzz/film/apartment-props.mjs#drawFloorLamp"
+   },
+   {
+    "g": "games",
+    "reuse": "embedded",
+    "best": "duck-hunt/film/room.mjs#drawRoom"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "mirror",
+  "inv": "mirror",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/not-ugly/film/levels/room-cast.mjs#drawMirror / mirrorView",
+  "states": "standing mirror with an arched glass that shows the live flipped reflection of the person",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "extractable",
+    "best": "animals/film/levels/savanna.mjs#mirror"
+   }
+  ]
+ },
+ {
+  "g": "animals",
+  "name": "mountains",
+  "inv": "mountains",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals-heart/film/levels/gorge.mjs#back",
+  "states": "flowering sandstone gorge, blue peaks, waterfall",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "race-track",
+  "inv": "race-track",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 0,
+  "best": "animals-speed/film/levels/stadium.mjs#back",
+  "states": "running stadium with track, crowd, floodlight, blocks; horse racecourse with grandstand, judge tower, rails; parallax treadmill",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "server-rack",
+  "inv": "server-rack",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 0,
+  "best": "work/pixel-lab/ping/film/world.mjs#drawServerHall",
+  "states": "data-centre hall cut away: racks with deterministic blinking LEDs, cooling units with spinning fans, cable trays, a tall map screen, glowing roof sign",
+  "note": "Hall geometry lives in ping world.mjs constants.",
+  "alts": []
+ },
+ {
+  "g": "tech-people",
+  "name": "snowflake",
+  "inv": "snowflake",
+  "kind": "effect",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/touch/film/street.mjs#snowLayer",
+  "states": "three layers of falling snow at different speeds, sparkle in lamp cones, a snow clump falling",
+  "note": "",
+  "alts": [
+   {
+    "g": "animals",
+    "reuse": "embedded",
+    "best": "animals-heart/film/levels/snow.mjs#actors"
+   }
+  ]
+ },
+ {
+  "g": "tech-people",
+  "name": "traffic-light",
+  "inv": "traffic-light",
+  "kind": "prop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 1,
+  "best": "work/pixel-lab/fake-buttons/film/levels/street-props.mjs#drawSignals",
+  "states": "US pedestrian head (raised hand / walking man) and a car signal on a mast arm (red/yellow/green), all driven by one walkAt schedule",
+  "note": "Continuous lamp crossfades.",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "village",
+  "inv": "village",
+  "kind": "backdrop",
+  "reuse": "extractable",
+  "quality": "hero",
+  "need": 1,
+  "uneed": 0,
+  "best": "deadliest/film/levels/village.mjs#back",
+  "states": "dusk village street: adobe gate, lilac and peach cottages, lantern, well, string lights",
+  "note": "",
+  "alts": []
+ },
+ {
+  "g": "animals",
+  "name": "worm",
+  "inv": "worm",
+  "kind": "character",
+  "reuse": "extractable",
+  "quality": "filler",
+  "need": 1,
+  "uneed": 1,
+  "best": "animals/film/levels/forest.mjs#drawGrub",
+  "states": "grub pulled from a log; earthworm in soil cutaway",
+  "note": "",
+  "alts": []
+ }
+]

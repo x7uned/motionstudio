@@ -1,0 +1,9 @@
+How much would Pac-Man eat in our world · IN OUR WORLD #3 · Kagenami (@kagenami_ai) pixel film, 2026-10-29
+
+Voice: ElevenLabs, Dennis · Eleven v4 [thoughtful], language_code=en — one take; timings checked with ElevenLabs Scribe.
+Picture, sprites, maze, market, crossroads, props, sound and music: drawn and synthesised for this film (Motion Studio pixel-lab).
+Pac-Man and the ghosts are our own sprites in the arcade spirit (hand-made string grids), not the original sprites; the maze is
+our own layout; no Namco or Sega logos, fonts, sprites, sounds or music. The blue spiky silhouette is our own simple drawing.
+Pac-Man is a trademark of Bandai Namco Entertainment; Sonic is a trademark of Sega. Names are used only to refer to the games.
+Facts: The Pac-Man Dossier by Jamey Pittman (pacman.holenet.info), from the 1980 arcade game's code.
+No art from the Kagenami catalog or from earlier Pac-Man films.

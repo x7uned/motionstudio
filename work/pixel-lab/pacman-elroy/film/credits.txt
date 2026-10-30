@@ -1,0 +1,9 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), своя мелодия; без музыки, сирены и звуков оригинальной игры.
+Картинка: нарисована в коде. Лабиринт (свой, 21×26, из ролика про призраков), спрайты, вид Blinky в режиме Elroy (полосы скорости, нахмуренные глаза — наш приём, в аркаде он выглядит как обычно), панели, корпус и панель автомата — свои рисунки, не графика аркады и не оригинальная карта. Конец уровня — настоящая партия на нашем движке по правилам Dossier (скорости 1-го уровня, пауза на каждой точке, пороги 20/10, разбег), Pac-Man играет программа. Панель-гонка «YOU 80 / GHOST 75» — иллюстрация чисел, а не кадр игры.
+Pac-Man — товарный знак Bandai Namco Entertainment; ролик объясняет правила игры и не связан с правообладателем.
+
+Источники фактов (подробно — ../facts.md и ../research.md):
+- Jamey Pittman, The Pac-Man Dossier: гл. 2 Speed, гл. 4 Blinky, Table A.1 «Level specifications», Glossary — https://pacman.holenet.info/ (перепечатка: https://www.gamedeveloper.com/design/the-pac-man-dossier)
+- StrategyWiki, Pac-Man/Gameplay и Pac-Man/Tips — https://strategywiki.org/wiki/Pac-Man/Gameplay
+- Shaun Williams, реимплементация Pac-Man на JS (порядок скоростей, Elroy): https://github.com/masonicGIT/pacman

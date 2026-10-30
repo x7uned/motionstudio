@@ -1,0 +1,5 @@
+Pac-Man has a hiding spot the ghosts can't find, right by the start 👻
+
+Sources: Jamey Pittman, "The Pac-Man Dossier"; Chad Birch, "Understanding Pac-Man Ghost Behavior" (GameInternals); StrategyWiki, Pac-Man Tips.
+
+#pacman #retrogaming #arcade #gaming

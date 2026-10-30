@@ -1,0 +1,34 @@
+{
+ "kind": "spider-web",
+ "states": [
+  "sway",
+  "still",
+  "shake",
+  "sag",
+  "glint"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 52,
+  "hh": 52
+ },
+ "measured": {
+  "hw": 50,
+  "hh": 50,
+  "box": [
+   212,
+   370,
+   308,
+   468
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 223,
+ "msPerFrame": 20.4,
+ "maxFramePx": 352,
+ "maxNovelPx": 1119
+}

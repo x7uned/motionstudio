@@ -1,0 +1,33 @@
+{
+ "kind": "falcon",
+ "states": [
+  "perch",
+  "look",
+  "lift",
+  "dive"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 110,
+  "hh": 76
+ },
+ "measured": {
+  "hw": 110,
+  "hh": 76,
+  "box": [
+   152,
+   346,
+   371,
+   496
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 193,
+ "msPerFrame": 20.6,
+ "maxFramePx": 5238,
+ "maxNovelPx": 5202
+}

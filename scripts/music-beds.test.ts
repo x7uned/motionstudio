@@ -1,3 +1,4 @@
+import {TEST_PYTHON,TEST_FFMPEG} from "./test-tools";
 import {test} from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -8,7 +9,7 @@ import {createHash} from "node:crypto";
 import type {Storyboard} from "../src/lib/model";
 
 const ROOT=path.resolve(import.meta.dirname,"..");
-const PY=path.join(ROOT,".runtime/venv/bin/python"),FF=path.join(ROOT,"bin/ffmpeg");
+const PY=TEST_PYTHON,FF=TEST_FFMPEG;
 const film=():Storyboard=>({title:"Кэш",summary:"Как кэш ускоряет ответ",factNotes:"",scenes:Array.from({length:4},(_,i)=>({id:`scene-${i+1}`,title:"Кэш",subtitle:"",narration:"Кэш хранит ответ рядом.",visual:"spotlight" as const,items:["Кэш"],seconds:2}))});
 const tmp=(name:string)=>fs.mkdtempSync(path.join(os.tmpdir(),`studio-music-${name}-`));
 

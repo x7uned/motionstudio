@@ -1,0 +1,109 @@
+air-flow: jumps 0 pops 0 pure true footprint ok (declared 96×66, measured 106×100) 15 ms/frame
+airplane-window: jumps 0 pops 0 pure true footprint ok (declared 71×91, measured 70×96) 17.9 ms/frame
+airplane: jumps 0 pops 0 pure true footprint ok (declared 110×60, measured 119×81) 20.5 ms/frame
+animal-eye: jumps 0 pops 0 pure true footprint ok (declared 78×76, measured 75×76) 23.1 ms/frame
+arrow: jumps 0 pops 0 pure true footprint ok (declared 54×46, measured 69×68) 19.7 ms/frame
+ball: jumps 0 pops 0 pure true footprint ok (declared 44×44, measured 67×64) 20.1 ms/frame
+bed: jumps 1 pops 0 pure true footprint ok (declared 105×68, measured 105×68) 21.1 ms/frame jumps@3.9
+bee: jumps 0 pops 0 pure true footprint ok (declared 79×88, measured 79×88) 20.9 ms/frame
+brain: jumps 0 pops 0 pure true footprint ok (declared 82×76, measured 126×120) 22.9 ms/frame
+brick-wall: jumps 0 pops 0 pure true footprint ok (declared 100×98, measured 100×92) 22.1 ms/frame
+bubble: jumps 0 pops 0 pure true footprint ok (declared 22×76, measured 22×76) 19.7 ms/frame
+building: jumps 0 pops 0 pure true footprint ok (declared 72×122, measured 73×124) 20.8 ms/frame
+calendar: jumps 0 pops 0 pure true footprint ok (declared 96×90, measured 96×76) 20.6 ms/frame
+car: jumps 0 pops 0 pure true footprint ok (declared 86×24, measured 95×28) 19.7 ms/frame
+cardboard-box: jumps 0 pops 0 pure true footprint ok (declared 93×73, measured 93×73) 21.9 ms/frame
+cat: jumps 0 pops 0 pure true footprint ok (declared 72×92, measured 81×96) 21.5 ms/frame
+chart-bar: jumps 0 pops 0 pure true footprint ok (declared 108×78, measured 108×82) 27.4 ms/frame
+chimpanzee: jumps 0 pops 0 pure true footprint ok (declared 62×54, measured 57×53) 20.3 ms/frame
+clock: jumps 0 pops 0 pure true footprint ok (declared 62×62, measured 65×83) 21.8 ms/frame
+cloud: jumps 0 pops 0 pure true footprint ok (declared 108×76, measured 108×78) 22.4 ms/frame
+crocodile: jumps 0 pops 0 pure true footprint ok (declared 105×62, measured 103×51) 28.1 ms/frame
+crosswalk-button: jumps 0 pops 0 pure true footprint ok (declared 39×116, measured 38×116) 20.9 ms/frame
+crow: jumps 0 pops 0 pure true footprint ok (declared 66×68, measured 82×70) 21.7 ms/frame
+crt-tv: jumps 0 pops 0 pure true footprint ok (declared 94×84, measured 92×85) 25.3 ms/frame
+cup: jumps 0 pops 0 pure true footprint ok (declared 41×47, measured 41×47) 22.2 ms/frame
+desktop-computer: jumps 0 pops 0 pure true footprint ok (declared 74×46, measured 78×48) 21.7 ms/frame
+dog-bed: jumps 0 pops 0 pure true footprint ok (declared 67×34, measured 67×34) 20.9 ms/frame
+dog-toy: jumps 0 pops 0 pure true footprint ok (declared 93×76, measured 93×110) 20.5 ms/frame
+dog: jumps 0 pops 0 pure true footprint ok (declared 74×88, measured 69×91) 24.9 ms/frame
+door: jumps 0 pops 0 pure true footprint ok (declared 44×120, measured 40×124) 23.5 ms/frame
+dragonfly: jumps 0 pops 0 pure true footprint ok (declared 78×86, measured 78×86) 22.4 ms/frame
+elephant: jumps 0 pops 0 pure true footprint ok (declared 92×96, measured 115×146) 22.6 ms/frame
+falcon: jumps 0 pops 0 pure true footprint ok (declared 110×76, measured 110×76) 20.6 ms/frame
+fossil: jumps 0 pops 0 pure true footprint ok (declared 90×62, measured 89×64) 21.5 ms/frame
+fridge: jumps 3 pops 0 pure true footprint ok (declared 26×104, measured 26×104) 20.8 ms/frame jumps@1.467,3.333,4.567
+frog: jumps 1 pops 0 pure true footprint ok (declared 74×68, measured 74×68) 21.2 ms/frame jumps@2.533
+hand: jumps 0 pops 0 pure true footprint ok (declared 58×74, measured 72×78) 21 ms/frame
+heat-glow: jumps 0 pops 0 pure true footprint ok (declared 76×96, measured 82×116) 21.6 ms/frame
+hummingbird: jumps 0 pops 0 pure true footprint ok (declared 86×76, measured 86×76) 20.9 ms/frame
+lamp: jumps 0 pops 0 pure true footprint ok (declared 24×96, measured 22×96) 20.3 ms/frame
+leaf: jumps 0 pops 0 pure true footprint ok (declared 66×86, measured 99×101) 22.5 ms/frame
+lion: jumps 0 pops 0 pure true footprint ok (declared 88×78, measured 89×79) 32.3 ms/frame
+meter-bar: jumps 0 pops 0 pure true footprint ok (declared 94×28, measured 96×30) 22.2 ms/frame
+mirror: jumps 0 pops 0 pure true footprint ok (declared 62×92, measured 62×96) 22.5 ms/frame
+mosquito: jumps 0 pops 0 pure true footprint ok (declared 76×74, measured 101×80) 21.6 ms/frame
+motion-path: jumps 0 pops 0 pure true footprint ok (declared 82×64, measured 69×94) 20.3 ms/frame
+mouse: jumps 0 pops 0 pure true footprint ok (declared 84×78, measured 85×77) 21.9 ms/frame
+music-note: jumps 0 pops 0 pure true footprint ok (declared 37×63, measured 37×63) 20.4 ms/frame
+myth-stamp: jumps 0 pops 0 pure true footprint ok (declared 90×32, measured 104×42) 21.3 ms/frame
+paper-sheet: jumps 1 pops 0 pure true footprint ok (declared 72×28, measured 72×28) 20.7 ms/frame jumps@4.6
+person: jumps 0 pops 0 pure true footprint ok (declared 48×82, measured 72×85) 21.9 ms/frame
+pet-food: jumps 0 pops 0 pure true footprint ok (declared 58×36, measured 53×22) 20.7 ms/frame
+photograph: jumps 0 pops 0 pure true footprint ok (declared 72×100, measured 86×112) 24.6 ms/frame
+pigeon: jumps 0 pops 0 pure true footprint ok (declared 115×84, measured 115×84) 21.9 ms/frame
+power-line: jumps 0 pops 0 pure true footprint ok (declared 134×90, measured 134×90) 21 ms/frame
+radio-wave: jumps 0 pops 0 pure true footprint ok (declared 70×70, measured 66×68) 20.3 ms/frame
+ruler: jumps 0 pops 0 pure true footprint OFF (declared 60×18, measured 197×193) 20.3 ms/frame
+scent-trail: jumps 0 pops 0 pure true footprint ok (declared 70×86, measured 91×92) 20.8 ms/frame
+scorpion: jumps 0 pops 0 pure true footprint ok (declared 100×120, measured 89×116) 23.8 ms/frame
+server-rack: jumps 0 pops 0 pure true footprint ok (declared 25×87, measured 24×88) 21 ms/frame
+shark: jumps 0 pops 0 pure true footprint ok (declared 100×164, measured 111×168) 22.3 ms/frame
+shrew: jumps 2 pops 0 pure true footprint ok (declared 62×88, measured 60×100) 20.8 ms/frame jumps@4.1,4.167
+skin: jumps 0 pops 0 pure true footprint ok (declared 118×100, measured 118×99) 21.3 ms/frame
+skull: jumps 0 pops 0 pure true footprint ok (declared 54×48, measured 54×52) 20.5 ms/frame
+sloth: jumps 0 pops 0 pure true footprint ok (declared 86×80, measured 86×82) 21 ms/frame
+smartphone: jumps 0 pops 0 pure true footprint ok (declared 58×88, measured 82×120) 21.9 ms/frame
+snail: jumps 0 pops 0 pure true footprint ok (declared 76×72, measured 76×76) 22.5 ms/frame
+snake: jumps 0 pops 0 pure true footprint ok (declared 90×150, measured 89×151) 25.6 ms/frame
+snowflake: jumps 0 pops 0 pure true footprint ok (declared 75×90, measured 75×84) 20.4 ms/frame
+songbird: jumps 0 pops 0 pure true footprint ok (declared 48×36, measured 48×37) 20.7 ms/frame
+sound-wave: jumps 0 pops 0 pure true footprint ok (declared 84×84, measured 120×120) 22.7 ms/frame
+sparkle: jumps 0 pops 0 pure true footprint ok (declared 57×52, measured 57×52) 20.3 ms/frame
+speech-bubble: jumps 0 pops 0 pure true footprint ok (declared 92×40, measured 116×44) 21.5 ms/frame
+spider-web: jumps 0 pops 0 pure true footprint ok (declared 52×52, measured 50×50) 20.4 ms/frame
+squirrel: jumps 0 pops 0 pure true footprint ok (declared 66×74, measured 66×74) 23.8 ms/frame
+thermometer: jumps 0 pops 0 pure true footprint ok (declared 62×116, measured 62×116) 22.7 ms/frame
+traffic-light: jumps 0 pops 0 pure true footprint ok (declared 42×80, measured 42×82) 21 ms/frame
+tree: jumps 0 pops 0 pure true footprint ok (declared 96×112, measured 101×112) 25 ms/frame
+water-drop: jumps 0 pops 0 pure true footprint ok (declared 22×25, measured 22×24) 20.3 ms/frame
+window: jumps 0 pops 0 pure true footprint ok (declared 72×120, measured 72×120) 22.3 ms/frame
+wolf: jumps 0 pops 0 pure true footprint ok (declared 100×76, measured 113×78) 24.3 ms/frame
+worm: jumps 0 pops 0 pure true footprint ok (declared 46×66, measured 50×79) 21.5 ms/frame
+zoom-inset: jumps 0 pops 0 pure true footprint ok (declared 68×68, measured 105×70) 21.2 ms/frame
+airplane-cabin (backdrop): jumps 1 pops 0 pure true 81.1 ms/frame jumps@1.567
+backyard (backdrop): jumps 0 pops 0 pure true 28.8 ms/frame
+beach (backdrop): jumps 0 pops 0 pure true 31.9 ms/frame
+bedroom (backdrop): jumps 1 pops 0 pure true 41.4 ms/frame jumps@2.467
+cave (backdrop): jumps 0 pops 0 pure true 24.5 ms/frame
+city-skyline (backdrop): jumps 0 pops 0 pure true 24.6 ms/frame
+city-street (backdrop): jumps 0 pops 0 pure true 27.6 ms/frame
+computer-desk (backdrop): jumps 0 pops 0 pure true 45.4 ms/frame
+desert (backdrop): jumps 1 pops 0 pure true 45.1 ms/frame jumps@5.567
+farm (backdrop): jumps 0 pops 0 pure true 30.9 ms/frame
+forest (backdrop): jumps 0 pops 0 pure true 46.8 ms/frame
+jungle (backdrop): jumps 0 pops 0 pure true 46.5 ms/frame
+kitchen (backdrop): jumps 0 pops 0 pure true 56.8 ms/frame
+living-room (backdrop): jumps 1 pops 0 pure true 38.4 ms/frame jumps@5.4
+mountains (backdrop): jumps 0 pops 0 pure true 47 ms/frame
+night-sky (backdrop): jumps 0 pops 0 pure true 46.6 ms/frame
+park (backdrop): jumps 0 pops 0 pure true 39.2 ms/frame
+pond (backdrop): jumps 0 pops 0 pure true 27.9 ms/frame
+race-track (backdrop): jumps 0 pops 0 pure true 24.3 ms/frame
+retro-room (backdrop): jumps 1 pops 0 pure true 35.6 ms/frame jumps@4.067
+savanna (backdrop): jumps 0 pops 0 pure true 26.4 ms/frame
+sky (backdrop): jumps 0 pops 0 pure true 46.1 ms/frame
+snow (backdrop): jumps 0 pops 0 pure true 23.7 ms/frame
+studio (backdrop): jumps 0 pops 0 pure true 23.1 ms/frame
+underwater (backdrop): jumps 0 pops 0 pure true 26.1 ms/frame
+village (backdrop): jumps 0 pops 0 pure true 25.8 ms/frame

@@ -1,0 +1,34 @@
+{
+ "kind": "hand",
+ "states": [
+  "idle",
+  "point",
+  "tap",
+  "grab",
+  "wave"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 58,
+  "hh": 74
+ },
+ "measured": {
+  "hw": 72,
+  "hh": 78,
+  "box": [
+   195,
+   342,
+   334,
+   495
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 220,
+ "msPerFrame": 21,
+ "maxFramePx": 5507,
+ "maxNovelPx": 4318
+}

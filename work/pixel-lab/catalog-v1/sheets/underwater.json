@@ -1,0 +1,11 @@
+{
+ "kind": "underwater",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 26.1,
+ "maxNovelPx": 161867
+}

@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "artifactHash": "b552090e36350c4b97202cec776bf7d4cecb7d00f05b743a4e80bce855ad5d93",
+  "encodedAudioVerified": true,
+  "method": "Renderer motion interval and automation checks; measured source rate and output duration; actual stem fade/tail/loop energy; same-effect spacing checks; unchanged narration hash; no-effect voice gain comparison; final AAC decode and voice cross-correlation. Signal measurements, not human listening.",
+  "whooshAmplitudeRatioVsV7": 0.8,
+  "bodyMotionIntervals": 4,
+  "fanIntervalSeconds": 6.6,
+  "minimumSameEffectGapSeconds": 3,
+  "cueCountBefore": 12,
+  "cueCountAfter": 12,
+  "voiceGainDeltaDb": -1.6917156772813935e-06,
+  "decodedAudioLagSamples": 0,
+  "voiceCorrelation": 0.9925175381263992,
+  "backgroundGain": 0.009,
+  "smoothFadesPreserved": true,
+  "events": [
+    {
+      "at": 6.8,
+      "end": 7.966666666666667,
+      "kind": "assembly-cutaway",
+      "mode": "stretch",
+      "levelScale": 0.24,
+      "playbackRate": 0.47142857142857136
+    },
+    {
+      "at": 14.9,
+      "end": 15.05,
+      "kind": "object-enter",
+      "mode": null,
+      "levelScale": 0.8999999999999999,
+      "playbackRate": 1
+    },
+    {
+      "at": 18.233333333333334,
+      "end": 19.76666666666667,
+      "kind": "assembly-cutaway",
+      "mode": "stretch",
+      "levelScale": 0.24,
+      "playbackRate": 0.3586956521739135
+    },
+    {
+      "at": 19.166666666666668,
+      "end": 19.316666666666666,
+      "kind": "assembly-lift",
+      "mode": null,
+      "levelScale": 0.8999999999999999,
+      "playbackRate": 1
+    },
+    {
+      "at": 27.833333333333332,
+      "end": 27.98333333333333,
+      "kind": "assembly-lift",
+      "mode": null,
+      "levelScale": 0.8999999999999999,
+      "playbackRate": 1
+    },
+    {
+      "at": 30.733333333333334,
+      "end": 32.5,
+      "kind": "assembly-cutaway",
+      "mode": "stretch",
+      "levelScale": 0.24,
+      "playbackRate": 0.31132075471698134
+    },
+    {
+      "at": 31.033333333333335,
+      "end": 37.63333333333333,
+      "kind": "assembly-fan",
+      "mode": "loop",
+      "levelScale": 0.3,
+      "playbackRate": 1
+    },
+    {
+      "at": 32.5,
+      "end": 32.65,
+      "kind": "object-enter",
+      "mode": null,
+      "levelScale": 0.8999999999999999,
+      "playbackRate": 1
+    },
+    {
+      "at": 36.3,
+      "end": 37.63333333333333,
+      "kind": "assembly-cutaway",
+      "mode": "stretch",
+      "levelScale": 0.24,
+      "playbackRate": 0.4124999999999993
+    },
+    {
+      "at": 37.63333333333333,
+      "end": 37.78333333333333,
+      "kind": "assembly-lift",
+      "mode": null,
+      "levelScale": 0.8999999999999999,
+      "playbackRate": 1
+    },
+    {
+      "at": 41.4,
+      "end": 42.199999999999996,
+      "kind": "outro-transition",
+      "mode": "stretch",
+      "levelScale": 0.12,
+      "playbackRate": 0.6875
+    },
+    {
+      "at": 42.1,
+      "end": 42.52,
+      "kind": "highlight",
+      "mode": null,
+      "levelScale": 0.6,
+      "playbackRate": 1
+    }
+  ]
+}

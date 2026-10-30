@@ -1,0 +1,34 @@
+{
+ "kind": "airplane-window",
+ "states": [
+  "day",
+  "night",
+  "shade",
+  "frost",
+  "shine"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 71,
+  "hh": 91
+ },
+ "measured": {
+  "hw": 70,
+  "hh": 96,
+  "box": [
+   192,
+   324,
+   330,
+   505
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 5,
+ "pure": true,
+ "frames": 232,
+ "msPerFrame": 17.9,
+ "maxFramePx": 4009,
+ "maxNovelPx": 3169
+}

@@ -1,0 +1,33 @@
+{
+ "kind": "bubble",
+ "states": [
+  "few",
+  "stream",
+  "pop",
+  "stop"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 22,
+  "hh": 76
+ },
+ "measured": {
+  "hw": 22,
+  "hh": 76,
+  "box": [
+   244,
+   344,
+   284,
+   452
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 19.7,
+ "maxFramePx": 398,
+ "maxNovelPx": 29
+}

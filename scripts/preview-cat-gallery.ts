@@ -3,6 +3,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import {bundle} from "@remotion/bundler";
+import {bundleLive} from "../src/lib/remotion-bundle";
 import {renderStill,selectComposition} from "@remotion/renderer";
 import {CHROME} from "../src/lib/provider";
 import {ROOT,DATA,project} from "../src/lib/store";
@@ -24,7 +25,7 @@ async function main(){
  const dir=path.join(DATA,"projects",id),alignment=JSON.parse(await fs.readFile(path.join(dir,"alignment.json"),"utf8"));
  const plan={...p.plan,filmKind:"illustrated" as const,illustrated:gallery()};
  await fs.mkdir(out,{recursive:true});
- const serveUrl=await bundle({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects"),symlinkPublicDir:true});
+ const serveUrl=await bundleLive({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects")});
  const inputProps={plan,profile:p.profile,format:p.format,alignment};
  const composition=await selectComposition({serveUrl,id:"StudioFilm",inputProps,browserExecutable:CHROME});
  for(const t of (process.argv[4]??"1").split(",").map(Number)){const file=path.join(out,`t${t.toFixed(2)}.png`);await renderStill({composition,serveUrl,inputProps,frame:Math.round(t*30),output:file,browserExecutable:CHROME});console.log(file);}

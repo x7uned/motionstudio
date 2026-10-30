@@ -1,0 +1,35 @@
+{
+ "kind": "shark",
+ "states": [
+  "calm",
+  "grin",
+  "worry",
+  "happy",
+  "wave",
+  "look"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 100,
+  "hh": 164
+ },
+ "measured": {
+  "hw": 111,
+  "hh": 168,
+  "box": [
+   162,
+   252,
+   373,
+   583
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 258,
+ "msPerFrame": 22.3,
+ "maxFramePx": 4178,
+ "maxNovelPx": 1670
+}

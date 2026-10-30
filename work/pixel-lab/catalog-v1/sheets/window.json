@@ -1,0 +1,32 @@
+{
+ "kind": "window",
+ "states": [
+  "day",
+  "night",
+  "breeze"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 72,
+  "hh": 120
+ },
+ "measured": {
+  "hw": 72,
+  "hh": 120,
+  "box": [
+   192,
+   300,
+   334,
+   534
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 5,
+ "pure": true,
+ "frames": 151,
+ "msPerFrame": 22.3,
+ "maxFramePx": 4373,
+ "maxNovelPx": 1392
+}

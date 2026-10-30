@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "logo-visa-inc-63c064fa",
+      "kind": "logo",
+      "subject": "Visa Inc.",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/logo-visa-inc-63c064fa.png",
+      "sha256": "63c064fa588ca84fefe280399074d44f1e3f85caeef0e35b98682a8ab29024b9",
+      "width": 512,
+      "height": 166,
+      "source": {
+        "wikidata": "Q328840",
+        "label": "Visa Inc.",
+        "description": "American multinational financial services corporation",
+        "property": "P154",
+        "commonsFile": "Visa Inc. logo (2021–present).svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Visa_Inc._logo_(2021%E2%80%93present).svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Visa Inc., Nikon1803 , Gameposo , and Tokyoship",
+        "credit": "Own work using: https://www.visa.com/",
+        "restrictions": "trademarked",
+        "attributionRequired": false,
+        "date": "2021-07-22",
+        "retrievedAt": "2026-10-21T13:16:28.171Z"
+      }
+    },
+    {
+      "id": "logo-mastercard-b4aedfeb",
+      "kind": "logo",
+      "subject": "Mastercard",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/logo-mastercard-b4aedfeb.png",
+      "sha256": "b4aedfeb95308da06b2bf8d731d476c332636cb0f8c6b3e1406b9c950979752b",
+      "width": 512,
+      "height": 317,
+      "source": {
+        "wikidata": "Q489921",
+        "label": "Mastercard",
+        "description": "American multinational financial services corporation",
+        "property": "P8972",
+        "commonsFile": "Mastercard 2019 logo.svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mastercard_2019_logo.svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Mastercard Incorporated",
+        "credit": "Own work using : https://brand.mastercard.com/brandcenter/mastercard-brand-mark/downloads.html",
+        "restrictions": "trademarked",
+        "attributionRequired": false,
+        "date": "2019-01-07",
+        "retrievedAt": "2026-10-21T13:16:29.092Z"
+      }
+    },
+    {
+      "id": "flag-japan-2677f375",
+      "kind": "flag",
+      "subject": "Japan",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/flag-japan-2677f375.png",
+      "sha256": "2677f375bcfeac2bb43efba5123b570a51989c25be9a0dd2f8f89a62e65e5f09",
+      "width": 640,
+      "height": 427,
+      "source": {
+        "wikidata": "Q17",
+        "label": "Japan",
+        "description": "island country in East Asia",
+        "property": "P41",
+        "commonsFile": "Flag of Japan.svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Various",
+        "credit": "Law Concerning the National Flag and Anthem (1999) (Japanese) (English) ; Ministry of Defense Defense Specification Z 8701C (DSPZ8701C) ( archived ) Construction sheet:",
+        "restrictions": "insignia",
+        "attributionRequired": false,
+        "date": "1999-08-13",
+        "retrievedAt": "2026-10-21T13:17:01.680Z"
+      }
+    },
+    {
+      "id": "flag-united-kingdom-a1eaca71",
+      "kind": "flag",
+      "subject": "United Kingdom",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/flag-united-kingdom-a1eaca71.png",
+      "sha256": "a1eaca71719d813ddd715fb1a91c14ce6e17dde23d8aef9c8876eadcea983924",
+      "width": 640,
+      "height": 384,
+      "source": {
+        "wikidata": "Q145",
+        "label": "United Kingdom",
+        "description": "island country in north-west Europe",
+        "property": "P41",
+        "commonsFile": "Flag of the United Kingdom (3-5).svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-5).svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Original: Acts of Union 1800 Vector: Yaddah",
+        "credit": "Design data from http://fotw.vexillum.com/flags/gb.html ; original code is from Image:Flag of the United Kingdom (1-2).svg",
+        "restrictions": "insignia",
+        "attributionRequired": false,
+        "date": "1801-01-01",
+        "retrievedAt": "2026-10-21T13:17:02.692Z"
+      }
+    }
+  ],
+  "failed": []
+}

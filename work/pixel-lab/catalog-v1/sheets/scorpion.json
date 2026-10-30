@@ -1,0 +1,35 @@
+{
+ "kind": "scorpion",
+ "states": [
+  "calm",
+  "look",
+  "scuttle",
+  "rise",
+  "clack",
+  "worry"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 100,
+  "hh": 120
+ },
+ "measured": {
+  "hw": 89,
+  "hh": 116,
+  "box": [
+   173,
+   310,
+   350,
+   536
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 262,
+ "msPerFrame": 23.8,
+ "maxFramePx": 4268,
+ "maxNovelPx": 2379
+}

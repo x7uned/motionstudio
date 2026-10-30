@@ -1,0 +1,7 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде (квартира, кот и хозяин из ролика про «зумиз», коробка, лежанка, бумажные фигуры, панель приюта, термометр); сторонних изображений, фото и логотипов нет.
+Источники фактов:
+- Vinke C.M., Godijn L.M., van der Leij W.J.R., «Will a hiding box provide stress reduction for shelter cats?», Applied Animal Behaviour Science, 2014 (Утрехтский университет): https://research-portal.uu.nl/en/publications/will-a-hiding-box-provide-stress-reduction-for-shelter-cats/
+- Smith G.E., Chouinard P.A., Byosiere S.-E., «If I fits I sits: A citizen science investigation into illusory contour susceptibility in domestic cats», Applied Animal Behaviour Science 240, 2021, doi:10.1016/j.applanim.2021.105338.
+- Термонейтральная зона кошки 30–38 °C (National Research Council, 2006) — по обзору Veterinary Ireland Journal «The heat is on: the feline TNZ»: https://www.veterinaryirelandjournal.com/small-animal/333-the-heat-is-on-the-feline-tnz

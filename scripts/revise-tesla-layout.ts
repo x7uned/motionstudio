@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import assert from "node:assert/strict";
 import {bundle} from "@remotion/bundler";
+import {bundleLive} from "../src/lib/remotion-bundle";
 import {selectComposition,renderStill,renderMedia} from "@remotion/renderer";
 import {DATA,ROOT,project,updateProject,db,event} from "../src/lib/store";
 import {readJSON,writeJSON,fileHash,digest,auditCurrent} from "../src/lib/quality";
@@ -32,7 +33,7 @@ async function main(){
  }
  assert.equal(await fileHash(path.join(dir,"audio.wav")),manifest.preparedAudioHash,"Use the prepared audio revision");
  const inputProps={plan:p.plan,profile:p.profile,format:p.format,audio:`${id}/audio.wav`,alignment:await readJSON(path.join(dir,"alignment.json")),models:verifyModelSnapshot(dir),modelBase:`${id}/models`};
- const serveUrl=await bundle({entryPoint:path.join(ROOT,"renderer/index.tsx"),publicDir:path.join(DATA,"projects"),symlinkPublicDir:true});
+ const serveUrl=await bundleLive({entryPoint:path.join(ROOT,"renderer/index.tsx"),publicDir:path.join(DATA,"projects")});
  const chromiumOptions={gl:"angle" as const};
  const composition=await selectComposition({serveUrl,id:"StudioFilm",inputProps,browserExecutable:CHROME,chromiumOptions});
  if(action==="preview"){

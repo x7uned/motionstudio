@@ -1,0 +1,33 @@
+{
+ "kind": "cup",
+ "states": [
+  "full",
+  "tilt",
+  "sip",
+  "ripple"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 41,
+  "hh": 47
+ },
+ "measured": {
+  "hw": 41,
+  "hh": 47,
+  "box": [
+   225,
+   373,
+   303,
+   463
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 22.2,
+ "maxFramePx": 821,
+ "maxNovelPx": 245
+}

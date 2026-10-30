@@ -1,0 +1,33 @@
+{
+ "kind": "arrow",
+ "states": [
+  "point",
+  "poke",
+  "big",
+  "flip"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 54,
+  "hh": 46
+ },
+ "measured": {
+  "hw": 69,
+  "hh": 68,
+  "box": [
+   193,
+   353,
+   330,
+   488
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 19.7,
+ "maxFramePx": 3268,
+ "maxNovelPx": 3114
+}

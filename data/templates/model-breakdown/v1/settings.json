@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationCeilingDefault": 60,
+    "referenceDuration": 45,
+    "safeRight": 140,
+    "safeBottom": 1420
+  },
+  "layout": {
+    "stageTop": 260,
+    "stageHeight": 850,
+    "chapterTop": 1010,
+    "captionTop": 1250,
+    "captionBottom": 1395
+  },
+  "background": {
+    "pool": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "08",
+      "09",
+      "10"
+    ],
+    "excluded": [
+      "07"
+    ],
+    "opacity": 0.5,
+    "selection": "one random choice per project",
+    "reference": "01"
+  },
+  "voice": {
+    "id": "owner-dennis-professional-v4",
+    "voiceId": "Uk2wBdgJpwqwirqxDggc",
+    "model": "eleven_v4",
+    "name": "Dennis",
+    "delivery": "Живой русский рассказ знакомому: заинтересованность в механизме, спокойная уверенность, смысловые ударения и естественные паузы. Финальное приглашение подписаться — тепло и дружелюбно, без рекламного нажима и театральности.",
+    "strategy": "one continuous master",
+    "insertedChapterSilence": 0,
+    "preservePauses": true,
+    "credentials": "server .env.local only"
+  },
+  "branding": {
+    "username": "@xtuned",
+    "avatarFile": "assets/dennis-avatar.png",
+    "avatarSha256": "eb1c22f520e83909f34c8096bd7c3757cd539aa4ec4edfe081983b487b9c53e8",
+    "outro": {
+      "sceneId": "scene-8",
+      "question": "Хочешь узнать больше?",
+      "callToAction": "Подписывайся",
+      "motion": {
+        "fadeSeconds": 0.8,
+        "avatarDelaySeconds": 0.3,
+        "risePixels": 32,
+        "avatarSize": 440
+      }
+    },
+    "hideSchematicNote": true
+  },
+  "audio": {
+    "cueSheetVersion": 8,
+    "levels": {
+      "ui-reveal": 0.9,
+      "ui-highlight": 0.6,
+      "fan-start": 0.3,
+      "soft-whoosh": 0.24,
+      "outro-transition": 0.12
+    },
+    "backgroundGain": 0.009,
+    "minimumSameEffectGapSeconds": 3,
+    "cutaway": "stretch to preceding-key → destination-key interval",
+    "fan": "one loop with speed-key automation, 80ms crossfade, no repeated startup",
+    "masterTargetLufs": -16,
+    "acceptedLufs": [
+      -18,
+      -14
+    ],
+    "maxTruePeakDbtp": -1
+  },
+  "models": {
+    "contentDefault": "gpt-6.1-sol/xhigh",
+    "motion": "claude-opus-5-5/xhigh",
+    "explicitContentOverrideAllowed": true
+  },
+  "export": {
+    "videoCodec": "h264",
+    "pixelFormat": "yuv420p",
+    "range": "tv",
+    "colorSpace": "bt709",
+    "audioCodec": "aac",
+    "sampleRate": 48000,
+    "channels": 2,
+    "faststart": true
+  },
+  "scope": "Recipe and prepared renderer entry point. The exact new-topic model, avatar/outro snapshot and frozen per-template sound levels require production preparation; saving a template does not run TTS, render or approve a video."
+}

@@ -1,0 +1,228 @@
+{
+  "pack": "audition-01",
+  "ratings": {
+    "04": {
+      "rating": "like",
+      "note": ""
+    },
+    "05": {
+      "rating": "like",
+      "note": ""
+    },
+    "08": {
+      "rating": "like",
+      "note": ""
+    },
+    "10": {
+      "rating": "like",
+      "note": ""
+    },
+    "11": {
+      "rating": "like",
+      "note": ""
+    },
+    "12": {
+      "rating": "like",
+      "note": ""
+    },
+    "14": {
+      "rating": "like",
+      "note": ""
+    },
+    "13": {
+      "rating": "like",
+      "note": ""
+    },
+    "19": {
+      "rating": "like",
+      "note": ""
+    },
+    "20": {
+      "rating": "like",
+      "note": ""
+    },
+    "21": {
+      "rating": "like",
+      "note": ""
+    },
+    "22": {
+      "rating": "like",
+      "note": ""
+    },
+    "23": {
+      "rating": "like",
+      "note": ""
+    },
+    "24": {
+      "rating": "like",
+      "note": ""
+    },
+    "43": {
+      "rating": "like",
+      "note": ""
+    },
+    "48": {
+      "rating": "like",
+      "note": ""
+    },
+    "01": {
+      "note": "",
+      "rating": "no"
+    },
+    "02": {
+      "note": "",
+      "rating": "no"
+    },
+    "03": {
+      "note": "",
+      "rating": "no"
+    },
+    "06": {
+      "note": "",
+      "rating": "no"
+    },
+    "07": {
+      "note": "",
+      "rating": "no"
+    },
+    "09": {
+      "note": "",
+      "rating": "no"
+    },
+    "15": {
+      "note": "",
+      "rating": "no"
+    },
+    "16": {
+      "note": "",
+      "rating": "no"
+    },
+    "17": {
+      "note": "",
+      "rating": "no"
+    },
+    "18": {
+      "note": "",
+      "rating": "no"
+    },
+    "25": {
+      "note": "",
+      "rating": "no"
+    },
+    "26": {
+      "note": "",
+      "rating": "no"
+    },
+    "27": {
+      "note": "",
+      "rating": "no"
+    },
+    "28": {
+      "note": "",
+      "rating": "no"
+    },
+    "29": {
+      "note": "",
+      "rating": "no"
+    },
+    "30": {
+      "note": "",
+      "rating": "no"
+    },
+    "31": {
+      "note": "",
+      "rating": "no"
+    },
+    "32": {
+      "note": "",
+      "rating": "no"
+    },
+    "33": {
+      "note": "",
+      "rating": "no"
+    },
+    "34": {
+      "note": "",
+      "rating": "no"
+    },
+    "35": {
+      "note": "",
+      "rating": "no"
+    },
+    "36": {
+      "note": "",
+      "rating": "no"
+    },
+    "37": {
+      "note": "",
+      "rating": "no"
+    },
+    "38": {
+      "note": "",
+      "rating": "no"
+    },
+    "39": {
+      "note": "",
+      "rating": "no"
+    },
+    "40": {
+      "note": "",
+      "rating": "no"
+    },
+    "41": {
+      "note": "",
+      "rating": "no"
+    },
+    "42": {
+      "note": "",
+      "rating": "no"
+    },
+    "44": {
+      "note": "",
+      "rating": "no"
+    },
+    "45": {
+      "note": "",
+      "rating": "no"
+    },
+    "46": {
+      "note": "",
+      "rating": "no"
+    },
+    "47": {
+      "note": "",
+      "rating": "no"
+    },
+    "49": {
+      "note": "",
+      "rating": "no"
+    },
+    "50": {
+      "note": "",
+      "rating": "no"
+    }
+  },
+  "decision": {
+    "scope": "all-50",
+    "rule": "Explicit likes are selected; all other candidates rejected.",
+    "source": "User message in chat, 2026-10-19",
+    "approvedIds": [
+      "04",
+      "05",
+      "08",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "43",
+      "48"
+    ]
+  }
+}

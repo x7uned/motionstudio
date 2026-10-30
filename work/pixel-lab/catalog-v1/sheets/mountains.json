@@ -1,0 +1,11 @@
+{
+ "kind": "mountains",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 47,
+ "maxNovelPx": 130581
+}

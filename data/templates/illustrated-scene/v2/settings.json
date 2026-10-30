@@ -1,0 +1,122 @@
+{
+  "version": 2,
+  "renderer": "illustrated/v1",
+  "director": {
+    "model": "claude-opus-5-5",
+    "effort": "xhigh",
+    "timeoutSeconds": 1800
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationCeilingDefault": 60,
+    "referenceDuration": 102
+  },
+  "layout": {
+    "header": {
+      "top": 108
+    },
+    "stage": {
+      "top": 292,
+      "height": 900
+    },
+    "chapterLabel": {
+      "top": 1206
+    },
+    "captions": {
+      "top": 1262
+    },
+    "safeZone": {
+      "left": 78,
+      "right": 938
+    },
+    "focus": {
+      "left": 138,
+      "right": 878,
+      "top": 70,
+      "bottom": 830
+    }
+  },
+  "world": {
+    "width": 4000,
+    "height": 2400,
+    "zoom": {
+      "min": 0.5,
+      "max": 2.6
+    },
+    "cameraKeyMinGapSeconds": 1,
+    "cameraTravelSeconds": [
+      0.6,
+      2.2
+    ],
+    "limits": {
+      "objects": 32,
+      "cameraKeys": 64,
+      "callouts": 40,
+      "flows": 20
+    }
+  },
+  "callouts": {
+    "maxText": 26,
+    "maxOnScreen": 2,
+    "perObject": "sequential",
+    "typingSecondsPerChar": 0.035
+  },
+  "sound": {
+    "objectEnter": "ui-reveal",
+    "callout": "ui-highlight",
+    "flow": "ui-connect",
+    "cameraMove": "soft-whoosh"
+  },
+  "background": {
+    "selection": "approved-random",
+    "excluded": [
+      "07"
+    ]
+  },
+  "header": {
+    "avatar": "assets/avatar.png",
+    "avatarSha256": "eb1c22f520e83909f34c8096bd7c3757cd539aa4ec4edfe081983b487b9c53e8",
+    "size": 56
+  },
+  "voice": {
+    "profile": "Dennis",
+    "model": "eleven_v4",
+    "voiceId": "Uk2wBdgJpwqwirqxDggc",
+    "continuousTakeMaxChars": 2000,
+    "pronunciation": {
+      "xtuned": "экс-тюнд"
+    }
+  },
+  "outro": {
+    "pack": "xtuned-outro/v1",
+    "reserveSeconds": 4,
+    "spokenRu": "Хочешь больше таких разборов? Подписывайся на xtuned.",
+    "brandCheckAccepted": "brandHeard пакета + Extunt / экстюнт"
+  },
+  "catalog": [
+    "lava-lamp",
+    "lamp-wall",
+    "camera",
+    "monitor",
+    "server",
+    "pixel-grid",
+    "hash-press",
+    "mixer",
+    "seed",
+    "generator",
+    "number-stream",
+    "key",
+    "browser",
+    "padlock",
+    "plaque",
+    "cloud-sign",
+    "person",
+    "cosmic-ray",
+    "memory-chip",
+    "voting-booth",
+    "ballot-box",
+    "tally-board"
+  ]
+}

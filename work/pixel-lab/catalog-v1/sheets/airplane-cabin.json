@@ -1,0 +1,20 @@
+{
+ "kind": "airplane-cabin",
+ "backdrop": true,
+ "jumps": [
+  {
+   "t": 1.567,
+   "novel": 376,
+   "before": 98,
+   "after": 104,
+   "changed": 223,
+   "bayerTop3": 0.78
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 81.1,
+ "maxNovelPx": 85379
+}

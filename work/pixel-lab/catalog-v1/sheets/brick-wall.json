@@ -1,0 +1,33 @@
+{
+ "kind": "brick-wall",
+ "states": [
+  "solid",
+  "crack",
+  "crumble",
+  "lit"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 100,
+  "hh": 98
+ },
+ "measured": {
+  "hw": 100,
+  "hh": 92,
+  "box": [
+   162,
+   344,
+   361,
+   512
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 22.1,
+ "maxFramePx": 3848,
+ "maxNovelPx": 1750
+}

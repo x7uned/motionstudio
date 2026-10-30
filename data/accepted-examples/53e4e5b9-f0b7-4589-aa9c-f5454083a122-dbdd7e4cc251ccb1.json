@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "projectId": "53e4e5b9-f0b7-4589-aa9c-f5454083a122",
+  "acceptedAt": "2026-10-20T10:42:31.976Z",
+  "inputHash": "dbdd7e4cc251ccb1fc10b6299f1e432526257a3d520290b7b34645668e70249a",
+  "text": "In 1707, four British warships struck the rocks off the Isles of Scilly, and more than fourteen hundred men died. The navigators couldn't tell exactly where they were, and faulty charts and compasses made it worse. Latitude, how far north or south, was the easy part: the Sun or the pole star tells you. Longitude, how far east or west, was the real problem: the sky gives you nothing to measure it from. But time does. The Earth turns a full circle every twenty-four hours, so each hour between your local noon and noon back home is fifteen degrees of longitude. Carry home time with you, and you know where you are. The catch was the clock. To fix a ship's position within about a hundred kilometers, a clock could drift only about six seconds a day. The pendulum clocks of the time drifted with heat and cold. So in 1714, Britain offered twenty thousand pounds for a solution. Many expected astronomers to crack it. Instead, the answer came from a carpenter and self-taught clockmaker, John Harrison. His first sea clock, H1, had two linked swinging balances, so the ship's rocking didn't upset it. But it still lost time whenever the ship turned. So Harrison spent years rethinking it, until he built H4: a watch whose large balance ticks five times a second. In 1761, sailing to Jamaica, his son William used it to predict landfall at Madeira earlier than the crew expected. The trials showed it was three times more accurate than the prize demanded. Yet the Board of Longitude held back the money until Parliament stepped in. Still, the problem was solved: a clock had turned time into a place on the map.",
+  "feedback": null,
+  "comparison": null,
+  "provenance": "explicit editor approval; contextual example, not model training"
+}

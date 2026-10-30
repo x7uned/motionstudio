@@ -1,0 +1,19 @@
+{
+ "file": "pumpkin-face-medium.mp4",
+ "frames": 300,
+ "video_s": 10,
+ "audio_s": 10.005,
+ "seam_picture_meanabs": 8.422,
+ "neighbour_frames_meanabs": [
+  0.22,
+  0.269,
+  0.425
+ ],
+ "seam_audio_jump": 0,
+ "audio_typical_step": 0.0124,
+ "loudness_LUFS": -15.9,
+ "true_peak_dBFS": -1.4,
+ "LRA": 6.1,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

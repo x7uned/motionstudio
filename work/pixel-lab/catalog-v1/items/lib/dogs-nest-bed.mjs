@@ -1,0 +1,114 @@
+// catalog-v1 copy (2026-10-26) of work/pixel-lab/dogs/kit/nest-bed.mjs (bedBack, bedFront, bedSeat, BED); changes: the engine
+// is imported from items/lib/dogs-nest-hf.mjs (same code). The film's world units are used as they are.
+// hollow where the dog lies.
+// World units through G (nest-hf.mjs frame: X right, H up, S toward the viewer). Pure function of its arguments.
+import { KS, LIGHT, lit, band, ramp, sm, clamp01, h2, vnoise, heightfield, splitRule, outline, emit, memo, keyOf, viewOf, frameFor, groundShadow } from "./dogs-nest-hf.mjs";
+
+/** Bed geometry (world units). Width 2·Rout = 150; cushion ≈ 18 high; bolster crest 35 high. */
+export const BED = { Rout: 75, Rr: 61, Rin: 48, Hb: 33, Hc: 17, Hd: 19.5, hollowR: 44, hollowD: 10 };
+const { Rout, Rr, Rin, Hb, Hc, Hd } = BED;
+const RIM = Rr + 4.5;                                        // the cream fleece wraps over the crest down to here
+
+// warm honey bolster, oat-cream fleece cushion, dark base band (no red)
+const HONEY = ramp(["#24120A", "#422214", "#66361C", "#8A4C24", "#AA6630", "#C4823E", "#D89E54", "#E8BA72", "#F4D49A"]);
+const CREAM = ramp(["#3A2A24", "#644C40", "#8C705E", "#B09276", "#CBB092", "#DFC8AA", "#EDDCC2", "#F6EBD8", "#FEF7EA"]);
+const BASE = ramp(["#1E1008", "#3A2210", "#5A3618", "#7A4C22"]);
+const PIPE = ramp(["#5A3A1C", "#A8865C", "#E8D2A8", "#FFF2D2"]);
+const OUTL = ramp(["#1C0D05", "#2A1A12"]);
+
+/** Height of the bed surface at (X, S). press 0..1 pushes a hollow into the cushion around (dent, 0). */
+function bedH(X, S, press, dent) {
+  const r = Math.sqrt(X * X + S * S); if (r >= Rout) return -1;
+  let h;
+  if (r >= Rr) { const u = (r - Rr) / (Rout - Rr); h = Hb * Math.sqrt(Math.max(0, 1 - Math.pow(u, 2.6))); }
+  else if (r >= Rin) { const u = (Rr - r) / (Rr - Rin); h = Hc + (Hb - Hc) * (1 - u * u) * (1 + 0.25 * u * (1 - u)); }
+  else { const q = r / Rin; h = Hc + (Hd - Hc) * (1 - q * q) - 1.6 * sm(q, 0.82, 1); }
+  if (r > Rin + 2 && r < RIM + 1) {                         // plush fleece rim: soft tufts along the crest
+    const th = Math.atan2(S, X) * Rr;
+    h += 0.9 * vnoise(th / 2.6, 3.1, 7) * sm(r, Rin + 2, Rin + 6) * (1 - sm(r, RIM - 2, RIM + 1));
+  }
+  if (press > 0) {
+    const dx = X - dent, d = Math.sqrt(dx * dx + S * S * 1.08), R = BED.hollowR;
+    if (d < R) { const u = d / R; h -= press * BED.hollowD * (1 - u * u) * (1 - u * u) * (r < Rin + 2 ? 1 : 0.35); }
+    else if (r < Rin) h += press * 1.1 * Math.exp(-(((d - R) / 4) ** 2));    // displaced filling: a soft ring round the hollow
+  }
+  return Math.max(0, h);
+}
+
+function shadeOf(press, dent) {
+  const put = (out, c) => { out[0] = c[0]; out[1] = c[1]; out[2] = c[2]; };
+  return (X, S, h, gX, gS, px, py, out) => {
+    const r = Math.sqrt(X * X + S * S), w = lit(gX, gS);
+    const fleece = (v) => {                                    // plush cream: soft lighter tufts, faint darker pits
+      const n = h2(Math.floor(X * 0.8 + 0.4 * Math.floor(S * 0.5)), Math.floor(S * 0.5 + h * 0.8));
+      if (n > 0.9) v += 0.6; else if (n < 0.05) v -= 0.55;
+      return CREAM[band(v, 8, px, py)];
+    };
+    if (r < Rin + 0.6 && h < Hc + 2.2) {                       // cushion; a soft crease under the bolster
+      let v = 0.7 + 7.2 * w - 1.7 * sm(r, Rin - 7, Rin);
+      if (press > 0) { const d = Math.hypot(X - dent, S); v -= press * 0.9 * sm(-d, -BED.hollowR * 0.8, -BED.hollowR * 0.2); }
+      put(out, fleece(v)); return 2;
+    }
+    if (r < RIM) { put(out, fleece(1.3 + 7.0 * w - (r < Rr ? 0.7 * sm(-r, -Rr + 2, -Rin) : 0))); return 5; }   // fleece rim (top + inner side)
+    if (r < RIM + 1.6) { put(out, PIPE[band(0.4 + 3.2 * w, 3, px, py)]); return 3; }                         // piping under the fleece
+    if (h < 2.4) { put(out, BASE[band(0.8 + 3 * w, 3, px, py)]); return 4; }                                  // dark non-slip base
+    if (h < 4.6) { put(out, PIPE[band(0.6 + 3 * w, 3, px, py)]); return 3; }                                  // piping round the bottom
+    // outer fabric: shaded like a stuffed tube (lit top, the bottom turning under), soft vertical folds, a stitched seam
+    const hv = clamp01(h / (Hb - 3)), ny = Math.max(-0.95, Math.min(1, 1.9 * hv - 0.75)), nr = Math.sqrt(1 - ny * ny);
+    const tube = 0.5 + 0.5 * ((nr * X / r) * LIGHT[0] + ny * LIGHT[1] + (nr * S / r) * LIGHT[2]);
+    const th = Math.atan2(S, X), ff = (th / (2 * Math.PI)) * 16 + 0.3 * Math.sin(th * 3), fe = Math.abs(ff - Math.round(ff));
+    const fold = -1.1 * Math.exp(-((fe / 0.05) ** 2)) * sm(hv, 0.45, 0.85) + 0.35 * Math.exp(-(((fe - 0.09) / 0.05) ** 2)) * sm(hv, 0.45, 0.85);   // puckers under the rim
+    let v = 0.1 + 8.0 * Math.pow(0.45 * w + 0.55 * tube, 1.15) + fold;
+    if (Math.abs(h - Hb * 0.5) < 0.55 && ((th * Rout / 2.4) % 2 + 2) % 2 < 1.1) v += 1.6;
+    put(out, HONEY[band(v, 8, px, py)]); return 1;
+  };
+}
+
+const CACHE = [];
+function render(c, G, x, y, o) {
+  const press = clamp01(o.press ?? 0), dent = o.dent ?? 0, split = o.split ?? 6, side = o.splitSide ?? 0.55;
+  const key = keyOf(c, G, x, y, `${press}|${dent}|${split}|${side}`);
+  return memo(CACHE, key, (L) => {
+    const V = viewOf(G, x, y);
+    if (!frameFor(L, c, V, -Rout, Rout, -Rout, Rout, Hb + 2)) return null;
+    heightfield(L, V, {
+      X0: -Rout, X1: Rout, S0: -Rout, S1: Rout,
+      h: (X, S) => bedH(X, S, press, dent),
+      shade: shadeOf(press, dent),
+      split: splitRule(split, side, 34),
+      crease: (m) => (m === 2 || m === 5 ? CREAM[2] : m === 1 ? HONEY[1] : OUTL[0]),
+    });
+    outline(L, () => OUTL[0]);
+    return L;
+  });
+}
+
+/** World offset of the seat: put the dog's lawn point at (x + seat.x, y + seat.y) to lie in the hollow. */
+export function bedSeat(o = {}) { const press = clamp01(o.press ?? 0), dent = o.dent ?? 0; return { x: dent, y: -bedH(dent, 0, press, dent) }; }
+
+/**
+ * BACK part of the bed (draw BEFORE the dog): contact shadow, base, far bolster, cushion and the hollow.
+ * (x, y) = lawn point under the bed centre (where the dog stands). t is unused (the bed is still). o:
+ *   press 0..1 — the cushion under the dog sinks into a round hollow (depth 10); dent — hollow x offset (world units);
+ *   split (default 6) / splitSide (0.55) — depth where BACK ends (S > split + splitSide·max(0, |X| − 34) is FRONT);
+ *   a — dissolve 0..1.
+ * Returns { seat: [sx, sy] screen point for the dog's lawn point, rim: screen y of the near bolster crest, box }.
+ */
+export function bedBack(c, G, x, y, t = 0, o = {}) {
+  const a = o.a ?? 1; if (a <= 0) return null;
+  const z = G.z, cx = G.X(x), cy = G.Y(y);
+  const L = render(c, G, x, y, o);
+  groundShadow(c, cx + 4 * z, cy + 3 * z, (Rout + 7) * z, (Rout * KS + 5) * z, 0.5, undefined, L, a);
+  emit(c, L, 0, a);
+  return anchors(G, x, y, o, L);
+}
+/** FRONT part of the bed (draw AFTER the dog): the near bolster and the front lip of the hollow. Same arguments. */
+export function bedFront(c, G, x, y, t = 0, o = {}) {
+  const a = o.a ?? 1; if (a <= 0) return null;
+  const L = render(c, G, x, y, o); emit(c, L, 1, a);
+  return anchors(G, x, y, o, L);
+}
+function anchors(G, x, y, o, L) {
+  const s = bedSeat(o), z = G.z;
+  return { seat: [G.X(x + s.x), G.Y(y + s.y)], rim: G.Y(y) + (Rr * KS - Hb) * z, box: L ? [L.x0, L.y0, L.w, L.h] : null };
+}

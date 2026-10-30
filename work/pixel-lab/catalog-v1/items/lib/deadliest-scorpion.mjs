@@ -1,0 +1,105 @@
+// catalog-v1 copy (2026-10-26) of work/pixel-lab/deadliest/film/levels/desert-scorpion.mjs (R, palettes, cub, along,
+// drawScorpion; scorpionIcon not copied); changes: import path only (./cute.mjs). The film's drawing, options and
+// palettes are unchanged. Options (all optional): s scale, a presence, raise (tail 0..1), walk (gait 0..1), phase (gait
+// cycles), arms (pincers raised 0..1), open (claw opening 0..1), grin, brows (−1 sheepish … +1 cross), look [x, y], blink,
+// sway, bob, shadow (false = no contact shadow).
+import { blob, ell, tube, bez, eye, blush, smile, shadow, fade, mix, lerp, clamp01 } from "./cute.mjs";
+
+const R = Math.round;
+export const BODY = ["#1A0806", "#341208", "#561E0C", "#7C3012", "#A2461A", "#C46224", "#DE8232", "#F2A84E"];
+const FACE = ["#2E1206", "#58260C", "#86401A", "#B26028", "#D4843A", "#EAA652", "#F6C676", "#FDE2A8"];
+const CLAW = ["#24100A", "#46200C", "#6E3412", "#984C1A", "#BE6824", "#DC8A32", "#F0AE4C", "#FAD07E"];
+const BULB = ["#3A1806", "#6A3008", "#9A4E0E", "#C87018", "#E89228", "#F6B440", "#FCD268", "#FFEEA8"];
+const STING = ["#0C0404", "#1A0A08", "#2C120C", "#421C12", "#5A2818", "#74361E", "#8E4828", "#AA5E36"];
+const OUT = "#120604", LIT = "#FFD27A";
+const EYE = ["#0E0404", "#22100A", "#4A1E10", "#B0602A"];
+
+/** Point and unit tangent along a cubic Bézier at parameter u. */
+function cub(p, u) {
+  const v = 1 - u, a = v * v * v, b = 3 * v * v * u, c2 = 3 * v * u * u, d = u * u * u;
+  const x = a * p[0][0] + b * p[1][0] + c2 * p[2][0] + d * p[3][0], y = a * p[0][1] + b * p[1][1] + c2 * p[2][1] + d * p[3][1];
+  const tx = 3 * v * v * (p[1][0] - p[0][0]) + 6 * v * u * (p[2][0] - p[1][0]) + 3 * u * u * (p[3][0] - p[2][0]);
+  const ty = 3 * v * v * (p[1][1] - p[0][1]) + 6 * v * u * (p[2][1] - p[1][1]) + 3 * u * u * (p[3][1] - p[2][1]);
+  const n = Math.hypot(tx, ty) || 1; return [x, y, tx / n, ty / n];
+}
+/** n samples of a cubic, evenly spaced by arc length. */
+function along(p, n) {
+  const S = 60; let L = 0, prev = cub(p, 0); const acc = [0];
+  for (let i = 1; i <= S; i++) { const q = cub(p, i / S); L += Math.hypot(q[0] - prev[0], q[1] - prev[1]); acc.push(L); prev = q; }
+  const pts = [];
+  for (let k = 0; k < n; k++) { const s = (k / (n - 1)) * L; let i = 1; while (i < S && acc[i] < s) i++; const f = (s - acc[i - 1]) / (acc[i] - acc[i - 1] || 1); pts.push(cub(p, (i - 1 + f) / S)); }
+  return pts;
+}
+
+/**
+ * o: s (scale), a (dissolve), look [dx, dy], blink, raise 0 (curled rest) → 1 (high over the head), sway (tail, px),
+ * open 0..1 (pincer fingers), arms 0 (relaxed) → 1 (raised boxer pose), walk 0..1 (gait amplitude), phase (gait cycles),
+ * brows −1 sheepish … 0 none … 1 mischievous, grin 0..1, bob (px), shadow (bool).
+ * Returns { tip, bulb } (screen points of the stinger tip and the bulb) for sparkles.
+ */
+export function drawScorpion(c, x, y, t, o = {}) {
+  const a = o.a ?? 1; if (a <= 0) return null;
+  const s = o.s ?? 1, raise = clamp01(o.raise ?? 0), walk = o.walk ?? 0, ph = o.phase ?? 0, arms = o.arms ?? 0;
+  const br = Math.sin(t * 2 * Math.PI * 0.6) * 1.0 + (o.bob ?? 0), P = (dx, dy) => [x + dx * s, y + dy * s];
+  const BO = { thick: 8 * s, base: 3.0, gain: 2.2, outline: OUT, litOutline: LIT, a };
+  if (o.shadow !== false) shadow(c, x, y + 1, 100 * s, 7 * s, "#4A1E10", 0.42 * a);
+  const hy = -54 + br * 0.6 / s;                                          // head centre (relative)
+  const look = o.look ?? [0, 0], blink = o.blink ?? 0, PF = (dx, dy, k = 1) => P(dx + look[0] * 6 * k, dy + look[1] * 5 * k);   // face features follow the look (head turn)
+
+  // ---- tail (behind everything): six beads along a curve from behind the head, a bulb and a hooked stinger
+  const sw = o.sway ?? 0;
+  const C0 = [[8, -70], [70, -80], [76, -168], [26, -172]], C1 = [[8, -70], [92, -146], [70, -290], [4, -266]];
+  const ctrl = C0.map((p, i) => { const q = C1[i]; return P(lerp(p[0], q[0], raise) + (i >= 2 ? sw * (i - 1) * 0.5 : 0), lerp(p[1], q[1], raise) + (i >= 1 ? br * 0.6 : 0)); });
+  const pts = along(ctrl, 8), gap = Math.hypot(pts[2][0] - pts[1][0], pts[2][1] - pts[1][1]);
+  for (let i = 1; i < 7; i++) {
+    const [px, py, tx, ty] = pts[i], r = lerp(17, 12.5, (i - 1) / 5) * s, ang = Math.atan2(ty, tx);
+    blob(c, [ell(px, py, Math.max(r * 1.1, gap * 0.66), r, ang)], { ...BO, ramp: BODY, thick: 7 * s, base: 3.3, gain: 2.4 });
+    // segment ridge: a short lit arc across each bead
+    const g = fade(c, a); for (let k = -4; k <= 4; k++) { const q = k / 4; g.px(R(px - ty * k * r * 0.18 - tx * r * (0.35 - 0.2 * q * q)), R(py + tx * k * r * 0.18 - ty * r * (0.35 - 0.2 * q * q)), BODY[6]); }
+  }
+  // telson: golden bulb + dark curved aculeus (hook) bending down toward the front
+  const [ex, ey, etx, ety] = pts[7], bx = ex + etx * 4 * s, by = ey + ety * 4 * s, nrm = (-ety * 0 + etx) > 0 ? [-ety, etx] : [ety, -etx];
+  const dn = nrm[1] >= 0 ? nrm : [-nrm[0], -nrm[1]];                    // the side of the tangent that points down the screen
+  const h0 = [bx + etx * 11 * s, by + ety * 11 * s], h1 = [h0[0] + etx * 14 * s, h0[1] + ety * 14 * s], h2 = [h0[0] + etx * 9 * s + dn[0] * 22 * s, h0[1] + ety * 9 * s + dn[1] * 22 * s];
+  blob(c, [tube(bez(h0, h1, h2, 14), 8.5 * s, 1.0 * s)], { ...BO, ramp: STING, thick: 4 * s, base: 3.2, gain: 3, litOutline: "#D88A50" });
+  blob(c, [ell(bx, by, 18 * s, 14 * s, Math.atan2(ety, etx))], { ...BO, ramp: BULB, thick: 8 * s, base: 3.2, gain: 2.6 });
+  const tip = h2;
+
+  // ---- legs: three stubby bent legs per side (back pair first); tetrapod gait while walking
+  for (const sd of [-1, 1]) for (let i = 2; i >= 0; i--) {
+    const gait = Math.sin(2 * Math.PI * ph + i * Math.PI * 0.67 + (sd > 0 ? Math.PI : 0)), up = Math.max(0, gait) * 8 * walk;
+    const hip = P(sd * (34 + i * 8), -22 - i * 2 + br * 0.3), knee = P(sd * (58 + i * 11), -36 - i * 4 - up), foot = P(sd * (64 + i * 13 + gait * 4 * walk), -2 - up * 0.5 - i * 2);
+    blob(c, [tube([hip, knee], 8.5 * s, 7.5 * s), tube([knee, foot], 7.5 * s, 5.5 * s), ell(foot[0], foot[1] - 2 * s, 6 * s, 4 * s)], { ...BO, ramp: BODY, thick: 4 * s, base: 2.8 + (2 - i) * 0.3 });
+  }
+
+  // ---- head: a big round chestnut bean sitting on its legs, with a lighter face patch
+  blob(c, [ell(...P(0, hy), 62 * s, 44 * s), ell(...P(0, hy + 20), 54 * s, 26 * s)], { ...BO, ramp: BODY, thick: 26 * s, base: 2.9, gain: 2.6 });
+  blob(c, [ell(...PF(0, hy + 14, 0.6), 36 * s, 21 * s)], { ...BO, ramp: FACE, thick: 12 * s, base: 3.6, gain: 1.8, outline: mix(BODY[2], OUT, 0.3), litOutline: FACE[6] });
+  // two tiny median eyes on top of the head (real scorpions have them) — glossy dots
+  { const g = fade(c, a); for (const sd of [-1, 1]) { const [mx, my] = PF(sd * 8, hy - 33, 0.3); g.rect(R(mx) - 2, R(my) - 1, 4, 3, OUT); g.px(R(mx) - 1, R(my), "#4A1E10"); g.px(R(mx), R(my), "#4A1E10"); g.px(R(mx) - 1, R(my) - 1, "#FFE8C0"); } }
+
+  // ---- face
+  for (const sd of [-1, 1]) { const [ex2, ey2] = PF(sd * 25, hy - 6); eye(c, ex2, ey2, 16 * s, { ry: 17.5 * s, iris: EYE, pupil: "bead", look, blink, lid: BODY[4], a }); }
+  { const [l1, m1] = PF(-40, hy + 12, 0.5), [l2, m2] = PF(40, hy + 12, 0.5); blush(c, l1, m1, 8 * s, 4 * s, "#FF6A7A", a); blush(c, l2, m2, 8 * s, 4 * s, "#FF6A7A", a); }
+  const [mx, my] = PF(0, hy + 16, 0.8), grin = o.grin ?? 0;
+  smile(c, mx, my, Math.max(1, R(lerp(4, 6, clamp01(grin * 2)) * s)), { open: grin * 0.6, tongue: "#E8506A", a });
+  const brows = o.brows ?? 0;
+  if (Math.abs(brows) > 0.02) {
+    const g = fade(c, a * Math.min(1, Math.abs(brows) * 1.6)), k = Math.sign(brows);
+    for (const sd of [-1, 1]) { const [bx2, by2] = PF(sd * 25, hy - 28 - (k < 0 ? 3 : 0)); for (let i = -7; i <= 7; i++) { const yy = by2 - k * sd * i * 0.36 * s; g.px(R(bx2 + i * s), R(yy), OUT); g.px(R(bx2 + i * s), R(yy) + 1, OUT); } }
+  }
+
+  // ---- pincers: short arms to boxer-glove claws; fingers open/close (clack)
+  const open = clamp01(o.open ?? 0.35);
+  for (const sd of [-1, 1]) {
+    const up = arms * 20, sh = P(sd * 44, hy + 16), el = P(sd * (76 - arms * 4), hy + 20 - up * 0.4 + br * 0.3), wr = P(sd * (86 - arms * 6), hy - 2 - up);
+    blob(c, [tube(bez(sh, el, wr, 10), 9 * s, 8 * s)], { ...BO, ramp: CLAW, thick: 6 * s, base: 3.0 });
+    // u: hand axis (wrist → finger tips, up and outward); vv: perpendicular pointing away from the body (outer side)
+    const ang = -Math.PI / 2 + sd * (0.38 - arms * 0.16), u = [Math.cos(ang), Math.sin(ang)], vv = [-u[1] * sd, u[0] * sd], H = [wr[0] + u[0] * 13 * s, wr[1] + u[1] * 13 * s];
+    const Q = (du, dv) => [H[0] + (u[0] * du + vv[0] * dv) * s, H[1] + (u[1] * du + vv[1] * dv) * s];
+    const fo = open * 8, fx = bez(Q(10, 7), Q(21, 9 + fo), Q(31, 2 + fo * 1.1), 8), fm = bez(Q(10, -7), Q(21, -9 - fo), Q(31, -2 - fo * 1.1), 8);
+    blob(c, [ell(H[0], H[1], 19 * s, 15.5 * s, ang), tube(fx, 6.6 * s, 2.4 * s), tube(fm, 6.2 * s, 2.4 * s)], { ...BO, ramp: CLAW, thick: 11 * s, base: 3.1, gain: 2.5 });
+    if (open < 0.3) { const g = fade(c, a * (1 - open / 0.3)); const p0 = Q(15, 0), p1 = Q(30, 0); g.line(R(p0[0]), R(p0[1]), R(p1[0]), R(p1[1]), OUT); }
+  }
+  return { tip, bulb: [bx, by] };
+}

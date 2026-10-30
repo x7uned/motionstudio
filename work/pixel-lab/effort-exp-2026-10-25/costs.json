@@ -1,0 +1,92 @@
+{
+ "Your effort level: medium": {
+  "files": [
+   "01bbaf8c-bd4d-43cf-95cc-95e15ed27f5c.jsonl"
+  ],
+  "apiResponses": 24,
+  "toolCalls": 29,
+  "efforts": [
+   "medium"
+  ],
+  "models": [
+   "claude-opus-5-5"
+  ],
+  "tokens": {
+   "input": 48,
+   "w5": 0,
+   "w1h": 133252,
+   "read": 3173854,
+   "output": 45452,
+   "thinking": 11017
+  },
+  "usd": 2.61,
+  "split": {
+   "output": 0.91,
+   "cacheWrite": 1.07,
+   "cacheRead": 0.63,
+   "input": 0
+  },
+  "wallClockMin": 9.3,
+  "subagentFiles": 0
+ },
+ "Your effort level: high": {
+  "files": [
+   "3d01b1b2-7e57-476b-9821-35e20f5755ca.jsonl"
+  ],
+  "apiResponses": 47,
+  "toolCalls": 55,
+  "efforts": [
+   "high"
+  ],
+  "models": [
+   "claude-opus-5-5"
+  ],
+  "tokens": {
+   "input": 98,
+   "w5": 0,
+   "w1h": 193804,
+   "read": 8632626,
+   "output": 89828,
+   "thinking": 35238
+  },
+  "usd": 5.07,
+  "split": {
+   "output": 1.8,
+   "cacheWrite": 1.55,
+   "cacheRead": 1.73,
+   "input": 0
+  },
+  "wallClockMin": 19.8,
+  "subagentFiles": 0
+ },
+ "Your effort level: xhigh": {
+  "files": [
+   "cd8c51a4-2f13-45a1-9359-bfd4be42c010.jsonl"
+  ],
+  "apiResponses": 91,
+  "toolCalls": 99,
+  "efforts": [
+   "xhigh"
+  ],
+  "models": [
+   "claude-opus-5-5"
+  ],
+  "tokens": {
+   "input": 182,
+   "w5": 0,
+   "w1h": 364083,
+   "read": 27186199,
+   "output": 213964,
+   "thinking": 105617
+  },
+  "usd": 12.63,
+  "split": {
+   "output": 4.28,
+   "cacheWrite": 2.91,
+   "cacheRead": 5.44,
+   "input": 0
+  },
+  "wallClockMin": 43.6,
+  "subagentFiles": 0
+ }
+}

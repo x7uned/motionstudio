@@ -1,0 +1,16 @@
+From the dumbest animal to the smartest — Kagenami pixel film (2026-10-23)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take).
+Picture and sound: generated locally (pixel art and 8-bit synthesis); no third-party images, logos or recordings.
+Pixel illustration, not to scale. The order is a popular scale of nervous-system complexity and tested skills, not a single scientific ranking; the octopus/bee order follows the editor's choice.
+
+Sources:
+- Sponges have no neurons; sponge-like fossils ~600 million years old: Smithsonian Magazine; Cobb, "Why sponges are animals".
+- Honeybee brain ~1 million neurons, ~1 mm³; waggle dance: Menzel, Nature Reviews Neuroscience 2012 (doi 10.1038/nrn3357); von Frisch, Nobel Prize 1973.
+- Octopus ~500 million neurons, about two thirds in the arms: OIST; ScienceAlert.
+- Chaser the border collie knew the names of 1,022 toys: Pilley & Reid, Behavioural Processes 2011.
+- New Caledonian crows make hooked stick tools: St Andrews / Edinburgh, Nature Ecology & Evolution 2018. Crows remember a threatening face for at least five years: Marzluff et al., University of Washington.
+- Dolphin signature whistles used like names: King & Janik, PNAS 2013; recognised after 20+ years apart: Bruck, Proc. R. Soc. B 2013.
+- African elephant brain: 257 billion neurons, 97.5% in the cerebellum, 5.6 billion in the cortex vs ~16 billion in humans: Herculano-Houzel et al., Frontiers in Neuroanatomy 2014. Mirror self-recognition: Plotnik, de Waal & Reiss, PNAS 2006.
+- Ayumu's memory test: Inoue & Matsuzawa, Current Biology 2007 (later studies show practised humans can match him).
+- Human brain ~86 billion neurons: Azevedo et al. 2009. Oldest Homo sapiens fossils ~300,000 years: Hublin et al., Nature 2017.

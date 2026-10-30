@@ -1,0 +1,13 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст; тайминги слов сверены и перенесены на Scribe (voice/scribe.json, retime.mjs).
+Музыка и звуки: синтезированы в коде (8 бит), своя мелодия; без музыки и звуков Space Invaders (марш — свой двухнотный «тук», не четырёхнотный бас автомата).
+Картинка: нарисована в коде. Пришельцы трёх видов, пушка, тарелка, щиты, выстрелы и взрывы — свои пиксельные рисунки в духе игры 1978 года, не спрайты из ПЗУ; лунный пейзаж и планета — свои. Логотипов нет.
+Игра на экране — своя симуляция по правилам автомата (game.mjs): за кадр двигается один пришелец, удар о стену — шаг вниз на 8 px, взрыв — пауза 16 кадров; волна стартует с высоты Yr 72 (волны 4–6 по таблице автомата), ход партии и порядок попаданий придуманы. Время игры в ролике идёт по своим часам: замедление на объяснениях, ускорение («>> FAST») на расчистке и спуске новой волны.
+Демонстрация (выстрел пришельца на ряд выше падает в полосу и «убивает» призрачную пушку; призрачный шаг армии вниз — «GAME OVER») — схема, не запись игры.
+
+Источники фактов (подробно — ../facts.md, ../research/notes.md):
+- Дизассемблер (код Midway, ветвь кода Taito): https://www.computerarcheology.com/Arcade/SpaceInvaders/Code.html ; обзор и железо: https://www.computerarcheology.com/Arcade/SpaceInvaders/
+- Нисикадо, «a programming bug», выстрелы «pass right through»: https://shmuplations.com/nishikado/
+- Почему не исправили (IGCC 2018): https://web.archive.org/web/2024/https://igcc.jp/invader-house2018/
+- Происхождение названия неизвестно: https://www.chunichi.co.jp/article/554896
+- Один пришелец за 1/60 с, ускорение: https://www.wired.com/story/space-invaders-45-years-tomohiro-nishikado/
+- https://en.wikipedia.org/wiki/Space_Invaders ; https://ja.wikipedia.org/wiki/スペースインベーダー

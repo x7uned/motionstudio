@@ -1,0 +1,51 @@
+{
+ "kind": "shrew",
+ "states": [
+  "sit",
+  "look",
+  "wide",
+  "sleepy",
+  "sniff"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 62,
+  "hh": 88
+ },
+ "measured": {
+  "hw": 60,
+  "hh": 100,
+  "box": [
+   202,
+   340,
+   322,
+   520
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [
+  {
+   "t": 4.1,
+   "novel": 111,
+   "before": 10,
+   "after": 1,
+   "changed": 196,
+   "bayerTop3": 0.23
+  },
+  {
+   "t": 4.167,
+   "novel": 63,
+   "before": 1,
+   "after": 6,
+   "changed": 181,
+   "bayerTop3": 0.38
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 220,
+ "msPerFrame": 20.8,
+ "maxFramePx": 3861,
+ "maxNovelPx": 1072
+}

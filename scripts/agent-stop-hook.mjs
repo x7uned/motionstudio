@@ -3,6 +3,7 @@
 // (after one reminder), and after 3 reminders without any progress. Fails open on any error.
 import fs from "node:fs";
 import path from "node:path";
+import {pathToFileURL} from "node:url";
 import {randomUUID} from "node:crypto";
 
 const BUSY=new Set(["queued","running","awaiting-agent"]);
@@ -52,4 +53,4 @@ async function main(){
  }catch{}
  finally{if(Object.keys(out).length)process.stdout.write(JSON.stringify(out));}
 }
-if(process.argv[1]&&import.meta.url===new URL(`file://${path.resolve(process.argv[1])}`).href)main().then(()=>process.exit(0),()=>process.exit(0));
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)main().then(()=>process.exit(0),()=>process.exit(0));

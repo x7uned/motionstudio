@@ -1,0 +1,33 @@
+{
+ "kind": "water-drop",
+ "states": [
+  "hang",
+  "fall",
+  "splash",
+  "shine"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 22,
+  "hh": 25
+ },
+ "measured": {
+  "hw": 22,
+  "hh": 24,
+  "box": [
+   240,
+   396,
+   280,
+   442
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 20.3,
+ "maxFramePx": 283,
+ "maxNovelPx": 117
+}

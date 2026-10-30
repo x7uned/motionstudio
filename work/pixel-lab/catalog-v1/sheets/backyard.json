@@ -1,0 +1,11 @@
+{
+ "kind": "backyard",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 28.8,
+ "maxNovelPx": 97803
+}

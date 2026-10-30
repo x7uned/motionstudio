@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "renderer": "illustrated/v1",
+  "director": {
+    "model": "claude-opus-5-5",
+    "effort": "xhigh",
+    "timeoutSeconds": 1800
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationCeilingDefault": 60,
+    "referenceDuration": 48
+  },
+  "layout": {
+    "header": {
+      "top": 108
+    },
+    "stage": {
+      "top": 292,
+      "height": 900
+    },
+    "chapterLabel": {
+      "top": 1206
+    },
+    "captions": {
+      "top": 1262
+    },
+    "safeZone": {
+      "left": 78,
+      "right": 938
+    },
+    "focus": {
+      "left": 138,
+      "right": 878,
+      "top": 70,
+      "bottom": 830
+    }
+  },
+  "world": {
+    "width": 4000,
+    "height": 2400,
+    "zoom": {
+      "min": 0.5,
+      "max": 2.6
+    },
+    "cameraKeyMinGapSeconds": 1,
+    "cameraTravelSeconds": [
+      0.6,
+      2.2
+    ]
+  },
+  "callouts": {
+    "maxText": 26,
+    "maxOnScreen": 2,
+    "perObject": "sequential",
+    "typingSecondsPerChar": 0.035
+  },
+  "sound": {
+    "objectEnter": "ui-reveal",
+    "callout": "ui-highlight",
+    "flow": "ui-connect",
+    "cameraMove": "soft-whoosh"
+  },
+  "background": {
+    "selection": "approved-random",
+    "excluded": [
+      "07"
+    ]
+  }
+}

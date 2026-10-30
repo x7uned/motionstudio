@@ -1,0 +1,33 @@
+{
+ "kind": "songbird",
+ "states": [
+  "perch",
+  "sing",
+  "hop",
+  "look"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 48,
+  "hh": 36
+ },
+ "measured": {
+  "hw": 48,
+  "hh": 37,
+  "box": [
+   214,
+   383,
+   309,
+   450
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 20.7,
+ "maxFramePx": 1253,
+ "maxNovelPx": 173
+}

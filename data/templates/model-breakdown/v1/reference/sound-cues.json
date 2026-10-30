@@ -1,0 +1,253 @@
+{
+  "version": 8,
+  "clock": "measured speech; 30 fps",
+  "backgroundGain": 0.009,
+  "soundPreferences": {
+    "version": 5,
+    "allowed": [
+      "ui-reveal",
+      "soft-whoosh",
+      "ui-highlight",
+      "fan-start"
+    ],
+    "excluded": [
+      "servo-motor",
+      "air-release"
+    ],
+    "effectLevelScale": 0.6,
+    "fanLevelScale": 0.5,
+    "whooshLevelScale": 0.4,
+    "fadeInSeconds": 0.02,
+    "fadeOutSeconds": {
+      "fan-start": 0.9,
+      "soft-whoosh": 0.2,
+      "ui-highlight": 0.16,
+      "ui-reveal": 0.07
+    },
+    "backgroundGain": 0.009,
+    "minimumGapSeconds": 0.4,
+    "minimumSameEffectGapSeconds": 3,
+    "projectLevelOverrides": {
+      "ui-reveal": 1.5,
+      "outro-transition": 0.5
+    }
+  },
+  "cues": [
+    {
+      "at": 6.8,
+      "gain": 0.008,
+      "kind": "assembly-cutaway",
+      "effect": "soft-whoosh",
+      "durationSeconds": 1.166666666666667,
+      "durationMode": "stretch",
+      "sync": {
+        "objectId": "roadster",
+        "channel": "cutaway",
+        "start": 6.8,
+        "end": 7.966666666666667
+      },
+      "targetRmsDbFS": -22,
+      "peakDbFS": -9,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.3500000000000001,
+      "levelScale": 0.24
+    },
+    {
+      "at": 14.9,
+      "gain": 0.01,
+      "kind": "object-enter",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.8999999999999999
+    },
+    {
+      "at": 18.233333333333334,
+      "gain": 0.008,
+      "kind": "assembly-cutaway",
+      "effect": "soft-whoosh",
+      "durationSeconds": 1.5333333333333314,
+      "durationMode": "stretch",
+      "sync": {
+        "objectId": "roadster",
+        "channel": "cutaway",
+        "start": 18.233333333333334,
+        "end": 19.766666666666666
+      },
+      "targetRmsDbFS": -22,
+      "peakDbFS": -9,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.4,
+      "levelScale": 0.24
+    },
+    {
+      "at": 19.166666666666668,
+      "gain": 0.008,
+      "kind": "assembly-lift",
+      "effect": "ui-reveal",
+      "sync": {
+        "objectId": "roadster",
+        "channel": "lift",
+        "start": 19.166666666666668,
+        "end": 19.766666666666666
+      },
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.8999999999999999
+    },
+    {
+      "at": 27.833333333333332,
+      "gain": 0.008,
+      "kind": "assembly-lift",
+      "effect": "ui-reveal",
+      "sync": {
+        "objectId": "roadster",
+        "channel": "lift",
+        "start": 27.833333333333332,
+        "end": 29.566666666666666
+      },
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.8999999999999999
+    },
+    {
+      "at": 30.733333333333334,
+      "gain": 0.008,
+      "kind": "assembly-cutaway",
+      "effect": "soft-whoosh",
+      "durationSeconds": 1.7666666666666657,
+      "durationMode": "stretch",
+      "sync": {
+        "objectId": "roadster",
+        "channel": "cutaway",
+        "start": 30.733333333333334,
+        "end": 32.5
+      },
+      "targetRmsDbFS": -22,
+      "peakDbFS": -9,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.4,
+      "levelScale": 0.24
+    },
+    {
+      "at": 31.033333333333335,
+      "gain": 0.008,
+      "kind": "assembly-fan",
+      "effect": "fan-start",
+      "durationSeconds": 6.599999999999998,
+      "durationMode": "loop",
+      "automation": [
+        {
+          "at": 0,
+          "value": 0
+        },
+        {
+          "at": 31.018333333333334,
+          "value": 0
+        },
+        {
+          "at": 32.788333333333334,
+          "value": 1
+        },
+        {
+          "at": 36.30166666666666,
+          "value": 1
+        },
+        {
+          "at": 37.64333333333333,
+          "value": 0
+        }
+      ],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "fan",
+        "start": 31.033333333333335,
+        "end": 37.63333333333333
+      },
+      "targetRmsDbFS": -27,
+      "peakDbFS": -12,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.9,
+      "levelScale": 0.3,
+      "file": "sfx/51df7cabf492494b7a665f9d2f56688b3ecc832ac921b22b8d692a4216416ac7.wav",
+      "sha256": "51df7cabf492494b7a665f9d2f56688b3ecc832ac921b22b8d692a4216416ac7"
+    },
+    {
+      "at": 32.5,
+      "gain": 0.01,
+      "kind": "object-enter",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.8999999999999999
+    },
+    {
+      "at": 36.3,
+      "gain": 0.008,
+      "kind": "assembly-cutaway",
+      "effect": "soft-whoosh",
+      "durationSeconds": 1.3333333333333357,
+      "durationMode": "stretch",
+      "sync": {
+        "objectId": "roadster",
+        "channel": "cutaway",
+        "start": 36.3,
+        "end": 37.63333333333333
+      },
+      "targetRmsDbFS": -22,
+      "peakDbFS": -9,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.4,
+      "levelScale": 0.24
+    },
+    {
+      "at": 37.63333333333333,
+      "gain": 0.008,
+      "kind": "assembly-lift",
+      "effect": "ui-reveal",
+      "sync": {
+        "objectId": "roadster",
+        "channel": "lift",
+        "start": 37.63333333333333,
+        "end": 39.266666666666666
+      },
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.8999999999999999
+    },
+    {
+      "at": 41.4,
+      "gain": 0.008,
+      "kind": "outro-transition",
+      "effect": "soft-whoosh",
+      "durationSeconds": 0.8,
+      "durationMode": "stretch",
+      "targetRmsDbFS": -22,
+      "peakDbFS": -9,
+      "fadeInSeconds": 0.12,
+      "fadeOutSeconds": 0.24,
+      "levelScale": 0.12
+    },
+    {
+      "at": 42.1,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    }
+  ]
+}

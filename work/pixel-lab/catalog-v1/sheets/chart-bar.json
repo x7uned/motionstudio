@@ -1,0 +1,33 @@
+{
+ "kind": "chart-bar",
+ "states": [
+  "show",
+  "tall",
+  "short",
+  "done"
+ ],
+ "hud": true,
+ "declared": {
+  "hw": 108,
+  "hh": 78
+ },
+ "measured": {
+  "hw": 108,
+  "hh": 82,
+  "box": [
+   154,
+   180,
+   369,
+   339
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 5,
+ "pure": true,
+ "frames": 182,
+ "msPerFrame": 27.4,
+ "maxFramePx": 5849,
+ "maxNovelPx": 7891
+}

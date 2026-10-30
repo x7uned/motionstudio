@@ -1,0 +1,33 @@
+{
+ "kind": "sloth",
+ "states": [
+  "hang",
+  "reach",
+  "sleepy",
+  "algae"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 86,
+  "hh": 80
+ },
+ "measured": {
+  "hw": 86,
+  "hh": 82,
+  "box": [
+   182,
+   338,
+   348,
+   481
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 204,
+ "msPerFrame": 21,
+ "maxFramePx": 3663,
+ "maxNovelPx": 1139
+}

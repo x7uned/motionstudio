@@ -1,0 +1,1592 @@
+{
+  "version": 1,
+  "concept": "Один мир на одном полу: слева лобби со стеной лавовых ламп, вывеской Cloudflare, крупной лампой и камерой. Вправо растёт цепочка: кадр, хэш, смеситель, зерно, генератор, поток чисел, ключ и замок соединения зрителя. Камера переезжает между узлами. В финале она отъезжает на всю цепочку: основные источники питают смеситель сплошными линиями, а от ламп идёт пунктир — хаос про запас.",
+  "floorY": 1600,
+  "objects": [
+    {
+      "id": "pc",
+      "kind": "monitor",
+      "x": 480,
+      "y": 1481,
+      "scale": 0.7,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 1,
+        "progress": 0.05,
+        "cue": "Компьютеры"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.222,
+        "cue": "соединение"
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.05,
+            "cue": "Компьютеры"
+          },
+          "value": 0
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "lamp",
+      "kind": "lava-lamp",
+      "x": 740,
+      "y": 1435,
+      "scale": 0.75,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 1,
+        "progress": 0.468,
+        "cue": "поэтому"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.468,
+            "cue": "поэтому"
+          },
+          "value": 0.5
+        },
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.778,
+            "cue": "лавовые"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.222,
+            "cue": "соединение"
+          },
+          "value": 0.6
+        },
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.914,
+            "cue": "хаоса"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.258,
+            "cue": "Его"
+          },
+          "value": 0.7
+        },
+        {
+          "at": {
+            "scene": 7,
+            "progress": 0.235,
+            "cue": "лампы"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "sign",
+      "kind": "cloud-sign",
+      "x": 480,
+      "y": 870,
+      "scale": 0.5,
+      "label": "Cloudflare",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 1,
+        "progress": 0.561,
+        "cue": "Cloudflare"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.561,
+            "cue": "Cloudflare"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "cam",
+      "kind": "camera",
+      "x": 930,
+      "y": 1463.5,
+      "scale": 0.65,
+      "label": "",
+      "aim": "wall",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 1,
+        "progress": 0.685,
+        "cue": "снимает"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.685,
+            "cue": "снимает"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 3,
+            "progress": 0.786,
+            "cue": "смотрит"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "wall",
+      "kind": "lamp-wall",
+      "x": 430,
+      "y": 1283,
+      "scale": 0.48,
+      "label": "",
+      "aim": "",
+      "rows": 4,
+      "cols": 8,
+      "enter": {
+        "scene": 3,
+        "progress": 0.062,
+        "cue": "лобби"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 3,
+            "progress": 0.062,
+            "cue": "лобби"
+          },
+          "value": 0.5
+        },
+        {
+          "at": {
+            "scene": 3,
+            "progress": 0.573,
+            "cue": "ламп"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.258,
+            "cue": "Его"
+          },
+          "value": 0.8
+        },
+        {
+          "at": {
+            "scene": 7,
+            "progress": 0.235,
+            "cue": "лампы"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "device",
+      "kind": "browser",
+      "x": 2900,
+      "y": 1000,
+      "scale": 0.55,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 2,
+        "progress": 0.189,
+        "cue": "ваше"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.189,
+            "cue": "ваше"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.95,
+            "cue": ""
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "viewer",
+      "kind": "person",
+      "x": 2900,
+      "y": 1486,
+      "scale": 0.6,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 2,
+        "progress": 0.089,
+        "cue": "каждого"
+      },
+      "exit": {
+        "scene": 3,
+        "progress": 0.062,
+        "cue": "лобби"
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.089,
+            "cue": "каждого"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "server",
+      "kind": "server",
+      "x": 2470,
+      "y": 1486,
+      "scale": 0.6,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 2,
+        "progress": 0.222,
+        "cue": "соединение"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.222,
+            "cue": "соединение"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.68,
+            "cue": "случайностью"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "lock",
+      "kind": "padlock",
+      "x": 2728,
+      "y": 1194,
+      "scale": 0.5,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 2,
+        "progress": 0.339,
+        "cue": "ключом"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.339,
+            "cue": "ключом"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.881,
+            "cue": "ключей"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "seed-old",
+      "kind": "seed",
+      "x": 2470,
+      "y": 1300,
+      "scale": 0.45,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 2,
+        "progress": 0.789,
+        "cue": "зерно"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.083,
+        "cue": "него"
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.789,
+            "cue": "зерно"
+          },
+          "value": 0.15
+        },
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.582,
+            "cue": "прошлым"
+          },
+          "value": 0.35
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "frame-a",
+      "kind": "pixel-grid",
+      "x": 1160,
+      "y": 1430,
+      "scale": 0.45,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 4,
+        "progress": 0.717,
+        "cue": "кадр"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.403,
+        "cue": "горсть"
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 4,
+            "progress": 0.717,
+            "cue": "кадр"
+          },
+          "value": 0
+        }
+      ],
+      "moves": [
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.258,
+            "cue": "Его"
+          },
+          "x": 1160,
+          "y": 1430,
+          "scale": 0.45
+        },
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.343,
+            "cue": "хэшем"
+          },
+          "x": 1555,
+          "y": 1450,
+          "scale": 0.3
+        }
+      ]
+    },
+    {
+      "id": "frame-b",
+      "kind": "pixel-grid",
+      "x": 1380,
+      "y": 1430,
+      "scale": 0.45,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 4,
+        "progress": 0.836,
+        "cue": "повторить"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.258,
+        "cue": "Его"
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 4,
+            "progress": 0.836,
+            "cue": "повторить"
+          },
+          "value": 0
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "hash",
+      "kind": "hash-press",
+      "x": 1620,
+      "y": 1479,
+      "scale": 0.55,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 5,
+        "progress": 0.288,
+        "cue": "сжимают"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.288,
+            "cue": "сжимают"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.403,
+            "cue": "горсть"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.039,
+            "cue": "Из"
+          },
+          "value": 0.5
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "mixer",
+      "kind": "mixer",
+      "x": 2040,
+      "y": 1498,
+      "scale": 0.6,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 5,
+        "progress": 0.51,
+        "cue": "смешивают"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.51,
+            "cue": "смешивают"
+          },
+          "value": 0.5
+        },
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.68,
+            "cue": "случайностью"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 7,
+            "progress": 0.758,
+            "cue": "подведут"
+          },
+          "value": 0.75
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "seed",
+      "kind": "seed",
+      "x": 2040,
+      "y": 1300,
+      "scale": 0.55,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 5,
+        "progress": 0.873,
+        "cue": "рождается"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.873,
+            "cue": "рождается"
+          },
+          "value": 1
+        }
+      ],
+      "moves": [
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.083,
+            "cue": "него"
+          },
+          "x": 2040,
+          "y": 1300,
+          "scale": 0.55
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.19,
+            "cue": "генератор"
+          },
+          "x": 2720,
+          "y": 1330,
+          "scale": 0.5
+        }
+      ]
+    },
+    {
+      "id": "gen",
+      "kind": "generator",
+      "x": 2720,
+      "y": 1484.5,
+      "scale": 0.55,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 6,
+        "progress": 0.114,
+        "cue": "быстрый"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.114,
+            "cue": "быстрый"
+          },
+          "value": 0.2
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.265,
+            "cue": "выращивает"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "stream",
+      "kind": "number-stream",
+      "x": 3010,
+      "y": 1520,
+      "scale": 0.5,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 6,
+        "progress": 0.265,
+        "cue": "выращивает"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.265,
+            "cue": "выращивает"
+          },
+          "value": 0.3
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.428,
+            "cue": "угодно"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "key",
+      "kind": "key",
+      "x": 3010,
+      "y": 1380,
+      "scale": 0.6,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 6,
+        "progress": 0.629,
+        "cue": "предсказать"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.629,
+            "cue": "предсказать"
+          },
+          "value": 0.5
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.881,
+            "cue": "ключей"
+          },
+          "value": 1
+        }
+      ],
+      "moves": [
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.629,
+            "cue": "предсказать"
+          },
+          "x": 3010,
+          "y": 1380,
+          "scale": 0.6
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.74,
+            "cue": ""
+          },
+          "x": 2880,
+          "y": 1215,
+          "scale": 0.6
+        }
+      ]
+    },
+    {
+      "id": "source-a",
+      "kind": "server",
+      "x": 1820,
+      "y": 1514.5,
+      "scale": 0.45,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 7,
+        "progress": 0.146,
+        "cue": "надеется"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 7,
+            "progress": 0.146,
+            "cue": "надеется"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 7,
+            "progress": 0.758,
+            "cue": "подведут"
+          },
+          "value": 0.1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "source-b",
+      "kind": "server",
+      "x": 2260,
+      "y": 1514.5,
+      "scale": 0.45,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 7,
+        "progress": 0.146,
+        "cue": "надеется"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 7,
+            "progress": 0.146,
+            "cue": "надеется"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 7,
+            "progress": 0.758,
+            "cue": "подведут"
+          },
+          "value": 0.1
+        }
+      ],
+      "moves": []
+    }
+  ],
+  "flows": [
+    {
+      "from": "device",
+      "to": "server",
+      "tone": "info",
+      "style": "solid",
+      "enter": {
+        "scene": 2,
+        "progress": 0.222,
+        "cue": "соединение"
+      },
+      "exit": null
+    },
+    {
+      "from": "cam",
+      "to": "frame-a",
+      "tone": "info",
+      "style": "solid",
+      "enter": {
+        "scene": 4,
+        "progress": 0.798,
+        "cue": "не"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.258,
+        "cue": "Его"
+      }
+    },
+    {
+      "from": "hash",
+      "to": "mixer",
+      "tone": "number",
+      "style": "solid",
+      "enter": {
+        "scene": 5,
+        "progress": 0.51,
+        "cue": "смешивают"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.114,
+        "cue": "быстрый"
+      }
+    },
+    {
+      "from": "seed-old",
+      "to": "mixer",
+      "tone": "info",
+      "style": "solid",
+      "enter": {
+        "scene": 5,
+        "progress": 0.582,
+        "cue": "прошлым"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.847,
+        "cue": "так"
+      }
+    },
+    {
+      "from": "server",
+      "to": "mixer",
+      "tone": "info",
+      "style": "solid",
+      "enter": {
+        "scene": 5,
+        "progress": 0.68,
+        "cue": "случайностью"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.039,
+        "cue": "Из"
+      }
+    },
+    {
+      "from": "mixer",
+      "to": "seed",
+      "tone": "ok",
+      "style": "solid",
+      "enter": {
+        "scene": 5,
+        "progress": 0.873,
+        "cue": "рождается"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.083,
+        "cue": "него"
+      }
+    },
+    {
+      "from": "seed",
+      "to": "seed-old",
+      "tone": "info",
+      "style": "dotted",
+      "enter": {
+        "scene": 5,
+        "progress": 0.932,
+        "cue": "новое"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.083,
+        "cue": "него"
+      }
+    },
+    {
+      "from": "stream",
+      "to": "key",
+      "tone": "ok",
+      "style": "solid",
+      "enter": {
+        "scene": 6,
+        "progress": 0.629,
+        "cue": "предсказать"
+      },
+      "exit": {
+        "scene": 7,
+        "progress": 0.033,
+        "cue": "Сама"
+      }
+    },
+    {
+      "from": "source-a",
+      "to": "mixer",
+      "tone": "info",
+      "style": "solid",
+      "enter": {
+        "scene": 7,
+        "progress": 0.212,
+        "cue": "что"
+      },
+      "exit": {
+        "scene": 7,
+        "progress": 0.758,
+        "cue": "подведут"
+      }
+    },
+    {
+      "from": "source-b",
+      "to": "mixer",
+      "tone": "info",
+      "style": "solid",
+      "enter": {
+        "scene": 7,
+        "progress": 0.212,
+        "cue": "что"
+      },
+      "exit": {
+        "scene": 7,
+        "progress": 0.758,
+        "cue": "подведут"
+      }
+    },
+    {
+      "from": "wall",
+      "to": "mixer",
+      "tone": "ok",
+      "style": "dotted",
+      "enter": {
+        "scene": 7,
+        "progress": 0.362,
+        "cue": "не"
+      },
+      "exit": null
+    }
+  ],
+  "callouts": [
+    {
+      "target": "pc",
+      "text": "Компьютер: предсказуем",
+      "tone": "warn",
+      "side": "top",
+      "enter": {
+        "scene": 1,
+        "progress": 0.468,
+        "cue": "поэтому"
+      },
+      "exit": {
+        "scene": 1,
+        "progress": 0.778,
+        "cue": "лавовые"
+      }
+    },
+    {
+      "target": "lamp",
+      "text": "Лава — нет",
+      "tone": "ok",
+      "side": "top",
+      "enter": {
+        "scene": 1,
+        "progress": 0.778,
+        "cue": "лавовые"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.014,
+        "cue": "Это"
+      }
+    },
+    {
+      "target": "device",
+      "text": "Ваше соединение",
+      "tone": "info",
+      "side": "left",
+      "enter": {
+        "scene": 2,
+        "progress": 0.189,
+        "cue": "ваше"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.401,
+        "cue": "который"
+      }
+    },
+    {
+      "target": "lock",
+      "text": "Ключ, который не угадать",
+      "tone": "warn",
+      "side": "right",
+      "enter": {
+        "scene": 2,
+        "progress": 0.339,
+        "cue": "ключом"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.639,
+        "cue": "Для"
+      }
+    },
+    {
+      "target": "seed-old",
+      "text": "Нужно зерно хаоса",
+      "tone": "warn",
+      "side": "top",
+      "enter": {
+        "scene": 2,
+        "progress": 0.789,
+        "cue": "зерно"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.914,
+        "cue": "хаоса"
+      }
+    },
+    {
+      "target": "sign",
+      "text": "В лобби офиса",
+      "tone": "info",
+      "side": "right",
+      "enter": {
+        "scene": 3,
+        "progress": 0.224,
+        "cue": "Сан-Франциско"
+      },
+      "exit": {
+        "scene": 3,
+        "progress": 0.726,
+        "cue": "них"
+      }
+    },
+    {
+      "target": "wall",
+      "text": "Около 100 лавовых ламп",
+      "tone": "number",
+      "side": "bottom",
+      "enter": {
+        "scene": 3,
+        "progress": 0.403,
+        "cue": "около"
+      },
+      "exit": {
+        "scene": 4,
+        "progress": 0.054,
+        "cue": "Лава"
+      }
+    },
+    {
+      "target": "cam",
+      "text": "Камера смотрит на стену",
+      "tone": "info",
+      "side": "right",
+      "enter": {
+        "scene": 3,
+        "progress": 0.786,
+        "cue": "смотрит"
+      },
+      "exit": {
+        "scene": 4,
+        "progress": 0.054,
+        "cue": "Лава"
+      }
+    },
+    {
+      "target": "lamp",
+      "text": "Лава течёт как попало",
+      "tone": "info",
+      "side": "top",
+      "enter": {
+        "scene": 4,
+        "progress": 0.129,
+        "cue": "течёт"
+      },
+      "exit": {
+        "scene": 4,
+        "progress": 0.445,
+        "cue": "сенсор"
+      }
+    },
+    {
+      "target": "cam",
+      "text": "Сенсор шумит",
+      "tone": "info",
+      "side": "top",
+      "enter": {
+        "scene": 4,
+        "progress": 0.538,
+        "cue": "шумит"
+      },
+      "exit": {
+        "scene": 4,
+        "progress": 0.798,
+        "cue": "не"
+      }
+    },
+    {
+      "target": "frame-a",
+      "text": "Снимок — ещё не зерно",
+      "tone": "warn",
+      "side": "top",
+      "enter": {
+        "scene": 5,
+        "progress": 0.044,
+        "cue": "снимок"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.343,
+        "cue": "хэшем"
+      }
+    },
+    {
+      "target": "hash",
+      "text": "Хэш: горсть байтов",
+      "tone": "number",
+      "side": "top",
+      "enter": {
+        "scene": 5,
+        "progress": 0.437,
+        "cue": "байтов"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.68,
+        "cue": "случайностью"
+      }
+    },
+    {
+      "target": "seed-old",
+      "text": "Прошлое зерно",
+      "tone": "info",
+      "side": "top",
+      "enter": {
+        "scene": 5,
+        "progress": 0.582,
+        "cue": "прошлым"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.847,
+        "cue": "так"
+      }
+    },
+    {
+      "target": "server",
+      "text": "Случайность сервера",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 5,
+        "progress": 0.753,
+        "cue": "сервера"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.039,
+        "cue": "Из"
+      }
+    },
+    {
+      "target": "seed",
+      "text": "Новое зерно",
+      "tone": "ok",
+      "side": "top",
+      "enter": {
+        "scene": 5,
+        "progress": 0.932,
+        "cue": "новое"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.19,
+        "cue": "генератор"
+      }
+    },
+    {
+      "target": "gen",
+      "text": "Быстрый генератор",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 6,
+        "progress": 0.19,
+        "cue": "генератор"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.428,
+        "cue": "угодно"
+      }
+    },
+    {
+      "target": "stream",
+      "text": "Сколько угодно чисел",
+      "tone": "number",
+      "side": "bottom",
+      "enter": {
+        "scene": 6,
+        "progress": 0.428,
+        "cue": "угодно"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.81,
+        "cue": "сырьё"
+      }
+    },
+    {
+      "target": "stream",
+      "text": "Сырьё для ключей",
+      "tone": "ok",
+      "side": "bottom",
+      "enter": {
+        "scene": 6,
+        "progress": 0.81,
+        "cue": "сырьё"
+      },
+      "exit": {
+        "scene": 7,
+        "progress": 0.033,
+        "cue": "Сама"
+      }
+    },
+    {
+      "target": "source-a",
+      "text": "Основные источники",
+      "tone": "info",
+      "side": "top",
+      "enter": {
+        "scene": 7,
+        "progress": 0.212,
+        "cue": "что"
+      },
+      "exit": null
+    },
+    {
+      "target": "wall",
+      "text": "Хаос про запас",
+      "tone": "ok",
+      "side": "bottom",
+      "enter": {
+        "scene": 7,
+        "progress": 0.682,
+        "cue": "если"
+      },
+      "exit": null
+    }
+  ],
+  "camera": [
+    {
+      "at": {
+        "scene": 1,
+        "progress": 0,
+        "cue": ""
+      },
+      "x": 480,
+      "y": 1450,
+      "zoom": 1.6
+    },
+    {
+      "at": {
+        "scene": 1,
+        "progress": 0.246,
+        "cue": "предсказуемы"
+      },
+      "x": 677,
+      "y": 1210,
+      "zoom": 1.1
+    },
+    {
+      "at": {
+        "scene": 1,
+        "progress": 0.778,
+        "cue": "лавовые"
+      },
+      "x": 790,
+      "y": 1167,
+      "zoom": 1.21
+    },
+    {
+      "at": {
+        "scene": 2,
+        "progress": 0,
+        "cue": ""
+      },
+      "x": 2711,
+      "y": 1250,
+      "zoom": 1.05
+    },
+    {
+      "at": {
+        "scene": 2,
+        "progress": 0.339,
+        "cue": "ключом"
+      },
+      "x": 2733,
+      "y": 1238,
+      "zoom": 1.45
+    },
+    {
+      "at": {
+        "scene": 2,
+        "progress": 0.639,
+        "cue": "Для"
+      },
+      "x": 2510,
+      "y": 1360,
+      "zoom": 1.6
+    },
+    {
+      "at": {
+        "scene": 2,
+        "progress": 0.914,
+        "cue": "хаоса"
+      },
+      "x": 720,
+      "y": 1420,
+      "zoom": 1.6
+    },
+    {
+      "at": {
+        "scene": 3,
+        "progress": 0.062,
+        "cue": "лобби"
+      },
+      "x": 720,
+      "y": 1200,
+      "zoom": 0.9
+    },
+    {
+      "at": {
+        "scene": 4,
+        "progress": 0.054,
+        "cue": "Лава"
+      },
+      "x": 620,
+      "y": 1330,
+      "zoom": 1.45
+    },
+    {
+      "at": {
+        "scene": 4,
+        "progress": 0.445,
+        "cue": "сенсор"
+      },
+      "x": 930,
+      "y": 1440,
+      "zoom": 2
+    },
+    {
+      "at": {
+        "scene": 4,
+        "progress": 0.717,
+        "cue": "кадр"
+      },
+      "x": 1150,
+      "y": 1440,
+      "zoom": 1.35
+    },
+    {
+      "at": {
+        "scene": 5,
+        "progress": 0.258,
+        "cue": "Его"
+      },
+      "x": 1393,
+      "y": 1440,
+      "zoom": 1.4
+    },
+    {
+      "at": {
+        "scene": 5,
+        "progress": 0.437,
+        "cue": "байтов"
+      },
+      "x": 2084,
+      "y": 1400,
+      "zoom": 0.82
+    },
+    {
+      "at": {
+        "scene": 5,
+        "progress": 0.847,
+        "cue": "так"
+      },
+      "x": 2225,
+      "y": 1380,
+      "zoom": 1.3
+    },
+    {
+      "at": {
+        "scene": 6,
+        "progress": 0.039,
+        "cue": "Из"
+      },
+      "x": 2411,
+      "y": 1330,
+      "zoom": 1.03
+    },
+    {
+      "at": {
+        "scene": 6,
+        "progress": 0.384,
+        "cue": "сколько"
+      },
+      "x": 2880,
+      "y": 1290,
+      "zoom": 1.1
+    },
+    {
+      "at": {
+        "scene": 7,
+        "progress": 0.033,
+        "cue": "Сама"
+      },
+      "x": 2040,
+      "y": 1350,
+      "zoom": 0.75
+    },
+    {
+      "at": {
+        "scene": 7,
+        "progress": 0.235,
+        "cue": "лампы"
+      },
+      "x": 1624,
+      "y": 1260,
+      "zoom": 0.5
+    },
+    {
+      "at": {
+        "scene": 7,
+        "progress": 0.532,
+        "cue": "хаос"
+      },
+      "x": 1194,
+      "y": 1250,
+      "zoom": 0.5
+    }
+  ],
+  "mode": [
+    {
+      "at": {
+        "scene": 1,
+        "progress": 0,
+        "cue": ""
+      },
+      "value": "lit"
+    },
+    {
+      "at": {
+        "scene": 4,
+        "progress": 0.445,
+        "cue": "сенсор"
+      },
+      "value": "xray"
+    },
+    {
+      "at": {
+        "scene": 4,
+        "progress": 0.717,
+        "cue": "кадр"
+      },
+      "value": "lit"
+    }
+  ],
+  "bigWords": [
+    {
+      "text": "Предсказуемы",
+      "enter": {
+        "scene": 1,
+        "progress": 0.246,
+        "cue": "предсказуемы"
+      },
+      "exit": {
+        "scene": 1,
+        "progress": 0.468,
+        "cue": "поэтому"
+      }
+    },
+    {
+      "text": "Не повторить",
+      "enter": {
+        "scene": 4,
+        "progress": 0.798,
+        "cue": "не"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.044,
+        "cue": "снимок"
+      }
+    },
+    {
+      "text": "Не понадобятся",
+      "enter": {
+        "scene": 7,
+        "progress": 0.306,
+        "cue": "никогда"
+      },
+      "exit": {
+        "scene": 7,
+        "progress": 0.502,
+        "cue": "Это"
+      }
+    },
+    {
+      "text": "Хаос про запас",
+      "enter": {
+        "scene": 7,
+        "progress": 0.532,
+        "cue": "хаос"
+      },
+      "exit": {
+        "scene": 7,
+        "progress": 0.682,
+        "cue": "если"
+      }
+    }
+  ],
+  "notes": [
+    "Это условная иллюстрация, а не схема реального оборудования. На стене 4×8 ламп, их число и раскладка условные. «Около 100» взято из текста.",
+    "Шум сенсора показан рентгеном условной камеры. Модель камеры, её сенсор и частота съёмки не раскрыты.",
+    "Хэш, смеситель и генератор показаны обобщёнными блоками: алгоритмы не названы. Байты, последовательности и цифры на экране — декоративные заполнители.",
+    "Основные источники показаны двумя безымянными стойками, без конкретных устройств. Сбой в финале (стойки тускнеют, их линии гаснут) — гипотетическая иллюстрация, а не описанное событие.",
+    "Во 2-й сцене тусклое зерно у сервера означает «нужно зерно хаоса». В 5-й сцене оно же служит прошлым зерном. Петля «новое станет прошлым» показана пунктиром от нового зерна к прошлому.",
+    "Монитор в хуке — условный «предсказуемый компьютер». Сервер — тот компьютер, которому нужно зерно и чья случайность входит в смешивание. Крупная лампа рядом со стеной — крупный план одной лампы.",
+    "Все предметы стоят на одном полу, поэтому длинные линии к смесителю (пунктир от стены ламп) проходят за другими предметами.",
+    "Кадрирование 8 ключей камеры автоматически подогнано под безопасную зону кадра."
+  ]
+}

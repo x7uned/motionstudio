@@ -1,0 +1,17 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде. Блочный мир, текстуры, генератор рельефа и персонажи — свои, в духе игры, без её текстур, скинов, логотипа и графики. Генератор — иллюстрация идеи (шум → суша/океан → горы → биомы → 3D-шум), а не код и числа игры.
+Логотип Twitch: «Twitch Glitch Logo Purple.svg», Wikimedia Commons, Public domain (товарный знак Twitch Interactive), https://commons.wikimedia.org/wiki/File:Twitch_Glitch_Logo_Purple.svg — уменьшен до пикселей без перерисовки (media.json, SHA-256 7fd57005…).
+Стример: в кадре обобщённая фигура в наушниках, не портрет Kurt J. Mac. Имя канала и название шоу — по Википедии. Чат и сид — придуманные примеры.
+Карта всего мира, полосы «Земля ×7», Незер 1:8 — схемы, не карта реального сида.
+
+Источники фактов:
+- Граница мира 29 999 984 блока от центра, предел 30 млн: https://minecraft.wiki/w/World_border
+- Чанк 16×16, высота 384, генерация по мере движения: https://minecraft.wiki/w/Chunk
+- Шум, плотность > 0 = камень, continentalness/erosion/temperature/humidity, пещеры: https://minecraft.wiki/w/World_generation
+- Сид, 2^64 миров, одинаковый сид = одинаковая местность: https://minecraft.wiki/w/Seed_(level_generation)
+- Незер 1:8: https://minecraft.wiki/w/Nether_portal
+- Ходьба 4,317 блока/с → ≈80,4 суток до границы, ≈10,1 через Незер: https://minecraft.wiki/w/Walking
+- Блок = 1 м: https://minecraft.wiki/w/Tutorials/Measuring_distance ; площадь мира ≈3,6 млрд км² ≈ 7,06 × 510 млн км²
+- Far Lands с ~12 550 821 блока, исправлены в Beta 1.8: https://minecraft.wiki/w/Far_Lands
+- Kurt J. Mac, «Far Lands or Bust»: начал в марте 2011, дошёл 4 октября 2025 на стриме в Twitch: https://en.wikipedia.org/wiki/Far_Lands_or_Bust

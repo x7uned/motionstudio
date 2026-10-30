@@ -1,0 +1,35 @@
+{
+ "kind": "worm",
+ "states": [
+  "sit",
+  "look",
+  "wide",
+  "happy",
+  "sleepy",
+  "rear"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 46,
+  "hh": 66
+ },
+ "measured": {
+  "hw": 50,
+  "hh": 79,
+  "box": [
+   212,
+   341,
+   312,
+   488
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 259,
+ "msPerFrame": 21.5,
+ "maxFramePx": 2191,
+ "maxNovelPx": 1206
+}

@@ -1,0 +1,16 @@
+From the slowest animal to the fastest — Kagenami pixel film (2026-10-23)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take).
+Picture and sound: generated locally (pixel art and 8-bit synthesis); no third-party images, logos or recordings.
+The channel's character: the creator's own pixel sprite sheet (data/branding/xtuned-outro/v1/spritesheet.png).
+Pixel illustration, not to scale. The sprinter is a generic pixel runner, not a portrait of Usain Bolt.
+
+Sources (details in ../facts.md):
+- Snail: Guinness World Records — Archie, 33 cm (13 in) in 2 min, 1995, Congham.
+- Sloth: National Geographic (~0.24 km/h); algae in sloth fur: Suutari et al. 2010, Pauli et al., Proc R Soc B 2014.
+- Usain Bolt: peak ~44.7 km/h in the 2009 world-record 100 m.
+- Cat: up to ~48 km/h (30 mph) in short sprints (veterinary popular sources).
+- Racehorse: Guinness World Records — 70.76 km/h (Winning Brew, 2008).
+- Cheetah: Wilson et al., Nature 2013 — 25.9 m/s = 93 km/h, GPS collars, Botswana.
+- Free-tailed bat: McCracken et al., Royal Society Open Science 2016 — ~160 km/h ground speed.
+- Peregrine falcon: Guinness World Records — ~320 km/h terminal dive estimate, up to 389 km/h in experimental dives.

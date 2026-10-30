@@ -1,0 +1,20 @@
+{
+ "file": "ed138-pixel.mp4",
+ "frames": 1908,
+ "video_s": 63.6,
+ "audio_s": 63.616,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -32,
+  -180
+ ],
+ "loudness_LUFS": -16.3,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.5,
+ "one_frame_pops": [],
+ "sudden_jumps": [
+  {
+   "t": 24.47,
+   "d": 3.26
+  }
+ ]
+}

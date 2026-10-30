@@ -6,7 +6,7 @@ import type {askJSON} from "./provider";
 import {askClaudeJSON,MOTION_AGENT} from "./claude-provider";
 import {directorRecord} from "./content-agent";
 import {ROOT} from "./store";
-import {type IllustratedPlan,illustratedSchema,validateIllustrated,ILLUSTRATED_KINDS,FOOTPRINT,KIND_GUIDE,VIEW,SAFE} from "./illustrated";
+import {type IllustratedPlan,illustratedSchema,validateIllustrated,repairIllustrated,corpus,grounded,ILLUSTRATED_KINDS,FOOTPRINT,KIND_GUIDE,VIEW,SAFE} from "./illustrated";
 import {MEDIA_TILE_KINDS} from "./illustrated-catalog-media";
 import {COVERAGE} from "./coverage";
 import {loopDirective} from "./quality-contract";
@@ -31,7 +31,8 @@ export async function prepareIllustrated(plan:Storyboard,dir:string,alignment:an
  const media=(plan.media??[]).map(m=>({subject:m.subject,kind:m.kind,tile:m.kind==="logo"?"logo-tile":"person-tile",who:`${m.source.label} — ${m.source.description}`.slice(0,160)}));
  const catalog=ILLUSTRATED_KINDS.filter(k=>media.length||!(MEDIA_TILE_KINDS as readonly string[]).includes(k)).map(k=>({kind:k,footprint:FOOTPRINT[k],meaning:KIND_GUIDE[k]}));
  let previousError="";if(previous)try{validateIllustrated(previous,plan,alignment,opts);}catch(e){previousError=e instanceof Error?e.message:"ошибка";}
- const context={...(revisionFeedback?{revisionFeedback}:{}),...(previous?{previousPlan:previous,previousPlanValidatorError:previousError||null}:{}),title:plan.title,visualConcept:plan.visualConcept??null,scenes,catalog,...(media.length?{media}:{}),view:VIEW,...(language?{language:"en"}:{})};
+ const concept=directorConcept(plan.visualConcept,corpus(plan)),offScript=concept!==(plan.visualConcept??null);
+ const context={...(revisionFeedback?{revisionFeedback}:{}),...(previous?{previousPlan:previous,previousPlanValidatorError:previousError||null}:{}),title:plan.title,visualConcept:concept,scenes,catalog,...(media.length?{media}:{}),view:VIEW,...(language?{language:"en"}:{})};
  const hash=createHash("sha256").update(JSON.stringify({context,rules,...(coverage?{coverage}:{}),...(loop?{loop}:{})})).digest("hex");
  const prior=await fs.readFile(path.join(dir,"illustrated-context.json"),"utf8").then(JSON.parse).catch(()=>null);
  if(prior?.hash===hash){const cached=await fs.readFile(path.join(dir,"illustrated-plan.json"),"utf8").then(JSON.parse);return {...plan,filmKind:"illustrated",illustrated:validateIllustrated(cached,plan,alignment,opts)};}
@@ -47,19 +48,49 @@ ${rules}
 mode: lit|xray — рентген для показа внутреннего устройства. bigWords — до 4 крупных слов из текста для акцента (например хук), exit обязателен. Крупное слово занимает верхнюю треть кадра: пока оно видно, там не должно быть табличек, подписей предметов и выносок — опусти камеру, чтобы текстовые предметы оказались ниже, или начинай выноску после exit крупного слова.
 КРАЯ КАДРА: в каждом ключе камеры каждый видимый предмет либо целиком в кадре, либо целиком за краем — обрубки табличек и столбцов у краёв выглядят как ошибка вёрстки. Раздвигай соседние предметы или убирай ненужный в этот такт предмет через exit и возвращай новым предметом позже. Состояние, которое зритель уже видел (например «невозможный» итог), не откатывай в кадре без причины в тексте.
 Привязывай каждое событие к слову, которое его называет (at={scene,progress:0..1,cue:слово из narration этой главы или ''}; для повторов слова — cueOccurrence с 1). Темп: смена картинки каждые 1,5–3 с, но без суеты; в финале покажи всю цепочку целиком. notes — честные упрощения по-русски (условная иллюстрация, а не схема реального оборудования). Исправляй revisionFeedback только постановкой. Если дан previousPlan — это твой прежний план: верни его исправленную версию, сохрани удачные решения, исправь каждое замечание revisionFeedback и previousPlanValidatorError, а также проверь план по всем правилам выше.
-<CONTEXT>${JSON.stringify(context)}</CONTEXT>${coverage?COVERAGE_PROMPT:""}`;
+<CONTEXT>${JSON.stringify(context)}</CONTEXT>${coverage?COVERAGE_PROMPT:""}${offScript?OFF_SCRIPT_PROMPT:""}`;
  let feedback="";const schema=directorSchema(plan.media);
  for(let attempt=0;attempt<3;attempt++){
   const raw=await ask(prompt+language+loop+feedback,schema,path.join(dir,attempt?`illustrated-director-repair-${attempt}`:"illustrated-director"),[],signal,{model:MOTION_AGENT.model,effort:MOTION_AGENT.effort,timeout:1_800_000});
+  // Deterministic repair first (2026-10-25): a decorative element that breaks a rule is dropped by code, not by another paid attempt.
+  let repaired:ReturnType<typeof repairIllustrated>|undefined;
   try{
-   const result=validateIllustrated(raw,plan,alignment,opts);
+   repaired=repairIllustrated(raw,plan,alignment,opts);
+   const result=validateIllustrated(repaired.plan,plan,alignment,opts);
+   const removed=repaired.removed;
+   if(removed.length&&result.notes.length<8)result.notes=[...result.notes,`Автоматически убрано без нового запроса к режиссёру (${removed.length}): ${removed.join("; ")}`.slice(0,300)];
    await fs.writeFile(path.join(dir,"illustrated-plan.json"),JSON.stringify(result,null,2));
-   await fs.writeFile(path.join(dir,"illustrated-context.json"),JSON.stringify({hash,renderer:"illustrated/v1",director:directorRecord()}));
+   await fs.writeFile(path.join(dir,"illustrated-context.json"),JSON.stringify({hash,renderer:"illustrated/v1",director:directorRecord(),...(removed.length?{autoRepair:{attempt:attempt+1,removed}}:{})}));
    return {...plan,filmKind:"illustrated",illustrated:result};
-  }catch(e){if(attempt===2)throw e;feedback=`\nИсправь ошибку предыдущего JSON, сохранив остальную постановку: ${e instanceof Error?e.message:"ошибка схемы"}. Предыдущий ответ=${JSON.stringify(raw)}`;}
+  }catch(e){
+   if(attempt===2)throw e;
+   // Every remaining problem in one list, so one retry can fix them all (the strict validator names only the first).
+   const problems=repaired?.issues.length?[...new Set(repaired.issues.map(i=>i.message))]:[e instanceof Error?e.message:"ошибка схемы"];
+   feedback=problems.length>1
+    ?`\nИсправь все ошибки предыдущего JSON сразу, сохранив остальную постановку:\n${problems.map(p=>`- ${p}`).join("\n")}\nПредыдущий ответ=${JSON.stringify(repaired?.plan??raw)}`
+    :`\nИсправь ошибку предыдущего JSON, сохранив остальную постановку: ${problems[0]}. Предыдущий ответ=${JSON.stringify(repaired?.plan??raw)}`;
+  }
  }
  throw new Error("Не удалось подготовить иллюстрированную постановку.");
 }
+
+/** On-screen words come only from the checked script (validator grounding). Visual-concept labels and object names that the
+ *  narration never says reached the director as ready captions; it copied them and every such attempt was rejected
+ *  (4 of 7 attempts, work/cost-experiment-mix, 2026-10-25). They now move to notOnScreen / namesNotOnScreen and the
+ *  prompt says why. A concept that is fully grounded is returned as the same object, so its context hash is unchanged. */
+export function directorConcept(concept:Storyboard["visualConcept"]|undefined,vocabulary:Set<string>){
+ if(!concept)return concept??null;
+ let moved=false;
+ const scenes=(concept.scenes??[]).map(s=>{
+  const off=(s.labels??[]).filter(l=>!grounded(l,vocabulary));if(!off.length)return s;
+  moved=true;return {...s,labels:s.labels.filter(l=>grounded(l,vocabulary)),notOnScreen:off};
+ });
+ const names=(concept.objects??[]).filter(o=>o.name&&!grounded(o.name,vocabulary)).map(o=>o.name);
+ if(!moved&&!names.length)return concept;
+ return {...concept,scenes,...(names.length?{namesNotOnScreen:names}:{})};
+}
+const OFF_SCRIPT_PROMPT=`
+ТЕКСТ НА ЭКРАНЕ: подписи, выноски и крупные слова — только из слов сценария (narration, title, subtitle, items). В visualConcept строки notOnScreen и namesNotOnScreen в тексте не звучат: передавай их смысл предметами, состояниями и движением, но не пиши их на экране — такой план отклоняется.`;
 
 /** Strict director schema (2026-10-25). Without a media snapshot the catalog above hides logo-tile/person-tile and the validator
  *  rejects them, but the enum still offered them: a concept's media hint then cost a repair (≈$0.5) on every first attempt.

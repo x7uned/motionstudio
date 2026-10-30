@@ -1,0 +1,1722 @@
+{
+ "setup": {
+  "window": [
+   "2026-10-26T13:41:29.202Z",
+   "2026-10-26T14:00:41.000Z"
+  ],
+  "items": [
+   "cat"
+  ],
+  "main": {
+   "apiResponses": 60,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.9,
+    "think": 0.99,
+    "from": 60,
+    "own": true
+   },
+   "usdRecorded": 6.526,
+   "toolCalls": 61,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 120,
+    "w5": 0,
+    "w1h": 273853,
+    "read": 12773342,
+    "output": 89019,
+    "thinking": 44228,
+    "outputRecorded": 89019
+   },
+   "usd": 6.526,
+   "split": {
+    "output": 1.78,
+    "cacheWrite": 2.191,
+    "cacheRead": 2.555,
+    "input": 0
+   },
+   "wallClockMin": 19.2
+  },
+  "subagents": null,
+  "usd": 6.526,
+  "usdRecordedOnly": 6.526,
+  "usdPerItem": 6.526
+ },
+ "B1": {
+  "window": [
+   "2026-10-26T14:00:41.000Z",
+   "2026-10-26T14:53:32.000Z"
+  ],
+  "items": [
+   "living-room",
+   "studio",
+   "person",
+   "chart-bar",
+   "sound-wave",
+   "arrow",
+   "dog",
+   "wolf",
+   "brain",
+   "kitchen"
+  ],
+  "main": {
+   "apiResponses": 4,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.96,
+    "think": 0.54,
+    "from": 231,
+    "own": false
+   },
+   "usdRecorded": 0.381,
+   "toolCalls": 2,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 10,
+    "w5": 0,
+    "w1h": 6491,
+    "read": 1266579,
+    "output": 3767,
+    "thinking": 870,
+    "outputRecorded": 3767
+   },
+   "usd": 0.381,
+   "split": {
+    "output": 0.075,
+    "cacheWrite": 0.052,
+    "cacheRead": 0.253,
+    "input": 0
+   },
+   "wallClockMin": 52.8
+  },
+  "subagents": {
+   "files": [
+    "agent-af0e90188b779c564.jsonl"
+   ],
+   "apiResponses": 164,
+   "outputEstimatedResponses": 131,
+   "ratio": {
+    "cpt": 1.9,
+    "think": 0.53,
+    "from": 33,
+    "own": true
+   },
+   "usdRecorded": 13.604,
+   "toolCalls": 164,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 328,
+    "w5": 499607,
+    "w1h": 0,
+    "read": 53577194,
+    "output": 135807,
+    "thinking": 6401,
+    "outputRecorded": 19467
+   },
+   "usd": 15.931,
+   "split": {
+    "output": 2.716,
+    "cacheWrite": 2.498,
+    "cacheRead": 10.715,
+    "input": 0.001
+   },
+   "wallClockMin": 52
+  },
+  "usd": 16.312,
+  "usdRecordedOnly": 13.985,
+  "usdPerItem": 1.631
+ },
+ "review-B1": {
+  "window": [
+   "2026-10-26T14:53:32.000Z",
+   "2026-10-26T14:59:21.000Z"
+  ],
+  "items": [],
+  "main": {
+   "apiResponses": 15,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.98,
+    "think": 0.88,
+    "from": 15,
+    "own": true
+   },
+   "usdRecorded": 1.707,
+   "toolCalls": 16,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 32,
+    "w5": 0,
+    "w1h": 33818,
+    "read": 4996471,
+    "output": 21834,
+    "thinking": 10247,
+    "outputRecorded": 21834
+   },
+   "usd": 1.707,
+   "split": {
+    "output": 0.437,
+    "cacheWrite": 0.271,
+    "cacheRead": 0.999,
+    "input": 0
+   },
+   "wallClockMin": 5.8
+  },
+  "subagents": null,
+  "usd": 1.707,
+  "usdRecordedOnly": 1.707,
+  "usdPerItem": null
+ },
+ "B2": {
+  "window": [
+   "2026-10-26T14:59:21.000Z",
+   "2026-10-26T15:24:23.000Z"
+  ],
+  "items": [
+   "speech-bubble",
+   "myth-stamp",
+   "meter-bar",
+   "motion-path",
+   "bedroom",
+   "retro-room",
+   "elephant",
+   "hand",
+   "scent-trail",
+   "air-flow"
+  ],
+  "main": {
+   "apiResponses": 8,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 2.28,
+    "think": 0.1,
+    "from": 8,
+    "own": true
+   },
+   "usdRecorded": 0.897,
+   "toolCalls": 7,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 26,
+    "w5": 0,
+    "w1h": 20567,
+    "read": 2903596,
+    "output": 7606,
+    "thinking": 681,
+    "outputRecorded": 7606
+   },
+   "usd": 0.897,
+   "split": {
+    "output": 0.152,
+    "cacheWrite": 0.165,
+    "cacheRead": 0.581,
+    "input": 0
+   },
+   "wallClockMin": 25
+  },
+  "subagents": {
+   "files": [
+    "agent-a0ce446e33cb08dfc.jsonl",
+    "agent-a137f4562b7e65c62.jsonl",
+    "agent-a9f53ce9b501d512d.jsonl",
+    "agent-aa402e8061995de20.jsonl",
+    "agent-ac74263cd1879a8af.jsonl"
+   ],
+   "apiResponses": 262,
+   "outputEstimatedResponses": 192,
+   "ratio": {
+    "cpt": 1.78,
+    "think": 0.59,
+    "from": 70,
+    "own": true
+   },
+   "usdRecorded": 15.168,
+   "toolCalls": 270,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 524,
+    "w5": 898484,
+    "w1h": 0,
+    "read": 40759634,
+    "output": 252029,
+    "thinking": 46287,
+    "outputRecorded": 126082
+   },
+   "usd": 17.687,
+   "split": {
+    "output": 5.041,
+    "cacheWrite": 4.492,
+    "cacheRead": 8.152,
+    "input": 0.002
+   },
+   "wallClockMin": 23.8
+  },
+  "usd": 18.584,
+  "usdRecordedOnly": 16.065,
+  "usdPerItem": 1.858
+ },
+ "review-B2": {
+  "window": [
+   "2026-10-26T15:24:23.000Z",
+   "2026-10-26T15:26:54.000Z"
+  ],
+  "items": [],
+  "main": {
+   "apiResponses": 9,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.96,
+    "think": 0.69,
+    "from": 9,
+    "own": true
+   },
+   "usdRecorded": 1.009,
+   "toolCalls": 10,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 18,
+    "w5": 0,
+    "w1h": 16411,
+    "read": 3437212,
+    "output": 9519,
+    "thinking": 3884,
+    "outputRecorded": 9519
+   },
+   "usd": 1.009,
+   "split": {
+    "output": 0.19,
+    "cacheWrite": 0.131,
+    "cacheRead": 0.687,
+    "input": 0
+   },
+   "wallClockMin": 2.5
+  },
+  "subagents": null,
+  "usd": 1.009,
+  "usdRecordedOnly": 1.009,
+  "usdPerItem": null
+ },
+ "B3": {
+  "window": [
+   "2026-10-26T15:26:54.000Z",
+   "2026-10-26T15:38:46.000Z"
+  ],
+  "items": [
+   "computer-desk",
+   "smartphone",
+   "city-street",
+   "building",
+   "animal-eye",
+   "heat-glow",
+   "leaf",
+   "tree",
+   "mosquito"
+  ],
+  "main": {
+   "apiResponses": 7,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 2.32,
+    "think": 0.05,
+    "from": 7,
+    "own": true
+   },
+   "usdRecorded": 0.851,
+   "toolCalls": 6,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 24,
+    "w5": 0,
+    "w1h": 17736,
+    "read": 2799244,
+    "output": 7443,
+    "thinking": 368,
+    "outputRecorded": 7443
+   },
+   "usd": 0.851,
+   "split": {
+    "output": 0.149,
+    "cacheWrite": 0.142,
+    "cacheRead": 0.56,
+    "input": 0
+   },
+   "wallClockMin": 11.9
+  },
+  "subagents": {
+   "files": [
+    "agent-a0ab9c4d590758011.jsonl",
+    "agent-a0e03fef61ed832d4.jsonl",
+    "agent-a1bf214c6735e76d8.jsonl",
+    "agent-a8b698441cd1f74e1.jsonl",
+    "agent-abd902ba9cdea5525.jsonl"
+   ],
+   "apiResponses": 136,
+   "outputEstimatedResponses": 119,
+   "ratio": {
+    "cpt": 1.66,
+    "think": 0.71,
+    "from": 17,
+    "own": true
+   },
+   "usdRecorded": 5.655,
+   "toolCalls": 140,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 272,
+    "w5": 512552,
+    "w1h": 0,
+    "read": 14377797,
+    "output": 130736,
+    "thinking": 4031,
+    "outputRecorded": 10784
+   },
+   "usd": 8.054,
+   "split": {
+    "output": 2.615,
+    "cacheWrite": 2.563,
+    "cacheRead": 2.876,
+    "input": 0.001
+   },
+   "wallClockMin": 10.8
+  },
+  "usd": 8.905,
+  "usdRecordedOnly": 6.506,
+  "usdPerItem": 0.989
+ },
+ "report": {
+  "window": [
+   "2026-10-26T15:38:46.000Z",
+   "2026-10-26T15:45:31.000Z"
+  ],
+  "items": [],
+  "main": {
+   "apiResponses": 13,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.88,
+    "think": 0.29,
+    "from": 13,
+    "own": true
+   },
+   "usdRecorded": 1.638,
+   "toolCalls": 13,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 26,
+    "w5": 0,
+    "w1h": 31855,
+    "read": 5443814,
+    "output": 14713,
+    "thinking": 3303,
+    "outputRecorded": 14713
+   },
+   "usd": 1.638,
+   "split": {
+    "output": 0.294,
+    "cacheWrite": 0.255,
+    "cacheRead": 1.089,
+    "input": 0
+   },
+   "wallClockMin": 6.7
+  },
+  "subagents": null,
+  "usd": 1.638,
+  "usdRecordedOnly": 1.638,
+  "usdPerItem": null
+ },
+ "prep-P1": {
+  "window": [
+   "2026-10-26T15:45:31.000Z",
+   "2026-10-26T15:54:39.000Z"
+  ],
+  "items": [],
+  "main": {
+   "apiResponses": 17,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.95,
+    "think": 0.76,
+    "from": 17,
+    "own": true
+   },
+   "usdRecorded": 2.726,
+   "toolCalls": 15,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 34,
+    "w5": 0,
+    "w1h": 77865,
+    "read": 8051698,
+    "output": 24620,
+    "thinking": 10624,
+    "outputRecorded": 24620
+   },
+   "usd": 2.726,
+   "split": {
+    "output": 0.492,
+    "cacheWrite": 0.623,
+    "cacheRead": 1.61,
+    "input": 0
+   },
+   "wallClockMin": 9.1
+  },
+  "subagents": null,
+  "usd": 2.726,
+  "usdRecordedOnly": 2.726,
+  "usdPerItem": null
+ },
+ "P1": {
+  "window": [
+   "2026-10-26T15:54:39.000Z",
+   "2026-10-26T16:02:07.000Z"
+  ],
+  "items": [
+   "mouse",
+   "clock",
+   "backyard",
+   "forest",
+   "crt-tv",
+   "door",
+   "pet-food",
+   "ball",
+   "skin",
+   "shark"
+  ],
+  "main": {
+   "apiResponses": 8,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 2.28,
+    "think": 0.01,
+    "from": 8,
+    "own": true
+   },
+   "usdRecorded": 1.161,
+   "toolCalls": 7,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "tokens": {
+    "input": 28,
+    "w5": 0,
+    "w1h": 18698,
+    "read": 4203641,
+    "output": 8507,
+    "thinking": 77,
+    "outputRecorded": 8507
+   },
+   "usd": 1.161,
+   "split": {
+    "output": 0.17,
+    "cacheWrite": 0.15,
+    "cacheRead": 0.841,
+    "input": 0
+   },
+   "wallClockMin": 7.5
+  },
+  "subagents": {
+   "files": [
+    "agent-a82213cc35128cf98.jsonl",
+    "agent-a84cacdc0454a2d99.jsonl",
+    "agent-a88eb872cd904a1c1.jsonl",
+    "agent-aaba5ddcbd6e2b0d5.jsonl",
+    "agent-aec1691368e32490a.jsonl",
+    "agent-af610970fd7a9a8e3.jsonl"
+   ],
+   "apiResponses": 125,
+   "outputEstimatedResponses": 108,
+   "ratio": {
+    "cpt": 1.89,
+    "think": 1.84,
+    "from": 17,
+    "own": true
+   },
+   "usdRecorded": 3.296,
+   "toolCalls": 130,
+   "models": [
+    "claude-opus-5-5",
+    "claude-sonnet-5-5",
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "medium",
+    "high"
+   ],
+   "tokens": {
+    "input": 250,
+    "w5": 700113,
+    "w1h": 0,
+    "read": 12608090,
+    "output": 197885,
+    "thinking": 30187,
+    "outputRecorded": 47610
+   },
+   "usd": 4.891,
+   "split": {
+    "output": 1.746,
+    "cacheWrite": 1.478,
+    "cacheRead": 1.667,
+    "input": 0
+   },
+   "wallClockMin": 5.9
+  },
+  "usd": 6.052,
+  "usdRecordedOnly": 4.457,
+  "usdPerItem": 0.605
+ },
+ "report-P1": {
+  "window": [
+   "2026-10-26T16:02:07.000Z",
+   "2026-10-26T16:56:19.000Z"
+  ],
+  "items": [],
+  "main": {
+   "apiResponses": 17,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.96,
+    "think": 0.46,
+    "from": 17,
+    "own": true
+   },
+   "usdRecorded": 2.493,
+   "toolCalls": 16,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh",
+    "high"
+   ],
+   "tokens": {
+    "input": 34,
+    "w5": 0,
+    "w1h": 32082,
+    "read": 9365265,
+    "output": 18169,
+    "thinking": 5751,
+    "outputRecorded": 18169
+   },
+   "usd": 2.493,
+   "split": {
+    "output": 0.363,
+    "cacheWrite": 0.257,
+    "cacheRead": 1.873,
+    "input": 0
+   },
+   "wallClockMin": 54.2
+  },
+  "subagents": null,
+  "usd": 2.493,
+  "usdRecordedOnly": 2.493,
+  "usdPerItem": null
+ },
+ "W": {
+  "window": [
+   "2026-10-26T16:56:19.000Z",
+   "2026-10-26T17:19:36.000Z"
+  ],
+  "items": [],
+  "main": {
+   "apiResponses": 43,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.79,
+    "think": 0.03,
+    "from": 43,
+    "own": true
+   },
+   "usdRecorded": 6.071,
+   "toolCalls": 28,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "tokens": {
+    "input": 136,
+    "w5": 0,
+    "w1h": 66124,
+    "read": 25948132,
+    "output": 17604,
+    "thinking": 527,
+    "outputRecorded": 17604
+   },
+   "usd": 6.071,
+   "split": {
+    "output": 0.352,
+    "cacheWrite": 0.529,
+    "cacheRead": 5.19,
+    "input": 0.001
+   },
+   "wallClockMin": 23.3
+  },
+  "subagents": {
+   "files": [
+    "agent-a0433d35218658860.jsonl",
+    "agent-a0854fbef85216c41.jsonl",
+    "agent-a1a9045fe39b3b474.jsonl",
+    "agent-a23f1419ceb4848e8.jsonl",
+    "agent-a362cf40983ef86d2.jsonl",
+    "agent-a459bf01b3800a28f.jsonl",
+    "agent-a51ba6b16559f881a.jsonl",
+    "agent-a7d82d1c0e81beb66.jsonl",
+    "agent-a8b1f4792d679ba07.jsonl",
+    "agent-a94a2cc565c97c1d5.jsonl",
+    "agent-a9f4c1f4bfc35bd2b.jsonl",
+    "agent-aa1dd56e3eef053f2.jsonl",
+    "agent-aa82ad8cec75e0cd1.jsonl",
+    "agent-aa9fb5d4b2cedb232.jsonl",
+    "agent-ab1703fc40aa672d3.jsonl",
+    "agent-ab2392761d8f7924e.jsonl",
+    "agent-ab4512c473a7c3d36.jsonl",
+    "agent-abbf3eb7dbfafe704.jsonl",
+    "agent-ac23ecc1014a36d2a.jsonl",
+    "agent-acc9ddc93ec428591.jsonl",
+    "agent-ad05c4e934d105641.jsonl",
+    "agent-ae4e8fbe8dd1a7083.jsonl",
+    "agent-ae5e7edeec07561c0.jsonl",
+    "agent-aedc3b949c6222bcb.jsonl",
+    "agent-af65718ca0a403505.jsonl",
+    "agent-afa31941e9704f1c2.jsonl",
+    "agent-affdf5c0662a40b1f.jsonl"
+   ],
+   "apiResponses": 699,
+   "outputEstimatedResponses": 600,
+   "ratio": {
+    "cpt": 1.74,
+    "think": 1.19,
+    "from": 99,
+    "own": true
+   },
+   "usdRecorded": 13.929,
+   "toolCalls": 779,
+   "models": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "high",
+    "medium"
+   ],
+   "tokens": {
+    "input": 1398,
+    "w5": 3705740,
+    "w1h": 0,
+    "read": 87174379,
+    "output": 1107733,
+    "thinking": 59660,
+    "outputRecorded": 114962
+   },
+   "usd": 19.898,
+   "split": {
+    "output": 6.318,
+    "cacheWrite": 4.837,
+    "cacheRead": 8.741,
+    "input": 0.002
+   },
+   "wallClockMin": 22.4
+  },
+  "usd": 25.969,
+  "usdRecordedOnly": 20,
+  "usdPerItem": null
+ },
+ "report-W": {
+  "window": [
+   "2026-10-26T17:19:36.000Z",
+   "2026-10-26T17:31:37.000Z"
+  ],
+  "items": [],
+  "main": {
+   "apiResponses": 3,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.96,
+    "think": 0.54,
+    "from": 231,
+    "own": false
+   },
+   "usdRecorded": 0.439,
+   "toolCalls": 2,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "tokens": {
+    "input": 8,
+    "w5": 0,
+    "w1h": 3472,
+    "read": 1913261,
+    "output": 1446,
+    "thinking": 236,
+    "outputRecorded": 1446
+   },
+   "usd": 0.439,
+   "split": {
+    "output": 0.029,
+    "cacheWrite": 0.028,
+    "cacheRead": 0.383,
+    "input": 0
+   },
+   "wallClockMin": 2
+  },
+  "subagents": null,
+  "usd": 0.439,
+  "usdRecordedOnly": 0.439,
+  "usdPerItem": null
+ },
+ "E": {
+  "window": [
+   "2026-10-26T23:27:06.000Z",
+   "2026-10-26T23:42:34.000Z"
+  ],
+  "items": [],
+  "main": {
+   "apiResponses": 6,
+   "outputEstimatedResponses": 0,
+   "ratio": {
+    "cpt": 1.79,
+    "think": 0.14,
+    "from": 6,
+    "own": true
+   },
+   "usdRecorded": 0.991,
+   "toolCalls": 5,
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "tokens": {
+    "input": 18,
+    "w5": 0,
+    "w1h": 13343,
+    "read": 4099543,
+    "output": 3219,
+    "thinking": 406,
+    "outputRecorded": 3219
+   },
+   "usd": 0.991,
+   "split": {
+    "output": 0.064,
+    "cacheWrite": 0.107,
+    "cacheRead": 0.82,
+    "input": 0
+   },
+   "wallClockMin": 15.5
+  },
+  "subagents": {
+   "files": [
+    "agent-a06c60b668e7a6199.jsonl",
+    "agent-a3ded107a8f1fc049.jsonl",
+    "agent-ac4e3662e54dcdcfc.jsonl"
+   ],
+   "apiResponses": 98,
+   "outputEstimatedResponses": 72,
+   "ratio": {
+    "cpt": 1.54,
+    "think": 0.56,
+    "from": 26,
+    "own": true
+   },
+   "usdRecorded": 3.627,
+   "toolCalls": 121,
+   "models": [
+    "claude-sonnet-5-5",
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "medium",
+    "high"
+   ],
+   "tokens": {
+    "input": 196,
+    "w5": 634108,
+    "w1h": 0,
+    "read": 15273814,
+    "output": 222831,
+    "thinking": 6354,
+    "outputRecorded": 18274
+   },
+   "usd": 5.187,
+   "split": {
+    "output": 1.702,
+    "cacheWrite": 1.119,
+    "cacheRead": 2.365,
+    "input": 0
+   },
+   "wallClockMin": 15.1
+  },
+  "usd": 6.178,
+  "usdRecordedOnly": 4.618,
+  "usdPerItem": null
+ },
+ "_ratio": {
+  "cpt": 1.9624039972908387,
+  "think": 0.5374618225499342,
+  "from": 231
+ },
+ "_perAgent": {
+  "WH2": {
+   "batch": "W",
+   "file": "agent-a0433d35218658860.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.317,
+   "usdRecorded": 0.248,
+   "responses": 25,
+   "toolCalls": 27,
+   "cacheReadM": 3.64,
+   "outputK": 30,
+   "wallClockMin": 9.3
+  },
+  "E-sonnet-medium": {
+   "batch": "E",
+   "file": "agent-a06c60b668e7a6199.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 1.691,
+   "usdRecorded": 1.151,
+   "responses": 28,
+   "toolCalls": 33,
+   "cacheReadM": 3.6,
+   "outputK": 55.1,
+   "wallClockMin": 8.7
+  },
+  "WS4": {
+   "batch": "W",
+   "file": "agent-a0854fbef85216c41.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.975,
+   "usdRecorded": 0.739,
+   "responses": 18,
+   "toolCalls": 19,
+   "cacheReadM": 1.92,
+   "outputK": 24.2,
+   "wallClockMin": 4.3
+  },
+  "B3b": {
+   "batch": "B3",
+   "file": "agent-a0ab9c4d590758011.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 1.58,
+   "usdRecorded": 1.178,
+   "responses": 28,
+   "toolCalls": 30,
+   "cacheReadM": 2.97,
+   "outputK": 20.5,
+   "wallClockMin": 7.3
+  },
+  "B2a": {
+   "batch": "B2",
+   "file": "agent-a0ce446e33cb08dfc.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 3.036,
+   "usdRecorded": 2.594,
+   "responses": 50,
+   "toolCalls": 50,
+   "cacheReadM": 6.9,
+   "outputK": 43.4,
+   "wallClockMin": 15.1
+  },
+  "B3c": {
+   "batch": "B3",
+   "file": "agent-a0e03fef61ed832d4.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 1.119,
+   "usdRecorded": 0.821,
+   "responses": 22,
+   "toolCalls": 22,
+   "cacheReadM": 1.86,
+   "outputK": 18.1,
+   "wallClockMin": 4.9
+  },
+  "B2e": {
+   "batch": "B2",
+   "file": "agent-a137f4562b7e65c62.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 2.172,
+   "usdRecorded": 1.9,
+   "responses": 39,
+   "toolCalls": 39,
+   "cacheReadM": 4.57,
+   "outputK": 31.5,
+   "wallClockMin": 14.1
+  },
+  "WS1": {
+   "batch": "W",
+   "file": "agent-a1a9045fe39b3b474.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.819,
+   "usdRecorded": 0.706,
+   "responses": 19,
+   "toolCalls": 20,
+   "cacheReadM": 1.83,
+   "outputK": 11.8,
+   "wallClockMin": 3.1
+  },
+  "B3a": {
+   "batch": "B3",
+   "file": "agent-a1bf214c6735e76d8.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 2.521,
+   "usdRecorded": 1.913,
+   "responses": 44,
+   "toolCalls": 45,
+   "cacheReadM": 5.73,
+   "outputK": 31.3,
+   "wallClockMin": 10.8
+  },
+  "WS13": {
+   "batch": "W",
+   "file": "agent-a23f1419ceb4848e8.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.681,
+   "usdRecorded": 0.508,
+   "responses": 18,
+   "toolCalls": 21,
+   "cacheReadM": 1.57,
+   "outputK": 17.7,
+   "wallClockMin": 4
+  },
+  "WS14": {
+   "batch": "W",
+   "file": "agent-a362cf40983ef86d2.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.791,
+   "usdRecorded": 0.579,
+   "responses": 19,
+   "toolCalls": 21,
+   "cacheReadM": 1.77,
+   "outputK": 21.6,
+   "wallClockMin": 5.6
+  },
+  "E-haiku-high": {
+   "batch": "E",
+   "file": "agent-a3ded107a8f1fc049.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.448,
+   "usdRecorded": 0.31,
+   "responses": 29,
+   "toolCalls": 29,
+   "cacheReadM": 4.49,
+   "outputK": 61.8,
+   "wallClockMin": 9.9
+  },
+  "WS2": {
+   "batch": "W",
+   "file": "agent-a459bf01b3800a28f.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.803,
+   "usdRecorded": 0.644,
+   "responses": 21,
+   "toolCalls": 24,
+   "cacheReadM": 1.81,
+   "outputK": 16.7,
+   "wallClockMin": 3.5
+  },
+  "WS11": {
+   "batch": "W",
+   "file": "agent-a51ba6b16559f881a.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.503,
+   "usdRecorded": 0.368,
+   "responses": 12,
+   "toolCalls": 14,
+   "cacheReadM": 0.96,
+   "outputK": 14,
+   "wallClockMin": 2.2
+  },
+  "WH3": {
+   "batch": "W",
+   "file": "agent-a7d82d1c0e81beb66.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.608,
+   "usdRecorded": 0.449,
+   "responses": 48,
+   "toolCalls": 50,
+   "cacheReadM": 7.52,
+   "outputK": 68.2,
+   "wallClockMin": 10.7
+  },
+  "P1a": {
+   "batch": "P1",
+   "file": "agent-a82213cc35128cf98.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 1.196,
+   "usdRecorded": 0.893,
+   "responses": 21,
+   "toolCalls": 22,
+   "cacheReadM": 1.95,
+   "outputK": 19.6,
+   "wallClockMin": 4.8
+  },
+  "P1c": {
+   "batch": "P1",
+   "file": "agent-a84cacdc0454a2d99.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 1.158,
+   "usdRecorded": 0.966,
+   "responses": 28,
+   "toolCalls": 29,
+   "cacheReadM": 2.93,
+   "outputK": 19.7,
+   "wallClockMin": 5
+  },
+  "P1e": {
+   "batch": "P1",
+   "file": "agent-a88eb872cd904a1c1.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.204,
+   "usdRecorded": 0.171,
+   "responses": 22,
+   "toolCalls": 23,
+   "cacheReadM": 2.36,
+   "outputK": 28.5,
+   "wallClockMin": 4.6
+  },
+  "WS15": {
+   "batch": "W",
+   "file": "agent-a8b1f4792d679ba07.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.757,
+   "usdRecorded": 0.562,
+   "responses": 21,
+   "toolCalls": 23,
+   "cacheReadM": 1.8,
+   "outputK": 20,
+   "wallClockMin": 3.7
+  },
+  "B3e": {
+   "batch": "B3",
+   "file": "agent-a8b698441cd1f74e1.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 1.098,
+   "usdRecorded": 0.896,
+   "responses": 22,
+   "toolCalls": 23,
+   "cacheReadM": 1.95,
+   "outputK": 15.1,
+   "wallClockMin": 5.8
+  },
+  "WH6": {
+   "batch": "W",
+   "file": "agent-a94a2cc565c97c1d5.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.305,
+   "usdRecorded": 0.238,
+   "responses": 30,
+   "toolCalls": 34,
+   "cacheReadM": 3.76,
+   "outputK": 32,
+   "wallClockMin": 7.3
+  },
+  "WH10": {
+   "batch": "W",
+   "file": "agent-a9f4c1f4bfc35bd2b.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.282,
+   "usdRecorded": 0.218,
+   "responses": 25,
+   "toolCalls": 25,
+   "cacheReadM": 3.36,
+   "outputK": 27.5,
+   "wallClockMin": 7.5
+  },
+  "B2b": {
+   "batch": "B2",
+   "file": "agent-a9f53ce9b501d512d.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 3.164,
+   "usdRecorded": 2.423,
+   "responses": 46,
+   "toolCalls": 47,
+   "cacheReadM": 5.61,
+   "outputK": 66.1,
+   "wallClockMin": 13.6
+  },
+  "WS12": {
+   "batch": "W",
+   "file": "agent-aa1dd56e3eef053f2.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.73,
+   "usdRecorded": 0.551,
+   "responses": 19,
+   "toolCalls": 23,
+   "cacheReadM": 1.7,
+   "outputK": 18.9,
+   "wallClockMin": 3.9
+  },
+  "B2d": {
+   "batch": "B2",
+   "file": "agent-aa402e8061995de20.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 3.342,
+   "usdRecorded": 2.971,
+   "responses": 46,
+   "toolCalls": 46,
+   "cacheReadM": 6.97,
+   "outputK": 48.9,
+   "wallClockMin": 15.4
+  },
+  "WS3": {
+   "batch": "W",
+   "file": "agent-aa82ad8cec75e0cd1.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 1.229,
+   "usdRecorded": 1.033,
+   "responses": 27,
+   "toolCalls": 32,
+   "cacheReadM": 3.25,
+   "outputK": 20.9,
+   "wallClockMin": 5.2
+  },
+  "WH1": {
+   "batch": "W",
+   "file": "agent-aa9fb5d4b2cedb232.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.172,
+   "usdRecorded": 0.153,
+   "responses": 19,
+   "toolCalls": 26,
+   "cacheReadM": 1.81,
+   "outputK": 30.4,
+   "wallClockMin": 4.3
+  },
+  "P1d": {
+   "batch": "P1",
+   "file": "agent-aaba5ddcbd6e2b0d5.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.631,
+   "usdRecorded": 0.51,
+   "responses": 16,
+   "toolCalls": 18,
+   "cacheReadM": 1.28,
+   "outputK": 12.3,
+   "wallClockMin": 2.6
+  },
+  "WS8": {
+   "batch": "W",
+   "file": "agent-ab1703fc40aa672d3.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.904,
+   "usdRecorded": 0.691,
+   "responses": 18,
+   "toolCalls": 22,
+   "cacheReadM": 1.88,
+   "outputK": 21.6,
+   "wallClockMin": 4.2
+  },
+  "WH4": {
+   "batch": "W",
+   "file": "agent-ab2392761d8f7924e.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.373,
+   "usdRecorded": 0.329,
+   "responses": 32,
+   "toolCalls": 36,
+   "cacheReadM": 4.54,
+   "outputK": 36.2,
+   "wallClockMin": 8.4
+  },
+  "WH7": {
+   "batch": "W",
+   "file": "agent-ab4512c473a7c3d36.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.437,
+   "usdRecorded": 0.372,
+   "responses": 31,
+   "toolCalls": 44,
+   "cacheReadM": 4.97,
+   "outputK": 45.7,
+   "wallClockMin": 9.8
+  },
+  "WS6": {
+   "batch": "W",
+   "file": "agent-abbf3eb7dbfafe704.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 1.086,
+   "usdRecorded": 0.786,
+   "responses": 20,
+   "toolCalls": 22,
+   "cacheReadM": 2.32,
+   "outputK": 30.5,
+   "wallClockMin": 6.3
+  },
+  "B3d": {
+   "batch": "B3",
+   "file": "agent-abd902ba9cdea5525.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 1.16,
+   "usdRecorded": 0.848,
+   "responses": 20,
+   "toolCalls": 20,
+   "cacheReadM": 1.86,
+   "outputK": 17,
+   "wallClockMin": 6.3
+  },
+  "WS9": {
+   "batch": "W",
+   "file": "agent-ac23ecc1014a36d2a.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 1.221,
+   "usdRecorded": 0.967,
+   "responses": 30,
+   "toolCalls": 31,
+   "cacheReadM": 3.41,
+   "outputK": 26,
+   "wallClockMin": 8.3
+  },
+  "E-sonnet-high": {
+   "batch": "E",
+   "file": "agent-ac4e3662e54dcdcfc.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 3.097,
+   "usdRecorded": 2.167,
+   "responses": 41,
+   "toolCalls": 59,
+   "cacheReadM": 7.18,
+   "outputK": 105,
+   "wallClockMin": 15.1
+  },
+  "B2c": {
+   "batch": "B2",
+   "file": "agent-ac74263cd1879a8af.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 6.003,
+   "usdRecorded": 5.28,
+   "responses": 81,
+   "toolCalls": 88,
+   "cacheReadM": 16.7,
+   "outputK": 63.6,
+   "wallClockMin": 23.8
+  },
+  "WH8": {
+   "batch": "W",
+   "file": "agent-acc9ddc93ec428591.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.476,
+   "usdRecorded": 0.399,
+   "responses": 34,
+   "toolCalls": 35,
+   "cacheReadM": 5.24,
+   "outputK": 59.5,
+   "wallClockMin": 9.3
+  },
+  "WH9": {
+   "batch": "W",
+   "file": "agent-ad05c4e934d105641.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.427,
+   "usdRecorded": 0.358,
+   "responses": 41,
+   "toolCalls": 42,
+   "cacheReadM": 5.5,
+   "outputK": 46.6,
+   "wallClockMin": 8.5
+  },
+  "WH5": {
+   "batch": "W",
+   "file": "agent-ae4e8fbe8dd1a7083.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.5,
+   "usdRecorded": 0.322,
+   "responses": 37,
+   "toolCalls": 39,
+   "cacheReadM": 5.27,
+   "outputK": 76.6,
+   "wallClockMin": 7
+  },
+  "WS5": {
+   "batch": "W",
+   "file": "agent-ae5e7edeec07561c0.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.981,
+   "usdRecorded": 0.767,
+   "responses": 21,
+   "toolCalls": 23,
+   "cacheReadM": 2.34,
+   "outputK": 21.8,
+   "wallClockMin": 4.5
+  },
+  "P1f": {
+   "batch": "P1",
+   "file": "agent-aec1691368e32490a.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.226,
+   "usdRecorded": 0.202,
+   "responses": 26,
+   "toolCalls": 26,
+   "cacheReadM": 3.09,
+   "outputK": 43.4,
+   "wallClockMin": 5.9
+  },
+  "WS7": {
+   "batch": "W",
+   "file": "agent-aedc3b949c6222bcb.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.979,
+   "usdRecorded": 0.748,
+   "responses": 23,
+   "toolCalls": 24,
+   "cacheReadM": 2.45,
+   "outputK": 23.7,
+   "wallClockMin": 5.8
+  },
+  "B1": {
+   "batch": "B1",
+   "file": "agent-af0e90188b779c564.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "xhigh"
+   ],
+   "usd": 15.931,
+   "usdRecorded": 13.604,
+   "responses": 164,
+   "toolCalls": 164,
+   "cacheReadM": 53.58,
+   "outputK": 135.8,
+   "wallClockMin": 52
+  },
+  "P1b": {
+   "batch": "P1",
+   "file": "agent-af610970fd7a9a8e3.jsonl",
+   "models": [
+    "claude-opus-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.719,
+   "usdRecorded": 0.554,
+   "responses": 12,
+   "toolCalls": 12,
+   "cacheReadM": 1,
+   "outputK": 8.6,
+   "wallClockMin": 2
+  },
+  "WS10": {
+   "batch": "W",
+   "file": "agent-af65718ca0a403505.jsonl",
+   "models": [
+    "claude-sonnet-5-5"
+   ],
+   "efforts": [
+    "medium"
+   ],
+   "usd": 0.653,
+   "usdRecorded": 0.515,
+   "responses": 17,
+   "toolCalls": 21,
+   "cacheReadM": 1.53,
+   "outputK": 14.5,
+   "wallClockMin": 3
+  },
+  "WH11": {
+   "batch": "W",
+   "file": "agent-afa31941e9704f1c2.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.363,
+   "usdRecorded": 0.29,
+   "responses": 32,
+   "toolCalls": 37,
+   "cacheReadM": 4.68,
+   "outputK": 30.8,
+   "wallClockMin": 9.2
+  },
+  "WH12": {
+   "batch": "W",
+   "file": "agent-affdf5c0662a40b1f.jsonl",
+   "models": [
+    "claude-haiku-5-5"
+   ],
+   "efforts": [
+    "high"
+   ],
+   "usd": 0.516,
+   "usdRecorded": 0.39,
+   "responses": 42,
+   "toolCalls": 44,
+   "cacheReadM": 6.35,
+   "outputK": 53.5,
+   "wallClockMin": 12.4
+  }
+ }
+}

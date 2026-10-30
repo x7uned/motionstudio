@@ -1,0 +1,33 @@
+{
+ "kind": "fossil",
+ "states": [
+  "buried",
+  "reveal",
+  "glow",
+  "show"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 90,
+  "hh": 62
+ },
+ "measured": {
+  "hw": 89,
+  "hh": 64,
+  "box": [
+   174,
+   356,
+   351,
+   480
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 21.5,
+ "maxFramePx": 3358,
+ "maxNovelPx": 19417
+}

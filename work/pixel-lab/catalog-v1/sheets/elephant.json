@@ -1,0 +1,35 @@
+{
+ "kind": "elephant",
+ "states": [
+  "stand",
+  "look",
+  "trumpet",
+  "flap",
+  "happy",
+  "sleepy"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 92,
+  "hh": 96
+ },
+ "measured": {
+  "hw": 115,
+  "hh": 146,
+  "box": [
+   168,
+   274,
+   377,
+   518
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 268,
+ "msPerFrame": 22.6,
+ "maxFramePx": 6982,
+ "maxNovelPx": 3754
+}

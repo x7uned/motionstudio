@@ -1,0 +1,19 @@
+{
+ "file": "pumpkin-face-haiku-high.mp4",
+ "frames": 300,
+ "video_s": 10,
+ "audio_s": 10.005,
+ "seam_picture_meanabs": 3.383,
+ "neighbour_frames_meanabs": [
+  0.05,
+  0.03,
+  0.346
+ ],
+ "seam_audio_jump": 0,
+ "audio_typical_step": 0.0139,
+ "loudness_LUFS": -16.1,
+ "true_peak_dBFS": -1.7,
+ "LRA": 3.8,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

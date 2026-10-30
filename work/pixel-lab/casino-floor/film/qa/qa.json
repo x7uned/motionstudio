@@ -1,0 +1,15 @@
+{
+ "file": "casino-floor-pixel-max.mp4",
+ "frames": 1678,
+ "video_s": 55.933,
+ "audio_s": 55.936,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -33.1,
+  -180
+ ],
+ "loudness_LUFS": -16.5,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.7,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

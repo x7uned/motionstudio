@@ -1,0 +1,23 @@
+You've been pressing fake buttons — Kagenami pixel film (2026-10-24)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take); word timings checked with ElevenLabs Scribe.
+Picture and sound: generated locally (pixel art and 8-bit synthesis). The street, the building, the elevator, the thermostat,
+the phone and the people are our own illustrations, not real products, places or people. The channel's character: the
+creator's own pixel sprite sheet.
+
+Flags (Wikimedia Commons, rasterised to the pixel grid, not redrawn):
+- File:Flag_of_New_York_City.svg — CC BY-SA 3.0, Zscout370. https://commons.wikimedia.org/wiki/File:Flag_of_New_York_City.svg
+  SHA-256 99ad8d6c7f80cf25f32383327edeade0d826bf88cc7c11496a7b222683cb35c2
+- File:Flag_of_the_United_States.svg — Public domain. https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States.svg
+  SHA-256 48f0d3e4a7bf2d5c0c8d09cd975696acb2f3af601aaca80c537933ad9ec166ec
+
+Sources:
+- Crosswalk buttons: Michael Luo, "For Exercise in New York Futility, Push Button", The New York Times, 2004-02-27 — city DOT
+  figures: more than 2,500 of the 3,250 walk buttons no longer did anything after computer-controlled signals took over.
+- Elevator close button: 2010 ADA Standards / ADA Accessibility Guidelines 4.10 (minimum door-open times; the door-close
+  button cannot shorten them); fire-service mode requires the door-close button (ASME A17.1). In many elevators the button
+  works after the minimum time; the film says "for the first few seconds".
+- Dummy thermostats: ACHR News, "Placebo Stats", 2003-03-31 — informal web poll: 51 of 70 respondents had installed dummy
+  thermostats.
+- Phone camera: smartphone cameras use electronic shutters; the click is a played sound.
+- Illusion of control: Ellen J. Langer, "The Illusion of Control", Journal of Personality and Social Psychology, 1975.

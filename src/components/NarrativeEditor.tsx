@@ -1,7 +1,0 @@
-"use client";
-import {useState} from "react";
-export default function NarrativeEditor({id,text,disabled}:{id:string;text:string;disabled:boolean}){
- const [value,setValue]=useState(text),[busy,setBusy]=useState(false),[message,setMessage]=useState("");
- async function save(){setBusy(true);setMessage("");try{const r=await fetch("/api/preproduction",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({id,action:"saveNarrative",fullText:value})});const j=await r.json();if(!r.ok)throw new Error(j.error);setMessage("Сохранено. Запустите рендер: редактор и фактчекер проверят текст без перезаписи.");}catch(e){setMessage(e instanceof Error?e.message:"Не удалось сохранить рассказ.");}finally{setBusy(false);}}
- return <details className="editor-note"><summary>Редактировать цельный рассказ</summary><label>Произносимый текст<textarea rows={10} maxLength={9000} disabled={disabled||busy} value={value} onChange={e=>setValue(e.target.value)}/></label><p className="quiet">Сохранение пересоберёт разметку сцен. Прежний текст и PCM-мастер сохраняются в версиях; проверки станут неактуальными. Новый текст потребует новой озвучки после успешных проверок. Указания голосу не вводите сюда.</p><button className="button secondary" disabled={disabled||busy||value.replace(/\s+/g," ").trim()===text} onClick={()=>void save()}>Сохранить авторский рассказ</button>{message&&<p role="status">{message}</p>}</details>;
-}

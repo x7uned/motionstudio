@@ -1,0 +1,70 @@
+{
+  "pack": "xtuned-outro/v1",
+  "username": "@xtuned",
+  "character": {
+    "pack": "denis-story/v1",
+    "file": "spritesheet.png",
+    "sha256": "4ae236eb689b6ecea1e6ed3a46019e61bd5c58a6f5923468fabf9043743b271d",
+    "cell": [
+      192,
+      208
+    ],
+    "columns": 8,
+    "size": [
+      1536,
+      2080
+    ]
+  },
+  "languages": {
+    "ru": {
+      "spoken": "Хочешь больше таких разборов? Подписывайся на xtuned.",
+      "question": "Хочешь больше таких разборов?",
+      "cueWord": "Подписывайся",
+      "brandWord": "xtuned",
+      "button": "Подписаться",
+      "done": "Вы подписаны",
+      "brandHeard": [
+        "xtuned",
+        "x tuned",
+        "ex tuned",
+        "экс тюнд",
+        "экстюнд",
+        "икс тюнд",
+        "экс тюнед"
+      ]
+    },
+    "en": {
+      "spoken": "Want more breakdowns like this? Follow xtuned.",
+      "question": "Want more breakdowns like this?",
+      "cueWord": "Follow",
+      "brandWord": "xtuned",
+      "button": "Follow",
+      "done": "Following",
+      "brandHeard": [
+        "xtuned",
+        "x tuned",
+        "ex tuned",
+        "extuned",
+        "x-tuned"
+      ]
+    }
+  },
+  "reserveSeconds": 4,
+  "tailSeconds": 1.2,
+  "sounds": {
+    "click": {
+      "file": "sounds/pixel-click.wav",
+      "sha256": "720c00ab81eca7c8e3ed63a414c8dd7c5dffd5a5ba657620c063594754bb90b9",
+      "title": "03 · Kenney · цифровой бип",
+      "license": "CC0-1.0",
+      "attribution": "Kenney, CC0-1.0, https://kenney.nl/assets/digital-audio"
+    },
+    "success": {
+      "file": "sounds/chiptune-arpeggio.wav",
+      "sha256": "aafe1a123f64080fd6bb2b427e656f4d1f6d844bfd263d577884ef8e5356f19e",
+      "title": "08 · Kenney · power-up 7",
+      "license": "CC0-1.0",
+      "attribution": "Kenney, CC0-1.0, https://kenney.nl/assets/digital-audio"
+    }
+  }
+}

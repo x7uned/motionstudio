@@ -1,0 +1,8 @@
+Only one ghost in Pac-Man is really chasing you.
+
+Each ghost aims at its own target square. Red aims at you. Pink aims four squares in front of you. Blue doubles the line from Red to the spot ahead of you. Orange heads back to his corner once he gets close. Toru Iwatani, who designed the game, didn't want four ghosts chasing you in one line.
+
+Pixel illustration of the rules, not the original game. Photo of Toru Iwatani: Amadalvarez, CC BY-SA 4.0, Wikimedia Commons.
+Sources: Jamey Pittman, The Pac-Man Dossier; Susan Lammers, Programmers at Work (1986).
+
+#pacman #retrogaming #arcade #gamedesign #gaming

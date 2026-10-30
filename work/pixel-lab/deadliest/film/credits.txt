@@ -1,0 +1,16 @@
+Which animal kills the most people? — Kagenami pixel film (2026-10-23)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take; the natural sentence gap after "…the mosquito." widened to the requested 1.5 s with the take's own room tone — no time-stretching).
+Picture and sound: generated locally (pixel art and 8-bit synthesis); no third-party images, logos or recordings.
+The channel's character: the creator's own pixel sprite sheet (data/branding/xtuned-outro/v1/spritesheet.png).
+Pixel illustration, not to scale. Deaths per year are rough estimates (counts in Africa and Asia are incomplete).
+
+Sources (details in ../facts.md):
+- Shark: International Shark Attack File 2025 (Florida Museum) — 12 confirmed deaths in 2025, 5-year average 8 unprovoked.
+- Lion: Packer et al., Nature 2005 (Tanzania); Gates Notes / WHO compilation 2014.
+- Hippo: BBC; National Geographic; Africa Check.
+- Crocodile: FAO estimate via Discover Wildlife; CrocBITE records (fewer recorded).
+- Scorpion: Chippaux & Goyffon, Acta Tropica 2008; Royal Society of Tropical Medicine and Hygiene.
+- Dog: WHO rabies fact sheet (~59,000 deaths a year, dogs up to 99% of transmissions; vaccine-preventable).
+- Snake: WHO fact sheet «Snakebite envenoming» (81,410–137,880 deaths a year).
+- Mosquito: WHO World Malaria Report 2025 (610,000 malaria deaths in 2024).

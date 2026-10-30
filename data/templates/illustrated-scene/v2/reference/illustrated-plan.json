@@ -1,0 +1,1426 @@
+{
+  "version": 1,
+  "concept": "Детектив одного бита: кабина → табло «Итог» ← микросхема со строкой битов. В хуке и при подсчёте правый столбец табло перерастает левый: розовый кусок +4096 выше линии предела. Камера уходит в регистр: веса удваиваются, 13-й бит весит 4096, его переход 0 → 1 переносит вес в итог. Затем версия с лучом, три карточки подозреваемых и финал: бит → итог → «часть ≤ целого».",
+  "floorY": 1600,
+  "objects": [
+    {
+      "id": "tally",
+      "kind": "tally-board",
+      "x": 1300,
+      "y": 1370,
+      "scale": 1,
+      "label": "Итог",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 1,
+        "progress": 0.0752,
+        "cue": "выборах"
+      },
+      "exit": {
+        "scene": 9,
+        "progress": 0.0282,
+        "cue": "Официальное"
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.2041,
+            "cue": "4096"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.2471,
+            "cue": "голосов"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.8425,
+            "cue": "компьютера,"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.9038,
+            "cue": "даже"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 3,
+            "progress": 0.1569,
+            "cue": "одному"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 3,
+            "progress": 0.3425,
+            "cue": "досталось"
+          },
+          "value": 0.4
+        },
+        {
+          "at": {
+            "scene": 3,
+            "progress": 0.5149,
+            "cue": "лишних"
+          },
+          "value": 0.4
+        },
+        {
+          "at": {
+            "scene": 3,
+            "progress": 0.64,
+            "cue": ""
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.1865,
+            "cue": "битов"
+          },
+          "value": 1
+        },
+        {
+          "at": {
+            "scene": 6,
+            "progress": 0.2588,
+            "cue": "ячеек"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 8,
+            "progress": 0.6182,
+            "cue": "голоса,"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 8,
+            "progress": 0.7136,
+            "cue": "которых"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "chip0",
+      "kind": "memory-chip",
+      "x": 1980,
+      "y": 1429,
+      "scale": 0.9,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 1,
+        "progress": 0.7719,
+        "cue": "памяти"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.0301,
+        "cue": "Весной"
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 1,
+            "progress": 0.7719,
+            "cue": "памяти"
+          },
+          "value": 0
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "booth",
+      "kind": "voting-booth",
+      "x": 680,
+      "y": 1365,
+      "scale": 1,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 2,
+        "progress": 0.1849,
+        "cue": "года"
+      },
+      "exit": {
+        "scene": 3,
+        "progress": 0.442,
+        "cue": "4096"
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.1849,
+            "cue": "года"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.3011,
+            "cue": "в"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.4237,
+            "cue": "голосовали"
+          },
+          "value": 0.5
+        },
+        {
+          "at": {
+            "scene": 2,
+            "progress": 0.5333,
+            "cue": "машинах"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "place",
+      "kind": "plaque",
+      "x": 680,
+      "y": 1050,
+      "scale": 0.8,
+      "label": "Схарбек, 2003",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 2,
+        "progress": 0.3204,
+        "cue": "Схарбеке"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.7914,
+        "cue": "световым"
+      },
+      "active": [],
+      "moves": []
+    },
+    {
+      "id": "lbl-check",
+      "kind": "plaque",
+      "x": 1300,
+      "y": 1090,
+      "scale": 0.75,
+      "label": "Часть ≤ целого",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 4,
+        "progress": 0.2189,
+        "cue": "что"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.0068,
+        "cue": "Поэтому"
+      },
+      "active": [],
+      "moves": []
+    },
+    {
+      "id": "chip",
+      "kind": "memory-chip",
+      "x": 1980,
+      "y": 1429,
+      "scale": 0.9,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 5,
+        "progress": 0.2354,
+        "cue": "откуда"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 5,
+            "progress": 0.2354,
+            "cue": "откуда"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 8,
+            "progress": 0.2159,
+            "cue": "нуля"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 8,
+            "progress": 0.2841,
+            "cue": "единицу,"
+          },
+          "value": 0.5
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "quote",
+      "kind": "plaque",
+      "x": 1980,
+      "y": 1180,
+      "scale": 0.75,
+      "label": "«Спонтанное появление бита»",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 9,
+        "progress": 0.2617,
+        "cue": "спонтанное"
+      },
+      "exit": {
+        "scene": 9,
+        "progress": 0.604,
+        "cue": "Но"
+      },
+      "active": [],
+      "moves": []
+    },
+    {
+      "id": "ray",
+      "kind": "cosmic-ray",
+      "x": 1980,
+      "y": 880,
+      "scale": 0.9,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 10,
+        "progress": 0.3009,
+        "cue": "космический"
+      },
+      "exit": {
+        "scene": 11,
+        "progress": 0.6102,
+        "cue": "переворачивается."
+      },
+      "active": [
+        {
+          "at": {
+            "scene": 10,
+            "progress": 0.3009,
+            "cue": "космический"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 10,
+            "progress": 0.5611,
+            "cue": "врезается"
+          },
+          "value": 0
+        },
+        {
+          "at": {
+            "scene": 10,
+            "progress": 0.6407,
+            "cue": "атмосферу"
+          },
+          "value": 0.4
+        },
+        {
+          "at": {
+            "scene": 10,
+            "progress": 0.7469,
+            "cue": "рассыпается"
+          },
+          "value": 0.4
+        },
+        {
+          "at": {
+            "scene": 10,
+            "progress": 0.8956,
+            "cue": "частиц."
+          },
+          "value": 0.65
+        },
+        {
+          "at": {
+            "scene": 11,
+            "progress": 0.3952,
+            "cue": "иногда"
+          },
+          "value": 0.65
+        },
+        {
+          "at": {
+            "scene": 11,
+            "progress": 0.4561,
+            "cue": "микросхему"
+          },
+          "value": 0.85
+        },
+        {
+          "at": {
+            "scene": 11,
+            "progress": 0.517,
+            "cue": "памяти,"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    },
+    {
+      "id": "person",
+      "kind": "person",
+      "x": 1500,
+      "y": 1410,
+      "scale": 1,
+      "label": "",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 11,
+        "progress": 0.2842,
+        "cue": "ваше"
+      },
+      "exit": {
+        "scene": 11,
+        "progress": 0.6102,
+        "cue": "переворачивается."
+      },
+      "active": [],
+      "moves": []
+    },
+    {
+      "id": "card-ray",
+      "kind": "plaque",
+      "x": 1200,
+      "y": 1200,
+      "scale": 1,
+      "label": "Космический луч?",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 12,
+        "progress": 0.6446,
+        "cue": "луч"
+      },
+      "exit": {
+        "scene": 13,
+        "progress": 0.0364,
+        "cue": "Зато"
+      },
+      "active": [],
+      "moves": []
+    },
+    {
+      "id": "card-soft",
+      "kind": "plaque",
+      "x": 1200,
+      "y": 1340,
+      "scale": 1,
+      "label": "Ошибка в программе",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 12,
+        "progress": 0.4211,
+        "cue": "ошибка"
+      },
+      "exit": {
+        "scene": 13,
+        "progress": 0.0364,
+        "cue": "Зато"
+      },
+      "active": [],
+      "moves": []
+    },
+    {
+      "id": "card-hw",
+      "kind": "plaque",
+      "x": 1200,
+      "y": 1480,
+      "scale": 1,
+      "label": "Дефект железа",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 12,
+        "progress": 0.5211,
+        "cue": "дефект"
+      },
+      "exit": {
+        "scene": 13,
+        "progress": 0.0364,
+        "cue": "Зато"
+      },
+      "active": [],
+      "moves": []
+    },
+    {
+      "id": "tally2",
+      "kind": "tally-board",
+      "x": 1300,
+      "y": 1370,
+      "scale": 1,
+      "label": "Итог",
+      "aim": "",
+      "rows": 1,
+      "cols": 2,
+      "enter": {
+        "scene": 13,
+        "progress": 0.2398,
+        "cue": "сбой"
+      },
+      "exit": null,
+      "active": [
+        {
+          "at": {
+            "scene": 13,
+            "progress": 0.2398,
+            "cue": "сбой"
+          },
+          "value": 1
+        }
+      ],
+      "moves": []
+    }
+  ],
+  "flows": [
+    {
+      "from": "booth",
+      "to": "tally",
+      "tone": "info",
+      "style": "solid",
+      "enter": {
+        "scene": 3,
+        "progress": 0.0707,
+        "cue": "подсчёте"
+      },
+      "exit": {
+        "scene": 3,
+        "progress": 0.442,
+        "cue": "4096"
+      }
+    },
+    {
+      "from": "tally",
+      "to": "chip",
+      "tone": "number",
+      "style": "solid",
+      "enter": {
+        "scene": 5,
+        "progress": 0.4395,
+        "cue": "число,"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.0167,
+        "cue": "Компьютер"
+      }
+    },
+    {
+      "from": "chip",
+      "to": "tally",
+      "tone": "number",
+      "style": "solid",
+      "enter": {
+        "scene": 8,
+        "progress": 0.6182,
+        "cue": "голоса,"
+      },
+      "exit": {
+        "scene": 9,
+        "progress": 0.0282,
+        "cue": "Официальное"
+      }
+    },
+    {
+      "from": "ray",
+      "to": "person",
+      "tone": "info",
+      "style": "solid",
+      "enter": {
+        "scene": 11,
+        "progress": 0.3093,
+        "cue": "тело."
+      },
+      "exit": {
+        "scene": 11,
+        "progress": 0.6102,
+        "cue": "переворачивается."
+      }
+    },
+    {
+      "from": "ray",
+      "to": "chip",
+      "tone": "warn",
+      "style": "solid",
+      "enter": {
+        "scene": 11,
+        "progress": 0.4561,
+        "cue": "микросхему"
+      },
+      "exit": {
+        "scene": 11,
+        "progress": 0.6102,
+        "cue": "переворачивается."
+      }
+    },
+    {
+      "from": "chip",
+      "to": "tally2",
+      "tone": "warn",
+      "style": "solid",
+      "enter": {
+        "scene": 13,
+        "progress": 0.2907,
+        "cue": "поймала"
+      },
+      "exit": null
+    }
+  ],
+  "callouts": [
+    {
+      "target": "tally",
+      "text": "4096 = 2¹²",
+      "tone": "number",
+      "side": "top",
+      "enter": {
+        "scene": 1,
+        "progress": 0.4742,
+        "cue": "двенадцатой"
+      },
+      "exit": {
+        "scene": 1,
+        "progress": 0.6859,
+        "cue": "такой"
+      }
+    },
+    {
+      "target": "chip0",
+      "text": "Память любого компьютера",
+      "tone": "warn",
+      "side": "top",
+      "enter": {
+        "scene": 1,
+        "progress": 0.8087,
+        "cue": "любого"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.0301,
+        "cue": "Весной"
+      }
+    },
+    {
+      "target": "booth",
+      "text": "Магнитная карта",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 2,
+        "progress": 0.5333,
+        "cue": "машинах"
+      },
+      "exit": {
+        "scene": 2,
+        "progress": 0.7914,
+        "cue": "световым"
+      }
+    },
+    {
+      "target": "booth",
+      "text": "Световое перо",
+      "tone": "info",
+      "side": "top",
+      "enter": {
+        "scene": 2,
+        "progress": 0.8688,
+        "cue": "пером."
+      },
+      "exit": {
+        "scene": 3,
+        "progress": 0.1569,
+        "cue": "одному"
+      }
+    },
+    {
+      "target": "tally",
+      "text": "Одному участнику",
+      "tone": "info",
+      "side": "top",
+      "enter": {
+        "scene": 3,
+        "progress": 0.1569,
+        "cue": "одному"
+      },
+      "exit": {
+        "scene": 3,
+        "progress": 0.442,
+        "cue": "4096"
+      }
+    },
+    {
+      "target": "tally",
+      "text": "+4096 лишних голосов",
+      "tone": "warn",
+      "side": "top",
+      "enter": {
+        "scene": 3,
+        "progress": 0.5149,
+        "cue": "лишних"
+      },
+      "exit": {
+        "scene": 4,
+        "progress": 0.0056,
+        "cue": "Заметили"
+      }
+    },
+    {
+      "target": "tally",
+      "text": "Итог невозможен",
+      "tone": "warn",
+      "side": "bottom",
+      "enter": {
+        "scene": 4,
+        "progress": 0.2589,
+        "cue": "итог"
+      },
+      "exit": {
+        "scene": 4,
+        "progress": 0.5522,
+        "cue": "голосов"
+      }
+    },
+    {
+      "target": "tally",
+      "text": "Больше, чем могло быть",
+      "tone": "warn",
+      "side": "bottom",
+      "enter": {
+        "scene": 4,
+        "progress": 0.6322,
+        "cue": "оказалось"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.0884,
+        "cue": "стали"
+      }
+    },
+    {
+      "target": "tally",
+      "text": "Откуда взялось 4096?",
+      "tone": "number",
+      "side": "top",
+      "enter": {
+        "scene": 5,
+        "progress": 0.2354,
+        "cue": "откуда"
+      },
+      "exit": {
+        "scene": 5,
+        "progress": 0.5456,
+        "cue": "подозрительно"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Подозрительно круглое",
+      "tone": "number",
+      "side": "top",
+      "enter": {
+        "scene": 5,
+        "progress": 0.5456,
+        "cue": "подозрительно"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.0167,
+        "cue": "Компьютер"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Бит: 0 или 1",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 6,
+        "progress": 0.2588,
+        "cue": "ячеек"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.4643,
+        "cue": "и"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Каждая весит вдвое больше",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 6,
+        "progress": 0.5299,
+        "cue": "следующая"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.7267,
+        "cue": "один,"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "1 · 2 · 4 · 8",
+      "tone": "number",
+      "side": "bottom",
+      "enter": {
+        "scene": 6,
+        "progress": 0.7923,
+        "cue": "два,"
+      },
+      "exit": {
+        "scene": 6,
+        "progress": 0.96,
+        "cue": ""
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Если первая весит единицу",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 7,
+        "progress": 0.0062,
+        "cue": "Если"
+      },
+      "exit": {
+        "scene": 7,
+        "progress": 0.2569,
+        "cue": "то"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Бит 13 = 4096",
+      "tone": "number",
+      "side": "bottom",
+      "enter": {
+        "scene": 7,
+        "progress": 0.4116,
+        "cue": "ровно"
+      },
+      "exit": {
+        "scene": 7,
+        "progress": 0.7422,
+        "cue": "те"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "2¹² = 4096",
+      "tone": "number",
+      "side": "bottom",
+      "enter": {
+        "scene": 7,
+        "progress": 0.8169,
+        "cue": "два"
+      },
+      "exit": {
+        "scene": 8,
+        "progress": 0.0932,
+        "cue": "перескочить"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "0 → 1",
+      "tone": "warn",
+      "side": "bottom",
+      "enter": {
+        "scene": 8,
+        "progress": 0.2841,
+        "cue": "единицу,"
+      },
+      "exit": {
+        "scene": 8,
+        "progress": 0.5295,
+        "cue": "прибавятся"
+      }
+    },
+    {
+      "target": "tally",
+      "text": "+4096 к итогу",
+      "tone": "warn",
+      "side": "top",
+      "enter": {
+        "scene": 8,
+        "progress": 0.6182,
+        "cue": "голоса,"
+      },
+      "exit": {
+        "scene": 9,
+        "progress": 0.0282,
+        "cue": "Официальное"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Никто не отдавал",
+      "tone": "warn",
+      "side": "top",
+      "enter": {
+        "scene": 8,
+        "progress": 0.7955,
+        "cue": "никто"
+      },
+      "exit": {
+        "scene": 9,
+        "progress": 0.153,
+        "cue": "так"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Официальное объяснение",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 9,
+        "progress": 0.1852,
+        "cue": "звучит:"
+      },
+      "exit": {
+        "scene": 9,
+        "progress": 0.447,
+        "cue": "позиции"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Бит в позиции 13",
+      "tone": "warn",
+      "side": "bottom",
+      "enter": {
+        "scene": 9,
+        "progress": 0.4953,
+        "cue": "тринадцать."
+      },
+      "exit": {
+        "scene": 9,
+        "progress": 0.6594,
+        "cue": "спонтанно"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Описание, а не объяснение",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 9,
+        "progress": 0.749,
+        "cue": "описывает"
+      },
+      "exit": {
+        "scene": 10,
+        "progress": 0.115,
+        "cue": "версий,"
+      }
+    },
+    {
+      "target": "ray",
+      "text": "Одна из версий: луч",
+      "tone": "info",
+      "side": "left",
+      "enter": {
+        "scene": 10,
+        "progress": 0.3858,
+        "cue": "луч.",
+        "cueOccurrence": 1
+      },
+      "exit": {
+        "scene": 10,
+        "progress": 0.7469,
+        "cue": "рассыпается"
+      }
+    },
+    {
+      "target": "ray",
+      "text": "Ливень частиц",
+      "tone": "info",
+      "side": "left",
+      "enter": {
+        "scene": 10,
+        "progress": 0.8531,
+        "cue": "ливнем"
+      },
+      "exit": {
+        "scene": 11,
+        "progress": 0.0227,
+        "cue": "Каждую"
+      }
+    },
+    {
+      "target": "ray",
+      "text": "Миллионы частиц в секунду",
+      "tone": "number",
+      "side": "top",
+      "enter": {
+        "scene": 11,
+        "progress": 0.0657,
+        "cue": "секунду"
+      },
+      "exit": {
+        "scene": 11,
+        "progress": 0.2842,
+        "cue": "ваше"
+      }
+    },
+    {
+      "target": "person",
+      "text": "В ваше тело",
+      "tone": "info",
+      "side": "top",
+      "enter": {
+        "scene": 11,
+        "progress": 0.3093,
+        "cue": "тело."
+      },
+      "exit": {
+        "scene": 11,
+        "progress": 0.517,
+        "cue": "памяти,"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Бит переворачивается",
+      "tone": "warn",
+      "side": "bottom",
+      "enter": {
+        "scene": 11,
+        "progress": 0.6102,
+        "cue": "переворачивается."
+      },
+      "exit": {
+        "scene": 11,
+        "progress": 0.7749,
+        "cue": "голосования"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Защиты не было",
+      "tone": "warn",
+      "side": "bottom",
+      "enter": {
+        "scene": 11,
+        "progress": 0.8824,
+        "cue": "защищена"
+      },
+      "exit": {
+        "scene": 12,
+        "progress": 0.1387,
+        "cue": "поймал:"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Следов не оставляет",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 12,
+        "progress": 0.1975,
+        "cue": "следов"
+      },
+      "exit": {
+        "scene": 12,
+        "progress": 0.327,
+        "cue": "Перевернуть"
+      }
+    },
+    {
+      "target": "card-hw",
+      "text": "Метод исключения",
+      "tone": "info",
+      "side": "bottom",
+      "enter": {
+        "scene": 12,
+        "progress": 0.8887,
+        "cue": "исключив"
+      },
+      "exit": {
+        "scene": 13,
+        "progress": 0.0364,
+        "cue": "Зато"
+      }
+    },
+    {
+      "target": "chip",
+      "text": "Не защита",
+      "tone": "warn",
+      "side": "top",
+      "enter": {
+        "scene": 13,
+        "progress": 0.3517,
+        "cue": "не",
+        "cueOccurrence": 1
+      },
+      "exit": {
+        "scene": 13,
+        "progress": 0.6466,
+        "cue": "часть"
+      }
+    },
+    {
+      "target": "tally2",
+      "text": "Простая проверка",
+      "tone": "ok",
+      "side": "top",
+      "enter": {
+        "scene": 13,
+        "progress": 0.4585,
+        "cue": "а"
+      },
+      "exit": {
+        "scene": 13,
+        "progress": 0.6466,
+        "cue": "часть"
+      }
+    }
+  ],
+  "camera": [
+    {
+      "at": {
+        "scene": 1,
+        "progress": 0,
+        "cue": ""
+      },
+      "x": 1300,
+      "y": 1162,
+      "zoom": 0.88
+    },
+    {
+      "at": {
+        "scene": 1,
+        "progress": 0.4466,
+        "cue": "два"
+      },
+      "x": 1310,
+      "y": 1333,
+      "zoom": 1.2
+    },
+    {
+      "at": {
+        "scene": 1,
+        "progress": 0.6859,
+        "cue": "такой"
+      },
+      "x": 2010,
+      "y": 1440,
+      "zoom": 1.3
+    },
+    {
+      "at": {
+        "scene": 2,
+        "progress": 0.0301,
+        "cue": "Весной"
+      },
+      "x": 1107,
+      "y": 1330,
+      "zoom": 0.73
+    },
+    {
+      "at": {
+        "scene": 3,
+        "progress": 0.442,
+        "cue": "4096"
+      },
+      "x": 1310,
+      "y": 1340,
+      "zoom": 1.2
+    },
+    {
+      "at": {
+        "scene": 4,
+        "progress": 0.0056,
+        "cue": "Заметили"
+      },
+      "x": 1300,
+      "y": 1378,
+      "zoom": 1.25
+    },
+    {
+      "at": {
+        "scene": 5,
+        "progress": 0.0068,
+        "cue": "Поэтому"
+      },
+      "x": 1655,
+      "y": 1250,
+      "zoom": 0.73
+    },
+    {
+      "at": {
+        "scene": 6,
+        "progress": 0.0167,
+        "cue": "Компьютер"
+      },
+      "x": 2030,
+      "y": 1460,
+      "zoom": 1.62
+    },
+    {
+      "at": {
+        "scene": 7,
+        "progress": 0.2729,
+        "cue": "тринадцатая"
+      },
+      "x": 1965,
+      "y": 1470,
+      "zoom": 1.75
+    },
+    {
+      "at": {
+        "scene": 8,
+        "progress": 0.4273,
+        "cue": "и"
+      },
+      "x": 1655,
+      "y": 1250,
+      "zoom": 0.73
+    },
+    {
+      "at": {
+        "scene": 9,
+        "progress": 0.0282,
+        "cue": "Официальное"
+      },
+      "x": 2025,
+      "y": 1440,
+      "zoom": 1.2
+    },
+    {
+      "at": {
+        "scene": 9,
+        "progress": 0.4953,
+        "cue": "тринадцать."
+      },
+      "x": 2012,
+      "y": 1366,
+      "zoom": 1
+    },
+    {
+      "at": {
+        "scene": 10,
+        "progress": 0.115,
+        "cue": "версий,"
+      },
+      "x": 1830,
+      "y": 995,
+      "zoom": 0.7
+    },
+    {
+      "at": {
+        "scene": 11,
+        "progress": 0.5887,
+        "cue": "бит"
+      },
+      "x": 2030,
+      "y": 1460,
+      "zoom": 1.62
+    },
+    {
+      "at": {
+        "scene": 12,
+        "progress": 0.0152,
+        "cue": "Только",
+        "cueOccurrence": 1
+      },
+      "x": 2000,
+      "y": 1440,
+      "zoom": 1.35
+    },
+    {
+      "at": {
+        "scene": 12,
+        "progress": 0.327,
+        "cue": "Перевернуть"
+      },
+      "x": 1170,
+      "y": 1255,
+      "zoom": 1.05
+    },
+    {
+      "at": {
+        "scene": 13,
+        "progress": 0.128,
+        "cue": "другое:"
+      },
+      "x": 1655,
+      "y": 1240,
+      "zoom": 0.73
+    }
+  ],
+  "mode": [
+    {
+      "at": {
+        "scene": 1,
+        "progress": 0,
+        "cue": ""
+      },
+      "value": "lit"
+    },
+    {
+      "at": {
+        "scene": 6,
+        "progress": 0.5839,
+        "cue": "весит"
+      },
+      "value": "xray"
+    },
+    {
+      "at": {
+        "scene": 8,
+        "progress": 0.4273,
+        "cue": "и"
+      },
+      "value": "lit"
+    },
+    {
+      "at": {
+        "scene": 11,
+        "progress": 0.5887,
+        "cue": "бит"
+      },
+      "value": "xray"
+    },
+    {
+      "at": {
+        "scene": 12,
+        "progress": 0.327,
+        "cue": "Перевернуть"
+      },
+      "value": "lit"
+    }
+  ],
+  "bigWords": [
+    {
+      "text": "+4096 голосов",
+      "enter": {
+        "scene": 1,
+        "progress": 0.2041,
+        "cue": "4096"
+      },
+      "exit": {
+        "scene": 1,
+        "progress": 0.4128,
+        "cue": "ровно"
+      }
+    },
+    {
+      "text": "«Спонтанно»",
+      "enter": {
+        "scene": 9,
+        "progress": 0.6594,
+        "cue": "спонтанно"
+      },
+      "exit": {
+        "scene": 9,
+        "progress": 0.9463,
+        "cue": "его."
+      }
+    },
+    {
+      "text": "Подозреваемый",
+      "enter": {
+        "scene": 12,
+        "progress": 0.6917,
+        "cue": "подозреваемый:"
+      },
+      "exit": {
+        "scene": 12,
+        "progress": 0.9387,
+        "cue": "остальное."
+      }
+    },
+    {
+      "text": "Часть ≤ целого",
+      "enter": {
+        "scene": 13,
+        "progress": 0.7076,
+        "cue": "не",
+        "cueOccurrence": 2
+      },
+      "exit": {
+        "scene": 13,
+        "progress": 0.965,
+        "cue": ""
+      }
+    }
+  ],
+  "notes": [
+    "Кабина голосования, микросхема, космический луч и силуэт — условные иллюстрации, а не схемы реального бельгийского оборудования. Машину не вскрываем: где в ней стоит память, источники не говорят.",
+    "Отдельного розового блока в каталоге нет. Лишние +4096 показаны частью правого столбца, которая перерастает левый, с розовой линией предела. Над табло в сцене 4 стоит табличка «Часть ≤ целого» из items финала. Остальные тексты взяты из items, подзаголовков и озвучки.",
+    "Хук показывает событие заранее. Табло сбрасывается только вне кадра, пока камера на микросхеме (сцены 1 и 6). Со слов «Весной 2003 года» история идёт с начала, а в сцене 8 прибавка повторяется как механизм того же события.",
+    "Регистр — строка из 16 битов под микросхемой, как её рисует memory-chip. Реальная разрядность неизвестна, нумерация с единицы и 2¹² = 4096 — допущение исследования. В рентгене веса видны все сразу: отдельных столбиков веса и цвета ячейки рендерер не даёт.",
+    "Выноски о битах стоят снизу у строки битов, их линия идёт к середине строки, а не к конкретной ячейке. Адрес бита передаёт текст. На слове «тринадцатая» камера наезжает на левую часть строки, где стоит 13-я ячейка.",
+    "Чтобы у краёв кадра не было обрубков, кабина и её поток уходят на «4096» до наезда на табло, табличка места — до выноски о пере, а табло — на сцены 9–12. В финале табло возвращается в том же состоянии «невозможно».",
+    "Луч — лишь одна из версий. До слова «иногда» ливень раскрыт не полностью, чтобы след не дошёл до микросхемы раньше слова. Один поток к силуэту условно обозначает постоянный поток частиц сквозь тело, плотность — не данные. Частица бьёт в уже перевёрнутый бит.",
+    "Кадрирование 1 ключей камеры автоматически подогнано под безопасную зону кадра."
+  ]
+}

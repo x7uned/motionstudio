@@ -1,0 +1,35 @@
+{
+ "kind": "person",
+ "states": [
+  "stand",
+  "wave",
+  "point",
+  "talk",
+  "shrug",
+  "surprised"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 48,
+  "hh": 82
+ },
+ "measured": {
+  "hw": 72,
+  "hh": 85,
+  "box": [
+   200,
+   335,
+   334,
+   504
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 255,
+ "msPerFrame": 21.9,
+ "maxFramePx": 1876,
+ "maxNovelPx": 863
+}

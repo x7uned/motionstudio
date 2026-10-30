@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import {randomUUID} from "node:crypto";
 import {z} from "zod";
+import {renameRetry} from "./platform";
 
 /**
  * Skill settings (user decision 2026-10-21): one file in the studio root, `studio.config.json`, read by the engine, the
@@ -34,7 +35,8 @@ export const studioConfigSchema=z.object({
   /** `run` starts the engine itself when it is down. Off by default: Claude Code's sandboxed Bash has no Tavily login. */
   autostart:z.boolean().default(false),
  }).strict().default({maxActiveJobs:0,renderSlots:1,autostart:false}),
- ui:z.object({port:z.number().int().min(1024).max(65535).default(3210)}).strict().default({port:3210}),
+ /** Legacy key of the removed web UI (2026-10-30); still accepted in old files, ignored, not listed. */
+ ui:z.unknown().optional(),
  /** Who changed a guarded setting and with which words of the user (renderSlots). */
  confirmations:z.array(z.object({key:z.string(),value:z.unknown(),userQuote:z.string().max(500),at:z.string()}).strict()).max(50).default([]),
 }).strict();
@@ -55,12 +57,12 @@ export function studioConfig(root=process.cwd()):StudioConfig{
  const value=studioConfigSchema.parse(rawConfig(root));
  cached={mtime,value,root};return value;
 }
-/** Dotted keys that can be read and set: defaults.brand, engine.maxActiveJobs, ui.port, agent.declared, ... */
+/** Dotted keys that can be read and set: defaults.brand, engine.maxActiveJobs, agent.declared, ... */
 export function configKeys(){
  const out:string[]=[];
  const shape=studioConfigSchema.shape as Record<string,any>;
  for(const [group,schema] of Object.entries(shape)){
-  if(["version","confirmations"].includes(group))continue;
+  if(["version","confirmations","ui"].includes(group))continue;
   const inner=(schema as any).unwrap?.()??schema;
   for(const key of Object.keys(inner.shape??{}))out.push(`${group}.${key}`);
  }
@@ -80,7 +82,7 @@ function coerce(raw:string){
 }
 function write(root:string,value:Record<string,any>){
  const file=configPath(root),tmp=`${file}.${process.pid}.${randomUUID()}.tmp`;
- fs.writeFileSync(tmp,JSON.stringify(value,null,2)+"\n");fs.renameSync(tmp,file);cached=null;
+ fs.writeFileSync(tmp,JSON.stringify(value,null,2)+"\n");renameRetry(tmp,file);cached=null;
 }
 export function setConfig(key:string,raw:string|null,opts:{userQuote?:string;root?:string}={}){
  const root=opts.root??process.cwd();

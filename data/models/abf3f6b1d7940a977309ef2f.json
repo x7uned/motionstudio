@@ -1,0 +1,13 @@
+{
+  "id": "abf3f6b1d7940a977309ef2f",
+  "name": "Игрок B · жёлтый · тактическая фигура",
+  "file": "abf3f6b1d7940a977309ef2f.glb",
+  "sha256": "abf3f6b1d7940a977309ef2f6efca8bc96aceb8bc30930ab8bb69a70491d18b1",
+  "bytes": 154456,
+  "vertices": 2998,
+  "animations": [
+    "Walk cycle · 2s",
+    "Single shot"
+  ],
+  "rights": "Оригинальная модель Motion Studio / @xtuned. Создана процедурно для объяснения ping; не ассет конкретной игры."
+}

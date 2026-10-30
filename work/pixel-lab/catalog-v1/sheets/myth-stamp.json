@@ -1,0 +1,33 @@
+{
+ "kind": "myth-stamp",
+ "states": [
+  "hover",
+  "myth",
+  "true",
+  "thump"
+ ],
+ "hud": true,
+ "declared": {
+  "hw": 90,
+  "hh": 32
+ },
+ "measured": {
+  "hw": 104,
+  "hh": 42,
+  "box": [
+   158,
+   220,
+   366,
+   302
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 21.3,
+ "maxFramePx": 3705,
+ "maxNovelPx": 1757
+}

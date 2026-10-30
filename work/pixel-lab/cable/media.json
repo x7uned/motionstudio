@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "flag-united-kingdom-a1eaca71",
+      "kind": "flag",
+      "subject": "United Kingdom",
+      "file": "0a0a0a0a-0000-4000-8000-0000000cab1e/media/flag-united-kingdom-a1eaca71.png",
+      "sha256": "a1eaca71719d813ddd715fb1a91c14ce6e17dde23d8aef9c8876eadcea983924",
+      "width": 640,
+      "height": 384,
+      "source": {
+        "wikidata": "Q145",
+        "label": "United Kingdom",
+        "description": "island country in north-west Europe",
+        "property": "P41",
+        "commonsFile": "Flag of the United Kingdom (3-5).svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-5).svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Original: Acts of Union 1800 Vector: Yaddah",
+        "credit": "Design data from http://fotw.vexillum.com/flags/gb.html ; original code is from Image:Flag of the United Kingdom (1-2).svg",
+        "restrictions": "insignia",
+        "attributionRequired": false,
+        "date": "1801-01-01",
+        "retrievedAt": "2026-10-21T21:05:14.221Z"
+      }
+    },
+    {
+      "id": "flag-united-states-deb41780",
+      "kind": "flag",
+      "subject": "United States",
+      "file": "0a0a0a0a-0000-4000-8000-0000000cab1e/media/flag-united-states-deb41780.png",
+      "sha256": "deb4178012054427cdf492361d39a36cc94ba50e57ed907abe09ac2e2dc10ffe",
+      "width": 640,
+      "height": 337,
+      "source": {
+        "wikidata": "Q30",
+        "label": "United States",
+        "description": "country located primarily in North America",
+        "property": "P41",
+        "commonsFile": "Flag of the United States (DDD-F-416E specifications).svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(DDD-F-416E_specifications).svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Vector file created by Dbenbenn , Zscout370 , Jacobolus , Indolences , and Technion .",
+        "credit": "SVG implementation of U. S. Code : Title 4, Chapter 1, Section 1",
+        "restrictions": "insignia",
+        "attributionRequired": false,
+        "date": "1960-07-04",
+        "retrievedAt": "2026-10-21T21:05:15.662Z"
+      }
+    }
+  ],
+  "failed": []
+}

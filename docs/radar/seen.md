@@ -15,3 +15,8 @@
 - 2026-10-25 · procedural-sounds, верстак процедурных UI-звуков · https://github.com/m1ckc3s/procedural-sounds
 - 2026-10-25 · ElevenLabs audio_effects в TTS (наблюдать; несовместимо с PCM-мастером) · https://elevenlabs.io/docs/changelog
 - 2026-10-25 · Kinetograph, рендер Remotion без браузера (наблюдать; бета, PolyForm) · https://github.com/0xS4N4TG/kinetograph
+- 2026-10-28 · Tegaki, рукописная анимация шрифтов · https://github.com/gkurt/tegaki
+- 2026-10-28 · Remotion 4.0.539 (@remotion/effects shatter(), curves()) · https://github.com/remotion-dev/remotion/releases
+- 2026-10-28 · video-shotcraft, каталог рецептов кадров для Remotion · https://github.com/Vincentwei1021/video-shotcraft
+- 2026-10-28 · shapcn, морфинг иконок со «скелетом» (наблюдать) · https://github.com/seahorsecastle/shapcn
+- 2026-10-28 · ElevenLabs Video to Music + SFX WAV 48 кГц (наблюдать, платно) · https://elevenlabs.io/docs/changelog

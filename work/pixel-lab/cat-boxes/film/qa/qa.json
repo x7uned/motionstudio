@@ -1,0 +1,19 @@
+{
+ "file": "cat-boxes-pixel.mp4",
+ "frames": 1537,
+ "video_s": 51.233,
+ "audio_s": 51.243,
+ "seam_picture_meanabs": 0.579,
+ "neighbour_frames_meanabs": [
+  0.192,
+  0.192,
+  0.115
+ ],
+ "seam_audio_jump": 0.0071,
+ "audio_typical_step": 0.0128,
+ "loudness_LUFS": -16.7,
+ "true_peak_dBFS": -4.4,
+ "LRA": 3.7,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

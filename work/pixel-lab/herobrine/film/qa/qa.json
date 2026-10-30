@@ -1,0 +1,19 @@
+{
+ "file": "herobrine-pixel.mp4",
+ "frames": 1943,
+ "video_s": 64.767,
+ "audio_s": 64.768,
+ "seam_picture_meanabs": 0.906,
+ "neighbour_frames_meanabs": [
+  0.569,
+  0.571,
+  0.615
+ ],
+ "seam_audio_jump": 0.008,
+ "audio_typical_step": 0.0096,
+ "loudness_LUFS": -16.6,
+ "true_peak_dBFS": -4.4,
+ "LRA": 3,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

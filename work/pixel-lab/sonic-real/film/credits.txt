@@ -1,0 +1,13 @@
+How fast is Sonic, really? · IN OUR WORLD #4 · Kagenami (@kagenami_ai) pixel film, 2026-10-30
+
+Voice: ElevenLabs, Dennis · Eleven v4 [thoughtful], language_code=en — one take; timings checked with ElevenLabs Scribe.
+Picture, sprites, game zone, city, TV pictures, props, sound and music: drawn and synthesised for this film (Motion Studio pixel-lab).
+Sonic is our own sprite in the spirit of the 1991 game (hand-made string grids, 39 cells tall), not Sega's sprite; the zone is our
+own drawing, not Green Hill; no Sega or Mojang logos, fonts, sprites, tiles, sounds or music. The TV pictures (a police radar gun,
+a streak breaking the sound barrier) are our own drawings, not frames of the 2020 film; no actors or posters. The runner is a
+generic runner, not Usain Bolt. The green blocky silhouette is our own simple drawing, not Mojang art.
+Sonic the Hedgehog is a trademark of Sega; Creeper and Minecraft are trademarks of Mojang / Microsoft. Names are used only to
+refer to the games and the film.
+Facts: Sonic Retro, Sonic Physics Guide (Running, Rolling, Hitboxes); Speed Demos Archive, Sonic 1 «Game Mechanics»; World
+Athletics biomechanics report (Berlin 2009); descriptions of the Sonic the Hedgehog (2020) radar scene.
+No art from the Kagenami catalog or from earlier films.

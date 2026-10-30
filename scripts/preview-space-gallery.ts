@@ -4,6 +4,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import {bundle} from "@remotion/bundler";
+import {bundleLive} from "../src/lib/remotion-bundle";
 import {renderStill,selectComposition} from "@remotion/renderer";
 import {CHROME} from "../src/lib/provider";
 import {ROOT,DATA,project} from "../src/lib/store";
@@ -44,7 +45,7 @@ async function main(){
  const plan={...p.plan,title:"What If the Sun Vanished for a Day?",filmKind:"illustrated" as const,illustrated:{version:1,concept:"space gallery",floorY:2300,backdrop:"space",flows:[],callouts:[],bigWords:[],notes:[],...g}};
  const profile={...p.profile,username:"@worldifthen_ai",production:{...p.profile.production!,portraitLayout:"tiktok-safe" as const}};
  await fs.mkdir(out,{recursive:true});
- const serveUrl=await bundle({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects"),symlinkPublicDir:true});
+ const serveUrl=await bundleLive({entryPoint:path.join(ROOT,"renderer","index.tsx"),publicDir:path.join(DATA,"projects")});
  const inputProps={plan,profile,format:p.format,alignment};
  const composition=await selectComposition({serveUrl,id:"StudioFilm",inputProps,browserExecutable:CHROME});
  for(const t of times.split(",").map(Number)){const file=path.join(out,`${which}-t${t.toFixed(2)}.png`);await renderStill({composition,serveUrl,inputProps,frame:Math.round(t*30),output:file,browserExecutable:CHROME});console.log(file);}

@@ -1,0 +1,33 @@
+{
+ "kind": "pigeon",
+ "states": [
+  "rest",
+  "look",
+  "lean",
+  "flap"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 115,
+  "hh": 84
+ },
+ "measured": {
+  "hw": 115,
+  "hh": 84,
+  "box": [
+   147,
+   380,
+   377,
+   504
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 187,
+ "msPerFrame": 21.9,
+ "maxFramePx": 3892,
+ "maxNovelPx": 5213
+}

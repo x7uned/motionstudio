@@ -1,0 +1,34 @@
+{
+ "kind": "smartphone",
+ "states": [
+  "dark",
+  "on",
+  "buzz",
+  "back",
+  "torch"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 58,
+  "hh": 88
+ },
+ "measured": {
+  "hw": 82,
+  "hh": 120,
+  "box": [
+   180,
+   300,
+   320,
+   507
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 6,
+ "pure": true,
+ "frames": 223,
+ "msPerFrame": 21.9,
+ "maxFramePx": 6460,
+ "maxNovelPx": 6791
+}

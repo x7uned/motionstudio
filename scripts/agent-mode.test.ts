@@ -15,7 +15,7 @@ let m:{
 };
 before(async()=>{
  tmp=await fs.mkdtemp(path.join(os.tmpdir(),"studio-agent-mode-"));marker=path.join(tmp,"spawned.txt");
- for(const name of ["codex","claude"]){const bin=path.join(tmp,`fake-${name}`);await fs.writeFile(bin,`#!/bin/sh\necho ${name} >> ${JSON.stringify(marker)}\nexit 1\n`,{mode:0o755});process.env[`STUDIO_${name.toUpperCase()}`]=bin;}
+ for(const name of ["codex","claude"]){const bin=path.join(tmp,`fake-${name}.mjs`);await fs.writeFile(bin,`import fs from "node:fs";fs.appendFileSync(${JSON.stringify(marker)},${JSON.stringify(name+"\n")});process.exit(1);\n`);process.env[`STUDIO_${name.toUpperCase()}`]=bin;}
  m={provider:await import("../src/lib/provider"),claude:await import("../src/lib/claude-provider"),agent:await import("../src/lib/agent-provider"),content:await import("../src/lib/content-agent"),contract:await import("../src/lib/quality-contract"),editorial:await import("../src/lib/editorial")};
 });
 after(async()=>{await fs.rm(tmp,{recursive:true,force:true});});

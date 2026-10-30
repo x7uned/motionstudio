@@ -1,0 +1,11 @@
+{
+ "kind": "savanna",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 26.4,
+ "maxNovelPx": 70546
+}

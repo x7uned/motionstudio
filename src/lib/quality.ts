@@ -6,6 +6,7 @@ import {factResultSchema,type FactResult,type Narrative} from "./quality-contrac
 import type {Source} from "./research-model";
 import {illustratedTexts} from "./illustrated";
 import {isometricTexts} from "./isometric";
+import {renameRetryAsync} from "./platform";
 
 export const digest=(value:unknown)=>createHash("sha256").update(typeof value==="string"?value:JSON.stringify(value)).digest("hex");
 export const plain=(s:string)=>s.replace(/\s+/g," ").trim();
@@ -23,7 +24,7 @@ export function writtenText(plan:Storyboard){
 export const withoutOutro=(plan:Storyboard):Storyboard=>plan.creatorOutro?{...plan,scenes:plan.scenes.filter(s=>s.id!==plan.creatorOutro!.sceneId)}:plan;
 export function editorialInput(plan:Storyboard){const content=withoutOutro(plan);return {fullText:spokenText(content),screenText:writtenText(content)};}
 export async function readJSON<T=any>(file:string):Promise<T|null>{try{return JSON.parse(await fs.readFile(file,"utf8"));}catch(e:any){if(e.code==="ENOENT"||e instanceof SyntaxError)return null;throw e;}}
-export async function writeJSON(file:string,value:unknown){await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2));await fs.rename(tmp,file);}
+export async function writeJSON(file:string,value:unknown){await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2));await renameRetryAsync(tmp,file);}
 export async function fileHash(file:string){return createHash("sha256").update(await fs.readFile(file)).digest("hex");}
 export async function instructionHash(root:string){const files=["story-editor","fact-checker","voice-director","export-reviewer"].map(n=>`.agents/skills/${n}/SKILL.md`);return digest(await Promise.all(files.map(f=>fs.readFile(/*turbopackIgnore: true*/path.join(/*turbopackIgnore: true*/root,f),"utf8"))));}
 export function validateFactResult(value:unknown,claims:{id:string;span:string;claim:string;kind:string}[],sources:Source[]):FactResult{

@@ -1,0 +1,11 @@
+{
+ "kind": "park",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 39.2,
+ "maxNovelPx": 141975
+}

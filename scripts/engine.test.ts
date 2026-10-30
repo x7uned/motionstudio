@@ -1,3 +1,4 @@
+import {TEST_PYTHON} from "./test-tools";
 // Parallel engine (user decision 2026-10-21): everything runs in parallel except local rendering.
 import {test,before,after} from "node:test";
 import assert from "node:assert/strict";
@@ -144,7 +145,7 @@ test("settings: one file with defaults, guarded render slot, no secrets",()=>{
  const {studioConfig,setConfig,configKeys,activeJobLimit}=m.config;
  const c=studioConfig(temp);
  assert.equal(c.defaults.brand,"ask");assert.equal(c.engine.renderSlots,1);assert.equal(c.engine.maxActiveJobs,0);assert.equal(activeJobLimit(c),Infinity);
- assert.ok(configKeys().includes("defaults.brand")&&configKeys().includes("engine.renderSlots")&&configKeys().includes("ui.port")&&configKeys().includes("agent.declared"));
+ assert.ok(configKeys().includes("defaults.brand")&&configKeys().includes("engine.renderSlots")&&!configKeys().includes("ui.port")&&configKeys().includes("agent.declared"));
  assert.equal(setConfig("engine.maxActiveJobs","3",{root:temp}),3);assert.equal(activeJobLimit(studioConfig(temp)),3);
  assert.throws(()=>setConfig("engine.renderSlots","2",{root:temp}),/по словам пользователя/);
  assert.equal(setConfig("engine.renderSlots","2",{root:temp,userQuote:"да, два рендера"}),2);
@@ -160,7 +161,7 @@ test("settings: one file with defaults, guarded render slot, no secrets",()=>{
 });
 
 test("ElevenLabs TTS: a 429 is retried with backoff without paying twice (cache, pending marker, PAID_GATE)",()=>{
- const python=[process.env.STUDIO_PYTHON,path.join(previous,".runtime/venv/bin/python"),"python3"].find(p=>p&&(p==="python3"||fs.existsSync(p)))!;
+ const python=TEST_PYTHON;
  const r=spawnSync(python,["-m","unittest","-v","test_elevenlabs_retry"],{cwd:path.join(previous,"scripts"),encoding:"utf8",env:{...process.env,ELEVENLABS_API_KEY:""}});
  assert.equal(r.status,0,r.stderr);
  assert.match(r.stderr,/Ran 5 tests[\s\S]*OK/);

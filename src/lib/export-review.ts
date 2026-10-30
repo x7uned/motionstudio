@@ -86,6 +86,8 @@ export function soundCues(plan:Storyboard,alignment:any[],outroSounds?:{click:bo
 }
 const ocrBuilds=new Map<string,Promise<unknown>>();
 async function ocrFrames(dir:string,images:{file:string;at:number}[]){
+ // The OCR helper uses Apple Vision; on Windows/Linux the text checks (safe zones, captions) are skipped and say so.
+ if(process.platform!=="darwin")return {available:false,results:[],sampledFrames:0,error:"OCR кадров есть только на macOS (Apple Vision). На этой ОС проверка текста по кадрам пропущена — посмотри кадры ревью глазами."};
  try{
   const source=path.join(ROOT,"scripts/ocr-frames.swift"),hash=(await fileHash(source)).slice(0,16),binary=path.join(ROOT,".runtime",`vision-ocr-${hash}`);
   await fs.mkdir(path.join(ROOT,".runtime/swift-module-cache"),{recursive:true});

@@ -1,0 +1,34 @@
+{
+ "kind": "airplane",
+ "states": [
+  "cruise",
+  "bank",
+  "climb",
+  "descend",
+  "contrail"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 110,
+  "hh": 60
+ },
+ "measured": {
+  "hw": 119,
+  "hh": 81,
+  "box": [
+   143,
+   339,
+   369,
+   464
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 229,
+ "msPerFrame": 20.5,
+ "maxFramePx": 4107,
+ "maxNovelPx": 2681
+}

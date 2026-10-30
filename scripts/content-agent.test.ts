@@ -35,9 +35,9 @@ test("role caches are separated by the selected content model",async()=>{
 });
 
 async function fakeClaude(dir:string,reportedModel:string){
- const bin=path.join(dir,"fake-claude"),argsFile=path.join(dir,"args.txt");
+ const bin=path.join(dir,"fake-claude.mjs"),argsFile=path.join(dir,"args.txt");
  const out=JSON.stringify({type:"result",subtype:"success",is_error:false,result:"",structured_output:{value:7},num_turns:1,total_cost_usd:0,modelUsage:{[reportedModel]:{inputTokens:1,outputTokens:1}}});
- await fs.writeFile(bin,`#!/bin/sh\nprintf '%s\\n' "$@" > ${JSON.stringify(argsFile)}\ncat > /dev/null\nprintf '%s\\n' ${JSON.stringify(out)}\n`,{mode:0o755});
+ await fs.writeFile(bin,`import fs from "node:fs";fs.writeFileSync(${JSON.stringify(argsFile)},process.argv.slice(2).map(a=>a+"\\n").join(""));process.stdin.resume();process.stdin.on("data",()=>{});process.stdin.on("end",()=>{process.stdout.write(${JSON.stringify(out+"\n")});});\n`);
  return {bin,argsFile};
 }
 

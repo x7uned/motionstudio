@@ -2,6 +2,7 @@
 // `npm run studio -- create|refs add` prints MOTION_STUDIO_RUN=<id>; the Stop hook keeps the session working until they finish.
 import fs from "node:fs";
 import path from "node:path";
+import {pathToFileURL} from "node:url";
 import {randomUUID} from "node:crypto";
 
 export function runIds(text){return [...String(text??"").matchAll(/MOTION_STUDIO_RUN=([a-f0-9-]{36})/g)].map(m=>m[1]);}
@@ -26,4 +27,4 @@ function main(){
  }catch{}
  process.exit(0);
 }
-if(process.argv[1]&&import.meta.url===new URL(`file://${path.resolve(process.argv[1])}`).href)main();
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)main();

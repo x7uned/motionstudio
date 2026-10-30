@@ -1,0 +1,35 @@
+{
+ "kind": "ball",
+ "states": [
+  "rest",
+  "roll",
+  "bounce",
+  "spin",
+  "blue",
+  "yellow"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 44,
+  "hh": 44
+ },
+ "measured": {
+  "hw": 67,
+  "hh": 64,
+  "box": [
+   228,
+   356,
+   329,
+   447
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 7,
+ "pure": true,
+ "frames": 262,
+ "msPerFrame": 20.1,
+ "maxFramePx": 2864,
+ "maxNovelPx": 2837
+}

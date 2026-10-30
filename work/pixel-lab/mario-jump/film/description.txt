@@ -1,0 +1,5 @@
+In Super Mario Bros., holding jump makes gravity weaker 🍄
+
+#supermario #nes #retrogaming #gaming
+
+Sources: SMB1 disassembly (doppelganger); jdaster64 SMB physics guide; TASVideos; Super Mario All-Stars Player's Guide.

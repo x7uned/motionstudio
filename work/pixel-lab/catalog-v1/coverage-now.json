@@ -1,0 +1,403 @@
+{
+ "ported": {
+  "props": 83,
+  "backdrops": 26,
+  "kinds": [
+   "air-flow",
+   "airplane-window",
+   "airplane",
+   "animal-eye",
+   "arrow",
+   "ball",
+   "bed",
+   "bee",
+   "brain",
+   "brick-wall",
+   "bubble",
+   "building",
+   "calendar",
+   "car",
+   "cardboard-box",
+   "cat",
+   "chart-bar",
+   "chimpanzee",
+   "clock",
+   "cloud",
+   "crocodile",
+   "crosswalk-button",
+   "crow",
+   "crt-tv",
+   "cup",
+   "desktop-computer",
+   "dog-bed",
+   "dog-toy",
+   "dog",
+   "door",
+   "dragonfly",
+   "elephant",
+   "falcon",
+   "fossil",
+   "fridge",
+   "frog",
+   "hand",
+   "heat-glow",
+   "hummingbird",
+   "lamp",
+   "leaf",
+   "lion",
+   "meter-bar",
+   "mirror",
+   "mosquito",
+   "motion-path",
+   "mouse",
+   "music-note",
+   "myth-stamp",
+   "paper-sheet",
+   "person",
+   "pet-food",
+   "photograph",
+   "pigeon",
+   "power-line",
+   "radio-wave",
+   "ruler",
+   "scent-trail",
+   "scorpion",
+   "server-rack",
+   "shark",
+   "shrew",
+   "skin",
+   "skull",
+   "sloth",
+   "smartphone",
+   "snail",
+   "snake",
+   "snowflake",
+   "songbird",
+   "sound-wave",
+   "sparkle",
+   "speech-bubble",
+   "spider-web",
+   "squirrel",
+   "thermometer",
+   "traffic-light",
+   "tree",
+   "water-drop",
+   "window",
+   "wolf",
+   "worm",
+   "zoom-inset"
+  ],
+  "backdropKinds": [
+   "airplane-cabin",
+   "backyard",
+   "beach",
+   "bedroom",
+   "cave",
+   "city-skyline",
+   "city-street",
+   "computer-desk",
+   "desert",
+   "farm",
+   "forest",
+   "jungle",
+   "kitchen",
+   "living-room",
+   "mountains",
+   "night-sky",
+   "park",
+   "pond",
+   "race-track",
+   "retro-room",
+   "savanna",
+   "sky",
+   "snow",
+   "studio",
+   "underwater",
+   "village"
+  ]
+ },
+ "names": {
+  "props": 102,
+  "backdrops": 29,
+  "notInRegistry": [
+   "pumpkin",
+   "tv",
+   "food-bowl",
+   "water-bowl"
+  ],
+  "backdropsNotInIdeas": [
+   "night-hill"
+  ]
+ },
+ "baselineTrial10s": {
+  "all": {
+   "covered": 1,
+   "of": 318,
+   "pct": 0
+  },
+  "genericFree": {
+   "covered": 2,
+   "of": 318,
+   "pct": 1
+  },
+  "unbranded": {
+   "covered": 1,
+   "of": 197,
+   "pct": 1
+  },
+  "unbrandedGenericFree": {
+   "covered": 2,
+   "of": 197,
+   "pct": 1
+  },
+  "unbrandedGenericFreeWithBackdrop": {
+   "covered": 0,
+   "of": 197,
+   "pct": 0
+  }
+ },
+ "now": {
+  "all": {
+   "covered": 74,
+   "of": 318,
+   "pct": 23
+  },
+  "genericFree": {
+   "covered": 76,
+   "of": 318,
+   "pct": 24
+  },
+  "unbranded": {
+   "covered": 72,
+   "of": 197,
+   "pct": 37
+  },
+  "unbrandedGenericFree": {
+   "covered": 73,
+   "of": 197,
+   "pct": 37
+  },
+  "unbrandedGenericFreeWithBackdrop": {
+   "covered": 70,
+   "of": 197,
+   "pct": 36
+  }
+ },
+ "newlyCoveredUnbrandedGenericFree": [
+  "Why are your cat's pupils slits, but a lion's are round?",
+  "Cats survive the 9th floor better than the 5th?",
+  "Why does your cat love boxes?",
+  "How to say \"I love you\" in cat",
+  "Your cat meows only for you",
+  "What your cat's whiskers measure",
+  "Why your cat sleeps 15 hours a day",
+  "Why cats go crazy at 3 a.m.",
+  "Your dog can't see its red ball on the grass",
+  "\"1 dog year = 7 human years\" is wrong",
+  "Why is your dog's nose wet?",
+  "Your dog breathes in and out at the same time",
+  "We gave dogs puppy eyes",
+  "Why does your dog tilt its head?",
+  "Dogs don't eat grass because they're sick",
+  "Why your dog spins before lying down",
+  "Bats aren't blind",
+  "Why pigeons bob their heads",
+  "Why birds on power lines don't get shocked",
+  "Why mosquito bites itch — and scratching makes it worse",
+  "From the least deadly animal to the deadliest",
+  "From the animal that sleeps least to most",
+  "From the weakest bite to the strongest",
+  "From the slowest animal to the fastest",
+  "From the worst nose to the best",
+  "Why can't you tickle yourself?",
+  "Why your voice sounds weird on recordings",
+  "Your nose isn't that big — the selfie camera is too close",
+  "Why you jerk awake as you fall asleep",
+  "Goosebumps are fur you no longer have",
+  "Crosswalk buttons are often fake",
+  "A mirror doesn't flip left and right",
+  "A fluffy cloud weighs as much as 100 elephants",
+  "Why airplane windows are round — and have a tiny hole",
+  "Your cat knows its name — it just ignores you",
+  "Your cat can't see what's right under its nose",
+  "Why your cat brings you dead mice",
+  "Why your cat shows you its butt",
+  "Why your cat bites you in the middle of petting",
+  "Why your cat chatters at birds",
+  "Cats domesticated themselves",
+  "Your cat might see light you can't",
+  "From the deepest animal voice to the highest",
+  "From the coldest body to the hottest",
+  "Why your dog kicks grass after pooping",
+  "Your dog may smell how long you've been gone",
+  "Your dog can smell your stress",
+  "Your dog yawns when you yawn",
+  "A bee dies when it stings you, but not when it stings a bee",
+  "Why mosquitoes buzz right in your ear",
+  "Why you forget why you walked into a room",
+  "Try humming with your nose closed — you can't",
+  "Your eye has a hole, and your brain hides it",
+  "You can fold paper more than 7 times",
+  "Kids could hear old TVs scream",
+  "Your cat will sit in a square that isn't there",
+  "Why your cat makes that disgusted face",
+  "That saggy belly on your cat isn't fat",
+  "Why cats can't climb down head-first",
+  "Your cat isn't staring at a ghost",
+  "Why your cat follows you to the bathroom",
+  "Old TVs flickered for your dog",
+  "Your dog smells new things with its right nostril first",
+  "Almost every mammal gets about a billion heartbeats",
+  "A hummingbird's heart drops from 1,200 to 50 every night",
+  "This frog freezes solid every winter and wakes up in spring",
+  "Why you see a face in this pumpkin",
+  "Wolves don't howl at the Moon",
+  "Why horror music makes you scared",
+  "Your brain sees a face in this pumpkin in a split second",
+  "Это очень старая история: на листьях возрастом около 48 млн лет (карьер Мессель, Германия)…"
+ ],
+ "topMissingUnbrandedProps": [
+  [
+   "ant",
+   10
+  ],
+  [
+   "fungus",
+   6
+  ],
+  [
+   "fly",
+   4
+  ],
+  [
+   "tongue",
+   3
+  ],
+  [
+   "egg",
+   3
+  ],
+  [
+   "bone",
+   3
+  ],
+  [
+   "ant-nest",
+   3
+  ],
+  [
+   "pixel-hero",
+   3
+  ],
+  [
+   "nerve",
+   3
+  ],
+  [
+   "hamster",
+   3
+  ],
+  [
+   "keyboard",
+   3
+  ],
+  [
+   "dna-strand",
+   2
+  ],
+  [
+   "kitten",
+   2
+  ],
+  [
+   "goldfish",
+   2
+  ],
+  [
+   "aquarium",
+   2
+  ],
+  [
+   "camel",
+   2
+  ],
+  [
+   "owl",
+   2
+  ],
+  [
+   "blood-vessel",
+   2
+  ],
+  [
+   "cockroach",
+   2
+  ],
+  [
+   "cricket",
+   2
+  ],
+  [
+   "sperm-whale",
+   2
+  ],
+  [
+   "baby",
+   2
+  ],
+  [
+   "battery",
+   2
+  ],
+  [
+   "microwave",
+   2
+  ],
+  [
+   "table",
+   2
+  ]
+ ],
+ "topMissingUnbrandedBackdrops": [
+  [
+   "bathroom",
+   4
+  ],
+  [
+   "game-level",
+   3
+  ],
+  [
+   "office",
+   3
+  ],
+  [
+   "suburb-street",
+   2
+  ],
+  [
+   "pet-cage",
+   2
+  ],
+  [
+   "arcade",
+   2
+  ],
+  [
+   "lab",
+   2
+  ],
+  [
+   "arena",
+   1
+  ],
+  [
+   "elevator",
+   1
+  ],
+  [
+   "world-map",
+   1
+  ]
+ ]
+}

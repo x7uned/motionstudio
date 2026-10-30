@@ -1,0 +1,201 @@
+{
+  "id": "background-beds",
+  "version": 3,
+  "created": "2026-10-21",
+  "source": "Оригинальный процедурный синтез. Аранжированные подложки — generator/arranged.mjs (seed 2026), nature-air — generator/beds.mjs (статичная, как v1/v2). Сторонних сэмплов нет.",
+  "approval": "Пользователь прослушал демо work/vizavi-demo (аранжировка chip-soft по сюжету QR-отрывка) и одобрил музыку как композицию и работу эффектов (2026-10-20/21). Камеру из того же демо пользователь не принял — она сюда не относится.",
+  "regenerate": "node generator/arranged.mjs <id> <seconds> <arrangement.json> <out.f32> → raw float32 stereo 48 кГц; arrangement.json строит src/lib/music-arrangement.ts из плана фильма.",
+  "arrangement": "Главы → смена гармонии (вступление тонкое, грув со 2-й главы); warn-выноска → провал (удар + падающие ноты, мелодия и ударные уходят); ok-выноска → подъём/колокольчики; крупное слово → звон; последняя смысловая глава → финальный аккорд (темп ±6 %, чтобы аккорд лёг на долю); к заставке музыка уходит. Акценты не ближе 2,5 с (пара провал → подъём — 1,2 с).",
+  "mix": {
+    "bedNormalizedLufs": -20,
+    "levelling": "измерение ffmpeg loudnorm при каждом рендере",
+    "pauseDb": -8,
+    "speechDb": -12,
+    "speechDbNote": "аранжированные подложки на 3 dB громче под речью, как в одобренном демо; v2 остаётся −15",
+    "attackSeconds": 0.12,
+    "releaseSeconds": 0.7,
+    "thresholdDbFS": -45,
+    "outroFadeSeconds": 1.2,
+    "sfx": "cue sheet v10: blip-акцент highlight в ±0,35 с от музыкального акцента не звучит; остальные эффекты без изменений"
+  },
+  "beds": [
+    {
+      "id": "pluck-curious",
+      "title": "Любопытные щипки",
+      "status": "preferred",
+      "category": "explainer",
+      "character": "90 BPM, фа мажор: Fadd9 → C/E → Dm7 → B♭maj7. Щипковое арпеджио (Karplus–Strong) восьмыми с паузами, низкий щипок на сильную долю, тихий пад, еле слышный шейкер.",
+      "topics": [
+        "как работают вещи (Kagenami)",
+        "QR, коды, связь, устройства",
+        "лёгкие «почему так» объяснения"
+      ],
+      "avoid": [
+        "катастрофические и космические what-if"
+      ],
+      "since": "v2",
+      "arranged": true,
+      "generator": "generator/arranged.mjs pluck-curious",
+      "gainDb": 8.49,
+      "preview": "audio/pluck-curious-qr-arrangement.m4a",
+      "previewNote": "аранжировка по сюжету фильма 401596f0 (QR), нормализовано к −20 LUFS",
+      "sha256": "32ea948c0e2c98973616d82302e6c5abaeb22959346fbb9ac79e79f1b93a1400"
+    },
+    {
+      "id": "glass-arp",
+      "title": "Стеклянное арпеджио",
+      "status": "preferred",
+      "category": "explainer",
+      "character": "100 BPM, ля минор: Am → Fmaj7 → Cadd9 → G6. Стеклянное арпеджио шестнадцатыми с медленным фильтром (32 с), пад, без ударных.",
+      "topics": [
+        "технологии и вычисления",
+        "математика/алгоритмы (Reed–Solomon и т.п.)",
+        "объяснения с моментом «открытия»"
+      ],
+      "avoid": [
+        "очень спокойные, медленные темы"
+      ],
+      "since": "v2",
+      "arranged": true,
+      "generator": "generator/arranged.mjs glass-arp",
+      "gainDb": 8.13,
+      "preview": "audio/glass-arp-qr-arrangement.m4a",
+      "previewNote": "аранжировка по сюжету фильма 401596f0 (QR), нормализовано к −20 LUFS",
+      "sha256": "df730f5fc6af3ad90d4313752af707164c9e224277a288797eb4875ad4a4e11b"
+    },
+    {
+      "id": "chip-soft",
+      "title": "Мягкий 8-bit",
+      "status": "preferred",
+      "category": "explainer",
+      "character": "110 BPM, до мажор: C → Am → F → G. Отфильтрованное квадратное арпеджио, 8-bit бас восьмыми, тихий хэт, пад. Перекликается с 8-bit заставкой.",
+      "topics": [
+        "пиксели, цифровые данные, QR",
+        "компьютеры, игры, интернет",
+        "бодрые короткие explainers"
+      ],
+      "avoid": [
+        "исторические и природные темы"
+      ],
+      "since": "v2",
+      "arranged": true,
+      "generator": "generator/arranged.mjs chip-soft",
+      "gainDb": 12.61,
+      "preview": "audio/chip-soft-qr-arrangement.m4a",
+      "previewNote": "аранжировка по сюжету фильма 401596f0 (QR), нормализовано к −20 LUFS",
+      "sha256": "ba2bbe2adeb9838bc71c800e11ff5ccfd56e78b74516ae8826adb62e8704cf47"
+    },
+    {
+      "id": "warm-pad",
+      "title": "Тёплый пад",
+      "status": "preferred",
+      "character": "Тёплые медленные аккорды Cmaj9 → Am9 → Fmaj9 → G6/9 по 8 с, мягкий фильтр, реверб. Без ритма.",
+      "topics": [
+        "how-things-work (Kagenami)",
+        "технологии и изобретения",
+        "история",
+        "спокойные объяснения механизмов",
+        "универсальный выбор, если тема не подходит к остальным"
+      ],
+      "avoid": [
+        "тревожные/катастрофические what-if — там лучше space-drone"
+      ],
+      "since": "v1",
+      "arranged": true,
+      "generator": "generator/arranged.mjs warm-pad",
+      "gainDb": 1.92,
+      "preview": "audio/warm-pad-qr-arrangement.m4a",
+      "previewNote": "аранжировка по сюжету фильма 401596f0 (QR), нормализовано к −20 LUFS",
+      "sha256": "2f1122726ece53c6a29d44b9871598e2c88bf9af34f6b268ac7b18018c1fc318"
+    },
+    {
+      "id": "space-drone",
+      "title": "Космический дрон",
+      "status": "preferred",
+      "character": "Глубокие квинты C2/G2/C3 с верхними обертонами, медленно мерцающие высокие ноты, «воздух», большой реверб. Без ритма.",
+      "topics": [
+        "космос, Солнце, Луна, планеты, орбиты",
+        "what-if сценарии масштаба планеты (World If Then)",
+        "физика, время, гравитация",
+        "загадочные/тревожные темы"
+      ],
+      "avoid": [
+        "лёгкие бытовые темы — звучит слишком серьёзно"
+      ],
+      "since": "v1",
+      "arranged": true,
+      "generator": "generator/arranged.mjs space-drone",
+      "gainDb": 2.39,
+      "preview": "audio/space-drone-qr-arrangement.m4a",
+      "previewNote": "аранжировка по сюжету фильма 401596f0 (QR), нормализовано к −20 LUFS",
+      "sha256": "fbb0b0557a7fef4b276534803049e0d5f4e195a47f190137014be7fbbbfb47db"
+    },
+    {
+      "id": "lofi-pulse",
+      "title": "Lo-fi пульс",
+      "status": "preferred",
+      "character": "Lo-fi 72 BPM: Rhodes-аккорды Fmaj7 → Em7 → Dm7 → Cmaj7, мягкая бочка, щётки на слабые доли, тихий винил. Есть ритм.",
+      "topics": [
+        "бытовые технологии и гаджеты",
+        "интернет, QR, связь, компьютеры",
+        "лёгкие быстрые «как это работает»",
+        "позитивные, энергичные ролики"
+      ],
+      "avoid": [
+        "медленные драматичные и космические темы — ритм спорит с паузами речи"
+      ],
+      "since": "v1",
+      "arranged": true,
+      "generator": "generator/arranged.mjs lofi-pulse",
+      "gainDb": 11.82,
+      "preview": "audio/lofi-pulse-qr-arrangement.m4a",
+      "previewNote": "аранжировка по сюжету фильма 401596f0 (QR), нормализовано к −20 LUFS",
+      "sha256": "c74f50188b1c9260feab60c1bf70df6f198d35782603514d5c3d328e80763db4"
+    },
+    {
+      "id": "music-box",
+      "title": "Музыкальная шкатулка",
+      "status": "saved",
+      "character": "Редкие колокольчики в пентатонике до мажора поверх тихих аккордов, реверб. Лёгкий, «любопытный».",
+      "topics": [
+        "животные (например, кошка)",
+        "маленькие чудеса и парадоксы повседневности",
+        "детские/наивные вопросы"
+      ],
+      "avoid": [
+        "серьёзные катастрофы, космос"
+      ],
+      "since": "v1",
+      "arranged": true,
+      "generator": "generator/arranged.mjs music-box",
+      "gainDb": 2.5,
+      "preview": "audio/music-box-qr-arrangement.m4a",
+      "previewNote": "аранжировка по сюжету фильма 401596f0 (QR), нормализовано к −20 LUFS",
+      "sha256": "0418021665cb9ffa382fda35934ee3c0e90b2e7bdee9d05d2363cb59b9ecef8a"
+    },
+    {
+      "id": "nature-air",
+      "title": "Ветер и волны",
+      "status": "saved",
+      "character": "Ветер с порывами (коричневый шум), шелест листвы, далёкие волны раз в 7–11 с, еле слышный тёплый тон. Без мелодии.",
+      "topics": [
+        "природа, погода, океаны, ветер",
+        "Земля как планета без космического антуража"
+      ],
+      "avoid": [
+        "темы, где нужна музыка; на динамике телефона звучит тише остальных (энергия в низах)"
+      ],
+      "since": "v1",
+      "arranged": false,
+      "generator": "generator/beds.mjs nature-air",
+      "gainDb": 2.14,
+      "file": "audio/nature-air.wav",
+      "sha256": "de764c059a2144100596d6507061aa6fae0901207bd2f14840404cc85bbf4c16",
+      "staticReference": "background-beds/v2"
+    }
+  ],
+  "generatorSha256": {
+    "arranged.mjs": "b35a4078f01930c533f0a56c3215545a71b97317ecd76d621de86ee06b357e4a",
+    "beds.mjs": "35b92735a549723d432bd46e2d500ed81867059025f90d562119f052c246c4bc"
+  }
+}

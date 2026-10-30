@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "logo-mojang-studios-a12cd723",
+      "kind": "logo",
+      "subject": "Mojang Studios",
+      "file": "0a0a0a0a-0000-4000-8000-00000000beef/media/logo-mojang-studios-a12cd723.png",
+      "sha256": "a12cd723f4a0afed34e55efdbb3f0ff2287f76e70e4baa74b279170d621b704d",
+      "width": 512,
+      "height": 146,
+      "source": {
+        "wikidata": "Q1129295",
+        "label": "Mojang Studios",
+        "description": "Swedish video game developer",
+        "property": "P154",
+        "commonsFile": "Mojang Studios Logo (2020, wide).svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mojang_Studios_Logo_(2020,_wide).svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Bold",
+        "credit": "https://logos.fandom.com/wiki/Mojang_Studios",
+        "restrictions": "trademarked",
+        "attributionRequired": false,
+        "date": "2020-05-17",
+        "retrievedAt": "2026-10-24T02:16:23.986Z"
+      }
+    }
+  ],
+  "failed": []
+}

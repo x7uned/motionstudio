@@ -1,0 +1,36 @@
+{
+ "file": "animals-heart-pixel.mp4",
+ "frames": 2390,
+ "video_s": 79.667,
+ "audio_s": 79.68,
+ "seam_picture_meanabs": 0.465,
+ "neighbour_frames_meanabs": [
+  0.865,
+  0.886,
+  0.953
+ ],
+ "seam_audio_jump": 0.052,
+ "audio_typical_step": 0.0123,
+ "loudness_LUFS": -16.8,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.4,
+ "one_frame_pops": [],
+ "sudden_jumps": [
+  {
+   "t": 23.33,
+   "d": 3.01
+  },
+  {
+   "t": 25.6,
+   "d": 3.53
+  },
+  {
+   "t": 25.7,
+   "d": 3.28
+  },
+  {
+   "t": 46.57,
+   "d": 3.01
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст; проверка распознаванием Scribe (совпадает со сценарием).
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде (квартира и рыжий кот из роликов «Your cat sleeps all day…» и «How to say "I love you" in cat», колонка, реплики, график, значки); сторонних изображений, фото и логотипов нет.
+Имя кота MILO и слова PILLOW, WINDOW, BUTTER, TABLE — иллюстрация (в исследовании были японские существительные того же ритма, что имя кошки).
+Источники фактов:
+- Saito A., Shinozuka K., Ito Y., Hasegawa T. Domestic cats (Felis catus) discriminate their names from other words. Scientific Reports 9, 5394 (2019). doi:10.1038/s41598-019-40616-4 — https://pmc.ncbi.nlm.nih.gov/articles/PMC6449508/ (и поправка: Sci Rep 9, 13265, 2019).
+- Saito A., Shinozuka K. Vocal recognition of owners by domestic cats (Felis catus). Animal Cognition 16, 685–690 (2013). doi:10.1007/s10071-013-0620-4.
+- University of Tokyo, пресс-релиз 2019 («Cats interact with us when they want»).

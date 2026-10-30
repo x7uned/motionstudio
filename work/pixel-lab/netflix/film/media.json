@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "flag-united-kingdom-a1eaca71",
+      "kind": "flag",
+      "subject": "United Kingdom",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/flag-united-kingdom-a1eaca71.png",
+      "sha256": "a1eaca71719d813ddd715fb1a91c14ce6e17dde23d8aef9c8876eadcea983924",
+      "width": 640,
+      "height": 384,
+      "source": {
+        "wikidata": "Q145",
+        "label": "United Kingdom",
+        "description": "island country in north-west Europe",
+        "property": "P41",
+        "commonsFile": "Flag of the United Kingdom (3-5).svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-5).svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Original: Acts of Union 1800 Vector: Yaddah",
+        "credit": "Design data from http://fotw.vexillum.com/flags/gb.html ; original code is from Image:Flag of the United Kingdom (1-2).svg",
+        "restrictions": "insignia",
+        "attributionRequired": false,
+        "date": "1801-01-01",
+        "retrievedAt": "2026-10-22T07:58:06.748Z"
+      }
+    },
+    {
+      "id": "flag-united-states-deb41780",
+      "kind": "flag",
+      "subject": "United States",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/flag-united-states-deb41780.png",
+      "sha256": "deb4178012054427cdf492361d39a36cc94ba50e57ed907abe09ac2e2dc10ffe",
+      "width": 640,
+      "height": 337,
+      "source": {
+        "wikidata": "Q30",
+        "label": "United States",
+        "description": "country located primarily in North America",
+        "property": "P41",
+        "commonsFile": "Flag of the United States (DDD-F-416E specifications).svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(DDD-F-416E_specifications).svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Vector file created by Dbenbenn , Zscout370 , Jacobolus , Indolences , and Technion .",
+        "credit": "SVG implementation of U. S. Code : Title 4, Chapter 1, Section 1",
+        "restrictions": "insignia",
+        "attributionRequired": false,
+        "date": "1960-07-04",
+        "retrievedAt": "2026-10-22T07:58:07.980Z"
+      }
+    },
+    {
+      "id": "flag-netherlands-268e72d8",
+      "kind": "flag",
+      "subject": "Netherlands",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/flag-netherlands-268e72d8.png",
+      "sha256": "268e72d8b3ff0d4a3b305cef7c554f9a09b934698b3e4828468ea467a97a00d0",
+      "width": 640,
+      "height": 427,
+      "source": {
+        "wikidata": "Q55",
+        "label": "Netherlands",
+        "description": "one of the four autonomous countries of the Kingdom of the Netherlands; with territories in the Caribbean",
+        "property": "P41",
+        "commonsFile": "Flag of the Netherlands.svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Netherlands.svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Zscout370",
+        "credit": "Own work",
+        "restrictions": "insignia",
+        "attributionRequired": false,
+        "date": "2005-10-10",
+        "retrievedAt": "2026-10-22T07:58:09.023Z"
+      }
+    },
+    {
+      "id": "logo-netflix-b324fbff",
+      "kind": "logo",
+      "subject": "Netflix",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/logo-netflix-b324fbff.png",
+      "sha256": "b324fbff097b8b9803ef809a0bc7ab1b4490b17c83f33d8bbf3ed29794cb7b6e",
+      "width": 511,
+      "height": 512,
+      "source": {
+        "wikidata": "Q907311",
+        "label": "Netflix",
+        "description": "American subscription video on-demand over-the-top streaming service",
+        "property": "P8972",
+        "commonsFile": "Netflix icon.svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Netflix_icon.svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "CMetalCore",
+        "credit": "Own work",
+        "restrictions": "trademarked",
+        "attributionRequired": false,
+        "date": "2016-11-17",
+        "retrievedAt": "2026-10-22T07:58:09.908Z"
+      }
+    },
+    {
+      "id": "logo-amazon-web-services-add48188",
+      "kind": "logo",
+      "subject": "Amazon Web Services",
+      "file": "0a0a0a0a-0000-4000-8000-00000000ba5e/media/logo-amazon-web-services-add48188.png",
+      "sha256": "add481880477d02da0db1e88dc7f4dab679e4baf533cd73af0dccdf6daf24ecf",
+      "width": 512,
+      "height": 307,
+      "source": {
+        "wikidata": "Q456157",
+        "label": "Amazon Web Services",
+        "description": "subsidiary of Amazon that provides on-demand cloud computing platforms on a metered pay-as-you-go basis",
+        "property": "P154",
+        "commonsFile": "Amazon Web Services Logo.svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg",
+        "license": "Apache License 2.0",
+        "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+        "artist": "Amazon.com Inc.",
+        "credit": "Amazon",
+        "restrictions": "trademarked",
+        "attributionRequired": true,
+        "date": "2017-09-12",
+        "retrievedAt": "2026-10-22T07:58:10.318Z"
+      }
+    }
+  ],
+  "failed": []
+}

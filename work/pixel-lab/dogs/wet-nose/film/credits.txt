@@ -1,0 +1,9 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде (набор dogs/kit: колли, хозяин, парк, схемы носа nosebio); сторонних изображений, фото и логотипов нет. «Тепловизор», разрезы и частички запаха — иллюстрация, не в масштабе.
+Источники фактов:
+- VCA Hospitals, «Why is my dog's nose always wet?» — слизь помогает улавливать запахи; облизывание доставляет частички к вомероназальному (якобсонову) органу; «You can tell if your pet is sick by checking their nose — false».
+- До ≈300 млн обонятельных рецепторов у собаки против ≈6 млн у человека — широко цитируемая оценка (PBS NOVA и др.).
+- Craven, Paterson & Settles, «The fluid dynamics of canine olfaction», J. R. Soc. Interface (2010); Staymates et al., Scientific Reports (2016) — выдох через боковые щели ноздрей.
+- Bálint et al., «Dogs can sense weak thermal radiation», Scientific Reports (2020) — холодный ринарий; тёплый предмет с ≈1,6 м; механизм не доказан.
+- Tufts Cummings School of Veterinary Medicine (Dr. Michael Stone) — нос бывает сухим и тёплым после сна.

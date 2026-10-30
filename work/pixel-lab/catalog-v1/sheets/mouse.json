@@ -1,0 +1,35 @@
+{
+ "kind": "mouse",
+ "states": [
+  "sit",
+  "look",
+  "wide",
+  "happy",
+  "sleepy",
+  "sniff"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 84,
+  "hh": 78
+ },
+ "measured": {
+  "hw": 85,
+  "hh": 77,
+  "box": [
+   194,
+   343,
+   347,
+   490
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 257,
+ "msPerFrame": 21.9,
+ "maxFramePx": 4423,
+ "maxNovelPx": 764
+}

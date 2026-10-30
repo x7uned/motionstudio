@@ -1,0 +1,33 @@
+{
+ "kind": "dog-bed",
+ "states": [
+  "empty",
+  "dent",
+  "turn",
+  "spring"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 67,
+  "hh": 34
+ },
+ "measured": {
+  "hw": 67,
+  "hh": 34,
+  "box": [
+   195,
+   386,
+   328,
+   452
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 190,
+ "msPerFrame": 20.9,
+ "maxFramePx": 1431,
+ "maxNovelPx": 511
+}

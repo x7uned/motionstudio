@@ -1,0 +1,34 @@
+{
+ "kind": "car",
+ "states": [
+  "parked",
+  "drive",
+  "brake",
+  "honk",
+  "lights"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 86,
+  "hh": 24
+ },
+ "measured": {
+  "hw": 95,
+  "hh": 28,
+  "box": [
+   173,
+   392,
+   357,
+   445
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 220,
+ "msPerFrame": 19.7,
+ "maxFramePx": 1618,
+ "maxNovelPx": 372
+}

@@ -1,0 +1,308 @@
+{
+  "version": 8,
+  "clock": "measured speech; 30 fps",
+  "backgroundGain": 0.009,
+  "soundPreferences": {
+    "version": 5,
+    "allowed": [
+      "ui-reveal",
+      "soft-whoosh",
+      "ui-highlight",
+      "fan-start"
+    ],
+    "excluded": [
+      "servo-motor",
+      "air-release"
+    ],
+    "effectLevelScale": 0.6,
+    "fanLevelScale": 0.5,
+    "whooshLevelScale": 0.4,
+    "fadeInSeconds": 0.02,
+    "fadeOutSeconds": {
+      "fan-start": 0.9,
+      "soft-whoosh": 0.2,
+      "ui-highlight": 0.16,
+      "ui-reveal": 0.07
+    },
+    "backgroundGain": 0.009,
+    "minimumGapSeconds": 0.4,
+    "minimumSameEffectGapSeconds": 3
+  },
+  "cues": [
+    {
+      "at": 0.26666666666666666,
+      "gain": 0.012,
+      "kind": "reveal",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 1.2666666666666666,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 3.533333333333333,
+      "gain": 0.012,
+      "kind": "connect",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 6.966666666666667,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 8.033333333333333,
+      "gain": 0.012,
+      "kind": "reveal",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 10.333333333333334,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 13.933333333333334,
+      "gain": 0.006,
+      "kind": "camera-move",
+      "effect": "soft-whoosh",
+      "targetRmsDbFS": -22,
+      "peakDbFS": -9,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.2,
+      "levelScale": 0.24
+    },
+    {
+      "at": 14.766666666666667,
+      "gain": 0.012,
+      "kind": "reveal",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 15.833333333333334,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 19.7,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 20.533333333333335,
+      "gain": 0.012,
+      "kind": "connect",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 23.766666666666666,
+      "gain": 0.012,
+      "kind": "reveal",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 24.166666666666668,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 26.966666666666665,
+      "gain": 0.012,
+      "kind": "connect",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 27.866666666666667,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 30.133333333333333,
+      "gain": 0.012,
+      "kind": "connect",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 31.7,
+      "gain": 0.006,
+      "kind": "camera-move",
+      "effect": "soft-whoosh",
+      "targetRmsDbFS": -22,
+      "peakDbFS": -9,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.2,
+      "levelScale": 0.24
+    },
+    {
+      "at": 32.5,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 33.13333333333333,
+      "gain": 0.012,
+      "kind": "reveal",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 35.56666666666667,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 36.266666666666666,
+      "gain": 0.012,
+      "kind": "reveal",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 39.5,
+      "gain": 0.012,
+      "kind": "reveal",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 41.3,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    },
+    {
+      "at": 42.56666666666667,
+      "gain": 0.008,
+      "kind": "connect",
+      "effect": "ui-reveal",
+      "targetRmsDbFS": -30,
+      "peakDbFS": -15,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "levelScale": 0.6
+    },
+    {
+      "at": 45.3,
+      "gain": 0.007,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "targetRmsDbFS": -25,
+      "peakDbFS": -11,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "levelScale": 0.6
+    }
+  ]
+}

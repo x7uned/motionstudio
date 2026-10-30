@@ -1,0 +1,35 @@
+{
+ "kind": "animal-eye",
+ "states": [
+  "open",
+  "slit",
+  "wide",
+  "shine",
+  "blink",
+  "look"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 78,
+  "hh": 76
+ },
+ "measured": {
+  "hw": 75,
+  "hh": 76,
+  "box": [
+   187,
+   344,
+   336,
+   492
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 5,
+ "pure": true,
+ "frames": 259,
+ "msPerFrame": 23.1,
+ "maxFramePx": 3100,
+ "maxNovelPx": 3288
+}

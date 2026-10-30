@@ -1,0 +1,14 @@
+{
+  "pumpkin": {
+    "topic": "Why your brain sees a face in a carved pumpkin",
+    "narration": "../effort-exp-2026-10-25/common/narration.txt",
+    "words": "../effort-exp-2026-10-25/common/voice/words.json",
+    "voice": "../effort-exp-2026-10-25/common/voice/voice-raw.wav"
+  },
+  "sunlight": {
+    "topic": "How old is the sunlight that hits your face"
+  },
+  "bats": {
+    "topic": "How bats catch insects in total darkness"
+  }
+}

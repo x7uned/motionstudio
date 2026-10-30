@@ -1,0 +1,84 @@
+{
+ "note": "momentary (400 ms) maxima over each demo window, stems before the final linear loudnorm; voice −16 LUFS integrated",
+ "finalGain_dB": -0.5,
+ "speechTypical_Mmax_LUFS": -9.1,
+ "levels": {
+  "meow": {
+   "t0": 24.76,
+   "len": 0.84,
+   "clipLUFS": -11.8,
+   "gain_dB": -4.2,
+   "underVoice_s": 0,
+   "demo_Mmax_LUFS": -15.4,
+   "voice_Mmax_LUFS_same_window": -58.1,
+   "mix_Mmax_LUFS": -15.4,
+   "demo_minus_voice_dB": 42.7
+  },
+  "half": {
+   "t0": 33.58,
+   "len": 1.68,
+   "clipLUFS": -13.6,
+   "gain_dB": -2.4,
+   "underVoice_s": 0.689,
+   "demo_Mmax_LUFS": -15.4,
+   "voice_Mmax_LUFS_same_window": -13.9,
+   "mix_Mmax_LUFS": -12.9,
+   "demo_minus_voice_dB": -1.5
+  },
+  "echo": {
+   "t0": 40.46,
+   "len": 2.12,
+   "clipLUFS": -18.4,
+   "gain_dB": 2.4,
+   "underVoice_s": 1.382,
+   "demo_Mmax_LUFS": -15.7,
+   "voice_Mmax_LUFS_same_window": -12.5,
+   "mix_Mmax_LUFS": -11.6,
+   "demo_minus_voice_dB": -3.2
+  },
+  "real": {
+   "t0": 42.66,
+   "len": 0.732,
+   "clipLUFS": -17.2,
+   "gain_dB": 1.2,
+   "underVoice_s": 0.029,
+   "demo_Mmax_LUFS": -15.1,
+   "voice_Mmax_LUFS_same_window": -49.2,
+   "mix_Mmax_LUFS": -15.1,
+   "demo_minus_voice_dB": 34.1
+  },
+  "p08": {
+   "t0": 44.52,
+   "len": 0.876,
+   "clipLUFS": -20.3,
+   "gain_dB": 4.3,
+   "underVoice_s": 0.876,
+   "demo_Mmax_LUFS": -19.4,
+   "voice_Mmax_LUFS_same_window": -14.8,
+   "mix_Mmax_LUFS": -13.8,
+   "demo_minus_voice_dB": -4.6
+  },
+  "p10": {
+   "t0": 46.1,
+   "len": 0.701,
+   "clipLUFS": -20.3,
+   "gain_dB": 4.3,
+   "underVoice_s": 0.609,
+   "demo_Mmax_LUFS": -18.8,
+   "voice_Mmax_LUFS_same_window": -15.9,
+   "mix_Mmax_LUFS": -14.3,
+   "demo_minus_voice_dB": -2.9
+  },
+  "p12": {
+   "t0": 47.66,
+   "len": 0.584,
+   "clipLUFS": -20,
+   "gain_dB": 4,
+   "underVoice_s": 0,
+   "demo_Mmax_LUFS": -15.8,
+   "voice_Mmax_LUFS_same_window": -63.8,
+   "mix_Mmax_LUFS": -15.8,
+   "demo_minus_voice_dB": 48
+  }
+ }
+}

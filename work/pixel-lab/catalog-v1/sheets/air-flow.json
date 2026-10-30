@@ -1,0 +1,34 @@
+{
+ "kind": "air-flow",
+ "states": [
+  "calm",
+  "breeze",
+  "gust",
+  "stop",
+  "toward"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 96,
+  "hh": 66
+ },
+ "measured": {
+  "hw": 106,
+  "hh": 100,
+  "box": [
+   168,
+   320,
+   368,
+   504
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 226,
+ "msPerFrame": 15,
+ "maxFramePx": 2249,
+ "maxNovelPx": 1122
+}

@@ -1,0 +1,35 @@
+{
+ "kind": "dog",
+ "states": [
+  "sit",
+  "look",
+  "tilt",
+  "pant",
+  "bark",
+  "sniff"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 74,
+  "hh": 88
+ },
+ "measured": {
+  "hw": 69,
+  "hh": 91,
+  "box": [
+   201,
+   329,
+   331,
+   510
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 271,
+ "msPerFrame": 24.9,
+ "maxFramePx": 2338,
+ "maxNovelPx": 1070
+}

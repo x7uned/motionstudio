@@ -1,0 +1,11 @@
+{
+ "kind": "race-track",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 24.3,
+ "maxNovelPx": 150654
+}

@@ -1,0 +1,35 @@
+{
+ "kind": "crow",
+ "states": [
+  "sit",
+  "look",
+  "wide",
+  "happy",
+  "glare",
+  "spread"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 66,
+  "hh": 68
+ },
+ "measured": {
+  "hw": 82,
+  "hh": 70,
+  "box": [
+   180,
+   350,
+   341,
+   484
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 261,
+ "msPerFrame": 21.7,
+ "maxFramePx": 2436,
+ "maxNovelPx": 1847
+}

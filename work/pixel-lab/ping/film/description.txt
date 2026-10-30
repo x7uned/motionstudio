@@ -1,0 +1,8 @@
+You made it behind the wall and still died? Blame ping.
+
+On your screen you reached cover. But your enemy has a high ping, so he saw you a moment late, still in the open. When his shot reaches the server, the server turns back time to what he saw and counts the hit. This is lag compensation, and games do it on purpose. A closer server and a cable help.
+
+Pixel illustration, simplified. Ping numbers are examples.
+Sources: Valve Developer Community, "Source Multiplayer Networking".
+
+#gaming #technology #ping #lag #cs2

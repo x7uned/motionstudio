@@ -5,6 +5,7 @@ import os from "node:os";
 import {spawn} from "node:child_process";
 import {restoreAgentOptionals,schemaForAgent} from "./provider";
 import {agentJob,askViaAgent} from "./agent-provider";
+import {childPath,IS_WIN,spawnTarget} from "./platform";
 
 // Motion roles (3D director, netcode motion plan) use Claude; research/script/review stay on GPT via Codex.
 export const MOTION_AGENT={provider:"claude",model:"claude-opus-5-5",effort:"xhigh"} as const;
@@ -13,7 +14,7 @@ export type ClaudeAgent={model?:string;effort?:"low"|"medium"|"high"|"xhigh"|"ma
 const versionKey=(v:string)=>v.split(".").map(n=>Number(n)||0).reduce((a,n)=>a*1000+n,0);
 export function claudeBinary(){
  if(process.env.STUDIO_CLAUDE)return process.env.STUDIO_CLAUDE;
- const fixed=[path.join(os.homedir(),".local","bin","claude"),"/opt/homebrew/bin/claude","/usr/local/bin/claude"].find(p=>existsSync(p));
+ const fixed=(IS_WIN?[path.join(os.homedir(),".local","bin","claude.exe"),path.join(process.env.LOCALAPPDATA??"","Programs","claude","claude.exe")]:[path.join(os.homedir(),".local","bin","claude"),"/opt/homebrew/bin/claude","/usr/local/bin/claude"]).find(p=>existsSync(p));
  if(fixed)return fixed;
  // Claude desktop ships Claude Code under a versioned folder; take the newest one.
  const base=path.join(os.homedir(),"Library","Application Support","Claude","claude-code");
@@ -32,7 +33,8 @@ export function claudeEnvironment(source:NodeJS.ProcessEnv=process.env):NodeJS.P
   if((k.startsWith("CLAUDE")&&k!=="CLAUDE_CONFIG_DIR")||k==="ANTHROPIC_BASE_URL")continue;
   env[k]=v;
  }
- env.PATH=`/opt/homebrew/bin:/usr/bin:/bin:${source.PATH||""}`;
+ for(const k of Object.keys(env))if(k.toUpperCase()==="PATH")delete env[k];
+ env[IS_WIN?"Path":"PATH"]=childPath(source);
  return env;
 }
 export function schemaForClaude(schema:unknown){
@@ -83,7 +85,7 @@ export async function askClaudeJSON(prompt:string,schema:unknown,dir:string,imag
  try{
   const raw=await new Promise<string>((resolve,reject)=>{
    if(signal?.aborted)return reject(new Error("Остановлено."));
-   const child=spawn(/*turbopackIgnore: true*/bin,args,{cwd:isolated,env:claudeEnvironment(),stdio:["pipe","pipe","pipe"]});
+   const child=spawn(...spawnTarget(bin,args),{cwd:isolated,windowsHide:true,env:claudeEnvironment(),stdio:["pipe","pipe","pipe"]});
    let out="",err="",timedOut=false,hard:ReturnType<typeof setTimeout>|undefined;
    const stop=()=>{child.kill("SIGTERM");hard=setTimeout(()=>child.kill("SIGKILL"),4000);};
    const timer=setTimeout(()=>{timedOut=true;stop();},agent.timeout??900_000);
@@ -111,7 +113,7 @@ export async function claudeHealth(){
  const bin=claudeBinary();
  if(!bin)return {cli:false,authenticated:false,model:MOTION_AGENT.model,effort:MOTION_AGENT.effort};
  const status=await new Promise<string>(resolve=>{
-  const child=spawn(/*turbopackIgnore: true*/bin,["auth","status"],{env:claudeEnvironment(),stdio:["ignore","pipe","ignore"]});
+  const child=spawn(...spawnTarget(bin,["auth","status"]),{windowsHide:true,env:claudeEnvironment(),stdio:["ignore","pipe","ignore"]});
   let out="";const timer=setTimeout(()=>child.kill("SIGKILL"),8000);
   child.stdout.setEncoding("utf8");child.stdout.on("data",x=>{out+=x;});child.on("close",()=>{clearTimeout(timer);resolve(out);});child.on("error",()=>{clearTimeout(timer);resolve("");});
  });

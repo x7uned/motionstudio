@@ -1,0 +1,7 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде (кот из набора «милых животных» animals/film/cute.mjs, варежка героя из ролика про тачскрин); сторонних изображений, фото и логотипов нет.
+Источники фактов:
+- Ron Ofri, «Vision in the Animal Kingdom», WSAVA World Congress 2008 (VIN): https://www.vin.com/doc/?id=3866640 — людям нужно в 6 раз больше света, чем кошке; тапетум удваивает вероятность, что свет поглотится; кошке нужно быть в 7 с лишним раз ближе, чтобы видеть так же чётко.
+- Banks, Sprague, Schmoll, Parnell, Love, «Why do animal eyes have pupils of different shapes?», Science Advances 2015; UC Berkeley News: https://news.berkeley.edu/2015/08/07/pupil-shape-and-ecological-niche/ — щелевой зрачок домашней кошки меняет площадь в 135 раз, круглый зрачок человека — в 15.
+- Wikipedia, «Tapetum lucidum»: https://en.wikipedia.org/wiki/Tapetum_lucidum — слой за сетчаткой отражает свет обратно через неё; у человека его нет, «красные глаза» на фото — отражение от сосудистой оболочки.

@@ -93,8 +93,8 @@ def read_music_bed(root,sheet,total):
 
 def main():
  root=pathlib.Path(sys.argv[1]);ffmpeg=sys.argv[2]
- plan=json.loads((root/'storyboard.json').read_text());total=round(sum(s['seconds'] for s in plan['scenes'])*rate)
- sheet=json.loads((root/'sound-cues.json').read_text());voice=(root/'narration.wav').exists()
+ plan=json.loads((root/'storyboard.json').read_text(encoding='utf-8'));total=round(sum(s['seconds'] for s in plan['scenes'])*rate)
+ sheet=json.loads((root/'sound-cues.json').read_text(encoding='utf-8'));voice=(root/'narration.wav').exists()
  background_gain=sheet.get('backgroundGain',.006)
  if not isinstance(background_gain,(int,float)) or not math.isfinite(background_gain) or not 0<=background_gain<=.02:raise ValueError('Unsafe background gain')
  music=read_music_bed(root,sheet,total)
@@ -169,6 +169,6 @@ def main():
  mix_report={'version':2,'voiceGainDb':0,'voiceMasterUnmodified':True,'backgroundGain':background_gain,'soundPreferences':sheet.get('soundPreferences'),'masterTargetLUFS':-16,'masterTruePeakLimitDbTP':-1.5,'cues':report}
  if music is not None:
   left=music[0::2];mix_report['musicBed']={**sheet['musicBed'],'activeRmsDbFS':db(active_rms(left)),'peakDbFS':db(max(abs(v) for v in music))}
- (root/'sound-mix-report.json').write_text(json.dumps(mix_report,ensure_ascii=False,indent=2))
+ (root/'sound-mix-report.json').write_text(json.dumps(mix_report,ensure_ascii=False,indent=2),encoding='utf-8')
  subprocess.run([ffmpeg,'-y','-v','error','-i',str(root/'premix.wav'),'-af','loudnorm=I=-16:TP=-1.5:LRA=9','-ar','48000','-ac','2',str(root/'audio.wav')],check=True)
 if __name__=='__main__':main()

@@ -1,0 +1,16 @@
+You're not ugly — Kagenami pixel film (2026-10-24)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take); word timings checked with ElevenLabs Scribe.
+Picture and sound: generated locally (pixel art and 8-bit synthesis). The room, the face and the X-ray are our own
+illustrations (the X-ray and the sound paths are simplified). "You" is the channel's recurring pixel hero; the friend is
+the creator's own pixel sprite sheet.
+
+Sources:
+- Selfie distance: Brittany Ward, Max Ward, Ohad Fried, Boris Paskhover, "Nasal Distortion in Short-Distance Photographs:
+  The Selfie Effect", JAMA Facial Plastic Surgery, 2018 — at about 30 cm (12 in) the nasal base looks about 30% wider than
+  at 1.5 m (5 ft).
+- Mirror vs real photo: Theodore H. Mita, Marshall Dermer, Jeffrey Knight, "Reversed facial images and the mere-exposure
+  hypothesis", Journal of Personality and Social Psychology 35(8), 1977.
+- Own voice: air and bone conduction (standard hearing science); Susan M. Hughes, Marissa A. Harrison, "I like my voice
+  better: self-enhancement bias in perceptions of voice attractiveness", Perception 42(9), 2013 — participants rated their
+  own voice, included without being told, as more attractive than other raters did.

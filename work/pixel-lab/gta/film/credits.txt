@@ -1,0 +1,18 @@
+GTA 6: the city behind you — Kagenami pixel film (2026-10-23)
+
+Voice: ElevenLabs, Dennis · Eleven v4 (one take).
+Picture and sound: generated locally (pixel art and 8-bit synthesis). The street, cars, people and the console are our own
+illustrations, not GTA 6 assets, a real map or a real console design. The channel's character: the creator's own pixel sprite sheet.
+
+Logos (Wikimedia Commons, rasterised to the pixel grid, not redrawn):
+- File:Grand_Theft_Auto_VI_logo.svg — Public domain (text logo), trademarked; Rockstar Games / Take-Two Interactive.
+  https://commons.wikimedia.org/wiki/File:Grand_Theft_Auto_VI_logo.svg  SHA-256 68b6ba9bb64782fd9624fa42a0ab5eb073d47e0868f6874cf127d1634fd07098
+- File:Rockstar_Games_Logo.svg — Public domain (text logo), trademarked; Rockstar Games / Take-Two Interactive.
+  https://commons.wikimedia.org/wiki/File:Rockstar_Games_Logo.svg  SHA-256 3a2b6be8920fdb0e8cab172e88f2219411ca6d35d578e7e7f4f7e32aa44609fc
+Trademarks belong to their owners; used to name the game and the studio. No endorsement.
+
+Sources:
+- Release date: Rockstar Games — Grand Theft Auto VI, November 19, 2026, PlayStation 5 and Xbox Series X|S (Collider, 2026-10-22: no further delay announced).
+- Obbe Vermeij (former Rockstar North technical director) on GTA III / Vice City / San Andreas: cars out of the player's sight were removed; via 80.lv.
+- Frustum culling, occlusion culling and level of detail: standard real-time rendering techniques (e.g. Akenine-Möller et al., Real-Time Rendering).
+- "LEONIDA" on the radar: the state named in Rockstar's GTA VI trailer; the map shape is made up.

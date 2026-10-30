@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "person-toru-iwatani-96fb3e2c",
+      "kind": "person",
+      "subject": "Toru Iwatani",
+      "file": "0a0a0a0a-0000-4000-8000-00000000c0be/media/person-toru-iwatani-96fb3e2c.jpg",
+      "sha256": "96fb3e2c71a7d5c3021f415a8844c18a292298dffdf2792ec47fb766c3dd21b4",
+      "width": 184,
+      "height": 184,
+      "crop": {
+        "left": 0,
+        "top": 31,
+        "size": 184,
+        "face": true
+      },
+      "source": {
+        "wikidata": "Q956020",
+        "label": "Tōru Iwatani",
+        "description": "Japanese video game designer, creator of Pac-Man (born 1955)",
+        "property": "P18",
+        "commonsFile": "Toru Iwatani Gamelab Barcelona 2015 (crop).png",
+        "page": "https://commons.wikimedia.org/wiki/File:Toru_Iwatani_Gamelab_Barcelona_2015_(crop).png",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Amadalvarez",
+        "credit": "This image has been extracted from another file",
+        "restrictions": "",
+        "attributionRequired": true,
+        "date": "2023-07-25",
+        "retrievedAt": "2026-10-23T10:29:21.818Z"
+      }
+    }
+  ],
+  "failed": []
+}

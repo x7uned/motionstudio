@@ -1,0 +1,28 @@
+# «A 13-year-old "beat" Tetris» — факты (ресёрч 2026-10-24, субагент; AP читали через перепечатки boston.com/PBS)
+
+1. **Willis Gibson («Blue Scuti»)** — 13 лет (род. 27.01.2010), Stillwater, Oklahoma. HIGH. https://en.wikipedia.org/wiki/Willis_Gibson
+   - 21.12.2023 на стриме сделал «single» на уровне 157 — игра зависла, музыка застряла на одной ноте. HIGH. https://www.boston.com/news/technology/2024/01/04/13-year-old-gamer-blue-scuti-beats-unbeatable-tetris-kill-screen/ (AP), https://kotaku.com/twitch-youtube-blue-scuti-tetris-kill-screen-nes-1851134043
+   - Видео 02.01.2024 «The First Time Somebody Has Ever 'Beat' Tetris»; новости 2–4.01.2024. https://www.youtube.com/watch?v=J9oVQ43j22g
+   - Партия ≈38 минут. HIGH.
+   - На стриме: «Oh my God…», затем «I can't feel my fingers» (Kotaku: «I'm gonna pass out. I can't feel my fingers. I can't feel my hands.»). HIGH. https://www.pbs.org/newshour/nation/i-cant-feel-my-fingers-13-year-old-is-first-gamer-ever-to-beat-tetris
+   - CEO The Tetris Company Maya Rogers: «monumental achievement», «a feat that defies all preconceived limits of this legendary game». HIGH. AP via PBS.
+   - Техника rolling. Счёт на экране застрял на 999,999; пересчитанный реальный ≈6,85 млн. MED-HIGH. https://biggieblog.com/celebrating-the-first-nes-tetris-game-crash/
+   - Вторым был Fractal161 (уровень 155, ~03.01.2024), третьим PixelAndy (04.01). MED.
+2. **Что значит «пройти».** У NES Tetris нет конца: фигуры падают, пока не проиграешь. Gibson «прошёл» её, обрушив. HIGH (AP).
+   - Причина простыми словами: очки за линию игра добавляет медленным циклом — по разу за каждый уровень плюс один. Выше ≈155 уровня это сложение длится дольше одного кадра (1/60 с); следующий кадр прерывает игру в плохой момент, она прыгает не туда в своём коде и зависает. HIGH. https://negative-seven.github.io/tetris_explained/ , https://news.ycombinator.com/item?id=38846747
+   - Дольше всего считаются «синглы»; самый ранний возможный краш — сингл с переходом на 155; дальше — как повезёт. HIGH. biggieblog.
+   - Что краш возможен, первым показал ИИ Грега Кэннона (2021); Max «HydrantDude» Roy составил таблицу всех точек краша. MED-HIGH. https://www.techspot.com/news/101383-13-year-old-first-human-beat-tetris.html , https://tetrisinterest.com/?p=3176
+   - Цвета ломаются с уровня 138 (баг вычисления — палитра читается не оттуда); «Dusk» (146, блоки почти невидимы), «Charcoal» (148, чёрно-серо-белый). HIGH. negative-seven, https://en.wikipedia.org/wiki/Tetris_(NES_video_game)
+3. **Скорость.** С уровня 29 (NTSC) фигура опускается на ряд каждый кадр (~60 рядов/с), всё поле ≈1/3 с; уровни 19–28 — ряд за 2 кадра; после 29 скорость больше не растёт. HIGH. https://tetris.wiki/Tetris_(NES,_Nintendo)
+   - Поэтому 29 звали «kill screen»: обычное зажатие даёт ≈10 сдвигов/с — до краёв не успеть. HIGH.
+   - Thor Aackerlund прошёл 29 хайпертаппингом в 2011; Joseph Saelee (16) прославил хайпертаппинг, выиграв чемпионат мира 2018. Хайпертаппинг >10 нажатий/с (Kotaku: ≈12). HIGH.
+   - 2020: Christopher «CheeZ» Martinez придумал rolling — пальцы другой руки катают крестовину к большому пальцу снизу. Kotaku: ≥20 нажатий/с; Википедия (IGN): до ≈30. HIGH.
+4. **ИИ первым.** StackRabbit (Грег Кэннон) — уровень 237, 102 252 920 очков, ≈1 ч 05 мин; Gizmodo 27.01.2022. AP: на модифицированной версии игры — «not strictly comparable». HIGH. https://gizmodo.com/best-game-of-tetris-ever-ai-1848432104
+5. **Фон.** Tetris создал Алексей Пажитнов в ВЦ АН СССР (Москва) на «Электронике-60»; tetra + tennis. NES-версия — Nintendo, Северная Америка, ноябрь 1989. Счёт показывает максимум 999,999. HIGH.
+6. **«Перерождение» (идея для петли).** Счётчик уровня — один байт: после 255 идёт 0; падение снова медленное, цвета и очки сбрасываются. HIGH. https://biggieblog.com/looking-beyond-the-nes-tetris-game-crash/ , https://antithesis.com/blog/2026/tetris-quest/
+   - Первый человек — Michael «Dog» Artiaga (16), 5–6.10.2024, на картридже, изменённом, чтобы убрать краши; 1 ч 21 мин со старта на 19; играл до уровня 91 (всего 347 уровней), 29 486 164 очка. HIGH. https://tetrisinterest.com/?p=3176 , https://en.wikipedia.org/wiki/Michael_Artiaga
+   - Tetris Interest: «As far as we know, it is humanly impossible to achieve rebirth on an unmodified cartridge.»
+
+**Избегать:** «первый ЧЕЛОВЕК» (ИИ раньше, на изменённой игре); «beat» в кавычках; краш на 157, не 155; 29 — не последний уровень, скорость после 29 не растёт; перерождение только на изменённом картридже; год создания 1984 только как официальный; «6,8 млн» — пересчёт, на экране 999,999; не упоминать смерть отца (чувствительно); несовершеннолетний — пиксельный аватар, без личных деталей; внешний вид Tetris защищён (логотип — товарный знак; решение суда 2012 Tetris Holding v. Xio защищает вид фигур и поля) — не копировать логотип и точный экран NES, рисовать обобщённые блоки.
+
+**Commons:** NES с контроллером https://commons.wikimedia.org/wiki/File:NES-Console-Set.jpg (Evan-Amos, PD); контроллер https://commons.wikimedia.org/wiki/File:NES-Controller-Flat.jpg , https://commons.wikimedia.org/wiki/File:Nintendo-Entertainment-System-NES-Controller-FL.jpg (PD); плата картриджа Tetris https://commons.wikimedia.org/wiki/File:Nintendo-NES-Tetris-Cartridge-Board.jpg (PD); Willis Gibson 10.2023 https://commons.wikimedia.org/wiki/File:Blue_Scuti_2023_(cropped).jpg (aGameScout, CC BY-SA 4.0), 01.2024 https://commons.wikimedia.org/wiki/File:Blue_scuti_2024.jpg ; хват rolling https://commons.wikimedia.org/wiki/File:Scuti_rolling_grip_front_side.jpg (CC BY-SA 4.0); Пажитнов GDC 2024 https://commons.wikimedia.org/wiki/File:Alexey_Pajitnov_GDC_2024_(cropped).jpg (Official GDC, CC BY 2.0). Логотип Tetris — не использовать.

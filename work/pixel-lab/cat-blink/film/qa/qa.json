@@ -1,0 +1,19 @@
+{
+ "file": "cat-blink-pixel.mp4",
+ "frames": 1363,
+ "video_s": 45.433,
+ "audio_s": 45.44,
+ "seam_picture_meanabs": 0.585,
+ "neighbour_frames_meanabs": [
+  0.139,
+  0.074,
+  1.075
+ ],
+ "seam_audio_jump": 0.0078,
+ "audio_typical_step": 0.0123,
+ "loudness_LUFS": -16.5,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.9,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

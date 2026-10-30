@@ -1,0 +1,341 @@
+{
+  "version": 2,
+  "voiceGainDb": 0,
+  "voiceMasterUnmodified": true,
+  "backgroundGain": 0.009,
+  "soundPreferences": {
+    "version": 5,
+    "allowed": [
+      "ui-reveal",
+      "soft-whoosh",
+      "ui-highlight",
+      "fan-start"
+    ],
+    "excluded": [
+      "servo-motor",
+      "air-release"
+    ],
+    "effectLevelScale": 0.6,
+    "fanLevelScale": 0.5,
+    "whooshLevelScale": 0.4,
+    "fadeInSeconds": 0.02,
+    "fadeOutSeconds": {
+      "fan-start": 0.9,
+      "soft-whoosh": 0.2,
+      "ui-highlight": 0.16,
+      "ui-reveal": 0.07
+    },
+    "backgroundGain": 0.009,
+    "minimumGapSeconds": 0.4,
+    "minimumSameEffectGapSeconds": 3,
+    "projectLevelOverrides": {
+      "ui-reveal": 1.5,
+      "outro-transition": 0.5
+    }
+  },
+  "masterTargetLUFS": -16,
+  "masterTruePeakLimitDbTP": -1.5,
+  "cues": [
+    {
+      "at": 6.8,
+      "kind": "assembly-cutaway",
+      "effect": "soft-whoosh",
+      "file": null,
+      "targetActiveRmsDbFS": -22,
+      "levelScale": 0.24,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.3500000000000001,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.08,
+      "peakDbFS": -23.48,
+      "boostVsLegacyDb": 20.88,
+      "duration": 1.1666666666666667,
+      "sourceDuration": 0.55,
+      "playbackRate": 0.47142857142857136,
+      "durationMode": "stretch",
+      "automation": [],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "cutaway",
+        "start": 6.8,
+        "end": 7.966666666666667
+      }
+    },
+    {
+      "at": 14.9,
+      "kind": "object-enter",
+      "effect": "ui-reveal",
+      "file": null,
+      "targetActiveRmsDbFS": -30,
+      "levelScale": 0.8999999999999999,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.39,
+      "peakDbFS": -25.11,
+      "boostVsLegacyDb": 16.95,
+      "duration": 0.15,
+      "sourceDuration": 0.15,
+      "playbackRate": 1,
+      "durationMode": null,
+      "automation": [],
+      "sync": null
+    },
+    {
+      "at": 18.233333333333334,
+      "kind": "assembly-cutaway",
+      "effect": "soft-whoosh",
+      "file": null,
+      "targetActiveRmsDbFS": -22,
+      "levelScale": 0.24,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.4,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.23,
+      "peakDbFS": -23.54,
+      "boostVsLegacyDb": 20.61,
+      "duration": 1.5333333333333334,
+      "sourceDuration": 0.55,
+      "playbackRate": 0.3586956521739135,
+      "durationMode": "stretch",
+      "automation": [],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "cutaway",
+        "start": 18.233333333333334,
+        "end": 19.766666666666666
+      }
+    },
+    {
+      "at": 19.166666666666668,
+      "kind": "assembly-lift",
+      "effect": "ui-reveal",
+      "file": null,
+      "targetActiveRmsDbFS": -30,
+      "levelScale": 0.8999999999999999,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.39,
+      "peakDbFS": -25.11,
+      "boostVsLegacyDb": 18.89,
+      "duration": 0.15,
+      "sourceDuration": 0.15,
+      "playbackRate": 1,
+      "durationMode": null,
+      "automation": [],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "lift",
+        "start": 19.166666666666668,
+        "end": 19.766666666666666
+      }
+    },
+    {
+      "at": 27.833333333333332,
+      "kind": "assembly-lift",
+      "effect": "ui-reveal",
+      "file": null,
+      "targetActiveRmsDbFS": -30,
+      "levelScale": 0.8999999999999999,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.39,
+      "peakDbFS": -25.11,
+      "boostVsLegacyDb": 18.89,
+      "duration": 0.15,
+      "sourceDuration": 0.15,
+      "playbackRate": 1,
+      "durationMode": null,
+      "automation": [],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "lift",
+        "start": 27.833333333333332,
+        "end": 29.566666666666666
+      }
+    },
+    {
+      "at": 30.733333333333334,
+      "kind": "assembly-cutaway",
+      "effect": "soft-whoosh",
+      "file": null,
+      "targetActiveRmsDbFS": -22,
+      "levelScale": 0.24,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.4,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.12,
+      "peakDbFS": -23.47,
+      "boostVsLegacyDb": 20.86,
+      "duration": 1.7666666666666666,
+      "sourceDuration": 0.55,
+      "playbackRate": 0.31132075471698134,
+      "durationMode": "stretch",
+      "automation": [],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "cutaway",
+        "start": 30.733333333333334,
+        "end": 32.5
+      }
+    },
+    {
+      "at": 31.033333333333335,
+      "kind": "assembly-fan",
+      "effect": "fan-start",
+      "file": "sfx/51df7cabf492494b7a665f9d2f56688b3ecc832ac921b22b8d692a4216416ac7.wav",
+      "targetActiveRmsDbFS": -27,
+      "levelScale": 0.3,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.9,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -37.92,
+      "peakDbFS": -25.05,
+      "boostVsLegacyDb": 29.32,
+      "duration": 6.6,
+      "sourceDuration": 3.0,
+      "playbackRate": 1,
+      "durationMode": "loop",
+      "automation": [
+        {
+          "at": 0,
+          "value": 0
+        },
+        {
+          "at": 31.018333333333334,
+          "value": 0
+        },
+        {
+          "at": 32.788333333333334,
+          "value": 1
+        },
+        {
+          "at": 36.30166666666666,
+          "value": 1
+        },
+        {
+          "at": 37.64333333333333,
+          "value": 0
+        }
+      ],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "fan",
+        "start": 31.033333333333335,
+        "end": 37.63333333333333
+      }
+    },
+    {
+      "at": 32.5,
+      "kind": "object-enter",
+      "effect": "ui-reveal",
+      "file": null,
+      "targetActiveRmsDbFS": -30,
+      "levelScale": 0.8999999999999999,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.39,
+      "peakDbFS": -25.11,
+      "boostVsLegacyDb": 16.95,
+      "duration": 0.15,
+      "sourceDuration": 0.15,
+      "playbackRate": 1,
+      "durationMode": null,
+      "automation": [],
+      "sync": null
+    },
+    {
+      "at": 36.3,
+      "kind": "assembly-cutaway",
+      "effect": "soft-whoosh",
+      "file": null,
+      "targetActiveRmsDbFS": -22,
+      "levelScale": 0.24,
+      "fadeInSeconds": 0.15,
+      "fadeOutSeconds": 0.4,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.08,
+      "peakDbFS": -23.6,
+      "boostVsLegacyDb": 20.63,
+      "duration": 1.3333333333333333,
+      "sourceDuration": 0.55,
+      "playbackRate": 0.4124999999999993,
+      "durationMode": "stretch",
+      "automation": [],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "cutaway",
+        "start": 36.3,
+        "end": 37.63333333333333
+      }
+    },
+    {
+      "at": 37.63333333333333,
+      "kind": "assembly-lift",
+      "effect": "ui-reveal",
+      "file": null,
+      "targetActiveRmsDbFS": -30,
+      "levelScale": 0.8999999999999999,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.07,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -34.39,
+      "peakDbFS": -25.11,
+      "boostVsLegacyDb": 18.89,
+      "duration": 0.15,
+      "sourceDuration": 0.15,
+      "playbackRate": 1,
+      "durationMode": null,
+      "automation": [],
+      "sync": {
+        "objectId": "roadster",
+        "channel": "lift",
+        "start": 37.63333333333333,
+        "end": 39.266666666666666
+      }
+    },
+    {
+      "at": 41.4,
+      "kind": "outro-transition",
+      "effect": "soft-whoosh",
+      "file": null,
+      "targetActiveRmsDbFS": -22,
+      "levelScale": 0.12,
+      "fadeInSeconds": 0.12,
+      "fadeOutSeconds": 0.24,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -40.01,
+      "peakDbFS": -29.62,
+      "boostVsLegacyDb": 14.6,
+      "duration": 0.8,
+      "sourceDuration": 0.55,
+      "playbackRate": 0.6875,
+      "durationMode": "stretch",
+      "automation": [],
+      "sync": null
+    },
+    {
+      "at": 42.1,
+      "kind": "highlight",
+      "effect": "ui-highlight",
+      "file": null,
+      "targetActiveRmsDbFS": -25,
+      "levelScale": 0.6,
+      "fadeInSeconds": 0.02,
+      "fadeOutSeconds": 0.16,
+      "fadeCurve": "smoothstep",
+      "actualActiveRmsDbFS": -30.69,
+      "peakDbFS": -19.01,
+      "boostVsLegacyDb": 25.58,
+      "duration": 0.42,
+      "sourceDuration": 0.42,
+      "playbackRate": 1,
+      "durationMode": null,
+      "automation": [],
+      "sync": null
+    }
+  ]
+}

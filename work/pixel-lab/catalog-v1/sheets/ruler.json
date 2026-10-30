@@ -1,0 +1,33 @@
+{
+ "kind": "ruler",
+ "states": [
+  "start",
+  "grow",
+  "measure",
+  "done"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 60,
+  "hh": 18
+ },
+ "measured": {
+  "hw": 197,
+  "hh": 193,
+  "box": [
+   174,
+   227,
+   459,
+   438
+  ]
+ },
+ "footprintOk": false,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 187,
+ "msPerFrame": 20.3,
+ "maxFramePx": 1344,
+ "maxNovelPx": 2535
+}

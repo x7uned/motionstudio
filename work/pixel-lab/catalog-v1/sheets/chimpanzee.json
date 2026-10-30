@@ -1,0 +1,35 @@
+{
+ "kind": "chimpanzee",
+ "states": [
+  "sit",
+  "look",
+  "wide",
+  "happy",
+  "sleepy",
+  "hoot"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 62,
+  "hh": 54
+ },
+ "measured": {
+  "hw": 57,
+  "hh": 53,
+  "box": [
+   206,
+   367,
+   319,
+   458
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 257,
+ "msPerFrame": 20.3,
+ "maxFramePx": 1939,
+ "maxNovelPx": 371
+}

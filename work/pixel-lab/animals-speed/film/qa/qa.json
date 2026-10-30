@@ -1,0 +1,19 @@
+{
+ "file": "animals-speed-pixel.mp4",
+ "frames": 1614,
+ "video_s": 53.8,
+ "audio_s": 53.803,
+ "seam_picture_meanabs": 64.422,
+ "neighbour_frames_meanabs": [
+  1.404,
+  0.07,
+  0.098
+ ],
+ "seam_audio_jump": 0.0021,
+ "audio_typical_step": 0.0132,
+ "loudness_LUFS": -16.4,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.6,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

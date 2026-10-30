@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "projectId": "fee58688-0137-41a4-a321-4b2aa11696fc",
+  "acceptedAt": "2026-10-20T10:42:31.745Z",
+  "inputHash": "886c320ed54bc02ba688294dc50a90f87f33e4faf6e7699b3b2ceffa8dba49a1",
+  "text": "In 1894, a camera caught a cat apparently breaking physics. You know the old trick: a cat dropped upside down still lands on its feet. A French scientist named Marey filmed that fall at twelve frames per second, and the photos only deepened the mystery. The cat started with no spin, so it wasn't pushing off the hand that dropped it, and the air didn't help either. But a falling body can't give itself spin out of nowhere. So how does it turn over with nothing to push against? A cat isn't one solid block. With an unusually flexible backbone and no working collarbone, it bends in the middle, so its front and back halves turn around different axes. First it tucks its front legs in tight and stretches its back legs out. Think of a swivel chair: arms pulled in, you're easy to spin; arms flung wide, you're hard to turn. So the compact front half swings by as much as ninety degrees, while the back half twists the other way by as little as ten. Then the cat swaps: front legs out, back legs in. Now the back half is easy to turn, so it catches up while the front barely turns back. If one round isn't enough, the cat repeats it until all four paws point down. The halves always turn against each other, so the total spin stays zero and no law is broken. Kittens start doing it at three to four weeks old, but physicists took far longer to explain it. Marey had described this two-part twist in 1894, yet many kept insisting the cat pushed off the hand. It took more than seventy years, until 1969, for researchers to settle it by modeling a cat as two linked cylinders. So the cat never broke physics. All along, it was pushing against the other half of itself.",
+  "feedback": null,
+  "comparison": null,
+  "provenance": "explicit editor approval; contextual example, not model training"
+}

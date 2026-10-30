@@ -8,6 +8,7 @@ import {lookup} from "node:dns/promises";
 import {isIP} from "node:net";
 import type {DatabaseSync} from "node:sqlite";
 import {z} from "zod";
+import {systemEnv,localTool} from "./platform";
 
 export const OPENVERSE_ENDPOINT="https://api.openverse.org/v1/audio/";
 export const SOUND_LICENSES=["cc0","by","pdm"] as const;
@@ -79,7 +80,7 @@ async function atomicJSON(file:string,value:unknown){
 async function execute(command:string,args:string[],signal?:AbortSignal){
   if(signal?.aborted)throw new Error("Остановлено.");
   await new Promise<void>((resolve,reject)=>{
-    const p=spawn(command,args,{env:{PATH:"/usr/bin:/bin",LANG:"C",NODE_ENV:process.env.NODE_ENV||"production"},stdio:["ignore","ignore","pipe"],signal,timeout:45000});
+    const p=spawn(command,args,{env:{...systemEnv(),PATH:process.platform==="win32"?String(process.env.Path??process.env.PATH??""):"/usr/bin:/bin",LANG:"C",NODE_ENV:process.env.NODE_ENV||"production"},stdio:["ignore","ignore","pipe"],signal,timeout:45000,windowsHide:true});
     let stderr="";p.stderr.on("data",b=>{stderr=(stderr+b).slice(-1500);});
     p.on("error",reject);p.on("close",code=>code===0?resolve():reject(new Error(`${path.basename(command)}: ${code}; ${stderr}`)));
   });
@@ -101,7 +102,7 @@ export async function downloadEffect(raw:string,file:string,signal?:AbortSignal)
   let next=raw;const headers=file+".headers";
   try{for(let hop=0;hop<5;hop++){
     const {url,address}=await publicAudioURL(next),ip=address.family===6?`[${address.address}]`:address.address;
-    await execute("/usr/bin/curl",["--disable","--silent","--show-error","--fail","--proto","=https","--connect-timeout","10","--max-time","30","--max-filesize",String(MAX_BYTES),"--noproxy","*","--resolve",`${url.hostname}:443:${ip}`,"--dump-header",headers,"--output",file,"--url",url.href],signal);
+    await execute(process.platform==="win32"?path.join(process.env.SystemRoot??"C:\\Windows","System32","curl.exe"):"/usr/bin/curl",["--disable","--silent","--show-error","--fail","--proto","=https","--connect-timeout","10","--max-time","30","--max-filesize",String(MAX_BYTES),"--noproxy","*","--resolve",`${url.hostname}:443:${ip}`,"--dump-header",headers,"--output",file,"--url",url.href],signal);
     const text=await fsp.readFile(headers,"utf8"),status=Number([...text.matchAll(/^HTTP\/\S+ (\d+)/gm)].at(-1)?.[1]);
     if(status>=300&&status<400){const location=[...text.matchAll(/^location:\s*(.+)$/gim)].at(-1)?.[1].trim();if(!location)throw new Error("Редирект без URL.");next=new URL(location,url).href;continue;}
     if(status!==200)throw new Error(`Загрузка эффекта: HTTP ${status}.`);
@@ -189,7 +190,7 @@ export class SoundLibrary {
     try{
       await (this.options.download||downloadEffect)(selected.url,source,signal);
       if(this.options.convert)await this.options.convert(source,wav,signal);
-      else await execute(this.options.ffmpeg||path.join(this.root,"bin/ffmpeg"),["-y","-v","error","-nostdin","-protocol_whitelist","file,pipe","-i",source,"-t","3","-vn","-acodec","pcm_s16le","-ar","48000","-ac","1",wav],signal);
+      else await execute(this.options.ffmpeg||localTool(this.root,"ffmpeg"),["-y","-v","error","-nostdin","-protocol_whitelist","file,pipe","-i",source,"-t","3","-vn","-acodec","pcm_s16le","-ar","48000","-ac","1",wav],signal);
       const bytes=await fsp.readFile(wav);if(!validEffectWav(bytes))throw new Error("Эффект не является коротким PCM16 mono 48kHz WAV.");
       const sha256=hash(bytes),file=path.relative(this.root,path.join(dir,`${selected.id}-${sha256.slice(0,12)}.wav`));
       await fsp.copyFile(wav,contained(this.root,file));

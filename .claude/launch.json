@@ -2,14 +2,6 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "motion-studio",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "start"
-      ],
-      "port": 3210
-    },
-    {
       "name": "outro-sounds",
       "runtimeExecutable": "python3",
       "runtimeArgs": [

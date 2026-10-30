@@ -1,0 +1,33 @@
+{
+ "kind": "cloud",
+ "states": [
+  "drift",
+  "puff",
+  "rain",
+  "fade"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 108,
+  "hh": 76
+ },
+ "measured": {
+  "hw": 108,
+  "hh": 78,
+  "box": [
+   171,
+   349,
+   370,
+   498
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 193,
+ "msPerFrame": 22.4,
+ "maxFramePx": 1486,
+ "maxNovelPx": 10601
+}

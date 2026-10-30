@@ -6,18 +6,18 @@ import { spawn } from "node:child_process";
 import { ROOT } from "./store";
 import { claudeHealth } from "./claude-provider";
 import { agentJob, askViaAgent } from "./agent-provider";
+import { venvBin, localTool, remotionChrome, onPath, withChildPath, PYTHON_UTF8, spawnTarget } from "./platform";
+// Paths are resolved per OS (macOS, Linux, Windows); STUDIO_* in the environment or .env.local override them.
+const MAC_CODEX = "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex";
 export const CODEX =
   process.env.STUDIO_CODEX ||
-  "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex";
-export const FFMPEG =
-  process.env.STUDIO_FFMPEG || path.join(ROOT, "bin", "ffmpeg");
-export const CHROME =
-  process.env.STUDIO_CHROME ||
-  path.join(ROOT,"node_modules",".remotion","chrome-headless-shell",`mac-${process.arch}`,`chrome-headless-shell-mac-${process.arch}`,"chrome-headless-shell");
+  (process.platform === "darwin" && !onPath("codex") ? MAC_CODEX : onPath("codex") || MAC_CODEX);
+export const FFMPEG = localTool(ROOT, "ffmpeg", process.env.STUDIO_FFMPEG);
+export const CHROME = process.env.STUDIO_CHROME || remotionChrome(ROOT);
 export const PYTHON =
-  process.env.STUDIO_PYTHON ||
-  path.join(ROOT, ".runtime", "venv", "bin", "python");
-export const TAVILY = path.join(ROOT, ".runtime", "research", "bin", "tvly");
+  process.env.STUDIO_PYTHON || venvBin(path.join(ROOT, ".runtime", "venv"), "python");
+export const TAVILY =
+  process.env.STUDIO_TAVILY || venvBin(path.join(ROOT, ".runtime", "research"), "tvly");
 const speechKeys = [
   "STUDIO_TTS_PROVIDER",
   "ELEVENLABS_API_KEY",
@@ -83,12 +83,14 @@ export async function run(
           delete environment[key];
       }
     }
-    const child = spawn(command, args, {
+    const [exe, argv] = spawnTarget(command, args);
+    const child = spawn(exe, argv, {
       cwd: opts.cwd || ROOT,
-      env: {
+      env: withChildPath({
         ...environment,
-        PATH: `/opt/homebrew/bin:/usr/bin:/bin:${process.env.PATH || ""}`,
-      },
+        ...(command === PYTHON ? PYTHON_UTF8 : {}),
+      }),
+      windowsHide: true,
       stdio: [opts.input === undefined ? "ignore" : "pipe", "pipe", "pipe"],
     });
     if (opts.input !== undefined) {

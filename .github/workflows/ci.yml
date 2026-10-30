@@ -1,0 +1,59 @@
+# The skill must install and run from a plain clone on Windows and Linux (user request 2026-10-30).
+# No secrets are used: TTS, Tavily and Apify are not called; the render test is deterministic.
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  studio:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: npm ci
+        run: npm ci --no-audit --no-fund
+      - name: Setup (venv, FFmpeg, Chrome; no heavy assets, no Tavily)
+        run: node scripts/setup.mjs --no-assets --no-tavily
+      - name: Line endings of style data are byte-exact
+        shell: bash
+        run: git diff --exit-code
+      - name: Type check
+        run: npm run check
+      - name: Tests
+        run: npm test
+      - name: Studio status
+        run: npm run studio -- status
+      - name: Heavy style assets manifest is reachable
+        run: node scripts/assets.mjs fetch --only data/sound-packs/background-beds/v1/audio/warm-pad.wav
+      - name: Real render (Remotion + FFmpeg, live public folder)
+        run: npm run smoke
+      - name: Engine start/stop
+        shell: bash
+        run: |
+          npm run studio -- start
+          npm run studio -- status
+          npm run studio -- stop
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-${{ matrix.os }}
+          path: |
+            data/quality-validation/landscape/video.mp4
+            data/quality-validation/landscape/frame.jpg
+            data/logs/engine.log
+          if-no-files-found: ignore

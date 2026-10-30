@@ -1,0 +1,15 @@
+{
+ "file": "claw-machine-pixel.mp4",
+ "frames": 1573,
+ "video_s": 52.433,
+ "audio_s": 52.437,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -35.6,
+  -180
+ ],
+ "loudness_LUFS": -16.6,
+ "true_peak_dBFS": -4.3,
+ "LRA": 2.1,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

@@ -1,0 +1,49 @@
+{
+ "kind": "stopwatch",
+ "states": [
+  "show",
+  "run",
+  "done"
+ ],
+ "hud": true,
+ "declared": {
+  "hw": 66,
+  "hh": 78
+ },
+ "measured": {
+  "hw": 63,
+  "hh": 78,
+  "box": [
+   199,
+   187,
+   324,
+   340
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [
+  {
+   "t": 2.433,
+   "novel": 2267,
+   "before": 0,
+   "after": 0,
+   "changed": 2267,
+   "bayerTop2": 0.13
+  },
+  {
+   "t": 2.867,
+   "novel": 709,
+   "before": 0,
+   "after": 0,
+   "changed": 709,
+   "bayerTop2": 0.41
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 141,
+ "msPerFrame": 23,
+ "maxFramePx": 2267,
+ "maxNovelPx": 2267
+}

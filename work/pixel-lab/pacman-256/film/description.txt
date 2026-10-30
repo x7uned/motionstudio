@@ -1,0 +1,5 @@
+Pac-Man has no last level, yet level 256 breaks in half 👾
+
+Sources: Don Hodges, "Splitting Apart the Split Screen"; Jamey Pittman, "The Pac-Man Dossier"; Wikipedia (Pac-Man).
+
+#pacman #retrogaming #arcade #gaming

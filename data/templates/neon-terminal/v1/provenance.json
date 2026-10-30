@@ -1,0 +1,62 @@
+{
+  "savedAt": "2026-10-19T23:17:53.579Z",
+  "source": "style-lab",
+  "sample": "neon",
+  "approved": false,
+  "connected": false,
+  "userRequest": "Слушай, мне понравились все, если честно. Давай-ка сохраним каждый в шаблон… Но понравились все, очень круто. Поэтому сохрани их каждый как шаблон в нашу систему.",
+  "reference": [
+    {
+      "name": "video.mp4",
+      "sha256": "1b3376957bc18b95d8f128d94311d05d6807183fec2bda25078c461334187bb6"
+    },
+    {
+      "name": "contact-sheet.jpg",
+      "sha256": "1badc7d565d88911f41121ccd120556ee776868e33f2cc015b0ac99e67dd53c6"
+    },
+    {
+      "name": "STYLE.md",
+      "sha256": "3dae5cf375dc3b22b1a4fa13cf26a9bb097ff4d76c8319d0a5951dc7fcf31223"
+    },
+    {
+      "name": "BRIEF.md",
+      "sha256": "effdf35b3e895950c1ce185bbca4cd48f132c84fd8207d6a9aa81601c9831c0c"
+    },
+    {
+      "name": "frames/frame-0.8s.png",
+      "sha256": "21603d4d2ba876582872aca508a269884fca701c3f0f89a1005fbd26aaec4823"
+    },
+    {
+      "name": "frames/frame-11.8s.png",
+      "sha256": "6b6c4dfd4d520e52fd22fe80460a62ff8032fe01c94c409ccdb2e48acab1cad4"
+    },
+    {
+      "name": "frames/frame-14.2s.png",
+      "sha256": "d76aef20f678d5fd69716538e84b5a17a158d348fa22d072cc45e99f737c05fb"
+    },
+    {
+      "name": "frames/frame-3.0s.png",
+      "sha256": "397bedcdfb21f4527aba824a137925085ff2ca4159c591d1cd14e6a893814f4d"
+    },
+    {
+      "name": "frames/frame-6.0s.png",
+      "sha256": "048931aab98318892d195d7137861d3acad5481f9c1c361474daaa33342fc717"
+    },
+    {
+      "name": "frames/frame-9.0s.png",
+      "sha256": "4783efa5e5f5fc8c6852879d73f2d00f5640a4bf259977c02983e0c95d9f2391"
+    },
+    {
+      "name": "story.json",
+      "sha256": "25471187a79bfa917564d3cec76c492cc3824beecaa686a428d06aa6878fa41d"
+    },
+    {
+      "name": "source/index.tsx",
+      "sha256": "00833014683daf345e8f960d613331dbfd4c9ce0854db18f82017359b87c74c6"
+    },
+    {
+      "name": "poster.jpg",
+      "sha256": "3488c124c22af67f0d6c69dc88ce6835627cf68bf072a0537da6320ba3b9760c"
+    }
+  ]
+}

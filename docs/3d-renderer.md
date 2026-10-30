@@ -2,7 +2,7 @@
 
 ## Рабочий процесс
 
-В «Разборах видео» выберите готовую подборку и нажмите «Создать 3D по разбору». В студии укажите новую тему. Режим «Автоматически по разбору» включает Three.js для сцен, которые анализатор предлагает собирать в Three.js или Blender. Для ролика без референса 3D можно выбрать вручную. Сохранённый «История технологий / v1» остаётся отдельным неизменным 2D-шаблоном.
+Веб-интерфейса нет с 2026-10-30; всё делается командами `npm run studio -- …`. Готовая подборка разборов (`refs list`) подключается к новому ролику: `create --topic «новая тема» --reference <id подборки>`. Без `--render-mode` режим выбирается автоматически по разбору: Three.js включается для сцен, которые анализатор предлагает собирать в Three.js или Blender. Для ролика без референса 3D задаётся вручную: `--render-mode three`. Свои модели — `--models <id,id>` (id из `models list`). Прежние роли GPT‑6.1 Sol / Claude Opus 5.5 из списка ниже — с `--engine legacy`; в агентном режиме эти роли выполняет ведущий агент. Сохранённый «История технологий / v1» остаётся отдельным неизменным 2D-шаблоном.
 
 1. Изолированные GPT‑6.1 Sol xhigh роли готовят поисковые запросы, проверяют прочитанные Tavily первоисточники и пишут сценарий.
 2. Один непрерывный дубль ElevenLabs задаёт таймкоды слов и измеренную длительность. Для теста можно выключить речь.
@@ -11,13 +11,13 @@
 5. Three.js + React Three Fiber + Remotion рендерят кадры и собирают MP4. Камера, титры, субтитры и аудио используют 30 fps. Экспорт: H.264, yuv420p, BT.709 limited, AAC 48 kHz, faststart.
 6. Очередь делает полное декодирование, проверяет длительность, громкость, речь и кадры. Редактор принимает результат вручную. Автоматический разбор кадров не является прослушиванием или просмотром движения.
 
-В разделе «3D-рендер» есть кнопка технического теста на 30 с без речи. Для неё сценарий задан приложением: это проверка рендера, а не новый фактологический выпуск.
+Технический тест на 30 с без речи: `npm run studio -- models demo`, затем `run <id>`. Для него сценарий задан студией: это проверка рендера, а не новый фактологический выпуск.
 
 ## Модели
 
 Базовые процедурные модели: смартфон, сервер, чип, спутник, стилизованная Земля, Луна и простые геометрические формы. Это условные иллюстрации, не точные реконструкции предметов и не точная карта Земли. Режиссёр обязан записывать упрощения в `notes`; они видны в проекте.
 
-В разделе «3D-рендер» можно загрузить GLB 2.0 или embedded GLTF 2.0, затем выбрать до восьми моделей при создании проекта. Поддерживаются материалы, скелеты и встроенные анимационные клипы. Клипы проигрываются по абсолютному времени кадра, без собственного real-time цикла.
+GLB 2.0 или embedded GLTF 2.0 добавляется командой `npm run studio -- models add <файл> --name «…» --rights «чья модель и на каких правах»`; список — `models list`. При создании проекта можно выбрать до восьми моделей (`create … --models <id,id>`). Поддерживаются материалы, скелеты и встроенные анимационные клипы. Клипы проигрываются по абсолютному времени кадра, без собственного real-time цикла.
 
 Ограничения загрузки: 25 МБ, 250 000 вершин, 128 meshes, 512 nodes, 16 текстур/клипов. Буферы и PNG/JPEG должны быть внутри файла. Внешние URI, соседние .bin и изображения не запрашиваются. Draco, KTX2, meshopt и обязательные неизвестные расширения отклоняются. Для сцены с особым предметом предоставьте пригодную модель: скачивание/покупка и нейросетевая генерация моделей здесь не подключены.
 
@@ -29,7 +29,7 @@
 
 Чистые функции `cameraState()` и `objectState()` вычисляют состояние для произвольного кадра. Нет CSS-анимаций, таймеров, случайного состояния или кодогенерации. Камера интерполируется плавно, вход/выход моделей длится0,5 с, заголовки и субтитры перекрываются мягко.
 
-Проект хранит `three-plan.json`, `three-context.json`, `3D-RENDER.md`, результаты изолированного режиссёра, измеренный storyboard, MP4 и ревью. Повтор использует проверенный план; правка сценария в редакторе сбрасывает его для новой постановки. Сценарий и выбранные модели сохраняются. Пользовательские старые storyboards не переводятся в3D автоматически.
+Проект хранит `three-plan.json`, `three-context.json`, `3D-RENDER.md`, результаты изолированного режиссёра, измеренный storyboard, MP4 и ревью. Повтор использует проверенный план; правка сценария (`scenes <id> save`) сбрасывает его для новой постановки. Сценарий и выбранные модели сохраняются. Пользовательские старые storyboards не переводятся в3D автоматически.
 
 ## Границы возможностей
 
@@ -37,7 +37,7 @@
 
 ## Проверка реализации
 
-`npm run check`, `npm test`, `npm run build`. После изменений рендера: настоящий проход очереди до MP4 и ревью, контактные листы на всех ключевых позах/сменах титров, проверка границ с шагом кадра, полный decode, реальное воспроизведение экспортированного файла.
+`npm run check`, `npm test`. После изменений рендера: настоящий проход очереди до MP4 и ревью, контактные листы на всех ключевых позах/сменах титров, проверка границ с шагом кадра, полный decode, реальное воспроизведение экспортированного файла.
 
 Официальные API: [Remotion Three](https://www.remotion.dev/docs/three), [ThreeCanvas](https://www.remotion.dev/docs/three-canvas), [Three.js GLTFLoader](https://threejs.org/docs/#GLTFLoader).
 
@@ -75,11 +75,11 @@ A separate Claude Opus 5.5 / xhigh scene builder chooses supported geometry conf
 
 Force glyphs use the static `arrow` primitive (local +Y; rotate by pi around Z for down). Detailed films constrain spatial labels to the exact pre-TTS `verifiedLabels`; reusing one does not invalidate fact approval, while a new label does. Downward illustrative outlets sit beside the body so the gas direction is visible, with markers fading before the support plane. Powered fans in an open cutaway move outward and rotate for inspection, with a visible exploded-view disclaimer. These are explanatory geometry and motion, not a physical fluid simulation or reconstructed factory layout.
 
-Measured narration then goes to the existing separate Claude motion director, which uses these prepared assemblies and speech anchors. Schema and snapshot hashes prevent unknown assemblies or changed geometry configuration. Fan phase integrates the animated power channel, so changing power does not jump blade orientation. `confirmClaudeModel` checks actual CLI modelUsage and stops if the requested model is absent. API preparation reports expose concept, parts, approximations and actual provider telemetry.
+Measured narration then goes to the existing separate Claude motion director, which uses these prepared assemblies and speech anchors. Schema and snapshot hashes prevent unknown assemblies or changed geometry configuration. Fan phase integrates the animated power channel, so changing power does not jump blade orientation. `confirmClaudeModel` checks actual CLI modelUsage and stops if the requested model is absent. Preparation reports (`npm run studio -- report <id>` and the project files) expose concept, parts, approximations and actual provider telemetry.
 
 Changing narration archives these reports and invalidates dependent hashes. Picture-only repair preserves the continuous narration master. Final MP4 frames and native playback still require review; neither a concept nor a model report approves a film.
 
-Production сборка: `npm run build` использует Webpack. Встроенный Turbopack на данном хосте завершается `binding to a port: Operation not permitted` даже вне файлового sandbox; Webpack собирает тот же Next.js App Router без этого внутреннего процесса.
+Production-сборки Next.js больше нет (веб-интерфейс удалён 2026-10-30, код — в теге git `web-ui-final`); Remotion собирает свой бандл при рендере (`src/lib/remotion-bundle.ts`). Проверка типов — `npm run check`.
 
 
 ## Нижний блок портретного quality-v2 ролика

@@ -1,0 +1,20 @@
+{
+ "file": "sonic-real-pixel.mp4",
+ "frames": 2326,
+ "video_s": 77.533,
+ "audio_s": 77.547,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -30.4,
+  -180
+ ],
+ "loudness_LUFS": -16.6,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.4,
+ "one_frame_pops": [],
+ "sudden_jumps": [
+  {
+   "t": 5.3,
+   "d": 93.06
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "file": "pumpkin-face-sonnet-high.mp4",
+ "frames": 300,
+ "video_s": 10,
+ "audio_s": 10.005,
+ "loudness_LUFS": -16,
+ "true_peak_dBFS": -4.5,
+ "LRA": 5.2,
+ "max_frame_diff": {
+  "d": 2.03,
+  "t": 9.47
+ },
+ "one_frame_pops": [],
+ "sudden_jumps": [],
+ "probe": [
+  "Duration: 00:00:10.00, start: 0.000000, bitrate: 3831 kb/s",
+  "  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1080x1920, 3628 kb/s, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)",
+  "  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 192 kb/s (default)"
+ ]
+}

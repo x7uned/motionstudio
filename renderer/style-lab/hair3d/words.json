@@ -1,0 +1,300 @@
+{
+ "text": "Every second, your hair grows faster. One second. Shoulders. Ten seconds. It hits the floor. One minute. Your cat lives in it. Ten minutes. The whole house. One hour. Half the neighborhood is hair. Follow, so you don't miss the next one.",
+ "duration": 15.68,
+ "words": [
+  {
+   "text": "Every",
+   "start": 0.08,
+   "end": 0.4,
+   "charStart": 0,
+   "charEnd": 5
+  },
+  {
+   "text": "second,",
+   "start": 0.56,
+   "end": 1.04,
+   "charStart": 6,
+   "charEnd": 13
+  },
+  {
+   "text": "your",
+   "start": 1.12,
+   "end": 1.28,
+   "charStart": 14,
+   "charEnd": 18
+  },
+  {
+   "text": "hair",
+   "start": 1.4,
+   "end": 1.52,
+   "charStart": 19,
+   "charEnd": 23
+  },
+  {
+   "text": "grows",
+   "start": 1.6,
+   "end": 1.84,
+   "charStart": 24,
+   "charEnd": 29
+  },
+  {
+   "text": "faster.",
+   "start": 1.92,
+   "end": 2.64,
+   "charStart": 30,
+   "charEnd": 37
+  },
+  {
+   "text": "One",
+   "start": 2.88,
+   "end": 3.04,
+   "charStart": 38,
+   "charEnd": 41
+  },
+  {
+   "text": "second.",
+   "start": 3.12,
+   "end": 3.68,
+   "charStart": 42,
+   "charEnd": 49
+  },
+  {
+   "text": "Shoulders.",
+   "start": 3.84,
+   "end": 4.52,
+   "charStart": 50,
+   "charEnd": 60
+  },
+  {
+   "text": "Ten",
+   "start": 4.64,
+   "end": 4.8,
+   "charStart": 61,
+   "charEnd": 64
+  },
+  {
+   "text": "seconds.",
+   "start": 4.96,
+   "end": 5.52,
+   "charStart": 65,
+   "charEnd": 73
+  },
+  {
+   "text": "It",
+   "start": 5.6,
+   "end": 5.76,
+   "charStart": 74,
+   "charEnd": 76
+  },
+  {
+   "text": "hits",
+   "start": 5.88,
+   "end": 6.0,
+   "charStart": 77,
+   "charEnd": 81
+  },
+  {
+   "text": "the",
+   "start": 6.08,
+   "end": 6.16,
+   "charStart": 82,
+   "charEnd": 85
+  },
+  {
+   "text": "floor.",
+   "start": 6.32,
+   "end": 6.8,
+   "charStart": 86,
+   "charEnd": 92
+  },
+  {
+   "text": "One",
+   "start": 6.88,
+   "end": 6.96,
+   "charStart": 93,
+   "charEnd": 96
+  },
+  {
+   "text": "minute.",
+   "start": 7.12,
+   "end": 7.6,
+   "charStart": 97,
+   "charEnd": 104
+  },
+  {
+   "text": "Your",
+   "start": 7.68,
+   "end": 7.76,
+   "charStart": 105,
+   "charEnd": 109
+  },
+  {
+   "text": "cat",
+   "start": 7.84,
+   "end": 8.08,
+   "charStart": 110,
+   "charEnd": 113
+  },
+  {
+   "text": "lives",
+   "start": 8.24,
+   "end": 8.48,
+   "charStart": 114,
+   "charEnd": 119
+  },
+  {
+   "text": "in",
+   "start": 8.52,
+   "end": 8.56,
+   "charStart": 120,
+   "charEnd": 122
+  },
+  {
+   "text": "it.",
+   "start": 8.68,
+   "end": 9.04,
+   "charStart": 123,
+   "charEnd": 126
+  },
+  {
+   "text": "Ten",
+   "start": 9.12,
+   "end": 9.2,
+   "charStart": 127,
+   "charEnd": 130
+  },
+  {
+   "text": "minutes.",
+   "start": 9.28,
+   "end": 9.84,
+   "charStart": 131,
+   "charEnd": 139
+  },
+  {
+   "text": "The",
+   "start": 9.92,
+   "end": 10.08,
+   "charStart": 140,
+   "charEnd": 143
+  },
+  {
+   "text": "whole",
+   "start": 10.16,
+   "end": 10.4,
+   "charStart": 144,
+   "charEnd": 149
+  },
+  {
+   "text": "house.",
+   "start": 10.48,
+   "end": 11.28,
+   "charStart": 150,
+   "charEnd": 156
+  },
+  {
+   "text": "One",
+   "start": 11.36,
+   "end": 11.44,
+   "charStart": 157,
+   "charEnd": 160
+  },
+  {
+   "text": "hour.",
+   "start": 11.6,
+   "end": 12.16,
+   "charStart": 161,
+   "charEnd": 166
+  },
+  {
+   "text": "Half",
+   "start": 12.28,
+   "end": 12.4,
+   "charStart": 167,
+   "charEnd": 171
+  },
+  {
+   "text": "the",
+   "start": 12.44,
+   "end": 12.48,
+   "charStart": 172,
+   "charEnd": 175
+  },
+  {
+   "text": "neighborhood",
+   "start": 12.64,
+   "end": 13.12,
+   "charStart": 176,
+   "charEnd": 188
+  },
+  {
+   "text": "is",
+   "start": 13.2,
+   "end": 13.28,
+   "charStart": 189,
+   "charEnd": 191
+  },
+  {
+   "text": "hair.",
+   "start": 13.4,
+   "end": 13.84,
+   "charStart": 192,
+   "charEnd": 197
+  },
+  {
+   "text": "Follow,",
+   "start": 14.04,
+   "end": 14.4,
+   "charStart": 198,
+   "charEnd": 205
+  },
+  {
+   "text": "so",
+   "start": 14.44,
+   "end": 14.48,
+   "charStart": 206,
+   "charEnd": 208
+  },
+  {
+   "text": "you",
+   "start": 14.52,
+   "end": 14.56,
+   "charStart": 209,
+   "charEnd": 212
+  },
+  {
+   "text": "don't",
+   "start": 14.64,
+   "end": 14.72,
+   "charStart": 213,
+   "charEnd": 218
+  },
+  {
+   "text": "miss",
+   "start": 14.8,
+   "end": 14.88,
+   "charStart": 219,
+   "charEnd": 223
+  },
+  {
+   "text": "the",
+   "start": 14.96,
+   "end": 15.04,
+   "charStart": 224,
+   "charEnd": 227
+  },
+  {
+   "text": "next",
+   "start": 15.16,
+   "end": 15.28,
+   "charStart": 228,
+   "charEnd": 232
+  },
+  {
+   "text": "one.",
+   "start": 15.36,
+   "end": 15.76,
+   "charStart": 233,
+   "charEnd": 237
+  }
+ ]
+}

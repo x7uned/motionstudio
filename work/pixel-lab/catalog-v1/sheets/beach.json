@@ -1,0 +1,11 @@
+{
+ "kind": "beach",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 31.9,
+ "maxNovelPx": 201527
+}

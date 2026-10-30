@@ -1,0 +1,10 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), [thoughtful], один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде. Лес, муравьи, гриб, луна, летучие мыши, обложка — свои пиксельные рисунки, иллюстрация, не в масштабе: лист и стебель толще настоящих, гнездо ниже настоящих крон, «рентген» — схема (где мышцы, где нити гриба, где мозг), не снимок из работы 2017 года. Окаменелый лист на плашке — наш рисунок, не фотография находки из Месселя. The Last of Us упомянута словами, без кадров, логотипа и персонажей игры. Ускоренное время (дни, «несколько дней») показано сменой дня и ночи.
+
+Источники фактов:
+- Муравьи-древоточцы с Ophiocordyceps в Таиланде: спускаются из гнёзд в кронах, кусают жилку на нижней стороне листа примерно в 25 см от земли, где влажно и тепло, хватка синхронно около полудня, мышцы челюстей разрушаются, судороги и падения: Hughes et al. 2011, BMC Ecology 11:13, https://pmc.ncbi.nlm.nih.gov/articles/3118224 ; https://www.sciencedaily.com/releases/2011/05/110509065536.htm
+- 3D-электронная микроскопия: клетки гриба по всему телу, оплетают мышцы, в мозге их нет; как гриб управляет поведением, пока не ясно: Fredericksen et al. 2017, PNAS, https://pure.psu.edu/en/publications/three-dimensional-visualization-and-a-deep-learning-model-reveal- ; https://www.nationalgeographic.com/animals/article/controlling-zombie-ants-fungus-spd
+- Следы «мёртвой хватки» на окаменелых листьях из Месселя, 48 млн лет: Hughes, Wappler & Labandeira 2011, Biology Letters 7(1):67–70, https://insider.si.edu/2010/11/fossil-reveals-48-million-year-history-of-zombie-ants
+- The Last of Us: идею заражённых авторы взяли из эпизода «Planet Earth» BBC про кордицепс; в игре гриб поражает мозг: https://www.npr.org/2013/07/09/199040676/a-zombie-horror-game-inspired-by-a-nature-documentary ; https://en.wikipedia.org/wiki/Development_of_The_Last_of_Us
+- «Мы для него слишком горячие» — упрощение: Ophiocordyceps заточен под муравьёв, а большинство грибов не растёт при температуре тела человека (около 37 °C).

@@ -1,0 +1,42 @@
+{
+ "kind": "paper-sheet",
+ "states": [
+  "flat",
+  "flutter",
+  "square",
+  "kanizsa"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 72,
+  "hh": 28
+ },
+ "measured": {
+  "hw": 72,
+  "hh": 28,
+  "box": [
+   194,
+   392,
+   334,
+   443
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [
+  {
+   "t": 4.6,
+   "novel": 108,
+   "before": 1,
+   "after": 1,
+   "changed": 244,
+   "bayerTop3": 0.38
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 5,
+ "pure": true,
+ "frames": 193,
+ "msPerFrame": 20.7,
+ "maxFramePx": 842,
+ "maxNovelPx": 352
+}

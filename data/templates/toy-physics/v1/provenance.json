@@ -1,0 +1,66 @@
+{
+  "savedAt": "2026-10-19T23:17:53.249Z",
+  "source": "style-lab",
+  "sample": "toy-physics",
+  "approved": false,
+  "connected": false,
+  "userRequest": "Слушай, мне понравились все, если честно. Давай-ка сохраним каждый в шаблон… Но понравились все, очень круто. Поэтому сохрани их каждый как шаблон в нашу систему.",
+  "reference": [
+    {
+      "name": "video.mp4",
+      "sha256": "9f989451b1830854dd3caa4d8195cfdf696dc3e36c3ea9999e909c5c7283ee08"
+    },
+    {
+      "name": "contact-sheet.jpg",
+      "sha256": "1b55d1622a7488dd2fb907dbf22b222840986281e7ca77db5b22fa5348d4867b"
+    },
+    {
+      "name": "STYLE.md",
+      "sha256": "dace960ffdd0b9c2df41a671bb9111026f2536edc0ece9aaa5e8fa0f5fd5de1f"
+    },
+    {
+      "name": "BRIEF.md",
+      "sha256": "2c44542fdae9cff420f91822a7fe7328aa50cacbe7316ed741c06c358cad261a"
+    },
+    {
+      "name": "frames/frame-0.8s.png",
+      "sha256": "d5174bff73bcb98ac744b1a61decebebe9f40d4fbb2f69f1578504a93fcc0891"
+    },
+    {
+      "name": "frames/frame-11.8s.png",
+      "sha256": "29c39cf0cae8f9067beffbbe251729dec7b938fa61d778786d79c92730af9d19"
+    },
+    {
+      "name": "frames/frame-14.2s.png",
+      "sha256": "d9cc2f22d16bb9fe5923489e10fa23d8db99d2fd24c482643d890b36c486616b"
+    },
+    {
+      "name": "frames/frame-3.0s.png",
+      "sha256": "0185fd37c49658a835c8f379dddee37c56c8cd998afb5ea09555f26e1f1b5f5b"
+    },
+    {
+      "name": "frames/frame-6.0s.png",
+      "sha256": "ff8cea492cd4ec913afdc354e60721ba93fb6c9228af285bb469e4acd11f59de"
+    },
+    {
+      "name": "frames/frame-9.0s.png",
+      "sha256": "b82bd1e240397d7be3cd22bee3734b5bb5f780d1b826bdcfa7ed67e5b5bf822d"
+    },
+    {
+      "name": "story.json",
+      "sha256": "25471187a79bfa917564d3cec76c492cc3824beecaa686a428d06aa6878fa41d"
+    },
+    {
+      "name": "source/index.tsx",
+      "sha256": "297543932becb65c91a9ba55b1e532a4bd84881bbcb65a43c6b9841876684950"
+    },
+    {
+      "name": "source/sim.ts",
+      "sha256": "141a3b5e15a2994ed43c8afd2030cc1e5739f10ea3a48d361134da8ca4e5f26b"
+    },
+    {
+      "name": "poster.jpg",
+      "sha256": "c1145da36e13aec55908e2e9c6c188d961f13d389d24fb07ad3b703bd034451a"
+    }
+  ]
+}

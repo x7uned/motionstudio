@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "logo-nintendo-87d4432a",
+      "kind": "logo",
+      "subject": "Nintendo",
+      "file": "0a0a0a0a-0000-4000-8000-00000000a1e5/media/logo-nintendo-87d4432a.png",
+      "sha256": "87d4432a32863130c8ddadd33706fdff911c4559797f02a5c57f2f163e52567b",
+      "width": 512,
+      "height": 171,
+      "source": {
+        "wikidata": "Q8093",
+        "label": "Nintendo",
+        "description": "Japanese multinational video game and consumer electronics company",
+        "property": "P154",
+        "commonsFile": "Nintendo.svg",
+        "page": "https://commons.wikimedia.org/wiki/File:Nintendo.svg",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "artist": "Nintendo",
+        "credit": "Transferred from en.wikipedia to Commons by JamesR .",
+        "restrictions": "trademarked",
+        "attributionRequired": false,
+        "date": "2016-05-11",
+        "retrievedAt": "2026-10-24T02:33:49.634Z"
+      }
+    }
+  ],
+  "failed": []
+}

@@ -1,0 +1,19 @@
+{
+ "file": "pacman256-pixel.mp4",
+ "frames": 2144,
+ "video_s": 71.467,
+ "audio_s": 71.467,
+ "seam_picture_meanabs": 0.77,
+ "neighbour_frames_meanabs": [
+  0.458,
+  0.556,
+  0.103
+ ],
+ "seam_audio_jump": 0.0004,
+ "audio_typical_step": 0.0108,
+ "loudness_LUFS": -16.6,
+ "true_peak_dBFS": -4.5,
+ "LRA": 2,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

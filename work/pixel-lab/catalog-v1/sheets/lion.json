@@ -1,0 +1,34 @@
+{
+ "kind": "lion",
+ "states": [
+  "idle",
+  "look",
+  "roar",
+  "proud",
+  "worry"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 88,
+  "hh": 78
+ },
+ "measured": {
+  "hw": 89,
+  "hh": 79,
+  "box": [
+   173,
+   345,
+   345,
+   499
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 223,
+ "msPerFrame": 32.3,
+ "maxFramePx": 3459,
+ "maxNovelPx": 964
+}

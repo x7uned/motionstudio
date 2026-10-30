@@ -1,0 +1,15 @@
+{
+ "file": "casino-money-pixel-max.mp4",
+ "frames": 1481,
+ "video_s": 49.367,
+ "audio_s": 49.387,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -34.1,
+  -180
+ ],
+ "loudness_LUFS": -16.4,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.7,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

@@ -1,0 +1,20 @@
+{
+ "kind": "bedroom",
+ "backdrop": true,
+ "jumps": [
+  {
+   "t": 2.467,
+   "novel": 378,
+   "before": 65,
+   "after": 126,
+   "changed": 709,
+   "bayerTop3": 0.79
+  }
+ ],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 41.4,
+ "maxNovelPx": 201425
+}

@@ -1,0 +1,11 @@
+{
+ "kind": "city-street",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 2,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 27.6,
+ "maxNovelPx": 245888
+}

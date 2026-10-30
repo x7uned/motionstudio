@@ -1,0 +1,33 @@
+{
+ "kind": "lamp",
+ "states": [
+  "off",
+  "on",
+  "flicker",
+  "dim"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 24,
+  "hh": 96
+ },
+ "measured": {
+  "hw": 22,
+  "hh": 96,
+  "box": [
+   240,
+   324,
+   284,
+   504
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 184,
+ "msPerFrame": 20.3,
+ "maxFramePx": 217,
+ "maxNovelPx": 542
+}

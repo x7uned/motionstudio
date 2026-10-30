@@ -1,0 +1,15 @@
+{
+ "file": "steve-real-pixel.mp4",
+ "frames": 2103,
+ "video_s": 70.1,
+ "audio_s": 70.101,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -30,
+  -112.3
+ ],
+ "loudness_LUFS": -16.5,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.4,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

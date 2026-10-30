@@ -1,0 +1,5 @@
+In Breakout, your paddle shrinks right when the ball is fastest 🧱
+
+#gaming #retrogaming #breakout #arcade
+
+Sources: Atari Breakout Operation, Maintenance and Service Manual (1976, archive.org); Wikipedia «Breakout (video game)».

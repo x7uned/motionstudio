@@ -1,0 +1,19 @@
+{
+ "file": "cat-zoomies-pixel.mp4",
+ "frames": 1707,
+ "video_s": 56.9,
+ "audio_s": 56.917,
+ "seam_picture_meanabs": 1.004,
+ "neighbour_frames_meanabs": [
+  0.853,
+  0.805,
+  17.122
+ ],
+ "seam_audio_jump": 0.0065,
+ "audio_typical_step": 0.0111,
+ "loudness_LUFS": -16.7,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.9,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

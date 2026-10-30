@@ -1,0 +1,32 @@
+{
+ "kind": "dragonfly",
+ "states": [
+  "hover",
+  "look",
+  "smile"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 78,
+  "hh": 86
+ },
+ "measured": {
+  "hw": 78,
+  "hh": 86,
+  "box": [
+   184,
+   334,
+   339,
+   501
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 145,
+ "msPerFrame": 22.4,
+ "maxFramePx": 4792,
+ "maxNovelPx": 3250
+}

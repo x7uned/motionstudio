@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Звуки заставки · Motion Studio</title>
+<style>
+@font-face{font-family:Inter;src:url(fonts/inter-cyrillic-wght-normal.woff2)}
+@font-face{font-family:Inter;src:url(fonts/inter-latin-wght-normal.woff2);unicode-range:U+0000-024F}
+@font-face{font-family:Manrope;src:url(fonts/manrope-cyrillic-wght-normal.woff2)}
+@font-face{font-family:Manrope;src:url(fonts/manrope-latin-wght-normal.woff2);unicode-range:U+0000-024F}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:#f8fafc;color:#0f172a;font:14px Inter,system-ui,sans-serif}
+header{background:#0f172a;color:#f8fafc;padding:30px max(24px,calc((100vw - 1320px)/2)) 28px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:#94a3b8;text-transform:uppercase}h1{font:650 34px Manrope,Inter,sans-serif;margin:12px 0 8px;letter-spacing:-.04em}
+header p{color:#cbd5e1;line-height:1.7;margin:0;max-width:780px}main{max-width:1368px;margin:auto;padding:24px}
+button,select,input{font:inherit}button,select{border:1px solid #cbd5e1;border-radius:7px;padding:10px 12px;background:white;color:#334155}
+button{cursor:pointer;min-height:40px;transition:background-color .12s,color .12s}button:hover{background:#f1f5f9}button:disabled{opacity:.45;cursor:default}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible,audio:focus-visible{outline:3px solid #60a5fa;outline-offset:3px}
+.primary{background:#2563eb;color:white;border-color:#2563eb}.primary:hover{background:#1d4ed8}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:#f8fafc;padding:12px 0;position:sticky;top:0;z-index:2;border-bottom:1px solid #e2e8f0}
+.spacer{flex:1}.status{font-size:12px;color:#475569}.summary{display:flex;gap:22px;margin:18px 0 22px;color:#475569;flex-wrap:wrap}.summary b{color:#0f172a;font-variant-numeric:tabular-nums}
+h2{font:650 18px Manrope,Inter,sans-serif;margin:26px 0 12px}.row{display:grid;grid-template-columns:40px minmax(180px,1fr) minmax(230px,290px) 275px;gap:16px;align-items:center;background:white;border:1px solid #e2e8f0;padding:16px;border-radius:10px;margin-bottom:8px;scroll-margin-top:90px}
+.number{font-size:18px;color:#64748b;font-variant-numeric:tabular-nums}.title{font-weight:600;margin-bottom:6px}.detail{color:#64748b;font-size:12px;line-height:1.5}.detail a{color:#475569}audio{width:100%;height:36px}.votes{display:flex;gap:6px}.votes button{font-size:12px;padding:8px 10px;white-space:nowrap}
+.votes button[aria-pressed=true]{background:#0f172a;color:white;border-color:#0f172a}.row[data-vote=like]{border-left:3px solid #16a34a;padding-left:14px}.row[data-vote=no]{border-left:3px solid #94a3b8;padding-left:14px}.row[data-vote=maybe]{border-left:3px solid #d97706;padding-left:14px}
+.note{grid-column:2/-1;display:flex;gap:12px;align-items:center}.note input{width:100%;border:0;border-bottom:1px solid #e2e8f0;padding:5px 0;font-size:12px;color:#475569;background:transparent;min-height:30px}
+.now{color:#1d4ed8;font-size:12px;min-width:80px}.playing{box-shadow:0 0 0 2px #93c5fd}footer{font-size:12px;color:#64748b;line-height:1.8;margin-top:30px;padding-top:16px;border-top:1px solid #e2e8f0}a{color:#2563eb}.empty{padding:30px;color:#64748b}
+@media(max-width:1050px){.row{grid-template-columns:36px 1fr 280px}.votes{grid-column:2}.row audio{grid-column:3;grid-row:1/3}.note{grid-column:2/-1}.toolbar{position:static}}
+@media(max-width:660px){header{padding:24px}h1{font-size:28px}.row{grid-template-columns:30px 1fr;gap:12px}.row audio{grid-column:2;grid-row:auto}.votes{grid-column:2}.note{grid-column:2}.summary{gap:12px}.spacer{display:none}.status{width:100%}main{padding:16px}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">Motion Studio · заставка @xtuned · 8-бит</div>
+<h1>Звуки заставки @xtuned</h1>
+<p>Нужен один клик (нажатие кнопки после слова «xtuned») и одно арпеджио («Вы подписаны» / «Following»). Отметь «Нравится» у одного клика и одного арпеджио, остальное — по желанию. Мягкий whoosh на входе уже утверждён и тут не участвует.</p></header>
+<main>
+<div class="toolbar">
+<button class="primary" id="playAll">▶ Слушать подряд</button><button id="stop">Остановить</button>
+<label>Показать <select id="filter" aria-label="Отбор звуков"><option value="all">Все 13</option><option value="like">Нравятся</option><option value="maybe">Возможно</option><option value="no">Не нравятся</option><option value="unrated">Без оценки</option></select></label>
+<span class="spacer"></span><button id="copy">Скопировать выбор</button><span class="status" id="saveStatus" role="status">Загрузка оценок…</span>
+</div>
+<div class="summary" aria-live="polite"><span>Нравятся <b id="likes">0</b></span><span>Возможно <b id="maybes">0</b></span><span>Не нравятся <b id="nos">0</b></span><span>Без оценки <b id="unrated">13</b></span><span class="now" id="now"></span></div>
+<div id="list"></div>
+<footer>13 кандидатов: 8 записей Kenney (CC0, исходники в audition-01/sources) и 5 оригинальных синтезированных звуков (build.py, прямоугольные волны без алиасинга). Громкость проб выровнена постоянным усилением с пиками до −6 dBFS; в ролике уровень настраивается отдельно, под голосом. Оценки сохраняются только локально в ratings.json.</footer>
+</main>
+<script src="catalog.js"></script>
+<script>
+const sounds=window.SOUNDS, list=document.getElementById('list'), status=document.getElementById('saveStatus');
+const states={}, audios=new Map(), rows=new Map();let autoplay=false,timer=null,saveChain=Promise.resolve(),pending=0;
+const labels={like:'Нравится',no:'Нет',maybe:'Возможно'};
+function element(tag,text,className){const e=document.createElement(tag);if(text)e.textContent=text;if(className)e.className=className;return e}
+function eligible(){const filter=document.getElementById('filter').value;return sounds.filter(s=>filter==='all'||(filter==='unrated'?!states[s.id]?.rating:states[s.id]?.rating===filter))}
+function refresh(){
+ for(const s of sounds){const value=states[s.id]?.rating||'',row=rows.get(s.id);row.dataset.vote=value;
+  row.querySelectorAll('[data-rating]').forEach(b=>b.setAttribute('aria-pressed',String(value===b.dataset.rating)));
+  row.querySelector('input').value=states[s.id]?.note||'';
+ }
+ for(const [key,id] of [['like','likes'],['maybe','maybes'],['no','nos']])document.getElementById(id).textContent=sounds.filter(s=>states[s.id]?.rating===key).length;
+ document.getElementById('unrated').textContent=sounds.filter(s=>!states[s.id]?.rating).length;
+ const visible=new Set(eligible().map(s=>s.id));for(const [id,row]of rows)row.hidden=!visible.has(id);
+ list.querySelectorAll('section').forEach(section=>section.hidden=![...section.querySelectorAll('.row')].some(r=>!r.hidden));
+}
+function save(id){
+ const value={id,rating:states[id]?.rating||'',note:states[id]?.note||''};pending++;status.textContent='Сохранение…';status.style.color='';
+ saveChain=saveChain.then(async()=>{
+  try{const response=await fetch('/api/ratings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});if(!response.ok)throw Error('HTTP '+response.status);
+   pending--;if(!pending){status.textContent='Все оценки сохранены';status.style.color='';}}
+  catch(error){pending--;status.textContent='Не сохранено. Скопируй выбор';status.style.color='#b91c1c';}
+ });
+}
+function stop(){autoplay=false;clearTimeout(timer);for(const a of audios.values())a.pause();document.getElementById('now').textContent='';document.getElementById('playAll').textContent='▶ Слушать подряд'}
+function next(id){const queue=eligible();const index=queue.findIndex(s=>s.id===id);if(index>=0&&index+1<queue.length)play(queue[index+1].id);else stop()}
+async function play(id){clearTimeout(timer);const a=audios.get(id);a.currentTime=0;try{await a.play();rows.get(id).scrollIntoView({behavior:'instant',block:'nearest'})}catch(e){stop();status.textContent='Нажми ▶ у звука '+id}}
+let section,category;
+for(const s of sounds){
+ if(category!==s.category){category=s.category;section=element('section');section.append(element('h2',category));list.append(section)}
+ const row=element('article','','row');row.id='sound-'+s.id;row.setAttribute('aria-label','Звук '+s.id+' '+s.title);rows.set(s.id,row);
+ row.append(element('div',s.id,'number'));const description=element('div');description.append(element('div',s.title,'title'));
+ const detail=element('div',s.duration.toLocaleString('ru-RU',{maximumFractionDigits:2})+' с · '+s.author+' · ','detail');
+ if(s.license==='original')detail.append(document.createTextNode('оригинальный синтез · build.py'));else{const source=element('a','CC0 / источник');source.href=s.source;source.target='_blank';source.rel='noopener';detail.append(source);}
+ description.append(detail);row.append(description);
+ const audio=element('audio');audio.controls=true;audio.preload='none';audio.src=s.file;audio.setAttribute('aria-label','Прослушать '+s.id+' '+s.title);audios.set(s.id,audio);row.append(audio);
+ audio.addEventListener('play',()=>{clearTimeout(timer);for(const [otherId,other]of audios)if(otherId!==s.id)other.pause();document.querySelectorAll('.playing').forEach(e=>e.classList.remove('playing'));row.classList.add('playing');document.getElementById('now').textContent='Играет '+s.id});
+ audio.addEventListener('pause',()=>row.classList.remove('playing'));
+ audio.addEventListener('ended',()=>{row.classList.remove('playing');if(autoplay)timer=setTimeout(()=>next(s.id),650);else document.getElementById('now').textContent=''});
+ audio.addEventListener('error',()=>{stop();status.textContent='Не удалось загрузить звук '+s.id;status.style.color='#b91c1c'});
+ const votes=element('div','','votes');for(const [value,label]of Object.entries(labels)){const b=element('button',label);b.dataset.rating=value;b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',s.id+' · '+label);b.onclick=()=>{states[s.id]={...states[s.id],rating:states[s.id]?.rating===value?'':value};refresh();save(s.id)};votes.append(b)}row.append(votes);
+ const note=element('div','','note'),input=element('input');input.placeholder='Комментарий к звуку…';input.maxLength=2000;input.setAttribute('aria-label','Комментарий к звуку '+s.id);
+ input.addEventListener('input',()=>{states[s.id]={...states[s.id],note:input.value};save(s.id)});note.append(input);row.append(note);section.append(row);
+}
+document.getElementById('stop').onclick=stop;
+document.getElementById('playAll').onclick=()=>{if(autoplay){stop();return}const queue=eligible();if(!queue.length)return;autoplay=true;document.getElementById('playAll').textContent='■ Остановить очередь';play(queue[0].id)};
+document.getElementById('filter').onchange=()=>{stop();refresh()};
+document.getElementById('copy').onclick=async()=>{
+ const lines=['Motion Studio · отбор 01'];for(const [rating,label]of Object.entries(labels))lines.push(label+': '+sounds.filter(s=>states[s.id]?.rating===rating).map(s=>s.id).join(', '));
+ for(const s of sounds)if(states[s.id]?.note)lines.push(s.id+': '+states[s.id].note);
+ try{await navigator.clipboard.writeText(lines.join('\n'));document.getElementById('copy').textContent='Скопировано';setTimeout(()=>document.getElementById('copy').textContent='Скопировать выбор',1800)}catch{const blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'}),a=element('a');a.href=URL.createObjectURL(blob);a.download='motion-studio-selection.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+};
+fetch('/api/ratings').then(r=>{if(!r.ok)throw Error();return r.json()}).then(data=>{Object.assign(states,data.ratings);refresh();status.textContent='Оценки сохраняются автоматически'}).catch(()=>{status.textContent='Нет связи с сохранением оценок';status.style.color='#b91c1c'});
+refresh();
+</script>
+</body></html>

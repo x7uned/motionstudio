@@ -1,0 +1,5 @@
+In Europe, your old video games really ran 17% slower 📺
+
+#gaming #retrogaming #pal #sonic
+
+Sources: The Broadcast Bridge «PAL line and frame relationships»; Wikipedia «PAL region»; djcube (Sonic the Hedgehog, Mega Drive PAL); code.boy.sh (PAL Mega Drive 50/60 Hz switch); NESdev Wiki (regional differences).

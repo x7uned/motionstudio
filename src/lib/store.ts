@@ -17,7 +17,7 @@ import type {PortraitLayout} from "./illustrated-layout";
 import {DEFAULT_CAPTION_STYLE} from "./caption-style";
 import {SAFE_ZONES_VERSION} from "./safe-zones";
 
-import {loadVideoTemplate,listVideoTemplates,templateProfile,snapshotVideoTemplate,snapshotTemplateAvatar,IMPLEMENTED_STYLE_SAMPLES,CHANNEL_AVATAR_TEMPLATE} from "./video-templates";
+import {loadVideoTemplate,templateProfile,snapshotVideoTemplate,snapshotTemplateAvatar,IMPLEMENTED_STYLE_SAMPLES,CHANNEL_AVATAR_TEMPLATE} from "./video-templates";
 
 export const ROOT = process.cwd();
 export const DATA = path.join(ROOT, "data");
@@ -359,28 +359,7 @@ export function completeJob(
     .prepare("UPDATE jobs SET status=?,finished=?,error=? WHERE id=?")
     .run(status, new Date().toISOString(), error, id);
 }
+/** Workspace-relative path of a studio file (forward slashes on every OS); the skill has no web server. */
 export function assetUrl(file: string | null) {
-  return file
-    ? `/api/assets/${file.split(path.sep).map(encodeURIComponent).join("/")}`
-    : null;
-}
-export function uiState() {
-  return {
-    projects: projects().map((p) => ({
-      ...p,
-      videoUrl: assetUrl(p.video),
-      posterUrl: assetUrl(p.poster),
-      sheetUrl: assetUrl(p.sheet),
-    })),
-    references: references().map((r) => ({ ...r, url: assetUrl(r.file) })),
-    profile: profile(),
-    videoTemplates: listVideoTemplates(ROOT),
-    jobs: jobs(),
-    profileUpdated:
-      (
-        db()
-          .prepare("SELECT value FROM settings WHERE key=?")
-          .get("profileUpdated") as any
-      )?.value ?? null,
-  };
+  return file ? file.split(path.sep).join("/") : null;
 }

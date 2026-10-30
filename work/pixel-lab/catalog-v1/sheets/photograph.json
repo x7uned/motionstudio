@@ -1,0 +1,33 @@
+{
+ "kind": "photograph",
+ "states": [
+  "show",
+  "flash",
+  "develop",
+  "flip"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 72,
+  "hh": 100
+ },
+ "measured": {
+  "hw": 86,
+  "hh": 112,
+  "box": [
+   176,
+   312,
+   348,
+   532
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 4,
+ "pure": true,
+ "frames": 190,
+ "msPerFrame": 24.6,
+ "maxFramePx": 9882,
+ "maxNovelPx": 27048
+}

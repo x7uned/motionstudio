@@ -36,7 +36,7 @@ def request_json(endpoint,payload=None,pending=None,sleep=None):
     print(f'ElevenLabs: HTTP 429 ({status or "rate limit"}), запрос не выполнен; повтор {attempt+1}/{len(RETRY_DELAYS)} через {delay:.0f} с.',file=sys.stderr,flush=True)
     if pending:pending[0].unlink(missing_ok=True)
     sleep(delay)
-    if pending:pending[0].write_text(pending[1])
+    if pending:pending[0].write_text(pending[1],encoding='utf-8')
     continue
    return _http_failure(e,detail)
   except (urllib.error.URLError,TimeoutError):
@@ -146,19 +146,19 @@ def check_paid_gate(root,key,chars,paid_gate):
 def cached_speech(root,voice,payload,endpoint):
  key=speech_key(voice,payload)
  cache=root/f'eleven-{key}.json';pending=root/f'eleven-{key}.pending.json'
- if cache.exists():return json.loads(cache.read_text()),key
+ if cache.exists():return json.loads(cache.read_text(encoding='utf-8')),key
  if pending.exists():raise ValueError('ElevenLabs: предыдущий платный запрос имеет неизвестный результат. Автоматического повтора нет. Проверьте историю ElevenLabs перед явным повтором.')
  if payload['model_id']=='eleven_v4':
   models=request_json('/v1/models')
   if not any(m.get('model_id')=='eleven_v4' and m.get('can_do_text_to_speech') for m in models):raise ValueError('ElevenLabs: модель eleven_v4 недоступна. Подмена модели запрещена.')
  marker=json.dumps({'model':payload['model_id'],'started':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()})
- pending.write_text(marker)
+ pending.write_text(marker,encoding='utf-8')
  try:response=request_json(endpoint,payload,pending=(pending,marker))
  except ValueError as error:
   if any(f'HTTP {code}' in str(error) for code in (400,401,403,404,422,429)):pending.unlink(missing_ok=True)
   raise
  if not response.get('audio_base64'):raise ValueError('ElevenLabs: пустой аудиоответ; результат платного запроса неизвестен.')
- temporary=cache.with_suffix('.tmp');temporary.write_text(json.dumps(response,ensure_ascii=False));temporary.replace(cache);pending.unlink(missing_ok=True)
+ temporary=cache.with_suffix('.tmp');temporary.write_text(json.dumps(response,ensure_ascii=False),encoding='utf-8');temporary.replace(cache);pending.unlink(missing_ok=True)
  return response,key
 
 def speech_payload(voice,text,model,language='ru'):
@@ -200,7 +200,7 @@ def spoken_alignment(plain,annotated,alignment,language='ru',pronunciations=()):
 
 def synthesize(root,plan,ffmpeg,max_duration=None,paid_gate=None):
  voice=os.environ.get('ELEVENLABS_VOICE_ID','').strip()
- voice_plan=json.loads((root/'voice-plan.json').read_text()) if (root/'voice-plan.json').exists() else None
+ voice_plan=json.loads((root/'voice-plan.json').read_text(encoding='utf-8')) if (root/'voice-plan.json').exists() else None
  if voice_plan and voice_plan.get('profile'):voice=voice_plan['profile']['voiceId']
  if not voice:raise ValueError('ElevenLabs: выберите русский голос и заполните ELEVENLABS_VOICE_ID в .env.local.')
  if not re.fullmatch(r'[A-Za-z0-9_-]{8,100}',voice):raise ValueError('ElevenLabs: некорректный voice ID.')
@@ -219,10 +219,10 @@ def synthesize(root,plan,ffmpeg,max_duration=None,paid_gate=None):
  subprocess.run([ffmpeg,'-y','-v','error','-i',str(mp3),'-ac','1','-ar','48000','-c:a','pcm_s16le',str(wav)],check=True)
  with wave.open(str(wav),'rb') as f:pcm=array.array('h',f.readframes(f.getnframes()))
  track=continuous_track(pcm,words,texts,plan,round((max_duration if max_duration is not None else sum(s['seconds'] for s in plan['scenes']))*30),preserve_pauses=bool(voice_plan and voice_plan.get('preservePauses')))
- (root/'storyboard.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2))
- (root/'narration-text.txt').write_text(text)
+ (root/'storyboard.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2),encoding='utf-8')
+ (root/'narration-text.txt').write_text(text,encoding='utf-8')
  metadata={'provider':'elevenlabs','voiceId':voice,'model':payload['model_id'],'speed':1,'cacheKey':key,'characterCount':len(tts_input),'alignment':'mapped to clean spoken characters','naturalTiming':True,'audioStrategy':'continuous master; chapters follow speech','voiceSettings':payload.get('voice_settings',{}),'deliveryApplied':model=='eleven_v4','preservePauses':bool(voice_plan and voice_plan.get('preservePauses')),'insertedInterSceneSilenceSeconds':0,'longPauseEdits':track['pauseEdits'],'sourceTrimStart':track['sourceTrimStart'],'sourceTrimEnd':track['sourceTrimEnd'],**({'language':language} if language!='ru' else {})}
- (root/'speech-provider.json').write_text(json.dumps(metadata,indent=2))
+ (root/'speech-provider.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
  return track
 
 if __name__=='__main__':

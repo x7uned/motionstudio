@@ -78,6 +78,7 @@ let faceBuild:Promise<string>|null=null;
 /** On-device face rectangles (macOS Vision via scripts/face-box.swift, compiled once like the OCR helper); [] if unavailable. */
 async function faces(image:Buffer):Promise<{x:number;y:number;width:number;height:number}[]>{
  const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"../..");
+ if(process.platform!=="darwin")return []; // Apple Vision only; elsewhere portraits use the top-centre crop.
  try{
   faceBuild??=(async()=>{const source=path.join(root,"scripts/face-box.swift"),hash=createHash("sha256").update(await fs.readFile(source)).digest("hex").slice(0,16),binary=path.join(root,".runtime",`face-box-${hash}`);
    if(!await fs.access(binary).then(()=>true).catch(()=>false)){await fs.mkdir(path.join(root,".runtime/swift-module-cache"),{recursive:true});await run("/usr/bin/xcrun",["swiftc",source,"-O","-module-cache-path",path.join(root,".runtime/swift-module-cache"),"-o",binary],{timeout:180000});}

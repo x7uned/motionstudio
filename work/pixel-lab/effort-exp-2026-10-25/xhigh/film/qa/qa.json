@@ -1,0 +1,63 @@
+{
+ "file": "pumpkin-face-xhigh.mp4",
+ "frames": 300,
+ "video_s": 10,
+ "audio_s": 10.005,
+ "size_MiB": 8.9,
+ "video": "h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1080x1920, 7259 kb/s, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)",
+ "audio": "aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 192 kb/s (default)",
+ "loudness_LUFS": -16.1,
+ "true_peak_dBTP": -1.9,
+ "LRA": 4.9,
+ "one_frame_pops": [],
+ "sudden_jumps": [],
+ "biggest_frame_changes": [
+  {
+   "t": 2.4,
+   "d": 8.42
+  },
+  {
+   "t": 2.37,
+   "d": 8.35
+  },
+  {
+   "t": 2.33,
+   "d": 7.96
+  },
+  {
+   "t": 2.3,
+   "d": 7.57
+  },
+  {
+   "t": 2.43,
+   "d": 7.4
+  },
+  {
+   "t": 2.27,
+   "d": 7.05
+  }
+ ],
+ "rms_dB_per_half_second": [
+  -20.2,
+  -16.8,
+  -18.2,
+  -26.7,
+  -19.8,
+  -21.3,
+  -23.1,
+  -20.6,
+  -16.2,
+  -18.5,
+  -15.5,
+  -16.5,
+  -16.4,
+  -15.2,
+  -23.6,
+  -25,
+  -24.5,
+  -23.4,
+  -25.8,
+  -29.9,
+  -120
+ ]
+}

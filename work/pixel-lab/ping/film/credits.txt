@@ -1,0 +1,5 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст.
+Музыка и звуки: синтезированы в коде (8 бит), без сторонних записей.
+Картинка: нарисована в коде. Игровая локация — иллюстрация в духе пустынной карты из шутеров, без логотипов, названий и чужой графики.
+Источник фактов:
+- Valve Developer Community, «Source Multiplayer Networking» (latency/ping, lag compensation, «hit after taking cover»): https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking

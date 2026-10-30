@@ -1,0 +1,13 @@
+{
+  "id": "a608d46c5ea70e237eb4b8b5",
+  "name": "Игрок A · фиолетовый · тактическая фигура",
+  "file": "a608d46c5ea70e237eb4b8b5.glb",
+  "sha256": "a608d46c5ea70e237eb4b8b5e2afda7c172bcc1bddc7c5695e588f5649b1ce86",
+  "bytes": 154456,
+  "vertices": 2998,
+  "animations": [
+    "Walk cycle · 2s",
+    "Single shot"
+  ],
+  "rights": "Оригинальная модель Motion Studio / @xtuned. Создана процедурно для объяснения ping; не ассет конкретной игры."
+}

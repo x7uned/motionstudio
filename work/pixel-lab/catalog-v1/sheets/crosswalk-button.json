@@ -1,0 +1,34 @@
+{
+ "kind": "crosswalk-button",
+ "states": [
+  "idle",
+  "press",
+  "wait",
+  "go",
+  "fake"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 39,
+  "hh": 116
+ },
+ "measured": {
+  "hw": 38,
+  "hh": 116,
+  "box": [
+   224,
+   304,
+   300,
+   519
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 220,
+ "msPerFrame": 20.9,
+ "maxFramePx": 1483,
+ "maxNovelPx": 548
+}

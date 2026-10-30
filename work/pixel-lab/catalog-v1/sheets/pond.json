@@ -1,0 +1,11 @@
+{
+ "kind": "pond",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 27.9,
+ "maxNovelPx": 158663
+}

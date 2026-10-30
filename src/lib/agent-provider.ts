@@ -5,6 +5,7 @@ import path from "node:path";
 import {createHash,randomUUID} from "node:crypto";
 import {z} from "zod";
 import {schemaForAgent,restoreAgentOptionals} from "./provider";
+import {renameRetryAsync} from "./platform";
 
 /**
  * Agent mode (user decision 2026-10-19): the driving chat agent answers LLM roles.
@@ -31,7 +32,7 @@ export const agentJob=()=>jobs.getStore();
 export const tasksDir=(scope:string)=>path.join(scope,"agent-tasks");
 const sha=(v:string|Buffer)=>createHash("sha256").update(v).digest("hex");
 const ISOLATED=/(editor|edit|fact|claim|verification|review|quality|model-\d|part-\d|frame)/i;
-async function writeJSON(file:string,value:unknown){await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.${randomUUID()}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2));await fs.rename(tmp,file);}
+async function writeJSON(file:string,value:unknown){await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.${randomUUID()}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2));await renameRetryAsync(tmp,file);}
 const readMeta=(dir:string):AgentTaskMeta|null=>{try{return JSON.parse(readFileSync(path.join(dir,"meta.json"),"utf8"));}catch{return null;}};
 // Concurrent roles of one job (Reels fragments) announce tasks at once: writes are chained per scope so an older,
 // shorter list can never land after a newer one.

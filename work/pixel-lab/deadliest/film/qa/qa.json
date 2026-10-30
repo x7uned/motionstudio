@@ -1,0 +1,24 @@
+{
+ "file": "deadliest-pixel.mp4",
+ "frames": 1852,
+ "video_s": 61.733,
+ "audio_s": 61.739,
+ "seam_picture_meanabs": 95.537,
+ "neighbour_frames_meanabs": [
+  0.818,
+  0.29,
+  0.281
+ ],
+ "seam_audio_jump": 0.0009,
+ "audio_typical_step": 0.0117,
+ "loudness_LUFS": -16.8,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.6,
+ "one_frame_pops": [],
+ "sudden_jumps": [
+  {
+   "t": 37.17,
+   "d": 3.58
+  }
+ ]
+}

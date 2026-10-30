@@ -1,0 +1,15 @@
+{
+ "file": "card-shuffle-pixel.mp4",
+ "frames": 1638,
+ "video_s": 54.6,
+ "audio_s": 54.613,
+ "tail_rms_dB_last500ms_vs_last50ms": [
+  -35.7,
+  -180
+ ],
+ "loudness_LUFS": -16.6,
+ "true_peak_dBFS": -4.4,
+ "LRA": 2.7,
+ "one_frame_pops": [],
+ "sudden_jumps": []
+}

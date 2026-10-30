@@ -1,0 +1,33 @@
+{
+ "kind": "clock",
+ "states": [
+  "tick",
+  "spin",
+  "set",
+  "ring"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 62,
+  "hh": 62
+ },
+ "measured": {
+  "hw": 65,
+  "hh": 83,
+  "box": [
+   197,
+   355,
+   327,
+   503
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 1,
+ "pure": true,
+ "frames": 178,
+ "msPerFrame": 21.8,
+ "maxFramePx": 4608,
+ "maxNovelPx": 818
+}

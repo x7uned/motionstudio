@@ -1,0 +1,16 @@
+{
+  "kind": "style-sample",
+  "renderer": "renderer/style-lab/neon",
+  "composition": "StyleLab",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "fps": 30,
+  "durationInFrames": 450,
+  "rerenderReference": "node --import tsx scripts/style-lab-render.ts neon",
+  "chromiumOptions": {
+    "gl": "angle"
+  },
+  "connected": false
+}

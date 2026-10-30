@@ -1,0 +1,13 @@
+Голос: ElevenLabs, Dennis · Eleven v4 (en), один дубль на весь текст; тайминги слов сверены и перенесены на Scribe (voice/scribe.json, retime.mjs).
+Музыка и звуки: синтезированы в коде (8 бит), своя мелодия; без музыки и звуков Duck Hunt и других игр Nintendo (кряканье, выстрел, смех собаки — свои синтезированные).
+Картинка: нарисована в коде. Комната, телевизоры, приставка, световой пистолет (своя форма, без марки), мальчик со спины (обобщённая фигура), утки, собака и болото — свои рисунки в духе игры, не спрайты и не фон из ПЗУ. Логотипов нет.
+Схемы — иллюстрации, не измерения: вырез пистолета (линза, датчик, лучи), лента кадров, «осциллограф» датчика, луч кинескопа (сильно замедлен, одна развёртка за 1,6 с), панель задержки.
+
+Источники фактов (подробно — ../facts.md, ../research/notes.md):
+- Патент Nintendo US 4,813,682 (чёрный кадр против ламп, фильтр строчной частоты): https://patents.google.com/patent/US4813682A/en
+- NESdev Wiki, Zapper: https://www.nesdev.org/wiki/Zapper ; частоты: https://www.nesdev.org/wiki/Cycle_reference_chart
+- The Slow Mo Guys: https://www.youtube.com/watch?v=V6XnSvB34y8 ; The 8-Bit Guy: https://www.youtube.com/watch?v=Nu-Hoj4EIjU
+- Nick Bild, «How the NES Zapper REALLY Works»: https://hackaday.io/project/203034-how-the-nes-zapper-really-works/details
+- Форум NESdev (лампы, ЖК): https://nesdev.nes.science/f9/t13021.xhtml ; https://forums.nesdev.org/viewtopic.php?p=225882
+- Modern Mallard: https://www.eevblog.com/forum/crowd-funded-projects/modern-mallard-a-kit-to-make-the-nes-game-duck-hunt-work-on-an-lcd-tv/ ; RetroRGB: https://retrorgb.com/yes-you-can-use-lightguns-on-lcds-sometimes.html
+- https://en.wikipedia.org/wiki/NES_Zapper ; https://en.wikipedia.org/wiki/Duck_Hunt

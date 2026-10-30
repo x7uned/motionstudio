@@ -1,0 +1,22 @@
+{
+  "handle": "@xtuned",
+  "colors": {
+    "background": "#000000",
+    "text": "#FFFFFF",
+    "purple": "#8D59DA",
+    "lavender": "#E0CDF8",
+    "yellow": "#F4CA50",
+    "ivory": "#FDFEED",
+    "green": "#65DA41",
+    "metal": "#62637A",
+    "plinth": "#352B47"
+  },
+  "fonts": [
+    "Manrope Variable 750–800"
+  ],
+  "libraries": [
+    "Anime.js v4 — приостановленный таймлайн, на каждом кадре seek(0) → seek(t)",
+    "thinking-orbs/engine — геометрия орба по номеру кадра",
+    "StudioBackground 01 «Точечная матрица»"
+  ]
+}

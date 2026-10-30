@@ -1,0 +1,35 @@
+{
+ "kind": "cat",
+ "states": [
+  "sit",
+  "look",
+  "wide",
+  "meow",
+  "puff",
+  "sleepy"
+ ],
+ "hud": false,
+ "declared": {
+  "hw": 72,
+  "hh": 92
+ },
+ "measured": {
+  "hw": 81,
+  "hh": 96,
+  "box": [
+   181,
+   324,
+   322,
+   512
+  ]
+ },
+ "footprintOk": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 3,
+ "pure": true,
+ "frames": 268,
+ "msPerFrame": 21.5,
+ "maxFramePx": 2215,
+ "maxNovelPx": 1033
+}

@@ -1,0 +1,11 @@
+{
+ "kind": "kitchen",
+ "backdrop": true,
+ "jumps": [],
+ "pops": [],
+ "ditherSteps": 0,
+ "pure": true,
+ "frames": 181,
+ "msPerFrame": 56.8,
+ "maxNovelPx": 133177
+}
