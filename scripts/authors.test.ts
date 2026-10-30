@@ -24,7 +24,8 @@ test("Free check and actor request cap spending and disable all paid add-ons",as
 });
 test("Token persistence preserves other ENV values and exposes no token through public profile",async()=>{
  fs.writeFileSync(path.join(temp,".env.local"),"ELEVENLABS_API_KEY=sample-private-key\nOTHER_SETTING=keep\n");
- await secrets.saveApifyToken("apify_api_123456789012345678901234");const value=fs.readFileSync(path.join(temp,".env.local"),"utf8");assert.match(value,/OTHER_SETTING=keep/);assert.equal(fs.statSync(path.join(temp,".env.local")).mode&0o777,0o600);assert.equal((await secrets.serverSecrets()).ELEVENLABS_API_KEY,"sample-private-key");await assert.rejects(secrets.saveApifyToken("bad\nKEY=secret"));
+ await secrets.saveApifyToken("apify_api_123456789012345678901234");const value=fs.readFileSync(path.join(temp,".env.local"),"utf8");assert.match(value,/OTHER_SETTING=keep/);// POSIX file modes do not exist on Windows (the file is private to the user profile there).
+ if(process.platform!=="win32")assert.equal(fs.statSync(path.join(temp,".env.local")).mode&0o777,0o600);assert.equal((await secrets.serverSecrets()).ELEVENLABS_API_KEY,"sample-private-key");await assert.rejects(secrets.saveApifyToken("bad\nKEY=secret"));
 });
 test("Dataset is bounded to 20, deduplicates and rejects private/network URLs",()=>{
  const item=(i:number)=>({id:`reel${i}`,url:`https://instagram.com/reel/code${i}/`,videoUrl:"https://scontent.cdninstagram.com/video.mp4",ownerUsername:"xtuned",caption:"Текст"});
