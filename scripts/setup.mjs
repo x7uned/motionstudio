@@ -29,13 +29,17 @@ if (!fs.existsSync(path.join(ROOT, "node_modules", "remotion"))) { console.error
 
 // Python 3.10+: Windows usually has the `py` launcher; `python3` there is often the Store stub.
 step("Python");
-const candidates = process.env.STUDIO_PYTHON_BOOTSTRAP ? [[process.env.STUDIO_PYTHON_BOOTSTRAP]] : WIN ? [["py", "-3"], ["python"], ["python3"]] : [["python3"], ["python"]];
+// Newest first; macOS ships an old /usr/bin/python3 (3.9), Homebrew installs python3.1x.
+const minors = [14, 13, 12, 11, 10];
+const posix = [...minors.map((m) => [`python3.${m}`]), ...minors.map((m) => [`/opt/homebrew/bin/python3.${m}`]), ...minors.map((m) => [`/usr/local/bin/python3.${m}`]), ["python3"], ["python"]];
+const candidates = process.env.STUDIO_PYTHON_BOOTSTRAP ? [[process.env.STUDIO_PYTHON_BOOTSTRAP]] : WIN ? [["py", "-3"], ["python"], ["python3"]] : posix;
 let python = null;
 for (const [cmd, ...pre] of candidates) {
   const r = sh(cmd, [...pre, "-c", "import sys;print('%d.%d'%sys.version_info[:2])"]);
   const v = (r.stdout || "").trim().split(".").map(Number);
   if (r.status === 0 && (v[0] > 3 || (v[0] === 3 && v[1] >= 10))) { python = [cmd, ...pre]; ok(`${[cmd, ...pre].join(" ")} → Python ${v.join(".")}`); break; }
 }
+if (!python) warn("Python 3.10+ не найден (macOS: brew install python; Windows: python.org с «Add python.exe to PATH»; или STUDIO_PYTHON_BOOTSTRAP=<путь>)");
 function venv(dir, packages, label) {
   const py = venvBin(dir, "python");
   if (!fs.existsSync(py)) {
